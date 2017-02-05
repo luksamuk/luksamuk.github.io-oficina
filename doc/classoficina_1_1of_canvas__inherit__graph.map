@@ -1,0 +1,4 @@
+<map id="oficina::ofCanvas" name="oficina::ofCanvas">
+<area shape="rect" id="node2" href="$class_my_canvas.html" title="MyCanvas" alt="" coords="5,80,91,107"/>
+<area shape="rect" id="node3" href="$class_other_canvas.html" title="OtherCanvas" alt="" coords="115,80,213,107"/>
+</map>

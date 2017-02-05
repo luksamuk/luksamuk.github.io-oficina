@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['of_5farch_5f32bit',['OF_ARCH_32BIT',['../platform_8hpp.html#ab5e932171228231ab5041160896f0e58',1,'platform.hpp']]],
+  ['of_5farch_5f64bit',['OF_ARCH_64BIT',['../platform_8hpp.html#ad912e2ac79e1f0c2664c627c05156026',1,'platform.hpp']]],
+  ['of_5farch_5farm',['OF_ARCH_ARM',['../platform_8hpp.html#af18544eeba13b774bf0453b5dd9e3d11',1,'platform.hpp']]],
+  ['of_5farch_5farm64',['OF_ARCH_ARM64',['../platform_8hpp.html#acd75baac142fd413e6b39b6c5f847cfc',1,'platform.hpp']]],
+  ['of_5farch_5farmv7',['OF_ARCH_ARMV7',['../platform_8hpp.html#a69dab249331a970a9d9bc42feb4fdfd0',1,'platform.hpp']]],
+  ['of_5farch_5funknown',['OF_ARCH_UNKNOWN',['../platform_8hpp.html#afe1c238b72a5f1080cb13b41501177c8',1,'platform.hpp']]],
+  ['of_5fplatform_5fandroid',['OF_PLATFORM_ANDROID',['../platform_8hpp.html#a224001fec212ef9059ed3b4da583a781',1,'platform.hpp']]],
+  ['of_5fplatform_5fios',['OF_PLATFORM_IOS',['../platform_8hpp.html#a032f855adac0c7fadfba375bb37d2d43',1,'platform.hpp']]],
+  ['of_5fplatform_5fios_5fsimulator',['OF_PLATFORM_IOS_SIMULATOR',['../platform_8hpp.html#adf7f2bce96e9d2a315773e2ee3dc0d38',1,'platform.hpp']]],
+  ['of_5fplatform_5flinux',['OF_PLATFORM_LINUX',['../platform_8hpp.html#ab8f490c27839491d62ac436da6283e76',1,'platform.hpp']]],
+  ['of_5fplatform_5fmacosx',['OF_PLATFORM_MACOSX',['../platform_8hpp.html#afbf6cb3174ecfddfcee3497b5cf3f628',1,'platform.hpp']]],
+  ['of_5fplatform_5funknown',['OF_PLATFORM_UNKNOWN',['../platform_8hpp.html#ac73db05a368dd03f35af7399659329f9',1,'platform.hpp']]],
+  ['of_5fplatform_5fwindows',['OF_PLATFORM_WINDOWS',['../platform_8hpp.html#afda820a400d0327f72197f38279fac2b',1,'platform.hpp']]],
+  ['of_5fversion_5fstring',['OF_VERSION_STRING',['../oficina_8hpp.html#aff8463fd04ea0c6af9cfba2359033b88',1,'oficina.hpp']]],
+  ['oflog_5fblu',['OFLOG_BLU',['../io_8hpp.html#a8863977db25c6637019e00c88fb19c63',1,'io.hpp']]],
+  ['oflog_5fcyn',['OFLOG_CYN',['../io_8hpp.html#a7d1df021a97a19f1543ab4eccabe7d0e',1,'io.hpp']]],
+  ['oflog_5fgrn',['OFLOG_GRN',['../io_8hpp.html#adca6abf030b21790bea83de39b0647bc',1,'io.hpp']]],
+  ['oflog_5fmag',['OFLOG_MAG',['../io_8hpp.html#aaeeca928f2e557e727086fa73a53391d',1,'io.hpp']]],
+  ['oflog_5fnrm',['OFLOG_NRM',['../io_8hpp.html#aa833ca596955adb7a4d6b24d1e5b5b70',1,'io.hpp']]],
+  ['oflog_5fred',['OFLOG_RED',['../io_8hpp.html#a03a3d283f504b1347c7d25b7ceca8663',1,'io.hpp']]],
+  ['oflog_5freset',['OFLOG_RESET',['../io_8hpp.html#abfa7c322f578cafab944176d2fa20065',1,'io.hpp']]],
+  ['oflog_5fwht',['OFLOG_WHT',['../io_8hpp.html#ab4eecb361cdfac3f133eab7ece18d85d',1,'io.hpp']]],
+  ['oflog_5fyel',['OFLOG_YEL',['../io_8hpp.html#a05c4d67e60c1becb33335a953f629cae',1,'io.hpp']]]
+];

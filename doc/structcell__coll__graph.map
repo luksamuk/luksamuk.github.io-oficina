@@ -1,0 +1,4 @@
+<map id="cell" name="cell">
+<area shape="rect" id="node2" href="$structnum.html" title="num" alt="" coords="5,5,52,32"/>
+<area shape="rect" id="node3" href="$structport.html" title="port" alt="" coords="92,5,136,32"/>
+</map>
