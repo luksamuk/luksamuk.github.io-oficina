@@ -14,6 +14,19 @@ License
 This engine is distributed under the LGPL v3.0 license.
 You can read more about it [here](http://choosealicense.com/licenses/lgpl-3.0).
 
+Documentation
+-------------
+
+You can either access or download Oficina's documentation:
+
+- [View Oficina's Documentation online (v2.0)](https://luksamuk.github.io/oficina/doc)
+- [View Oficina's Documentation offline (v2.0 - PDF format)](https://luksamuk.github.io/oficina/oficina.pdf)
+- [View Oficina's Documentation online (v1.3)](luksamuk.github.io/OficinaFramework)
+
+Download
+--------
+
+Coming soon.
 
 Dependancies
 ------------
