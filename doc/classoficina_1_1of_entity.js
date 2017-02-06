@@ -1,7 +1,11 @@
 var classoficina_1_1of_entity =
 [
     [ "~ofEntity", "classoficina_1_1of_entity.html#a4787e05d6409757b58057b5b44b55203", null ],
+    [ "AddComponent", "classoficina_1_1of_entity.html#abf8a197a18da1e0c747fef94426f8e10", null ],
+    [ "ClearComponents", "classoficina_1_1of_entity.html#ac8379a44f7257b5fce6c73da664e6259", null ],
     [ "draw", "classoficina_1_1of_entity.html#aa90bbcb7ea100e627b86e13bac9671d4", null ],
+    [ "DrawComponents", "classoficina_1_1of_entity.html#ad7b03846edc59e38ca01a3bb8f8e81f7", null ],
+    [ "GetComponent", "classoficina_1_1of_entity.html#aa08668685b24c3bca1c606d4162acdf2", null ],
     [ "getEulerAngles", "classoficina_1_1of_entity.html#a6d3616161e341ed0b630ce65d3a1d381", null ],
     [ "getModelMatrix", "classoficina_1_1of_entity.html#a77032eafe2c0f6a93136c6b0bc72b8e0", null ],
     [ "getName", "classoficina_1_1of_entity.html#ada08f1952df99b8e01d2e17fdef59633", null ],
@@ -11,6 +15,7 @@ var classoficina_1_1of_entity =
     [ "getScale", "classoficina_1_1of_entity.html#a6053df48d7b57e24fcf0f5a1413964c8", null ],
     [ "init", "classoficina_1_1of_entity.html#a53eba9a0b07df20a75505273f56360f8", null ],
     [ "load", "classoficina_1_1of_entity.html#a6efb0b3cb85471e821afd1808cc672d5", null ],
+    [ "RemoveComponent", "classoficina_1_1of_entity.html#a7f2d3651f10b25d188d323040f21245c", null ],
     [ "rotate", "classoficina_1_1of_entity.html#a216b253d6f8e2d8b87ccb4f8c675c621", null ],
     [ "scale", "classoficina_1_1of_entity.html#a419c1e8f4c18ede8d857a06db85e9c1e", null ],
     [ "setName", "classoficina_1_1of_entity.html#a2a46fb4aafc2885c02bf6cca6b406026", null ],
@@ -19,6 +24,8 @@ var classoficina_1_1of_entity =
     [ "translate", "classoficina_1_1of_entity.html#a0bf24c64adff8b66d2b5ac6224b77e6e", null ],
     [ "unload", "classoficina_1_1of_entity.html#aacf49335bf40ac16e9614d2e2ffbaac8", null ],
     [ "update", "classoficina_1_1of_entity.html#a9f32f90e2c59383891369921204a5014", null ],
+    [ "UpdateComponents", "classoficina_1_1of_entity.html#aa309b0b3db2337d6b2616c51f0e8e7cf", null ],
+    [ "components", "classoficina_1_1of_entity.html#ada429f617343879208acc85d5e25afa0", null ],
     [ "eulerangles", "classoficina_1_1of_entity.html#a7eaea3d600d0d04cf607d87dd71fc85d", null ],
     [ "magnification", "classoficina_1_1of_entity.html#a6dddde41f0181dec756df2093bca0c83", null ],
     [ "name", "classoficina_1_1of_entity.html#ac1e7b0d6c043554eb82276c221bc6351", null ],
@@ -26,6 +33,5 @@ var classoficina_1_1of_entity =
     [ "propertymask", "classoficina_1_1of_entity.html#ac1056ccb2c891427caf38999a0b6519e", null ],
     [ "rotation", "classoficina_1_1of_entity.html#af41876387e4ff5e4338e594c0ac9bda9", null ],
     [ "scaling", "classoficina_1_1of_entity.html#a7a2612cfffd75f2a56202fe70b8a49bb", null ],
-    [ "script", "classoficina_1_1of_entity.html#ae4b6e73e479ff375d8a6cb123ac7f6d5", null ],
     [ "translation", "classoficina_1_1of_entity.html#a1f40aa2011b318cafb8c516c44357348", null ]
 ];

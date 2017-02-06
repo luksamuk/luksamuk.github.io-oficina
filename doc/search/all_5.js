@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['getcomponent',['GetComponent',['../classoficina_1_1of_entity.html#aa08668685b24c3bca1c606d4162acdf2',1,'oficina::ofEntity']]],
   ['geteulerangles',['getEulerAngles',['../classoficina_1_1of_entity.html#a6d3616161e341ed0b630ce65d3a1d381',1,'oficina::ofEntity']]],
   ['gethandle',['getHandle',['../classoficina_1_1of_display.html#a4947bad685dc61ee1d3ac0adc8210d76',1,'oficina::ofDisplay']]],
   ['getmodelmatrix',['getModelMatrix',['../classoficina_1_1of_entity.html#a77032eafe2c0f6a93136c6b0bc72b8e0',1,'oficina::ofEntity']]],

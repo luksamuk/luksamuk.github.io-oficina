@@ -4,11 +4,12 @@ var indexSectionsWithContent =
   1: "o",
   2: "bcdeiopt",
   3: "abcdgiloprstuy~",
-  4: "elmnoprst",
+  4: "celmnoprst",
   5: "o",
   6: "o",
   7: "o",
-  8: "o"
+  8: "o",
+  9: "o"
 };
 
 var indexSectionNames =
@@ -21,7 +22,8 @@ var indexSectionNames =
   5: "typedefs",
   6: "enums",
   7: "enumvalues",
-  8: "defines"
+  8: "defines",
+  9: "pages"
 };
 
 var indexSectionLabels =
@@ -34,6 +36,7 @@ var indexSectionLabels =
   5: "Typedefs",
   6: "Enumerations",
   7: "Enumerator",
-  8: "Macros"
+  8: "Macros",
+  9: "Pages"
 };
 

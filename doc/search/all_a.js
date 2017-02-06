@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['oficina_20framework',['Oficina Framework',['../index.html',1,'']]],
   ['of_5farch_5f32bit',['OF_ARCH_32BIT',['../platform_8hpp.html#ab5e932171228231ab5041160896f0e58',1,'platform.hpp']]],
   ['of_5farch_5f64bit',['OF_ARCH_64BIT',['../platform_8hpp.html#ad912e2ac79e1f0c2664c627c05156026',1,'platform.hpp']]],
   ['of_5farch_5farm',['OF_ARCH_ARM',['../platform_8hpp.html#af18544eeba13b774bf0453b5dd9e3d11',1,'platform.hpp']]],
@@ -36,7 +37,6 @@ var searchData=
   ['ofdword',['ofdword',['../types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1',1,'types.hpp']]],
   ['ofelementbuffer',['ofElementBuffer',['../classoficina_1_1of_element_buffer.html',1,'oficina']]],
   ['ofentity',['ofEntity',['../classoficina_1_1of_entity.html',1,'oficina']]],
-  ['ofentitycollection',['ofEntityCollection',['../classoficina_1_1of_entity_collection.html',1,'oficina']]],
   ['offont',['ofFont',['../classoficina_1_1of_font.html',1,'oficina']]],
   ['offramespan',['ofFrameSpan',['../classoficina_1_1of_frame_span.html',1,'oficina']]],
   ['ofgameloop',['ofGameLoop',['../oficina_8hpp.html#a052b1f748b826bdf9585448deded43f4',1,'oficina']]],
@@ -49,6 +49,7 @@ var searchData=
   ['ofgettextinput',['ofGetTextInput',['../input_8hpp.html#ac28f4237c0c43867b9067a415f051f80',1,'oficina']]],
   ['ofgetwindowsize',['ofGetWindowSize',['../oficina_8hpp.html#a9cecf3c37bb61f591ef764dab35d52c5',1,'oficina']]],
   ['oficina_2ehpp',['oficina.hpp',['../oficina_8hpp.html',1,'']]],
+  ['oficomponent',['ofIComponent',['../classoficina_1_1of_i_component.html',1,'oficina']]],
   ['ofinit',['ofInit',['../oficina_8hpp.html#a0029465cbd8d1f8345bc43e0e19f6b1b',1,'oficina']]],
   ['ofinputstate',['ofInputState',['../structoficina_1_1of_input_state.html',1,'oficina']]],
   ['ofisgamepadconnected',['ofIsGamepadConnected',['../input_8hpp.html#a9b648d146427009b04205876f472530b',1,'oficina']]],
@@ -157,10 +158,10 @@ var searchData=
   ['oftexturepool',['ofTexturePool',['../classoficina_1_1of_texture_pool.html',1,'oficina']]],
   ['oftexturerenderer',['ofTextureRenderer',['../classoficina_1_1of_texture_renderer.html',1,'oficina']]],
   ['oftimespan',['ofTimeSpan',['../classoficina_1_1of_time_span.html',1,'oficina']]],
-  ['ofuniformhashgrid',['ofUniformHashGrid',['../classoficina_1_1of_uniform_hash_grid.html',1,'oficina']]],
   ['ofupdateeventdispatch',['ofUpdateEventDispatch',['../input_8hpp.html#a8ec76c65175f78f14fafecaceb273d15',1,'oficina']]],
   ['ofvertexarray',['ofVertexArray',['../classoficina_1_1of_vertex_array.html',1,'oficina']]],
   ['ofvertexbuffer',['ofVertexBuffer',['../classoficina_1_1of_vertex_buffer.html',1,'oficina']]],
   ['ofword',['ofword',['../types_8hpp.html#ac3f77e615bba4e54eb5d558cba521f85',1,'types.hpp']]],
-  ['open',['open',['../classoficina_1_1of_display.html#a7be1ee9a2f145d6f1b712d82fdee7676',1,'oficina::ofDisplay']]]
+  ['open',['open',['../classoficina_1_1of_display.html#a7be1ee9a2f145d6f1b712d82fdee7676',1,'oficina::ofDisplay']]],
+  ['ofscheme_20api_20reference',['ofScheme API Reference',['../schemeref.html',1,'']]]
 ];

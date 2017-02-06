@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0pre</span>
+   &#160;<span id="projectnumber">2.0.0a</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -87,6 +87,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>add()
 : <a class="el" href="classoficina_1_1of_canvas_manager.html#ab53849468a7f536e922751fefda8a544">oficina::ofCanvasManager</a>
 </li>
+<li>AddComponent()
+: <a class="el" href="classoficina_1_1of_entity.html#abf8a197a18da1e0c747fef94426f8e10">oficina::ofEntity</a>
+</li>
 </ul>
 
 
@@ -99,6 +102,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
+<li>ClearComponents()
+: <a class="el" href="classoficina_1_1of_entity.html#ac8379a44f7257b5fce6c73da664e6259">oficina::ofEntity</a>
+</li>
 <li>close()
 : <a class="el" href="classoficina_1_1of_display.html#af0bfec8e30fd2709bf724ef5f2fd8f5b">oficina::ofDisplay</a>
 </li>
@@ -128,11 +134,18 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classoficina_1_1of_canvas.html#a2999fe421ae2ab24e428f4239a21fe25">oficina::ofCanvas</a>
 , <a class="el" href="classoficina_1_1of_canvas_manager.html#a840a8c3db09429614d0a6f0e760694d4">oficina::ofCanvasManager</a>
 , <a class="el" href="classoficina_1_1of_entity.html#aa90bbcb7ea100e627b86e13bac9671d4">oficina::ofEntity</a>
+, <a class="el" href="classoficina_1_1of_i_component.html#a49fec000bce223717023b080cfbf0e0f">oficina::ofIComponent</a>
+</li>
+<li>DrawComponents()
+: <a class="el" href="classoficina_1_1of_entity.html#ad7b03846edc59e38ca01a3bb8f8e81f7">oficina::ofEntity</a>
 </li>
 </ul>
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
+<li>GetComponent()
+: <a class="el" href="classoficina_1_1of_entity.html#aa08668685b24c3bca1c606d4162acdf2">oficina::ofEntity</a>
+</li>
 <li>getEulerAngles()
 : <a class="el" href="classoficina_1_1of_entity.html#a6d3616161e341ed0b630ce65d3a1d381">oficina::ofEntity</a>
 </li>
@@ -168,7 +181,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classoficina_1_1of_canvas.html#adec8088c1fb6b703d1fa6d4dd4475924">oficina::ofCanvas</a>
 , <a class="el" href="classoficina_1_1of_canvas_manager.html#a3f31d2dd801c92377fbb7504affb7e96">oficina::ofCanvasManager</a>
 , <a class="el" href="classoficina_1_1of_entity.html#a53eba9a0b07df20a75505273f56360f8">oficina::ofEntity</a>
-, <a class="el" href="classoficina_1_1of_scheme.html#aebd648977e4320aac45de13913282ce7">oficina::ofScheme</a>
+, <a class="el" href="classoficina_1_1of_i_component.html#ae03575a492e3bc2a350d03d9d135c3eb">oficina::ofIComponent</a>
+, <a class="el" href="classoficina_1_1of_scheme.html#adb84c8591b4c8b954cc7e8d1de9d1495">oficina::ofScheme</a>
 </li>
 <li>isOpen()
 : <a class="el" href="classoficina_1_1of_display.html#aab174f0985d24073aac96fef4f8f8eb9">oficina::ofDisplay</a>
@@ -184,7 +198,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>load()
 : <a class="el" href="classoficina_1_1of_canvas.html#af0593224aefc0a33980f15802457a81e">oficina::ofCanvas</a>
 , <a class="el" href="classoficina_1_1of_entity.html#a6efb0b3cb85471e821afd1808cc672d5">oficina::ofEntity</a>
-, <a class="el" href="classoficina_1_1of_scheme.html#af26ed27fe1c69991732717b70024f5a8">oficina::ofScheme</a>
+, <a class="el" href="classoficina_1_1of_i_component.html#a1649f7a3944ac68abf35b9f7b0580054">oficina::ofIComponent</a>
+</li>
+<li>loadfile()
+: <a class="el" href="classoficina_1_1of_scheme.html#a5c074439e5dd90e1e65d86b575dd321a">oficina::ofScheme</a>
 </li>
 </ul>
 
@@ -206,6 +223,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <h3><a id="index_r"></a>- r -</h3><ul>
 <li>regFunc()
 : <a class="el" href="classoficina_1_1of_scheme.html#a802a0bcce12d85aca8914b7f7dd92daf">oficina::ofScheme</a>
+</li>
+<li>RemoveComponent()
+: <a class="el" href="classoficina_1_1of_entity.html#a7f2d3651f10b25d188d323040f21245c">oficina::ofEntity</a>
 </li>
 <li>resetSpan()
 : <a class="el" href="classoficina_1_1of_frame_span.html#a088ff4735eeab5e4d8f0d2ded4530b8f">oficina::ofFrameSpan</a>
@@ -255,6 +275,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="classoficina_1_1of_canvas.html#a2403fdc23f6c3cb74f0b03505ce57534">oficina::ofCanvas</a>
 , <a class="el" href="classoficina_1_1of_canvas_manager.html#a68857f140f08d1dd59dfe42e091f7da6">oficina::ofCanvasManager</a>
 , <a class="el" href="classoficina_1_1of_entity.html#aacf49335bf40ac16e9614d2e2ffbaac8">oficina::ofEntity</a>
+, <a class="el" href="classoficina_1_1of_i_component.html#a395e8aa13c2aca0181afe13b3589ce0f">oficina::ofIComponent</a>
 , <a class="el" href="classoficina_1_1of_scheme.html#a5f9937dc88acbf944a14481358ebd6aa">oficina::ofScheme</a>
 </li>
 <li>update()
@@ -262,7 +283,11 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="classoficina_1_1of_canvas_manager.html#a030b2180d640052f93091985caf56133">oficina::ofCanvasManager</a>
 , <a class="el" href="classoficina_1_1of_entity.html#a9f32f90e2c59383891369921204a5014">oficina::ofEntity</a>
 , <a class="el" href="classoficina_1_1of_frame_span.html#a38b4fe08ef7d46ca27b870e8e0c1af34">oficina::ofFrameSpan</a>
+, <a class="el" href="classoficina_1_1of_i_component.html#ac782477d3ab295d8d924b0a0565419e4">oficina::ofIComponent</a>
 , <a class="el" href="classoficina_1_1of_scheme.html#a7019afd47a3643dc93ddcc6c84f28d32">oficina::ofScheme</a>
+</li>
+<li>UpdateComponents()
+: <a class="el" href="classoficina_1_1of_entity.html#aa309b0b3db2337d6b2616c51f0e8e7cf">oficina::ofEntity</a>
 </li>
 </ul>
 
@@ -282,13 +307,16 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>~ofEntity()
 : <a class="el" href="classoficina_1_1of_entity.html#a4787e05d6409757b58057b5b44b55203">oficina::ofEntity</a>
 </li>
+<li>~ofIComponent()
+: <a class="el" href="classoficina_1_1of_i_component.html#a161dea4d5c08069df1a06d98a669e054">oficina::ofIComponent</a>
+</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Feb 5 2017 15:58:54 for OficinaFramework by
+    <li class="footer">Generated on Mon Feb 6 2017 17:32:46 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
   </ul>

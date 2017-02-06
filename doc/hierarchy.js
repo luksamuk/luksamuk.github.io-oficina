@@ -10,13 +10,12 @@ var hierarchy =
     [ "oficina::ofContext", "classoficina_1_1of_context.html", null ],
     [ "oficina::ofDisplay", "classoficina_1_1of_display.html", null ],
     [ "oficina::ofEntity", "classoficina_1_1of_entity.html", null ],
-    [ "oficina::ofEntityCollection", "classoficina_1_1of_entity_collection.html", [
-      [ "oficina::ofUniformHashGrid", "classoficina_1_1of_uniform_hash_grid.html", null ]
-    ] ],
     [ "oficina::ofFont", "classoficina_1_1of_font.html", null ],
     [ "oficina::ofFrameSpan", "classoficina_1_1of_frame_span.html", null ],
+    [ "oficina::ofIComponent", "classoficina_1_1of_i_component.html", [
+      [ "oficina::ofScheme", "classoficina_1_1of_scheme.html", null ]
+    ] ],
     [ "oficina::ofInputState", "structoficina_1_1of_input_state.html", null ],
-    [ "oficina::ofScheme", "classoficina_1_1of_scheme.html", null ],
     [ "oficina::ofShader", "classoficina_1_1of_shader.html", null ],
     [ "oficina::ofShaderAttribute", "classoficina_1_1of_shader_attribute.html", null ],
     [ "oficina::ofShaderProgram", "classoficina_1_1of_shader_program.html", null ],

@@ -9,9 +9,8 @@ var files =
       [ "ofDisplay", "classoficina_1_1of_display.html", "classoficina_1_1of_display" ]
     ] ],
     [ "entity.hpp", "entity_8hpp.html", [
-      [ "ofEntityCollection", "classoficina_1_1of_entity_collection.html", null ],
-      [ "ofEntity", "classoficina_1_1of_entity.html", "classoficina_1_1of_entity" ],
-      [ "ofUniformHashGrid", "classoficina_1_1of_uniform_hash_grid.html", "classoficina_1_1of_uniform_hash_grid" ]
+      [ "ofIComponent", "classoficina_1_1of_i_component.html", "classoficina_1_1of_i_component" ],
+      [ "ofEntity", "classoficina_1_1of_entity.html", "classoficina_1_1of_entity" ]
     ] ],
     [ "input.hpp", "input_8hpp.html", "input_8hpp" ],
     [ "io.hpp", "io_8hpp.html", "io_8hpp" ],

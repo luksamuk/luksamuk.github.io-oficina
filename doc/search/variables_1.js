@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['leftstick',['leftStick',['../structoficina_1_1of_input_state.html#a1a6bf92046bf793c85fe618374335faa',1,'oficina::ofInputState']]]
+  ['eulerangles',['eulerangles',['../classoficina_1_1of_entity.html#a7eaea3d600d0d04cf607d87dd71fc85d',1,'oficina::ofEntity']]]
 ];

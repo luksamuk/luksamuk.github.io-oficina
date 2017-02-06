@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['scaling',['scaling',['../classoficina_1_1of_entity.html#a7a2612cfffd75f2a56202fe70b8a49bb',1,'oficina::ofEntity']]],
-  ['script',['script',['../classoficina_1_1of_entity.html#ae4b6e73e479ff375d8a6cb123ac7f6d5',1,'oficina::ofEntity']]]
+  ['rightstick',['rightStick',['../structoficina_1_1of_input_state.html#a227e4149ff8d9f9cc553ed33b4869feb',1,'oficina::ofInputState']]],
+  ['rotation',['rotation',['../classoficina_1_1of_entity.html#af41876387e4ff5e4338e594c0ac9bda9',1,'oficina::ofEntity']]]
 ];

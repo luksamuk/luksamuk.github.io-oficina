@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.12"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OficinaFramework: Main Page</title>
+<title>OficinaFramework: Oficina Framework</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0pre</span>
+   &#160;<span id="projectnumber">2.0.0a</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -82,15 +82,35 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">OficinaFramework Documentation</div>  </div>
+<div class="title">Oficina Framework </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>Copyright (c) 2016 Lucas Vieira.</p>
+<h1><a class="anchor" id="about"></a>
+About</h1>
+<p>OficinaFramework is a multiplatform framework for game development, created by Lucas Vieira. It is focused on bringing a layer of accessibility for modern OpenGL games, using C++ as language. While it makes a game developer's life easier, it still brings about a lot of support for advanced system features which other languages and engines insist on hiding. This way, the programmer can tweak the game's performance without a heavyweight system.</p>
+<h1><a class="anchor" id="license"></a>
+License</h1>
+<p>This engine is distributed under the LGPL v3.0 license. You can read more about it <a href="http://choosealicense.com/licenses/lgpl-3.0">here</a>.</p>
+<h1><a class="anchor" id="depends"></a>
+Dependancies</h1>
+<ul>
+<li>SDL2 &gt;= 2.0.5</li>
+<li>SDL2_Image &gt;= 2.0.0</li>
+<li>OpenGL 3.3 support or higher</li>
+<li>GLEW &gt;= 2.0.0</li>
+<li>GL Mathematics (GLM) &gt;= 0.9.8</li>
+</ul>
+<p>This engine also uses code from TinyScheme project by Dimitrios Souflis, (c) 2000. See src/oficina2/scheme/COPYING for details.</p>
+<h1><a class="anchor" id="build"></a>
+Building</h1>
+<p>Just <code>cd</code> to the repo's folder and use CMAKE. This will create a static library. You'll then be able to install it to your path.</p>
+<div class="fragment"><div class="line">mkdir build</div><div class="line">cd build</div><div class="line">cmake ..</div><div class="line">make</div><div class="line">sudo make install</div></div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Feb 5 2017 15:58:54 for OficinaFramework by
+    <li class="footer">Generated on Mon Feb 6 2017 17:32:46 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
   </ul>

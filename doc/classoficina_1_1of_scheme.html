@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0pre</span>
+   &#160;<span id="projectnumber">2.0.0a</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -93,15 +93,25 @@ $(document).ready(function(){initNavTree('classoficina_1_1of_scheme.html','');})
  <a href="classoficina_1_1of_scheme.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="ofscheme_8hpp_source.html">ofscheme.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for oficina::ofScheme:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classoficina_1_1of_scheme.png" usemap="#oficina::ofScheme_map" alt=""/>
+  <map id="oficina::ofScheme_map" name="oficina::ofScheme_map">
+<area href="classoficina_1_1of_i_component.html" title="Defines a single component to be attached to an entity. " alt="oficina::ofIComponent" shape="rect" coords="0,0,133,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aebd648977e4320aac45de13913282ce7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#aebd648977e4320aac45de13913282ce7">init</a> (std::string objname, <a class="el" href="classoficina_1_1of_entity.html">ofEntity</a> *e_this)</td></tr>
-<tr class="memdesc:aebd648977e4320aac45de13913282ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the script object.  <a href="#aebd648977e4320aac45de13913282ce7">More...</a><br /></td></tr>
-<tr class="separator:aebd648977e4320aac45de13913282ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af26ed27fe1c69991732717b70024f5a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#af26ed27fe1c69991732717b70024f5a8">load</a> (std::string filename)</td></tr>
-<tr class="memdesc:af26ed27fe1c69991732717b70024f5a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and evaluates an actual script file. You can also reload your script at runtime with this function, if needed.  <a href="#af26ed27fe1c69991732717b70024f5a8">More...</a><br /></td></tr>
-<tr class="separator:af26ed27fe1c69991732717b70024f5a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb84c8591b4c8b954cc7e8d1de9d1495"><td class="memItemLeft" align="right" valign="top"><a id="adb84c8591b4c8b954cc7e8d1de9d1495"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#adb84c8591b4c8b954cc7e8d1de9d1495">init</a> ()</td></tr>
+<tr class="memdesc:adb84c8591b4c8b954cc7e8d1de9d1495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the script object. <br /></td></tr>
+<tr class="separator:adb84c8591b4c8b954cc7e8d1de9d1495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c074439e5dd90e1e65d86b575dd321a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#a5c074439e5dd90e1e65d86b575dd321a">loadfile</a> (std::string filename)</td></tr>
+<tr class="memdesc:a5c074439e5dd90e1e65d86b575dd321a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and evaluates an actual script file. You can also reload your script at runtime with this function, if needed.  <a href="#a5c074439e5dd90e1e65d86b575dd321a">More...</a><br /></td></tr>
+<tr class="separator:a5c074439e5dd90e1e65d86b575dd321a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f9937dc88acbf944a14481358ebd6aa"><td class="memItemLeft" align="right" valign="top"><a id="a5f9937dc88acbf944a14481358ebd6aa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#a5f9937dc88acbf944a14481358ebd6aa">unload</a> ()</td></tr>
 <tr class="memdesc:a5f9937dc88acbf944a14481358ebd6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disposes the script object. <br /></td></tr>
@@ -112,57 +122,41 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a802a0bcce12d85aca8914b7f7dd92daf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#a802a0bcce12d85aca8914b7f7dd92daf">regFunc</a> (std::string symbol, foreign_func fun)</td></tr>
 <tr class="memdesc:a802a0bcce12d85aca8914b7f7dd92daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/registers a foreign function on the script object.  <a href="#a802a0bcce12d85aca8914b7f7dd92daf">More...</a><br /></td></tr>
 <tr class="separator:a802a0bcce12d85aca8914b7f7dd92daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classoficina_1_1of_i_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classoficina_1_1of_i_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classoficina_1_1of_i_component.html">oficina::ofIComponent</a></td></tr>
+<tr class="memitem:a161dea4d5c08069df1a06d98a669e054 inherit pub_methods_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a161dea4d5c08069df1a06d98a669e054"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a161dea4d5c08069df1a06d98a669e054">~ofIComponent</a> ()</td></tr>
+<tr class="memdesc:a161dea4d5c08069df1a06d98a669e054 inherit pub_methods_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
+<tr class="separator:a161dea4d5c08069df1a06d98a669e054 inherit pub_methods_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1649f7a3944ac68abf35b9f7b0580054 inherit pub_methods_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a1649f7a3944ac68abf35b9f7b0580054"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a1649f7a3944ac68abf35b9f7b0580054">load</a> ()</td></tr>
+<tr class="memdesc:a1649f7a3944ac68abf35b9f7b0580054 inherit pub_methods_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads assets and such for the component. Overriding is optional. <br /></td></tr>
+<tr class="separator:a1649f7a3944ac68abf35b9f7b0580054 inherit pub_methods_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49fec000bce223717023b080cfbf0e0f inherit pub_methods_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a49fec000bce223717023b080cfbf0e0f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a49fec000bce223717023b080cfbf0e0f">draw</a> ()</td></tr>
+<tr class="memdesc:a49fec000bce223717023b080cfbf0e0f inherit pub_methods_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the component. Overriding is optional. <br /></td></tr>
+<tr class="separator:a49fec000bce223717023b080cfbf0e0f inherit pub_methods_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classoficina_1_1of_i_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classoficina_1_1of_i_component')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classoficina_1_1of_i_component.html">oficina::ofIComponent</a></td></tr>
+<tr class="memitem:a1d2ff6acbb5ceec9303275ed3bfbb200 inherit pro_attribs_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a1d2ff6acbb5ceec9303275ed3bfbb200"></a>
+<a class="el" href="classoficina_1_1of_entity.html">ofEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a1d2ff6acbb5ceec9303275ed3bfbb200">parent</a></td></tr>
+<tr class="memdesc:a1d2ff6acbb5ceec9303275ed3bfbb200 inherit pro_attribs_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct pointer to this component's parent entity. It is advised not to change this pointer. <br /></td></tr>
+<tr class="separator:a1d2ff6acbb5ceec9303275ed3bfbb200 inherit pro_attribs_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines one Scheme environment to be used inside an entity. </p>
 
-<p>Definition at line <a class="el" href="ofscheme_8hpp_source.html#l00074">74</a> of file <a class="el" href="ofscheme_8hpp_source.html">ofscheme.hpp</a>.</p>
+<p>Definition at line <a class="el" href="ofscheme_8hpp_source.html#l00075">75</a> of file <a class="el" href="ofscheme_8hpp_source.html">ofscheme.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="aebd648977e4320aac45de13913282ce7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aebd648977e4320aac45de13913282ce7">&sect;&nbsp;</a></span>init()</h2>
+<a id="a5c074439e5dd90e1e65d86b575dd321a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c074439e5dd90e1e65d86b575dd321a">&sect;&nbsp;</a></span>loadfile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void oficina::ofScheme::init </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>objname</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classoficina_1_1of_entity.html">ofEntity</a> *&#160;</td>
-          <td class="paramname"><em>e_this</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes the script object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">objname</td><td>Name of the entity that is using this scripting system. </td></tr>
-    <tr><td class="paramname">e_this</td><td>Pointer to the entity that is using this scripting system. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="af26ed27fe1c69991732717b70024f5a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af26ed27fe1c69991732717b70024f5a8">&sect;&nbsp;</a></span>load()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void oficina::ofScheme::load </td>
+          <td class="memname">void oficina::ofScheme::loadfile </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>filename</em></td><td>)</td>
@@ -178,6 +172,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>See the <a class="el" href="schemeref.html">ofScheme API Reference</a> for details. </dd></dl>
 
 </div>
 </div>
@@ -223,6 +218,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void oficina::ofScheme::update </td>
@@ -232,6 +230,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Calls the script object's update function, if existing. </p>
@@ -241,6 +244,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </table>
   </dd>
 </dl>
+
+<p>Implements <a class="el" href="classoficina_1_1of_i_component.html#ac782477d3ab295d8d924b0a0565419e4">oficina::ofIComponent</a>.</p>
 
 </div>
 </div>
@@ -253,7 +258,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_scheme.html">ofScheme</a></li>
-    <li class="footer">Generated on Sun Feb 5 2017 15:58:54 for OficinaFramework by
+    <li class="footer">Generated on Mon Feb 6 2017 17:32:46 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
   </ul>

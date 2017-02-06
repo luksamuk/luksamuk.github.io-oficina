@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['magnification',['magnification',['../classoficina_1_1of_entity.html#a6dddde41f0181dec756df2093bca0c83',1,'oficina::ofEntity']]]
+  ['leftstick',['leftStick',['../structoficina_1_1of_input_state.html#a1a6bf92046bf793c85fe618374335faa',1,'oficina::ofInputState']]]
 ];

@@ -9,9 +9,9 @@ var annotated_dup =
       [ "ofDisplay", "classoficina_1_1of_display.html", "classoficina_1_1of_display" ],
       [ "ofElementBuffer", "classoficina_1_1of_element_buffer.html", "classoficina_1_1of_element_buffer" ],
       [ "ofEntity", "classoficina_1_1of_entity.html", "classoficina_1_1of_entity" ],
-      [ "ofEntityCollection", "classoficina_1_1of_entity_collection.html", null ],
       [ "ofFont", "classoficina_1_1of_font.html", "classoficina_1_1of_font" ],
       [ "ofFrameSpan", "classoficina_1_1of_frame_span.html", "classoficina_1_1of_frame_span" ],
+      [ "ofIComponent", "classoficina_1_1of_i_component.html", "classoficina_1_1of_i_component" ],
       [ "ofInputState", "structoficina_1_1of_input_state.html", "structoficina_1_1of_input_state" ],
       [ "ofScheme", "classoficina_1_1of_scheme.html", "classoficina_1_1of_scheme" ],
       [ "ofShader", "classoficina_1_1of_shader.html", "classoficina_1_1of_shader" ],
@@ -22,7 +22,6 @@ var annotated_dup =
       [ "ofTexturePool", "classoficina_1_1of_texture_pool.html", null ],
       [ "ofTextureRenderer", "classoficina_1_1of_texture_renderer.html", "classoficina_1_1of_texture_renderer" ],
       [ "ofTimeSpan", "classoficina_1_1of_time_span.html", "classoficina_1_1of_time_span" ],
-      [ "ofUniformHashGrid", "classoficina_1_1of_uniform_hash_grid.html", "classoficina_1_1of_uniform_hash_grid" ],
       [ "ofVertexArray", "classoficina_1_1of_vertex_array.html", "classoficina_1_1of_vertex_array" ],
       [ "ofVertexBuffer", "classoficina_1_1of_vertex_buffer.html", "classoficina_1_1of_vertex_buffer" ]
     ] ]

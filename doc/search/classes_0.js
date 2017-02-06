@@ -8,9 +8,9 @@ var searchData=
   ['ofdisplay',['ofDisplay',['../classoficina_1_1of_display.html',1,'oficina']]],
   ['ofelementbuffer',['ofElementBuffer',['../classoficina_1_1of_element_buffer.html',1,'oficina']]],
   ['ofentity',['ofEntity',['../classoficina_1_1of_entity.html',1,'oficina']]],
-  ['ofentitycollection',['ofEntityCollection',['../classoficina_1_1of_entity_collection.html',1,'oficina']]],
   ['offont',['ofFont',['../classoficina_1_1of_font.html',1,'oficina']]],
   ['offramespan',['ofFrameSpan',['../classoficina_1_1of_frame_span.html',1,'oficina']]],
+  ['oficomponent',['ofIComponent',['../classoficina_1_1of_i_component.html',1,'oficina']]],
   ['ofinputstate',['ofInputState',['../structoficina_1_1of_input_state.html',1,'oficina']]],
   ['ofscheme',['ofScheme',['../classoficina_1_1of_scheme.html',1,'oficina']]],
   ['ofshader',['ofShader',['../classoficina_1_1of_shader.html',1,'oficina']]],
@@ -21,7 +21,6 @@ var searchData=
   ['oftexturepool',['ofTexturePool',['../classoficina_1_1of_texture_pool.html',1,'oficina']]],
   ['oftexturerenderer',['ofTextureRenderer',['../classoficina_1_1of_texture_renderer.html',1,'oficina']]],
   ['oftimespan',['ofTimeSpan',['../classoficina_1_1of_time_span.html',1,'oficina']]],
-  ['ofuniformhashgrid',['ofUniformHashGrid',['../classoficina_1_1of_uniform_hash_grid.html',1,'oficina']]],
   ['ofvertexarray',['ofVertexArray',['../classoficina_1_1of_vertex_array.html',1,'oficina']]],
   ['ofvertexbuffer',['ofVertexBuffer',['../classoficina_1_1of_vertex_buffer.html',1,'oficina']]]
 ];
