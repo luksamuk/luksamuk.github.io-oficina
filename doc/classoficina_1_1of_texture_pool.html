@@ -88,29 +88,170 @@ $(document).ready(function(){initNavTree('classoficina_1_1of_texture_pool.html',
 <div class="title">oficina::ofTexturePool Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Static object for managing textures. Most (if not all) textures should be loaded using this tool.  
+ <a href="classoficina_1_1of_texture_pool.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="render_8hpp_source.html">render.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a50027af787ad1203f34b3f59381ee846"><td class="memItemLeft" align="right" valign="top"><a id="a50027af787ad1203f34b3f59381ee846"></a>
-static <a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (std::string filename)</td></tr>
+<tr class="memitem:a50027af787ad1203f34b3f59381ee846"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_pool.html#a50027af787ad1203f34b3f59381ee846">load</a> (std::string filename)</td></tr>
+<tr class="memdesc:a50027af787ad1203f34b3f59381ee846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a texture from disk.  <a href="#a50027af787ad1203f34b3f59381ee846">More...</a><br /></td></tr>
 <tr class="separator:a50027af787ad1203f34b3f59381ee846"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c962a5e179bd150dbd33a13c3529df2"><td class="memItemLeft" align="right" valign="top"><a id="a4c962a5e179bd150dbd33a13c3529df2"></a>
-static <a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td><td class="memItemRight" valign="bottom"><b>load</b> (SDL_Surface *surf)</td></tr>
+<tr class="memitem:a4c962a5e179bd150dbd33a13c3529df2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_pool.html#a4c962a5e179bd150dbd33a13c3529df2">load</a> (SDL_Surface *surf)</td></tr>
+<tr class="memdesc:a4c962a5e179bd150dbd33a13c3529df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a texture from memory.  <a href="#a4c962a5e179bd150dbd33a13c3529df2">More...</a><br /></td></tr>
 <tr class="separator:a4c962a5e179bd150dbd33a13c3529df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f43b495ac2d45a19bb10b8875edc959"><td class="memItemLeft" align="right" valign="top"><a id="a7f43b495ac2d45a19bb10b8875edc959"></a>
-static <a class="el" href="classoficina_1_1of_font.html">ofFont</a>&#160;</td><td class="memItemRight" valign="bottom"><b>loadDefaultFont</b> ()</td></tr>
+<tr class="memitem:a7f43b495ac2d45a19bb10b8875edc959"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classoficina_1_1of_font.html">ofFont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_pool.html#a7f43b495ac2d45a19bb10b8875edc959">loadDefaultFont</a> ()</td></tr>
+<tr class="memdesc:a7f43b495ac2d45a19bb10b8875edc959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads Oficina's default font (GohuFont 11).  <a href="#a7f43b495ac2d45a19bb10b8875edc959">More...</a><br /></td></tr>
 <tr class="separator:a7f43b495ac2d45a19bb10b8875edc959"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeacd1af3470918881256531273020c6a"><td class="memItemLeft" align="right" valign="top"><a id="aeacd1af3470918881256531273020c6a"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>unload</b> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> &amp;t)</td></tr>
+<tr class="memitem:aeacd1af3470918881256531273020c6a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_pool.html#aeacd1af3470918881256531273020c6a">unload</a> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> &amp;t)</td></tr>
+<tr class="memdesc:aeacd1af3470918881256531273020c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads a font.  <a href="#aeacd1af3470918881256531273020c6a">More...</a><br /></td></tr>
 <tr class="separator:aeacd1af3470918881256531273020c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a990716f656c3fe384c60d90c219da8e9"><td class="memItemLeft" align="right" valign="top"><a id="a990716f656c3fe384c60d90c219da8e9"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_pool.html#a990716f656c3fe384c60d90c219da8e9">clear</a> ()</td></tr>
+<tr class="memdesc:a990716f656c3fe384c60d90c219da8e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads ALL textures on the pool. <br /></td></tr>
 <tr class="separator:a990716f656c3fe384c60d90c219da8e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="render_8hpp_source.html#l00360">360</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Static object for managing textures. Most (if not all) textures should be loaded using this tool. </p>
+<dl class="section note"><dt>Note</dt><dd>The use of this tool for managing textures is so that, when requiring a specific texture, it would never be loaded more than once. Furthermore, closing Oficina will also dispose all textures initialized, so if there is any leak of sorts, Oficina should be able to handle it nonetheless. </dd></dl>
+
+<p>Definition at line <a class="el" href="render_8hpp_source.html#l00678">678</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a50027af787ad1203f34b3f59381ee846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50027af787ad1203f34b3f59381ee846">&sect;&nbsp;</a></span>load() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> oficina::ofTexturePool::load </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads a texture from disk. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>File location on the disk. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the loaded texture. </dd></dl>
+
+</div>
+</div>
+<a id="a4c962a5e179bd150dbd33a13c3529df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c962a5e179bd150dbd33a13c3529df2">&sect;&nbsp;</a></span>load() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> oficina::ofTexturePool::load </td>
+          <td>(</td>
+          <td class="paramtype">SDL_Surface *&#160;</td>
+          <td class="paramname"><em>surf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads a texture from memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">surf</td><td>SDL surface containing texture data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the loaded texture. </dd></dl>
+
+</div>
+</div>
+<a id="a7f43b495ac2d45a19bb10b8875edc959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f43b495ac2d45a19bb10b8875edc959">&sect;&nbsp;</a></span>loadDefaultFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classoficina_1_1of_font.html">ofFont</a> oficina::ofTexturePool::loadDefaultFont </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads Oficina's default font (GohuFont 11). </p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the default font. </dd></dl>
+
+</div>
+</div>
+<a id="aeacd1af3470918881256531273020c6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeacd1af3470918881256531273020c6a">&sect;&nbsp;</a></span>unload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void oficina::ofTexturePool::unload </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> &amp;&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unloads a font. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Reference to the font to be unloaded. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="render_8hpp_source.html">render.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -119,7 +260,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_texture_pool.html">ofTexturePool</a></li>
-    <li class="footer">Generated on Mon Feb 6 2017 18:08:41 for OficinaFramework by
+    <li class="footer">Generated on Tue Feb 7 2017 18:18:20 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
   </ul>

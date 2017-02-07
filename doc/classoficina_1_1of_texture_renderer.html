@@ -88,32 +88,232 @@ $(document).ready(function(){initNavTree('classoficina_1_1of_texture_renderer.ht
 <div class="title">oficina::ofTextureRenderer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Tool for easily rendering 2D textures or texture atlases.  
+ <a href="classoficina_1_1of_texture_renderer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="render_8hpp_source.html">render.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae6e87a34829d0c87e27088694f4c95b5"><td class="memItemLeft" align="right" valign="top"><a id="ae6e87a34829d0c87e27088694f4c95b5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> t, glm::uvec2 frameSize=glm::uvec2(0, 0))</td></tr>
+<tr class="memitem:ae6e87a34829d0c87e27088694f4c95b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_renderer.html#ae6e87a34829d0c87e27088694f4c95b5">init</a> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> t, glm::uvec2 frameSize=glm::uvec2(0, 0))</td></tr>
+<tr class="memdesc:ae6e87a34829d0c87e27088694f4c95b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the renderer.  <a href="#ae6e87a34829d0c87e27088694f4c95b5">More...</a><br /></td></tr>
 <tr class="separator:ae6e87a34829d0c87e27088694f4c95b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3810e478a2e27421aefffee5d32fd387"><td class="memItemLeft" align="right" valign="top"><a id="a3810e478a2e27421aefffee5d32fd387"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> (glm::vec2 position, glm::mat4 mvp, <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> frame=0u, glm::vec4 color=glm::vec4(1.0f), float mag=1.0f)</td></tr>
+<tr class="memitem:a3810e478a2e27421aefffee5d32fd387"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_renderer.html#a3810e478a2e27421aefffee5d32fd387">render</a> (glm::vec2 position, glm::mat4 mvp, <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> frame=0u, glm::vec4 color=glm::vec4(1.0f), float mag=1.0f)</td></tr>
+<tr class="memdesc:a3810e478a2e27421aefffee5d32fd387"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders a frame of the texture.  <a href="#a3810e478a2e27421aefffee5d32fd387">More...</a><br /></td></tr>
 <tr class="separator:a3810e478a2e27421aefffee5d32fd387"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0312183536a45a3884c0b255a324ec64"><td class="memItemLeft" align="right" valign="top"><a id="a0312183536a45a3884c0b255a324ec64"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unload</b> ()</td></tr>
+<tr class="memitem:a0312183536a45a3884c0b255a324ec64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_renderer.html#a0312183536a45a3884c0b255a324ec64">unload</a> ()</td></tr>
+<tr class="memdesc:a0312183536a45a3884c0b255a324ec64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads the texture renderer.  <a href="#a0312183536a45a3884c0b255a324ec64">More...</a><br /></td></tr>
 <tr class="separator:a0312183536a45a3884c0b255a324ec64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3319354409e323bbc2cc9807e1b69e44"><td class="memItemLeft" align="right" valign="top"><a id="a3319354409e323bbc2cc9807e1b69e44"></a>
-<a class="el" href="classoficina_1_1of_texture_renderer.html">ofTextureRenderer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classoficina_1_1of_texture_renderer.html">ofTextureRenderer</a> &amp;other)</td></tr>
+<tr class="memitem:a3319354409e323bbc2cc9807e1b69e44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classoficina_1_1of_texture_renderer.html">ofTextureRenderer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_renderer.html#a3319354409e323bbc2cc9807e1b69e44">operator=</a> (const <a class="el" href="classoficina_1_1of_texture_renderer.html">ofTextureRenderer</a> &amp;other)</td></tr>
+<tr class="memdesc:a3319354409e323bbc2cc9807e1b69e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Equals" operator for cloning a texture renderer.  <a href="#a3319354409e323bbc2cc9807e1b69e44">More...</a><br /></td></tr>
 <tr class="separator:a3319354409e323bbc2cc9807e1b69e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac919c430849236e28e9a93646f8ef3ef"><td class="memItemLeft" align="right" valign="top"><a id="ac919c430849236e28e9a93646f8ef3ef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTexture</b> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> t)</td></tr>
+<tr class="memitem:ac919c430849236e28e9a93646f8ef3ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_renderer.html#ac919c430849236e28e9a93646f8ef3ef">SetTexture</a> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> t)</td></tr>
+<tr class="memdesc:ac919c430849236e28e9a93646f8ef3ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamically changes the texture used by the renderer. Particularly useful for handling skins and such.  <a href="#ac919c430849236e28e9a93646f8ef3ef">More...</a><br /></td></tr>
 <tr class="separator:ac919c430849236e28e9a93646f8ef3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afca13f855b684c7350b0f81c8e861714"><td class="memItemLeft" align="right" valign="top"><a id="afca13f855b684c7350b0f81c8e861714"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> () const</td></tr>
+<tr class="memitem:afca13f855b684c7350b0f81c8e861714"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_renderer.html#afca13f855b684c7350b0f81c8e861714">isInit</a> () const</td></tr>
+<tr class="memdesc:afca13f855b684c7350b0f81c8e861714"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for texture renderer initialization.  <a href="#afca13f855b684c7350b0f81c8e861714">More...</a><br /></td></tr>
 <tr class="separator:afca13f855b684c7350b0f81c8e861714"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="render_8hpp_source.html#l00373">373</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Tool for easily rendering 2D textures or texture atlases. </p>
+
+<p>Definition at line <a class="el" href="render_8hpp_source.html#l00702">702</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae6e87a34829d0c87e27088694f4c95b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6e87a34829d0c87e27088694f4c95b5">&sect;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofTextureRenderer::init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::uvec2&#160;</td>
+          <td class="paramname"><em>frameSize</em> = <code>glm::uvec2(0,&#160;0)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the renderer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Reference to the texture. </td></tr>
+    <tr><td class="paramname">frameSize</td><td>2D unsigned integer vector with the size of a frame on the texture. Particularly useful if handling texture atlases. If ignored or passed with null values, the renderer will reat the whole texture as a single frame. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afca13f855b684c7350b0f81c8e861714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afca13f855b684c7350b0f81c8e861714">&sect;&nbsp;</a></span>isInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool oficina::ofTextureRenderer::isInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks for texture renderer initialization. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the texture renderer was initialized or not. </dd></dl>
+
+</div>
+</div>
+<a id="a3319354409e323bbc2cc9807e1b69e44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3319354409e323bbc2cc9807e1b69e44">&sect;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classoficina_1_1of_texture_renderer.html">ofTextureRenderer</a>&amp; oficina::ofTextureRenderer::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classoficina_1_1of_texture_renderer.html">ofTextureRenderer</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>"Equals" operator for cloning a texture renderer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Texture renderer to be cloned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this renderer. </dd></dl>
+
+</div>
+</div>
+<a id="a3810e478a2e27421aefffee5d32fd387"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3810e478a2e27421aefffee5d32fd387">&sect;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofTextureRenderer::render </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::mat4&#160;</td>
+          <td class="paramname"><em>mvp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a>&#160;</td>
+          <td class="paramname"><em>frame</em> = <code>0u</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec4&#160;</td>
+          <td class="paramname"><em>color</em> = <code>glm::vec4(1.0f)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>mag</em> = <code>1.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renders a frame of the texture. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>Position of the texture (centered) on the matrix. </td></tr>
+    <tr><td class="paramname">mvp</td><td>Model-View-Projection matrix to be used when drawing the texture. </td></tr>
+    <tr><td class="paramname">frame</td><td>Frame to be retrieved from the texture, if it's a texture atlas.<br />
+ Frames are counted left to right, up to down respectively, starting at zero and assuming how many textures of the already given frame size fit on the texture's horizontal size.<br />
+ If texture is not an atlas, value defaults to 0, as the whole texture corresponds to its frame size, and therefore only one frame will fit it. </td></tr>
+    <tr><td class="paramname">color</td><td>4D vector specifying which color the texture should be tinted with.<br />
+Corresponds to a format {R, G, B, A}. Default values are {1, 1, 1, 1}. </td></tr>
+    <tr><td class="paramname">mag</td><td>Magnitude (scaling) of the drawn texture or frame. Defaults to 1.0f (default frame size). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>This rendering process uses a dynamic buffer and uploads vertex buffer data every frame, so it is as efficient as it can get, given that it has a dynamic and general-purpose behaviour. </dd></dl>
+
+</div>
+</div>
+<a id="ac919c430849236e28e9a93646f8ef3ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac919c430849236e28e9a93646f8ef3ef">&sect;&nbsp;</a></span>SetTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofTextureRenderer::SetTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dynamically changes the texture used by the renderer. Particularly useful for handling skins and such. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Be wary that this operation will not change the frame size, therefore both images should have the same padding. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Texture to be now associated with this renderer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0312183536a45a3884c0b255a324ec64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0312183536a45a3884c0b255a324ec64">&sect;&nbsp;</a></span>unload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofTextureRenderer::unload </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unloads the texture renderer. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This operation will not unload the texture itself. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="render_8hpp_source.html">render.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -122,7 +322,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> () const</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_texture_renderer.html">ofTextureRenderer</a></li>
-    <li class="footer">Generated on Mon Feb 6 2017 18:08:41 for OficinaFramework by
+    <li class="footer">Generated on Tue Feb 7 2017 18:18:20 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
   </ul>

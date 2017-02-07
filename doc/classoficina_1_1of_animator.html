@@ -89,65 +89,554 @@ $(document).ready(function(){initNavTree('classoficina_1_1of_animator.html','');
 <div class="title">oficina::ofAnimator Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Tool for controlling a texture renderer to generate animations.  
+ <a href="classoficina_1_1of_animator.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="render_8hpp_source.html">render.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab985d22f97e78a770db7370f80a3a226"><td class="memItemLeft" align="right" valign="top"><a id="ab985d22f97e78a770db7370f80a3a226"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> t, glm::uvec2 frameSize, bool manageTexture=false)</td></tr>
+<tr class="memitem:ab985d22f97e78a770db7370f80a3a226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#ab985d22f97e78a770db7370f80a3a226">init</a> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> t, glm::uvec2 frameSize, bool manageTexture=false)</td></tr>
+<tr class="memdesc:ab985d22f97e78a770db7370f80a3a226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the animator.  <a href="#ab985d22f97e78a770db7370f80a3a226">More...</a><br /></td></tr>
 <tr class="separator:ab985d22f97e78a770db7370f80a3a226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b2ee5748e4bd68816d698d813232616"><td class="memItemLeft" align="right" valign="top"><a id="a1b2ee5748e4bd68816d698d813232616"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unload</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a1b2ee5748e4bd68816d698d813232616">unload</a> ()</td></tr>
+<tr class="memdesc:a1b2ee5748e4bd68816d698d813232616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads the animator, and unloads the texture if texture is being managed by this tool. <br /></td></tr>
 <tr class="separator:a1b2ee5748e4bd68816d698d813232616"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a933297c2388ea81f359b4864cab3b9f8"><td class="memItemLeft" align="right" valign="top"><a id="a933297c2388ea81f359b4864cab3b9f8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (float dt)</td></tr>
+<tr class="memitem:a933297c2388ea81f359b4864cab3b9f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a933297c2388ea81f359b4864cab3b9f8">update</a> (float dt)</td></tr>
+<tr class="memdesc:a933297c2388ea81f359b4864cab3b9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the animation step.  <a href="#a933297c2388ea81f359b4864cab3b9f8">More...</a><br /></td></tr>
 <tr class="separator:a933297c2388ea81f359b4864cab3b9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d42be6197fbaf9186f10b89355ae5c"><td class="memItemLeft" align="right" valign="top"><a id="af5d42be6197fbaf9186f10b89355ae5c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> (glm::mat4 ViewProjection, float magnification=1.0f)</td></tr>
+<tr class="memitem:af5d42be6197fbaf9186f10b89355ae5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#af5d42be6197fbaf9186f10b89355ae5c">draw</a> (glm::mat4 ViewProjection, float magnification=1.0f)</td></tr>
+<tr class="memdesc:af5d42be6197fbaf9186f10b89355ae5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the animation.  <a href="#af5d42be6197fbaf9186f10b89355ae5c">More...</a><br /></td></tr>
 <tr class="separator:af5d42be6197fbaf9186f10b89355ae5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98ed6ee3f01d03625e48a674a670c567"><td class="memItemLeft" align="right" valign="top"><a id="a98ed6ee3f01d03625e48a674a670c567"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reg</b> (std::string animName, <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> nFrames, const <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> *animFrames, float speed, bool loops=false, <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> loopBackTo=0u)</td></tr>
+<tr class="memitem:a98ed6ee3f01d03625e48a674a670c567"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a98ed6ee3f01d03625e48a674a670c567">reg</a> (std::string animName, <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> nFrames, const <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> *animFrames, float speed, bool loops=false, <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> loopBackTo=0u)</td></tr>
+<tr class="memdesc:a98ed6ee3f01d03625e48a674a670c567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an animation by name.  <a href="#a98ed6ee3f01d03625e48a674a670c567">More...</a><br /></td></tr>
 <tr class="separator:a98ed6ee3f01d03625e48a674a670c567"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fe85d6775bf836d59f4834f0becc9f6"><td class="memItemLeft" align="right" valign="top"><a id="a5fe85d6775bf836d59f4834f0becc9f6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unreg</b> (std::string animName)</td></tr>
+<tr class="memitem:a5fe85d6775bf836d59f4834f0becc9f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a5fe85d6775bf836d59f4834f0becc9f6">unreg</a> (std::string animName)</td></tr>
+<tr class="memdesc:a5fe85d6775bf836d59f4834f0becc9f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregisters an animation.  <a href="#a5fe85d6775bf836d59f4834f0becc9f6">More...</a><br /></td></tr>
 <tr class="separator:a5fe85d6775bf836d59f4834f0becc9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3287bf10a305d742578b681c4b9eab2c"><td class="memItemLeft" align="right" valign="top"><a id="a3287bf10a305d742578b681c4b9eab2c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAnimation</b> (std::string animName)</td></tr>
+<tr class="memitem:a3287bf10a305d742578b681c4b9eab2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a3287bf10a305d742578b681c4b9eab2c">SetAnimation</a> (std::string animName)</td></tr>
+<tr class="memdesc:a3287bf10a305d742578b681c4b9eab2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current animation to another one.  <a href="#a3287bf10a305d742578b681c4b9eab2c">More...</a><br /></td></tr>
 <tr class="separator:a3287bf10a305d742578b681c4b9eab2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26e67484c29f5c650e2feb48e4531f92"><td class="memItemLeft" align="right" valign="top"><a id="a26e67484c29f5c650e2feb48e4531f92"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SyncToFrameRate</b> (bool state)</td></tr>
+<tr class="memitem:a26e67484c29f5c650e2feb48e4531f92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a26e67484c29f5c650e2feb48e4531f92">SyncToFrameRate</a> (bool state)</td></tr>
+<tr class="memdesc:a26e67484c29f5c650e2feb48e4531f92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the animation should remain synced to frame rate (frame-dependent) or not (frame-independent).  <a href="#a26e67484c29f5c650e2feb48e4531f92">More...</a><br /></td></tr>
 <tr class="separator:a26e67484c29f5c650e2feb48e4531f92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f9af60846fa592bdd4c82e38cbf6e64"><td class="memItemLeft" align="right" valign="top"><a id="a3f9af60846fa592bdd4c82e38cbf6e64"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAnimationSpeed</b> (float spd)</td></tr>
+<tr class="memitem:a3f9af60846fa592bdd4c82e38cbf6e64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a3f9af60846fa592bdd4c82e38cbf6e64">SetAnimationSpeed</a> (float spd)</td></tr>
+<tr class="memdesc:a3f9af60846fa592bdd4c82e38cbf6e64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamically change the animation speed. This speed is never stored.  <a href="#a3f9af60846fa592bdd4c82e38cbf6e64">More...</a><br /></td></tr>
 <tr class="separator:a3f9af60846fa592bdd4c82e38cbf6e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac78c53d4c9d300b58659c47b943eeca9"><td class="memItemLeft" align="right" valign="top"><a id="ac78c53d4c9d300b58659c47b943eeca9"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>GetAnimationSpeed</b> () const</td></tr>
+<tr class="memitem:ac78c53d4c9d300b58659c47b943eeca9"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#ac78c53d4c9d300b58659c47b943eeca9">GetAnimationSpeed</a> () const</td></tr>
+<tr class="memdesc:ac78c53d4c9d300b58659c47b943eeca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields the animation speed.  <a href="#ac78c53d4c9d300b58659c47b943eeca9">More...</a><br /></td></tr>
 <tr class="separator:ac78c53d4c9d300b58659c47b943eeca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55282ef661149b256fe8e15c0da311ac"><td class="memItemLeft" align="right" valign="top"><a id="a55282ef661149b256fe8e15c0da311ac"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>GetDefaultAnimationSpeed</b> () const</td></tr>
+<tr class="memitem:a55282ef661149b256fe8e15c0da311ac"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a55282ef661149b256fe8e15c0da311ac">GetDefaultAnimationSpeed</a> () const</td></tr>
+<tr class="memdesc:a55282ef661149b256fe8e15c0da311ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields the default animation speed.  <a href="#a55282ef661149b256fe8e15c0da311ac">More...</a><br /></td></tr>
 <tr class="separator:a55282ef661149b256fe8e15c0da311ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94c87e4b818627089732d9438ee356ed"><td class="memItemLeft" align="right" valign="top"><a id="a94c87e4b818627089732d9438ee356ed"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAnimationRunning</b> (bool state)</td></tr>
+<tr class="memitem:a94c87e4b818627089732d9438ee356ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a94c87e4b818627089732d9438ee356ed">SetAnimationRunning</a> (bool state)</td></tr>
+<tr class="memdesc:a94c87e4b818627089732d9438ee356ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the animation should be played or not. Defaults to true.  <a href="#a94c87e4b818627089732d9438ee356ed">More...</a><br /></td></tr>
 <tr class="separator:a94c87e4b818627089732d9438ee356ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2e7516f8d5a34fff5c7245b0932c871"><td class="memItemLeft" align="right" valign="top"><a id="af2e7516f8d5a34fff5c7245b0932c871"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetAnimationTexture</b> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> t)</td></tr>
+<tr class="memitem:af2e7516f8d5a34fff5c7245b0932c871"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#af2e7516f8d5a34fff5c7245b0932c871">SetAnimationTexture</a> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> t)</td></tr>
+<tr class="memdesc:af2e7516f8d5a34fff5c7245b0932c871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamically changes the internal texture atlas. Particularly useful for handling skins and such.  <a href="#af2e7516f8d5a34fff5c7245b0932c871">More...</a><br /></td></tr>
 <tr class="separator:af2e7516f8d5a34fff5c7245b0932c871"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a877f305bcde7f966df420977315731b8"><td class="memItemLeft" align="right" valign="top"><a id="a877f305bcde7f966df420977315731b8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> () const</td></tr>
+<tr class="memitem:a877f305bcde7f966df420977315731b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a877f305bcde7f966df420977315731b8">isInit</a> () const</td></tr>
+<tr class="memdesc:a877f305bcde7f966df420977315731b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the animator was initialized.  <a href="#a877f305bcde7f966df420977315731b8">More...</a><br /></td></tr>
 <tr class="separator:a877f305bcde7f966df420977315731b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52a6845c8f0ef6d7ee4bad44266b37b3"><td class="memItemLeft" align="right" valign="top"><a id="a52a6845c8f0ef6d7ee4bad44266b37b3"></a>
-glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><b>getPosition</b> ()</td></tr>
+<tr class="memitem:a52a6845c8f0ef6d7ee4bad44266b37b3"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a52a6845c8f0ef6d7ee4bad44266b37b3">getPosition</a> ()</td></tr>
+<tr class="memdesc:a52a6845c8f0ef6d7ee4bad44266b37b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields the position of the animation on the matrix.  <a href="#a52a6845c8f0ef6d7ee4bad44266b37b3">More...</a><br /></td></tr>
 <tr class="separator:a52a6845c8f0ef6d7ee4bad44266b37b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65388f5535255ab17ec94fedecd6cf5b"><td class="memItemLeft" align="right" valign="top"><a id="a65388f5535255ab17ec94fedecd6cf5b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPosition</b> (glm::vec2 pos)</td></tr>
+<tr class="memitem:a65388f5535255ab17ec94fedecd6cf5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a65388f5535255ab17ec94fedecd6cf5b">setPosition</a> (glm::vec2 pos)</td></tr>
+<tr class="memdesc:a65388f5535255ab17ec94fedecd6cf5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the position of the animation on the matrix.  <a href="#a65388f5535255ab17ec94fedecd6cf5b">More...</a><br /></td></tr>
 <tr class="separator:a65388f5535255ab17ec94fedecd6cf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00a3ebaae27d4910d52756efbbb59b81"><td class="memItemLeft" align="right" valign="top"><a id="a00a3ebaae27d4910d52756efbbb59b81"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetAnimationRunning</b> () const</td></tr>
+<tr class="memitem:a00a3ebaae27d4910d52756efbbb59b81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a00a3ebaae27d4910d52756efbbb59b81">GetAnimationRunning</a> () const</td></tr>
+<tr class="memdesc:a00a3ebaae27d4910d52756efbbb59b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the animation is currently running.  <a href="#a00a3ebaae27d4910d52756efbbb59b81">More...</a><br /></td></tr>
 <tr class="separator:a00a3ebaae27d4910d52756efbbb59b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="render_8hpp_source.html#l00417">417</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Tool for controlling a texture renderer to generate animations. </p>
+
+<p>Definition at line <a class="el" href="render_8hpp_source.html#l00808">808</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af5d42be6197fbaf9186f10b89355ae5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5d42be6197fbaf9186f10b89355ae5c">&sect;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::draw </td>
+          <td>(</td>
+          <td class="paramtype">glm::mat4&#160;</td>
+          <td class="paramname"><em>ViewProjection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>magnification</em> = <code>1.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws the animation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ViewProjection</td><td>View-Projection matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If you wish to ignore the animator's own positioning controls, you can pass a whole Model-View-Projection matrix here. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">magnification</td><td>Scaling of the animation. Defaults to 1.0 (default frame size). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a00a3ebaae27d4910d52756efbbb59b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00a3ebaae27d4910d52756efbbb59b81">&sect;&nbsp;</a></span>GetAnimationRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool oficina::ofAnimator::GetAnimationRunning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the animation is currently running. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the animation is running or not. </dd></dl>
+
+</div>
+</div>
+<a id="ac78c53d4c9d300b58659c47b943eeca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac78c53d4c9d300b58659c47b943eeca9">&sect;&nbsp;</a></span>GetAnimationSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float oficina::ofAnimator::GetAnimationSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Yields the animation speed. </p>
+<dl class="section return"><dt>Returns</dt><dd>Current speed of the current animation. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>To understand animation speed behaviour, see the reg method. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classoficina_1_1of_animator.html#a98ed6ee3f01d03625e48a674a670c567" title="Registers an animation by name. ">ofAnimator::reg</a> </dd></dl>
+
+</div>
+</div>
+<a id="a55282ef661149b256fe8e15c0da311ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55282ef661149b256fe8e15c0da311ac">&sect;&nbsp;</a></span>GetDefaultAnimationSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float oficina::ofAnimator::GetDefaultAnimationSpeed </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Yields the default animation speed. </p>
+<dl class="section return"><dt>Returns</dt><dd>Animation speed which the animation was registered with. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>To understand animation speed behaviour, see the reg method. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classoficina_1_1of_animator.html#a98ed6ee3f01d03625e48a674a670c567" title="Registers an animation by name. ">ofAnimator::reg</a> </dd></dl>
+
+</div>
+</div>
+<a id="a52a6845c8f0ef6d7ee4bad44266b37b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52a6845c8f0ef6d7ee4bad44266b37b3">&sect;&nbsp;</a></span>getPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec2 oficina::ofAnimator::getPosition </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Yields the position of the animation on the matrix. </p>
+<dl class="section return"><dt>Returns</dt><dd>A 2D vector containing the animation position. </dd></dl>
+
+</div>
+</div>
+<a id="ab985d22f97e78a770db7370f80a3a226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab985d22f97e78a770db7370f80a3a226">&sect;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::uvec2&#160;</td>
+          <td class="paramname"><em>frameSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>manageTexture</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the animator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Texture atlas containing the animation frames. </td></tr>
+    <tr><td class="paramname">frameSize</td><td>Frame size, as per <a class="el" href="classoficina_1_1of_texture_renderer.html" title="Tool for easily rendering 2D textures or texture atlases. ">ofTextureRenderer</a> specification. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classoficina_1_1of_texture_renderer.html" title="Tool for easily rendering 2D textures or texture atlases. ">ofTextureRenderer</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">manageTexture</td><td>Whether the given texture should be managed by this tool (disposed when the animator is disposed). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a877f305bcde7f966df420977315731b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a877f305bcde7f966df420977315731b8">&sect;&nbsp;</a></span>isInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool oficina::ofAnimator::isInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the animator was initialized. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the animator was initialized or not. </dd></dl>
+
+</div>
+</div>
+<a id="a98ed6ee3f01d03625e48a674a670c567"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ed6ee3f01d03625e48a674a670c567">&sect;&nbsp;</a></span>reg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::reg </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>animName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a>&#160;</td>
+          <td class="paramname"><em>nFrames</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> *&#160;</td>
+          <td class="paramname"><em>animFrames</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>loops</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a>&#160;</td>
+          <td class="paramname"><em>loopBackTo</em> = <code>0u</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers an animation by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animName</td><td>Desired animation name. </td></tr>
+    <tr><td class="paramname">nFrames</td><td>amount of frames on the animation. </td></tr>
+    <tr><td class="paramname">animFrames</td><td>Pointer to an array containing all animation frames, numbered. </td></tr>
+    <tr><td class="paramname">speed</td><td>Speed of the animation.<br />
+Animation speed handling changes depending on the syncing type.<br />
+<ul>
+<li>When animation is synced to frame rate (default), speed relates to how many GAME FRAMES each ANIMATION FRAME lasts; therefore the value will always be converted to an integer, and the minimum value will be 1. Also, by this logic, the lower this number is, the faster the animation plays.</li>
+<li>When animation is NOT synced to frame rate, speed relates on how many SECONDS each ANIMATION FRAME lasts; therefore the value can be an actual float, as you can set the animation to less than a second of duration. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">loops</td><td>Optionally set the animation to loop, jumping to the looping frame. </td></tr>
+    <tr><td class="paramname">loopBackTo</td><td>Optionally set the index of the frame, on the frames array, which the animator will jump to when looping the animation. Defaults to the first frame of the animation (0). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classoficina_1_1of_animator.html#a26e67484c29f5c650e2feb48e4531f92" title="Sets whether the animation should remain synced to frame rate (frame-dependent) or not (frame-indepen...">ofAnimator::SyncToFrameRate</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3287bf10a305d742578b681c4b9eab2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3287bf10a305d742578b681c4b9eab2c">&sect;&nbsp;</a></span>SetAnimation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::SetAnimation </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>animName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the current animation to another one. </p>
+<dl class="section warning"><dt>Warning</dt><dd>If the set animation is already being played, then nothing happens. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animName</td><td>Name of the animation to be played. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a94c87e4b818627089732d9438ee356ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94c87e4b818627089732d9438ee356ed">&sect;&nbsp;</a></span>SetAnimationRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::SetAnimationRunning </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets whether the animation should be played or not. Defaults to true. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>State of the animation: whether it should play or not. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3f9af60846fa592bdd4c82e38cbf6e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f9af60846fa592bdd4c82e38cbf6e64">&sect;&nbsp;</a></span>SetAnimationSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::SetAnimationSpeed </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>spd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dynamically change the animation speed. This speed is never stored. </p>
+<dl class="section warning"><dt>Warning</dt><dd>To understand animation speed behaviour, see the reg method. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="classoficina_1_1of_animator.html#a98ed6ee3f01d03625e48a674a670c567" title="Registers an animation by name. ">ofAnimator::reg</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">spd</td><td>Speed value to be given to the currently played animation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af2e7516f8d5a34fff5c7245b0932c871"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e7516f8d5a34fff5c7245b0932c871">&sect;&nbsp;</a></span>SetAnimationTexture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::SetAnimationTexture </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dynamically changes the internal texture atlas. Particularly useful for handling skins and such. </p>
+<dl class="section warning"><dt>Warning</dt><dd>This operation will not be performed if the animator is automatically handling the stored texture. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Texture to be now associated with the animation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a65388f5535255ab17ec94fedecd6cf5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65388f5535255ab17ec94fedecd6cf5b">&sect;&nbsp;</a></span>setPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::setPosition </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the position of the animation on the matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>The new position of the animation. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a26e67484c29f5c650e2feb48e4531f92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e67484c29f5c650e2feb48e4531f92">&sect;&nbsp;</a></span>SyncToFrameRate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::SyncToFrameRate </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets whether the animation should remain synced to frame rate (frame-dependent) or not (frame-independent). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>State of syncing. Defaults to true. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5fe85d6775bf836d59f4834f0becc9f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fe85d6775bf836d59f4834f0becc9f6">&sect;&nbsp;</a></span>unreg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::unreg </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>animName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unregisters an animation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animName</td><td>Desired animation to unregister. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a933297c2388ea81f359b4864cab3b9f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a933297c2388ea81f359b4864cab3b9f8">&sect;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::update </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the animation step. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>Time difference, in seconds, from the last drawn frame to the currently drawn frame (delta time). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="render_8hpp_source.html">render.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -156,7 +645,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetAnimationRunning</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_animator.html">ofAnimator</a></li>
-    <li class="footer">Generated on Mon Feb 6 2017 18:08:40 for OficinaFramework by
+    <li class="footer">Generated on Tue Feb 7 2017 18:18:19 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
   </ul>

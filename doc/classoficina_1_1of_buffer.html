@@ -89,57 +89,206 @@ $(document).ready(function(){initNavTree('classoficina_1_1of_buffer.html','');})
 <div class="title">oficina::ofBuffer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Specifies a generic buffer. Override this class to create your own buffers.  
+ <a href="classoficina_1_1of_buffer.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="render_8hpp_source.html">render.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for oficina::ofBuffer:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classoficina_1_1of_buffer.png" usemap="#oficina::ofBuffer_map" alt=""/>
   <map id="oficina::ofBuffer_map" name="oficina::ofBuffer_map">
-<area href="classoficina_1_1of_element_buffer.html" alt="oficina::ofElementBuffer" shape="rect" coords="0,56,146,80"/>
-<area href="classoficina_1_1of_vertex_buffer.html" alt="oficina::ofVertexBuffer" shape="rect" coords="156,56,302,80"/>
+<area href="classoficina_1_1of_element_buffer.html" title="Represents an Element Buffer object (EBO), useful for holding sequences of vertices for drawing on sc..." alt="oficina::ofElementBuffer" shape="rect" coords="0,56,146,80"/>
+<area href="classoficina_1_1of_vertex_buffer.html" title="Represents a Vertex Buffer object (VBO). Use this to hold data related to drawing. " alt="oficina::ofVertexBuffer" shape="rect" coords="156,56,302,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa9b8e13f76d23cdaf4970ea52e4a7b46"><td class="memItemLeft" align="right" valign="top"><a id="aa9b8e13f76d23cdaf4970ea52e4a7b46"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> () final</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_buffer.html#aa9b8e13f76d23cdaf4970ea52e4a7b46">init</a> () final</td></tr>
+<tr class="memdesc:aa9b8e13f76d23cdaf4970ea52e4a7b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes (generates) the buffer. <br /></td></tr>
 <tr class="separator:aa9b8e13f76d23cdaf4970ea52e4a7b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16d0a62acc35c1a45bb3cce2935514fa"><td class="memItemLeft" align="right" valign="top"><a id="a16d0a62acc35c1a45bb3cce2935514fa"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>unload</b> () final</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_buffer.html#a16d0a62acc35c1a45bb3cce2935514fa">unload</a> () final</td></tr>
+<tr class="memdesc:a16d0a62acc35c1a45bb3cce2935514fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads (deletes) the buffer. <br /></td></tr>
 <tr class="separator:a16d0a62acc35c1a45bb3cce2935514fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a251996d131e127ca0e73e80dd44536c0"><td class="memItemLeft" align="right" valign="top"><a id="a251996d131e127ca0e73e80dd44536c0"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>bind</b> () final</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_buffer.html#a251996d131e127ca0e73e80dd44536c0">bind</a> () final</td></tr>
+<tr class="memdesc:a251996d131e127ca0e73e80dd44536c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Binds the buffer. <br /></td></tr>
 <tr class="separator:a251996d131e127ca0e73e80dd44536c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90910e3e37ec1a068ca0b1bc6da4442f"><td class="memItemLeft" align="right" valign="top"><a id="a90910e3e37ec1a068ca0b1bc6da4442f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>unbind</b> () final</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_buffer.html#a90910e3e37ec1a068ca0b1bc6da4442f">unbind</a> () final</td></tr>
+<tr class="memdesc:a90910e3e37ec1a068ca0b1bc6da4442f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unbinds all buffers of this type. <br /></td></tr>
 <tr class="separator:a90910e3e37ec1a068ca0b1bc6da4442f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedc1e0601fda375b0331f52c6e277e1e"><td class="memItemLeft" align="right" valign="top"><a id="aedc1e0601fda375b0331f52c6e277e1e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setData</b> (size_t dataSize, void *data, ofBufferUsage usage)</td></tr>
+<tr class="memitem:aedc1e0601fda375b0331f52c6e277e1e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_buffer.html#aedc1e0601fda375b0331f52c6e277e1e">setData</a> (size_t dataSize, void *data, <a class="el" href="render_8hpp.html#a42c38585c6390e5f38ed7c1b13516b21">ofBufferUsage</a> usage)</td></tr>
+<tr class="memdesc:aedc1e0601fda375b0331f52c6e277e1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the data present on this buffer.  <a href="#aedc1e0601fda375b0331f52c6e277e1e">More...</a><br /></td></tr>
 <tr class="separator:aedc1e0601fda375b0331f52c6e277e1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a9f8928a927cfcde464e07cdcbf25c3"><td class="memItemLeft" align="right" valign="top"><a id="a7a9f8928a927cfcde464e07cdcbf25c3"></a>
-<a class="el" href="classoficina_1_1of_buffer.html">ofBuffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classoficina_1_1of_buffer.html">ofBuffer</a> &amp;other)</td></tr>
+<tr class="memitem:a7a9f8928a927cfcde464e07cdcbf25c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classoficina_1_1of_buffer.html">ofBuffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_buffer.html#a7a9f8928a927cfcde464e07cdcbf25c3">operator=</a> (const <a class="el" href="classoficina_1_1of_buffer.html">ofBuffer</a> &amp;other)</td></tr>
+<tr class="memdesc:a7a9f8928a927cfcde464e07cdcbf25c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Equals" operator for cloning the buffer.  <a href="#a7a9f8928a927cfcde464e07cdcbf25c3">More...</a><br /></td></tr>
 <tr class="separator:a7a9f8928a927cfcde464e07cdcbf25c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f3781fb332bc6478e7b3193c801dda7"><td class="memItemLeft" align="right" valign="top"><a id="a4f3781fb332bc6478e7b3193c801dda7"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> () const final</td></tr>
+<tr class="memitem:a4f3781fb332bc6478e7b3193c801dda7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_buffer.html#a4f3781fb332bc6478e7b3193c801dda7">isInit</a> () const final</td></tr>
+<tr class="memdesc:a4f3781fb332bc6478e7b3193c801dda7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for buffer's initialization.  <a href="#a4f3781fb332bc6478e7b3193c801dda7">More...</a><br /></td></tr>
 <tr class="separator:a4f3781fb332bc6478e7b3193c801dda7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03964c3b839a0a0ded15fdbc19bbc392"><td class="memItemLeft" align="right" valign="top"><a id="a03964c3b839a0a0ded15fdbc19bbc392"></a>
-virtual GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>getName</b> () const final</td></tr>
+<tr class="memitem:a03964c3b839a0a0ded15fdbc19bbc392"><td class="memItemLeft" align="right" valign="top">virtual GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_buffer.html#a03964c3b839a0a0ded15fdbc19bbc392">getName</a> () const final</td></tr>
+<tr class="memdesc:a03964c3b839a0a0ded15fdbc19bbc392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the buffer's real name on the GPU.  <a href="#a03964c3b839a0a0ded15fdbc19bbc392">More...</a><br /></td></tr>
 <tr class="separator:a03964c3b839a0a0ded15fdbc19bbc392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ae0e7133224bc75b1027ef795b306f95a"><td class="memItemLeft" align="right" valign="top"><a id="ae0e7133224bc75b1027ef795b306f95a"></a>
-GLenum&#160;</td><td class="memItemRight" valign="bottom"><b>m_type</b> = GL_ARRAY_BUFFER</td></tr>
+GLenum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_buffer.html#ae0e7133224bc75b1027ef795b306f95a">m_type</a> = GL_ARRAY_BUFFER</td></tr>
+<tr class="memdesc:ae0e7133224bc75b1027ef795b306f95a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of this buffer. Redefine this on the constructor if you need a different type of buffer. <br /></td></tr>
 <tr class="separator:ae0e7133224bc75b1027ef795b306f95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbda46684d1620604038db961ab4d713"><td class="memItemLeft" align="right" valign="top"><a id="abbda46684d1620604038db961ab4d713"></a>
-GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b> = 0u</td></tr>
+GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_buffer.html#abbda46684d1620604038db961ab4d713">m_name</a> = 0u</td></tr>
+<tr class="memdesc:abbda46684d1620604038db961ab4d713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer's real name (on the GPU). <br /></td></tr>
 <tr class="separator:abbda46684d1620604038db961ab4d713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="render_8hpp_source.html#l00150">150</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Specifies a generic buffer. Override this class to create your own buffers. </p>
+<dl class="section note"><dt>Note</dt><dd>Buffer type should be defined directly on constructor. </dd></dl>
+
+<p>Definition at line <a class="el" href="render_8hpp_source.html#l00229">229</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a03964c3b839a0a0ded15fdbc19bbc392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03964c3b839a0a0ded15fdbc19bbc392">&sect;&nbsp;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual GLuint oficina::ofBuffer::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the buffer's real name on the GPU. </p>
+<dl class="section return"><dt>Returns</dt><dd>Unsigned integer containing the buffer's GPU index. </dd></dl>
+
+</div>
+</div>
+<a id="a4f3781fb332bc6478e7b3193c801dda7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f3781fb332bc6478e7b3193c801dda7">&sect;&nbsp;</a></span>isInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool oficina::ofBuffer::isInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks for buffer's initialization. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the buffer was initialized or not. </dd></dl>
+
+</div>
+</div>
+<a id="a7a9f8928a927cfcde464e07cdcbf25c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a9f8928a927cfcde464e07cdcbf25c3">&sect;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classoficina_1_1of_buffer.html">ofBuffer</a>&amp; oficina::ofBuffer::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classoficina_1_1of_buffer.html">ofBuffer</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>"Equals" operator for cloning the buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Buffer to be cloned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this buffer. </dd></dl>
+
+</div>
+</div>
+<a id="aedc1e0601fda375b0331f52c6e277e1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedc1e0601fda375b0331f52c6e277e1e">&sect;&nbsp;</a></span>setData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void oficina::ofBuffer::setData </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>dataSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="render_8hpp.html#a42c38585c6390e5f38ed7c1b13516b21">ofBufferUsage</a>&#160;</td>
+          <td class="paramname"><em>usage</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the data present on this buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataSize</td><td>Size of the data to be fed, in bytes. </td></tr>
+    <tr><td class="paramname">data</td><td>Pointer to the beginning of data. </td></tr>
+    <tr><td class="paramname">usage</td><td>Type of usage of the buffer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="render_8hpp_source.html">render.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -148,7 +297,7 @@ GLuint&#160;</td><td class="memItemRight" valign="bottom"><b>m_name</b> = 0u</td
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_buffer.html">ofBuffer</a></li>
-    <li class="footer">Generated on Mon Feb 6 2017 18:08:40 for OficinaFramework by
+    <li class="footer">Generated on Tue Feb 7 2017 18:18:19 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
   </ul>

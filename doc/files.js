@@ -17,7 +17,7 @@ var files =
     [ "oficina.hpp", "oficina_8hpp.html", "oficina_8hpp" ],
     [ "ofscheme.hpp", "ofscheme_8hpp.html", "ofscheme_8hpp" ],
     [ "platform.hpp", "platform_8hpp.html", "platform_8hpp" ],
-    [ "render.hpp", "render_8hpp_source.html", null ],
+    [ "render.hpp", "render_8hpp.html", "render_8hpp" ],
     [ "timer.hpp", "timer_8hpp.html", [
       [ "ofTimeSpan", "classoficina_1_1of_time_span.html", "classoficina_1_1of_time_span" ],
       [ "ofFrameSpan", "classoficina_1_1of_frame_span.html", "classoficina_1_1of_frame_span" ]

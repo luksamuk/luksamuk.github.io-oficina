@@ -88,29 +88,195 @@ $(document).ready(function(){initNavTree('classoficina_1_1of_font.html','');});
 <div class="title">oficina::ofFont Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a font.  
+ <a href="classoficina_1_1of_font.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="render_8hpp_source.html">render.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a835839961cb6f1932147669e8c9c69e8"><td class="memItemLeft" align="right" valign="top"><a id="a835839961cb6f1932147669e8c9c69e8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> fontTexture, glm::uvec2 glyphSize, bool manageTexture=false)</td></tr>
+<tr class="memitem:a835839961cb6f1932147669e8c9c69e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_font.html#a835839961cb6f1932147669e8c9c69e8">init</a> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> fontTexture, glm::uvec2 glyphSize, bool manageTexture=false)</td></tr>
+<tr class="memdesc:a835839961cb6f1932147669e8c9c69e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the font.  <a href="#a835839961cb6f1932147669e8c9c69e8">More...</a><br /></td></tr>
 <tr class="separator:a835839961cb6f1932147669e8c9c69e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a58de49cdcefacbb5f1a5a6d68b8620"><td class="memItemLeft" align="right" valign="top"><a id="a8a58de49cdcefacbb5f1a5a6d68b8620"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> (std::string text, glm::vec2 position, glm::mat4 mvp, glm::vec4 color=glm::vec4(1.0f), float mag=1.0f)</td></tr>
+<tr class="memitem:a8a58de49cdcefacbb5f1a5a6d68b8620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_font.html#a8a58de49cdcefacbb5f1a5a6d68b8620">write</a> (std::string text, glm::vec2 position, glm::mat4 mvp, glm::vec4 color=glm::vec4(1.0f), float mag=1.0f)</td></tr>
+<tr class="memdesc:a8a58de49cdcefacbb5f1a5a6d68b8620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders a text on the screen.  <a href="#a8a58de49cdcefacbb5f1a5a6d68b8620">More...</a><br /></td></tr>
 <tr class="separator:a8a58de49cdcefacbb5f1a5a6d68b8620"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f60f719f0cb26b32d9a1f3d25b96e25"><td class="memItemLeft" align="right" valign="top"><a id="a7f60f719f0cb26b32d9a1f3d25b96e25"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>unload</b> ()</td></tr>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_font.html#a7f60f719f0cb26b32d9a1f3d25b96e25">unload</a> ()</td></tr>
+<tr class="memdesc:a7f60f719f0cb26b32d9a1f3d25b96e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads the font, and also unloads the texture if texture is being managed by the structure. <br /></td></tr>
 <tr class="separator:a7f60f719f0cb26b32d9a1f3d25b96e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a144025a532efd3c8789ab1ede321e82a"><td class="memItemLeft" align="right" valign="top"><a id="a144025a532efd3c8789ab1ede321e82a"></a>
-<a class="el" href="classoficina_1_1of_font.html">ofFont</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classoficina_1_1of_font.html">ofFont</a> &amp;other)</td></tr>
+<tr class="memitem:a144025a532efd3c8789ab1ede321e82a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classoficina_1_1of_font.html">ofFont</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_font.html#a144025a532efd3c8789ab1ede321e82a">operator=</a> (const <a class="el" href="classoficina_1_1of_font.html">ofFont</a> &amp;other)</td></tr>
+<tr class="memdesc:a144025a532efd3c8789ab1ede321e82a"><td class="mdescLeft">&#160;</td><td class="mdescRight">"Equals" operator for cloning fonts.  <a href="#a144025a532efd3c8789ab1ede321e82a">More...</a><br /></td></tr>
 <tr class="separator:a144025a532efd3c8789ab1ede321e82a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebee9f316afad203c9e57a64f921942e"><td class="memItemLeft" align="right" valign="top"><a id="aebee9f316afad203c9e57a64f921942e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> () const</td></tr>
+<tr class="memitem:aebee9f316afad203c9e57a64f921942e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_font.html#aebee9f316afad203c9e57a64f921942e">isInit</a> () const</td></tr>
+<tr class="memdesc:aebee9f316afad203c9e57a64f921942e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the font was initialized.  <a href="#aebee9f316afad203c9e57a64f921942e">More...</a><br /></td></tr>
 <tr class="separator:aebee9f316afad203c9e57a64f921942e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="render_8hpp_source.html#l00399">399</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Represents a font. </p>
+<dl class="section note"><dt>Note</dt><dd>Fonts are texture atlases with each frame being a character in white color.<br />
+Characters should range from 31 (unit separator) to 126 (tilde - '~'); it is also recommended that the first character (replacing unit separator) should be a block, for it can also be used as cursor on Repl. </dd></dl>
+
+<p>Definition at line <a class="el" href="render_8hpp_source.html#l00765">765</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a835839961cb6f1932147669e8c9c69e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a835839961cb6f1932147669e8c9c69e8">&sect;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofFont::init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td>
+          <td class="paramname"><em>fontTexture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::uvec2&#160;</td>
+          <td class="paramname"><em>glyphSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>manageTexture</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the font. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fontTexture</td><td>Texture atlas containing the font characters. </td></tr>
+    <tr><td class="paramname">glyphSize</td><td>2D unsigned integer vector containing the size of each glyph frame on the atlas. </td></tr>
+    <tr><td class="paramname">manageTexture</td><td>Whether the texture should be managed (disposal when the font is also disposed) Defaults to false. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aebee9f316afad203c9e57a64f921942e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebee9f316afad203c9e57a64f921942e">&sect;&nbsp;</a></span>isInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool oficina::ofFont::isInit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if the font was initialized. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the font was initialized or not. </dd></dl>
+
+</div>
+</div>
+<a id="a144025a532efd3c8789ab1ede321e82a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144025a532efd3c8789ab1ede321e82a">&sect;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classoficina_1_1of_font.html">ofFont</a>&amp; oficina::ofFont::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classoficina_1_1of_font.html">ofFont</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>"Equals" operator for cloning fonts. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Font to be cloned. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to this font. </dd></dl>
+
+</div>
+</div>
+<a id="a8a58de49cdcefacbb5f1a5a6d68b8620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a58de49cdcefacbb5f1a5a6d68b8620">&sect;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofFont::write </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec2&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::mat4&#160;</td>
+          <td class="paramname"><em>mvp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">glm::vec4&#160;</td>
+          <td class="paramname"><em>color</em> = <code>glm::vec4(1.0f)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>mag</em> = <code>1.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renders a text on the screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>Text to be written. </td></tr>
+    <tr><td class="paramname">position</td><td>Position of the first text glyph (centered) on the matrix. </td></tr>
+    <tr><td class="paramname">mvp</td><td>Model-View-Projection matrix to be used when drawing the texture. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>It is advised to use an ortographic projection if trying to draw readable text. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>4D vector specifying which color the textshould be tinted with.<br />
+Corresponds to a format {R, G, B, A}. Default values are {1, 1, 1, 1}. </td></tr>
+    <tr><td class="paramname">mag</td><td>Magnitude (scaling) of the drawn text glyphs. Defaults to 1.0f (default glyph size). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="render_8hpp_source.html">render.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -119,7 +285,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isInit</b> () const</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_font.html">ofFont</a></li>
-    <li class="footer">Generated on Mon Feb 6 2017 18:08:41 for OficinaFramework by
+    <li class="footer">Generated on Tue Feb 7 2017 18:18:20 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.12 </li>
   </ul>
