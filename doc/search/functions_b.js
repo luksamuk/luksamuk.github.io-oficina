@@ -9,6 +9,7 @@ var searchData=
   ['setautonormalize',['setAutoNormalize',['../classoficina_1_1of_shader_attribute.html#a7e1b9a9f6a0507662ad7852a52754eac',1,'oficina::ofShaderAttribute']]],
   ['setcount',['setCount',['../classoficina_1_1of_element_buffer.html#a43cf17315622436af0d9df5b8efe0283',1,'oficina::ofElementBuffer']]],
   ['setdata',['setData',['../classoficina_1_1of_buffer.html#aedc1e0601fda375b0331f52c6e277e1e',1,'oficina::ofBuffer']]],
+  ['setfullscreen',['setFullscreen',['../classoficina_1_1of_display.html#aafb7af91a9ffe3b0b8d0b9addf601fba',1,'oficina::ofDisplay']]],
   ['setname',['setName',['../classoficina_1_1of_entity.html#a2a46fb4aafc2885c02bf6cca6b406026',1,'oficina::ofEntity']]],
   ['setposition',['setPosition',['../classoficina_1_1of_animator.html#a65388f5535255ab17ec94fedecd6cf5b',1,'oficina::ofAnimator']]],
   ['setproperty',['setProperty',['../classoficina_1_1of_entity.html#aa146f00efa0389e0694aeeee95503e10',1,'oficina::ofEntity']]],

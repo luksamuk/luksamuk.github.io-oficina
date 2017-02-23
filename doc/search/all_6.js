@@ -5,6 +5,7 @@ var searchData=
   ['io_2ehpp',['io.hpp',['../io_8hpp.html',1,'']]],
   ['isautonormalizing',['isAutoNormalizing',['../classoficina_1_1of_shader_attribute.html#a0d1a4b0b26144d57ecc47cc145861a34',1,'oficina::ofShaderAttribute']]],
   ['iscompiled',['isCompiled',['../classoficina_1_1of_shader.html#af7ce7c8f25e4e0303b3152280f142cf7',1,'oficina::ofShader']]],
+  ['isfullscreen',['isFullscreen',['../classoficina_1_1of_display.html#a6d7525efe1e76008714f1d49679d2b0c',1,'oficina::ofDisplay']]],
   ['isinit',['isInit',['../classoficina_1_1of_context.html#af1da9309d4308d7094e2bce9b406c44a',1,'oficina::ofContext::isInit()'],['../classoficina_1_1of_buffer.html#a4f3781fb332bc6478e7b3193c801dda7',1,'oficina::ofBuffer::isInit()'],['../classoficina_1_1of_shader.html#a3c2c683587e7a0a18ab31a42c8e44477',1,'oficina::ofShader::isInit()'],['../classoficina_1_1of_shader_program.html#a90a265b4cc8dc0661a4112afb654ad70',1,'oficina::ofShaderProgram::isInit()'],['../classoficina_1_1of_texture_renderer.html#afca13f855b684c7350b0f81c8e861714',1,'oficina::ofTextureRenderer::isInit()'],['../classoficina_1_1of_font.html#aebee9f316afad203c9e57a64f921942e',1,'oficina::ofFont::isInit()'],['../classoficina_1_1of_animator.html#a877f305bcde7f966df420977315731b8',1,'oficina::ofAnimator::isInit()']]],
   ['islinked',['isLinked',['../classoficina_1_1of_shader_program.html#a60b342a89416989d80a2d69159dd93b4',1,'oficina::ofShaderProgram']]],
   ['isloaded',['isLoaded',['../classoficina_1_1of_texture.html#a39c3088b10eb35c81344b1e55e591b46',1,'oficina::ofTexture']]],

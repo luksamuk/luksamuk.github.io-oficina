@@ -3,6 +3,7 @@ var searchData=
   ['getanimationrunning',['GetAnimationRunning',['../classoficina_1_1of_animator.html#a00a3ebaae27d4910d52756efbbb59b81',1,'oficina::ofAnimator']]],
   ['getanimationspeed',['GetAnimationSpeed',['../classoficina_1_1of_animator.html#ac78c53d4c9d300b58659c47b943eeca9',1,'oficina::ofAnimator']]],
   ['getattributelocation',['getAttributeLocation',['../classoficina_1_1of_shader_program.html#a39aaa9becbf63a48417aef134185c249',1,'oficina::ofShaderProgram']]],
+  ['getcanvaslist',['getCanvasList',['../classoficina_1_1of_canvas_manager.html#ae498c6dcfef23b0677d505f1d25b5346',1,'oficina::ofCanvasManager']]],
   ['getcomponent',['GetComponent',['../classoficina_1_1of_entity.html#aa08668685b24c3bca1c606d4162acdf2',1,'oficina::ofEntity']]],
   ['getcount',['getCount',['../classoficina_1_1of_element_buffer.html#a826ba2b454413530acea23df3c876fe2',1,'oficina::ofElementBuffer']]],
   ['getdefaultanimationspeed',['GetDefaultAnimationSpeed',['../classoficina_1_1of_animator.html#a55282ef661149b256fe8e15c0da311ac',1,'oficina::ofAnimator']]],

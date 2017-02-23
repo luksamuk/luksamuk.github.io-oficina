@@ -17,6 +17,7 @@ var NAVTREE =
             [ "print-hex", "schemeref.html#PRINT-HEX", null ],
             [ "newline", "schemeref.html#NEWLINE", null ],
             [ "clear", "schemeref.html#CLEAR", null ],
+            [ "canvas-list", "schemeref.html#CANVASLIST", null ],
             [ "quit", "schemeref.html#QUIT", null ]
           ] ],
           [ "Input", "schemeref.html#input", [
@@ -30,7 +31,9 @@ var NAVTREE =
             [ "mousetap?", "schemeref.html#MOUSETAP", null ]
           ] ],
           [ "Display", "schemeref.html#display", [
-            [ "vwprt?", "schemeref.html#VWPRT", null ]
+            [ "vwprt?", "schemeref.html#VWPRT", null ],
+            [ "set-fullscreen!", "schemeref.html#SETFULLSCREEN", null ],
+            [ "fullscreen?", "schemeref.html#FULLSCREEN", null ]
           ] ]
         ] ],
         [ "Object API", "schemeref.html#object", [
@@ -62,7 +65,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Enumerator", "functions_eval.html", null ]
@@ -83,8 +86,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"functions_e.html",
-"structoficina_1_1of_input_state.html#a102558db0943f7c40e6f97f1cc436c1e"
+"functions_b.html",
+"schemeref.html#PROPSET"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
