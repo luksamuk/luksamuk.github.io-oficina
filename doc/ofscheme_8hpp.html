@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0a</span>
+   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -83,8 +83,8 @@ $(document).ready(function(){initNavTree('ofscheme_8hpp.html','');});
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ofscheme.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -92,9 +92,7 @@ $(document).ready(function(){initNavTree('ofscheme_8hpp.html','');});
 
 <p>Tools for object scripting and for the Repl.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;oficina2/scheme/scheme.h&quot;</code><br />
-<code>#include &quot;oficina2/scheme/scheme-private.h&quot;</code><br />
-<code>#include &quot;oficina2/scheme/dynload.h&quot;</code><br />
+<div class="textblock"><code>#include &lt;libguile.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
 <code>#include &quot;<a class="el" href="entity_8hpp_source.html">oficina2/entity.hpp</a>&quot;</code><br />
@@ -106,6 +104,13 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html">oficina::ofScheme</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines one Scheme environment to be used inside an entity.  <a href="classoficina_1_1of_scheme.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ae918b3402aa9d55e7928b109ca43fde1"><td class="memItemLeft" align="right" valign="top"><a id="ae918b3402aa9d55e7928b109ca43fde1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#ae918b3402aa9d55e7928b109ca43fde1">SCHEME_FUNCAST</a>(x)&#160;&#160;&#160;(scm_t_subr)&amp;(x)</td></tr>
+<tr class="memdesc:ae918b3402aa9d55e7928b109ca43fde1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro for defining Scheme functions. Pass the function name using this macro when creating functions for both ofScmDefineFunc and ofScheme::regFunc. <br /></td></tr>
+<tr class="separator:ae918b3402aa9d55e7928b109ca43fde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -120,28 +125,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofsc
 <tr class="memitem:ab76e0a1c2648c9963a0846dba09597d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#ab76e0a1c2648c9963a0846dba09597d2">oficina::ofScmIsInit</a> ()</td></tr>
 <tr class="memdesc:ab76e0a1c2648c9963a0846dba09597d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields the state of the Scheme Repl.  <a href="ofscheme_8hpp.html#ab76e0a1c2648c9963a0846dba09597d2">More...</a><br /></td></tr>
 <tr class="separator:ab76e0a1c2648c9963a0846dba09597d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb1d5f694aca004af72dcebee9ca4d93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#afb1d5f694aca004af72dcebee9ca4d93">oficina::ofScmEval</a> (std::string strToEval)</td></tr>
-<tr class="memdesc:afb1d5f694aca004af72dcebee9ca4d93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asks the Repl to evaluate a certain string.  <a href="ofscheme_8hpp.html#afb1d5f694aca004af72dcebee9ca4d93">More...</a><br /></td></tr>
-<tr class="separator:afb1d5f694aca004af72dcebee9ca4d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a05b99763e8e902739b5d9fc0094a1b"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#a6a05b99763e8e902739b5d9fc0094a1b">oficina::ofScmGetOutputPtr</a> ()</td></tr>
-<tr class="memdesc:a6a05b99763e8e902739b5d9fc0094a1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields a pointer to the Repl's Error output string.  <a href="ofscheme_8hpp.html#a6a05b99763e8e902739b5d9fc0094a1b">More...</a><br /></td></tr>
-<tr class="separator:a6a05b99763e8e902739b5d9fc0094a1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8a1214e740541020f7ee36ee8da6d6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#ab8a1214e740541020f7ee36ee8da6d6d">oficina::ofScmResetOutput</a> (scheme *scm=nullptr)</td></tr>
-<tr class="memdesc:ab8a1214e740541020f7ee36ee8da6d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets the error output of the Repl or of a Scheme script.  <a href="ofscheme_8hpp.html#ab8a1214e740541020f7ee36ee8da6d6d">More...</a><br /></td></tr>
-<tr class="separator:ab8a1214e740541020f7ee36ee8da6d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ea95439d36ca55f25485eaa53c7a3f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#a7ea95439d36ca55f25485eaa53c7a3f6">oficina::ofScmDefineFunc</a> (std::string symbol, foreign_func fun)</td></tr>
-<tr class="memdesc:a7ea95439d36ca55f25485eaa53c7a3f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a foreign function for the Repl.  <a href="ofscheme_8hpp.html#a7ea95439d36ca55f25485eaa53c7a3f6">More...</a><br /></td></tr>
-<tr class="separator:a7ea95439d36ca55f25485eaa53c7a3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41700db76ae4212455f6ec678288f9b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#a41700db76ae4212455f6ec678288f9b3">oficina::ofScmUndefineFunc</a> (std::string symbol)</td></tr>
-<tr class="memdesc:a41700db76ae4212455f6ec678288f9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undefines a foreign function for the Repl.  <a href="ofscheme_8hpp.html#a41700db76ae4212455f6ec678288f9b3">More...</a><br /></td></tr>
-<tr class="separator:a41700db76ae4212455f6ec678288f9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a8950eacfc8b9dd739991e605dbf3ee88"><td class="memItemLeft" align="right" valign="top"><a id="a8950eacfc8b9dd739991e605dbf3ee88"></a>
-const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#a8950eacfc8b9dd739991e605dbf3ee88">oficina::ofScmInitSrc</a> []</td></tr>
-<tr class="memdesc:a8950eacfc8b9dd739991e605dbf3ee88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization source code for each and any Scheme; namely the init.scm file. <br /></td></tr>
-<tr class="separator:a8950eacfc8b9dd739991e605dbf3ee88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a289cee63dd679eedc1a35c755565806a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#a289cee63dd679eedc1a35c755565806a">oficina::ofScmEval</a> (std::string strToEval, bool suppressAns=false)</td></tr>
+<tr class="memdesc:a289cee63dd679eedc1a35c755565806a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asks the Repl to evaluate a certain string.  <a href="ofscheme_8hpp.html#a289cee63dd679eedc1a35c755565806a">More...</a><br /></td></tr>
+<tr class="separator:a289cee63dd679eedc1a35c755565806a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a101ef4fa98600a112730d935faf6d8d1"><td class="memItemLeft" align="right" valign="top"><a id="a101ef4fa98600a112730d935faf6d8d1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#a101ef4fa98600a112730d935faf6d8d1">oficina::ofScmDumpOutput</a> ()</td></tr>
+<tr class="memdesc:a101ef4fa98600a112730d935faf6d8d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps REPL output awaiting the dump call on the output port. <br /></td></tr>
+<tr class="separator:a101ef4fa98600a112730d935faf6d8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65c7403345f9792db85b66a544ee2752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#a65c7403345f9792db85b66a544ee2752">oficina::ofScmDefineSymbol</a> (std::string symbol, SCM value)</td></tr>
+<tr class="memdesc:a65c7403345f9792db85b66a544ee2752"><td class="mdescLeft">&#160;</td><td class="mdescRight">defines a symbol for the Repl.  <a href="ofscheme_8hpp.html#a65c7403345f9792db85b66a544ee2752">More...</a><br /></td></tr>
+<tr class="separator:a65c7403345f9792db85b66a544ee2752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac99edf2d84a7d9b524a28e2448dc4975"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#ac99edf2d84a7d9b524a28e2448dc4975">oficina::ofScmDefineFunc</a> (std::string symbol, int n_params, scm_t_subr fun, int n_optional_params=0)</td></tr>
+<tr class="memdesc:ac99edf2d84a7d9b524a28e2448dc4975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a foreign function for the Repl.  <a href="ofscheme_8hpp.html#ac99edf2d84a7d9b524a28e2448dc4975">More...</a><br /></td></tr>
+<tr class="separator:ac99edf2d84a7d9b524a28e2448dc4975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad247f246df41e7c32a8543c91b9f55a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#ad247f246df41e7c32a8543c91b9f55a0">oficina::ofScmUndefine</a> (std::string symbol)</td></tr>
+<tr class="memdesc:ad247f246df41e7c32a8543c91b9f55a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Undefines a symbol (foreign function/variable) for the Repl.  <a href="ofscheme_8hpp.html#ad247f246df41e7c32a8543c91b9f55a0">More...</a><br /></td></tr>
+<tr class="separator:ad247f246df41e7c32a8543c91b9f55a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d95c09dc6e344383098515e0a40144"><td class="memItemLeft" align="right" valign="top">SCM&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ofscheme_8hpp.html#a92d95c09dc6e344383098515e0a40144">oficina::ofScmGetReference</a> (std::string symbol)</td></tr>
+<tr class="memdesc:a92d95c09dc6e344383098515e0a40144"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a reference to a symbol globally defined on the REPL's default module.  <a href="ofscheme_8hpp.html#a92d95c09dc6e344383098515e0a40144">More...</a><br /></td></tr>
+<tr class="separator:a92d95c09dc6e344383098515e0a40144"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tools for object scripting and for the Repl. </p>
@@ -149,8 +151,8 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 
 <p class="definition">Definition in file <a class="el" href="ofscheme_8hpp_source.html">ofscheme.hpp</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="file_a7ea95439d36ca55f25485eaa53c7a3f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a7ea95439d36ca55f25485eaa53c7a3f6">&#9670;&nbsp;</a></span>ofScmDefineFunc()</h2>
+<a id="file_ac99edf2d84a7d9b524a28e2448dc4975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_ac99edf2d84a7d9b524a28e2448dc4975">&#9670;&nbsp;</a></span>ofScmDefineFunc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,8 +166,20 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">foreign_func&#160;</td>
-          <td class="paramname"><em>fun</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">scm_t_subr&#160;</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_optional_params</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -179,15 +193,60 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <p>You should use this particularly if there is a specific function you wish to access using the Repl. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">symbol</td><td>Name of the function to be defined. </td></tr>
-    <tr><td class="paramname">fun</td><td>Function pointer to be used. Also accepts lambdas, but not closures (e.g. lambdas with captures). </td></tr>
+    <tr><td class="paramname">n_params</td><td>Number of required/obligatory parameters to be passed to the function. </td></tr>
+    <tr><td class="paramname">fun</td><td>Function pointer to be used. Pass the function name with the SCHEME_FUNCAST macro to cast it appropriately. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ofscheme_8hpp.html#ae918b3402aa9d55e7928b109ca43fde1" title="Macro for defining Scheme functions. Pass the function name using this macro when creating functions ...">SCHEME_FUNCAST</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n_optional_params</td><td>Optionally specify the amount of optional parameters which the function should have. Optional parameters should begin right after obligatory parameters. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="file_afb1d5f694aca004af72dcebee9ca4d93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_afb1d5f694aca004af72dcebee9ca4d93">&#9670;&nbsp;</a></span>ofScmEval()</h2>
+<a id="file_a65c7403345f9792db85b66a544ee2752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a65c7403345f9792db85b66a544ee2752">&#9670;&nbsp;</a></span>ofScmDefineSymbol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofScmDefineSymbol </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>symbol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SCM&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>defines a symbol for the Repl. </p>
+<p>You should use this particularly if there is a specific value you wish to access using the Repl. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">symbol</td><td>Name of the symbol to be defined. </td></tr>
+    <tr><td class="paramname">value</td><td>Value to be bound to the symbol. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_a289cee63dd679eedc1a35c755565806a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a289cee63dd679eedc1a35c755565806a">&#9670;&nbsp;</a></span>ofScmEval()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,8 +255,18 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
           <td class="memname">void oficina::ofScmEval </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>strToEval</em></td><td>)</td>
+          <td class="paramname"><em>strToEval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>suppressAns</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -206,29 +275,37 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">strToEval</td><td>String to be evaluated, in Scheme language. </td></tr>
+    <tr><td class="paramname">suppressAns</td><td>Suppresses answer to REPL. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="file_a6a05b99763e8e902739b5d9fc0094a1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a6a05b99763e8e902739b5d9fc0094a1b">&#9670;&nbsp;</a></span>ofScmGetOutputPtr()</h2>
+<a id="file_a92d95c09dc6e344383098515e0a40144"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a92d95c09dc6e344383098515e0a40144">&#9670;&nbsp;</a></span>ofScmGetReference()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char* oficina::ofScmGetOutputPtr </td>
+          <td class="memname">SCM oficina::ofScmGetReference </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>symbol</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Yields a pointer to the Repl's Error output string. </p>
-<dl class="section warning"><dt>Warning</dt><dd>Please handle this pointer with care; you should not ever have to dispose it manually. </dd></dl>
+<p>Retrieves a reference to a symbol globally defined on the REPL's default module. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">symbol</td><td>Symbol which reference should be retrieved. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A direct reference to the value or the procedure defined under this symbol. </dd></dl>
 
 </div>
 </div>
@@ -252,40 +329,14 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 
 </div>
 </div>
-<a id="file_ab8a1214e740541020f7ee36ee8da6d6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ab8a1214e740541020f7ee36ee8da6d6d">&#9670;&nbsp;</a></span>ofScmResetOutput()</h2>
+<a id="file_ad247f246df41e7c32a8543c91b9f55a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_ad247f246df41e7c32a8543c91b9f55a0">&#9670;&nbsp;</a></span>ofScmUndefine()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void oficina::ofScmResetOutput </td>
-          <td>(</td>
-          <td class="paramtype">scheme *&#160;</td>
-          <td class="paramname"><em>scm</em> = <code>nullptr</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Resets the error output of the Repl or of a Scheme script. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">scm</td><td>Pointer to the actual scheme structure, or NULL/nullptr if you wish to reset the Repl's error output. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="file_a41700db76ae4212455f6ec678288f9b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a41700db76ae4212455f6ec678288f9b3">&#9670;&nbsp;</a></span>ofScmUndefineFunc()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void oficina::ofScmUndefineFunc </td>
+          <td class="memname">void oficina::ofScmUndefine </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>symbol</em></td><td>)</td>
@@ -294,10 +345,10 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
       </table>
 </div><div class="memdoc">
 
-<p>Undefines a foreign function for the Repl. </p>
-<p>Takes a previously defined function and binds it to the Scheme's nil, effectively removing its lambda definition, if existing. This will not make the symbol cease to exist, but will remove its bound behaviour. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Undefines a symbol (foreign function/variable) for the Repl. </p>
+<p>Takes a previously defined symbol and binds it to the Scheme's nil, effectively removing its definition, if existing. This will not make the symbol cease to exist, but will remove its bound behaviour or value. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">symbol</td><td>Name of the function to be unbound. </td></tr>
+    <tr><td class="paramname">symbol</td><td>Name of the symbol to be unbound. </td></tr>
   </table>
   </dd>
 </dl>
@@ -310,7 +361,7 @@ const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0f9f0e1a7b56d3be1045a2960b921939.html">oficina2</a></li><li class="navelem"><a class="el" href="ofscheme_8hpp.html">ofscheme.hpp</a></li>
-    <li class="footer">Generated on Thu Feb 23 2017 15:46:05 for OficinaFramework by
+    <li class="footer">Generated on Thu Mar 16 2017 22:35:30 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

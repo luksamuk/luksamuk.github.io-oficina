@@ -18,7 +18,8 @@ var searchData=
   ['getscale',['getScale',['../classoficina_1_1of_entity.html#a6053df48d7b57e24fcf0f5a1413964c8',1,'oficina::ofEntity']]],
   ['getsize',['getSize',['../classoficina_1_1of_display.html#ad2017370dbaac9e4efda37fcbe44158b',1,'oficina::ofDisplay::getSize()'],['../classoficina_1_1of_shader_attribute.html#a7529a39b8725b388b8625f32f0a046c6',1,'oficina::ofShaderAttribute::getSize()'],['../classoficina_1_1of_texture.html#a9908f83287cd09135db64188481fb66d',1,'oficina::ofTexture::getSize()']]],
   ['getstride',['getStride',['../classoficina_1_1of_shader_attribute.html#ad6b1109289d7e540a3332b464ef96990',1,'oficina::ofShaderAttribute']]],
-  ['gettype',['getType',['../classoficina_1_1of_element_buffer.html#a20c6786afc3159b4dfc2f84db6d84914',1,'oficina::ofElementBuffer::getType()'],['../classoficina_1_1of_shader_attribute.html#ae7f8656f6af451b56d1268d5a69842aa',1,'oficina::ofShaderAttribute::getType()']]],
+  ['getsymref',['getSymRef',['../classoficina_1_1of_scheme.html#ae74a05aeba9fe494ebb45b399582cf4f',1,'oficina::ofScheme']]],
+  ['gettype',['getType',['../classoficina_1_1of_i_component.html#af9951647f0543fc133756272849e1ea2',1,'oficina::ofIComponent::getType()'],['../classoficina_1_1of_element_buffer.html#a20c6786afc3159b4dfc2f84db6d84914',1,'oficina::ofElementBuffer::getType()'],['../classoficina_1_1of_shader_attribute.html#ae7f8656f6af451b56d1268d5a69842aa',1,'oficina::ofShaderAttribute::getType()']]],
   ['getuniformlocation',['getUniformLocation',['../classoficina_1_1of_shader_program.html#ad00e3c9c6afe144c603a71fa35f5eec2',1,'oficina::ofShaderProgram']]],
   ['getviewportsize',['getViewportSize',['../classoficina_1_1of_context.html#a444fbb906171b6fbb9b968ce033f5cd1',1,'oficina::ofContext']]]
 ];

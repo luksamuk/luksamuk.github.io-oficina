@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0a</span>
+   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -109,9 +109,9 @@ Public Member Functions</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#adb84c8591b4c8b954cc7e8d1de9d1495">init</a> ()</td></tr>
 <tr class="memdesc:adb84c8591b4c8b954cc7e8d1de9d1495"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the script object. <br /></td></tr>
 <tr class="separator:adb84c8591b4c8b954cc7e8d1de9d1495"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c074439e5dd90e1e65d86b575dd321a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#a5c074439e5dd90e1e65d86b575dd321a">loadfile</a> (std::string filename)</td></tr>
-<tr class="memdesc:a5c074439e5dd90e1e65d86b575dd321a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and evaluates an actual script file. You can also reload your script at runtime with this function, if needed.  <a href="#a5c074439e5dd90e1e65d86b575dd321a">More...</a><br /></td></tr>
-<tr class="separator:a5c074439e5dd90e1e65d86b575dd321a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d0ae2328c3038b7f5bbaa2d9ca21eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#ad8d0ae2328c3038b7f5bbaa2d9ca21eb">loadfile</a> (std::string module, std::string filename)</td></tr>
+<tr class="memdesc:ad8d0ae2328c3038b7f5bbaa2d9ca21eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads and evaluates an actual script file. You can also reload your script at runtime with this function, if needed.  <a href="#ad8d0ae2328c3038b7f5bbaa2d9ca21eb">More...</a><br /></td></tr>
+<tr class="separator:ad8d0ae2328c3038b7f5bbaa2d9ca21eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f9937dc88acbf944a14481358ebd6aa"><td class="memItemLeft" align="right" valign="top"><a id="a5f9937dc88acbf944a14481358ebd6aa"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#a5f9937dc88acbf944a14481358ebd6aa">unload</a> ()</td></tr>
 <tr class="memdesc:a5f9937dc88acbf944a14481358ebd6aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disposes the script object. <br /></td></tr>
@@ -119,9 +119,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a7019afd47a3643dc93ddcc6c84f28d32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#a7019afd47a3643dc93ddcc6c84f28d32">update</a> (float dt)</td></tr>
 <tr class="memdesc:a7019afd47a3643dc93ddcc6c84f28d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls the script object's update function, if existing.  <a href="#a7019afd47a3643dc93ddcc6c84f28d32">More...</a><br /></td></tr>
 <tr class="separator:a7019afd47a3643dc93ddcc6c84f28d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a802a0bcce12d85aca8914b7f7dd92daf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#a802a0bcce12d85aca8914b7f7dd92daf">regFunc</a> (std::string symbol, foreign_func fun)</td></tr>
-<tr class="memdesc:a802a0bcce12d85aca8914b7f7dd92daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/registers a foreign function on the script object.  <a href="#a802a0bcce12d85aca8914b7f7dd92daf">More...</a><br /></td></tr>
-<tr class="separator:a802a0bcce12d85aca8914b7f7dd92daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e0585f7197e3b4b8344a35e1be4544"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#ad3e0585f7197e3b4b8344a35e1be4544">regSym</a> (std::string symbol, SCM value)</td></tr>
+<tr class="memdesc:ad3e0585f7197e3b4b8344a35e1be4544"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/registers a symbol with a value on the script object. The registered symbol will be available only inside the module defined on the script.  <a href="#ad3e0585f7197e3b4b8344a35e1be4544">More...</a><br /></td></tr>
+<tr class="separator:ad3e0585f7197e3b4b8344a35e1be4544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dceda7ded32b2e53e50f696a301940c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#a4dceda7ded32b2e53e50f696a301940c">regFunc</a> (std::string symbol, int n_params, scm_t_subr fun, int n_optional_params=0)</td></tr>
+<tr class="memdesc:a4dceda7ded32b2e53e50f696a301940c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines/registers a foreign function on the script object. The registered function will be available only inside the module defined on the script.  <a href="#a4dceda7ded32b2e53e50f696a301940c">More...</a><br /></td></tr>
+<tr class="separator:a4dceda7ded32b2e53e50f696a301940c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae74a05aeba9fe494ebb45b399582cf4f"><td class="memItemLeft" align="right" valign="top">SCM&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_scheme.html#ae74a05aeba9fe494ebb45b399582cf4f">getSymRef</a> (std::string symbol)</td></tr>
+<tr class="memdesc:ae74a05aeba9fe494ebb45b399582cf4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a reference to a symbol defined on the object's module.  <a href="#ae74a05aeba9fe494ebb45b399582cf4f">More...</a><br /></td></tr>
+<tr class="separator:ae74a05aeba9fe494ebb45b399582cf4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classoficina_1_1of_i_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classoficina_1_1of_i_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classoficina_1_1of_i_component.html">oficina::ofIComponent</a></td></tr>
 <tr class="memitem:a161dea4d5c08069df1a06d98a669e054 inherit pub_methods_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a161dea4d5c08069df1a06d98a669e054"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a161dea4d5c08069df1a06d98a669e054">~ofIComponent</a> ()</td></tr>
@@ -135,9 +141,17 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a49fec000bce223717023b080cfbf0e0f">draw</a> ()</td></tr>
 <tr class="memdesc:a49fec000bce223717023b080cfbf0e0f inherit pub_methods_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the component. Overriding is optional. <br /></td></tr>
 <tr class="separator:a49fec000bce223717023b080cfbf0e0f inherit pub_methods_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9951647f0543fc133756272849e1ea2 inherit pub_methods_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#af9951647f0543fc133756272849e1ea2">getType</a> () const</td></tr>
+<tr class="memdesc:af9951647f0543fc133756272849e1ea2 inherit pub_methods_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a getter for a string which informs the type of this component.  <a href="classoficina_1_1of_i_component.html#af9951647f0543fc133756272849e1ea2">More...</a><br /></td></tr>
+<tr class="separator:af9951647f0543fc133756272849e1ea2 inherit pub_methods_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classoficina_1_1of_i_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classoficina_1_1of_i_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classoficina_1_1of_i_component.html">oficina::ofIComponent</a></td></tr>
+<tr class="memitem:a3f7ac2178111cf134a4f2f38bbb09c58 inherit pro_methods_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a3f7ac2178111cf134a4f2f38bbb09c58"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a3f7ac2178111cf134a4f2f38bbb09c58">parseType</a> ()</td></tr>
+<tr class="memdesc:a3f7ac2178111cf134a4f2f38bbb09c58 inherit pro_methods_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the type of current component. If creating a component without attaching it to an entity, you might want to call this anywhere on your constructor, init or load methods. <br /></td></tr>
+<tr class="separator:a3f7ac2178111cf134a4f2f38bbb09c58 inherit pro_methods_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classoficina_1_1of_i_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classoficina_1_1of_i_component')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classoficina_1_1of_i_component.html">oficina::ofIComponent</a></td></tr>
 <tr class="memitem:a1d2ff6acbb5ceec9303275ed3bfbb200 inherit pro_attribs_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a1d2ff6acbb5ceec9303275ed3bfbb200"></a>
 <a class="el" href="classoficina_1_1of_entity.html">ofEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a1d2ff6acbb5ceec9303275ed3bfbb200">parent</a></td></tr>
@@ -147,10 +161,37 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines one Scheme environment to be used inside an entity. </p>
 
-<p class="definition">Definition at line <a class="el" href="ofscheme_8hpp_source.html#l00075">75</a> of file <a class="el" href="ofscheme_8hpp_source.html">ofscheme.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="ofscheme_8hpp_source.html#l00094">94</a> of file <a class="el" href="ofscheme_8hpp_source.html">ofscheme.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5c074439e5dd90e1e65d86b575dd321a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c074439e5dd90e1e65d86b575dd321a">&#9670;&nbsp;</a></span>loadfile()</h2>
+<a id="ae74a05aeba9fe494ebb45b399582cf4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae74a05aeba9fe494ebb45b399582cf4f">&#9670;&nbsp;</a></span>getSymRef()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SCM oficina::ofScheme::getSymRef </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>symbol</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves a reference to a symbol defined on the object's module. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">symbol</td><td>Symbol which reference should be retrieved. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the retrieved symbol. </dd></dl>
+
+</div>
+</div>
+<a id="ad8d0ae2328c3038b7f5bbaa2d9ca21eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d0ae2328c3038b7f5bbaa2d9ca21eb">&#9670;&nbsp;</a></span>loadfile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -159,8 +200,18 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">void oficina::ofScheme::loadfile </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>filename</em></td><td>)</td>
+          <td class="paramname"><em>module</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>filename</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -168,6 +219,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Loads and evaluates an actual script file. You can also reload your script at runtime with this function, if needed. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">module</td><td>Name of the module defined on the script file. </td></tr>
     <tr><td class="paramname">filename</td><td>File path to the script file. </td></tr>
   </table>
   </dd>
@@ -176,8 +228,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a802a0bcce12d85aca8914b7f7dd92daf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a802a0bcce12d85aca8914b7f7dd92daf">&#9670;&nbsp;</a></span>regFunc()</h2>
+<a id="a4dceda7ded32b2e53e50f696a301940c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dceda7ded32b2e53e50f696a301940c">&#9670;&nbsp;</a></span>regFunc()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,8 +243,20 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">foreign_func&#160;</td>
-          <td class="paramname"><em>fun</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_params</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">scm_t_subr&#160;</td>
+          <td class="paramname"><em>fun</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n_optional_params</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -202,11 +266,56 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Defines/registers a foreign function on the script object. </p>
+<p>Defines/registers a foreign function on the script object. The registered function will be available only inside the module defined on the script. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">symbol</td><td>Name of the function to be defined. </td></tr>
-    <tr><td class="paramname">fun</td><td>Function pointer to be used. Also accepts lambdas, but not closures (e.g. lambdas with captures). </td></tr>
+    <tr><td class="paramname">n_params</td><td>Number of required/obligatory parameters to be passed to the function. </td></tr>
+    <tr><td class="paramname">fun</td><td>Function pointer to be used. Pass the function name with the SCHEME_FUNCAST macro to cast it appropriately. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ofscheme_8hpp.html#ae918b3402aa9d55e7928b109ca43fde1" title="Macro for defining Scheme functions. Pass the function name using this macro when creating functions ...">SCHEME_FUNCAST</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n_optional_params</td><td>Optionally specify the amount of optional parameters which the function should have. Optional parameters should begin right after obligatory parameters. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad3e0585f7197e3b4b8344a35e1be4544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e0585f7197e3b4b8344a35e1be4544">&#9670;&nbsp;</a></span>regSym()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofScheme::regSym </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>symbol</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">SCM&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines/registers a symbol with a value on the script object. The registered symbol will be available only inside the module defined on the script. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">symbol</td><td>Name of the variable to be defined. </td></tr>
+    <tr><td class="paramname">value</td><td>Value to be bound to the symbol. </td></tr>
   </table>
   </dd>
 </dl>
@@ -258,7 +367,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_scheme.html">ofScheme</a></li>
-    <li class="footer">Generated on Thu Feb 23 2017 15:46:07 for OficinaFramework by
+    <li class="footer">Generated on Thu Mar 16 2017 22:35:31 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

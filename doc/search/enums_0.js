@@ -4,6 +4,7 @@ var searchData=
   ['ofcontexttype',['ofContextType',['../render_8hpp.html#a5b60a1b190b19ed2a10544095ff3b981',1,'oficina']]],
   ['ofdatatype',['ofDataType',['../render_8hpp.html#af613600522accaa6ba0886b99d4d8f10',1,'oficina']]],
   ['ofdebuggerstate',['ofDebuggerState',['../classoficina_1_1of_canvas_manager.html#ab2fca772b93cc7658d0b1f36ad1e95df',1,'oficina::ofCanvasManager']]],
+  ['offontfaces',['ofFontFaces',['../render_8hpp.html#a2967c15438c5f32054507523ab8aba84',1,'oficina']]],
   ['ofloglvl',['ofLogLvl',['../io_8hpp.html#aca563c5588560c4dd9110840744398a2',1,'oficina']]],
   ['oflogtype',['ofLogType',['../io_8hpp.html#ac4c9fb6871e6d6bc55362631297eb7dd',1,'oficina']]],
   ['ofmousebutton',['ofMouseButton',['../input_8hpp.html#ada948ff3de0d8c5f5fd444ce1c00cf00',1,'oficina']]],

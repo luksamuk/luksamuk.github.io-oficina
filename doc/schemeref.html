@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>OficinaFramework: ofScheme API Reference</title>
+<title>OficinaFramework: IronScheme API Reference v0.3</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0a</span>
+   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -82,14 +82,15 @@ $(document).ready(function(){initNavTree('schemeref.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">ofScheme API Reference </div>  </div>
+<div class="title">IronScheme API Reference v0.3 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="general"></a>
+<div class="textblock"><p>Quick API reference for IronScheme.</p>
+<h1><a class="anchor" id="general"></a>
 General Scheme Syntax</h1>
-<p>ofScheme is a custom Scheme, based on the TinyScheme API. Therefore, all of R5RS Scheme specifications are already built-in. You can refer to the R5RS paper or to TinyScheme's manual for more information.</p>
+<p>IronScheme is a custom Scheme, powered by GNU Guile. IronScheme uses Guile's features and speed to deliver an in-game REPL, and custom functions and variables organized in modules so you can write the behaviour of your game's entities in Scheme language.</p>
 <h1><a class="anchor" id="specific"></a>
-ofScheme Specific Syntax</h1>
+IronScheme Specific Syntax</h1>
 <h2><a class="anchor" id="global"></a>
 Global symbols</h2>
 <p>These symbols are available for use on all functions, and should be used when necessary. All sequential symbols are just aliases for integers; the first of each "collection" always represent the value 0.</p>
@@ -98,180 +99,298 @@ Global symbols</h2>
 <div class="fragment"><div class="line">:left-trigger</div><div class="line">:right-trigger</div></div><!-- fragment --><h2>Gamepad Buttons</h2>
 <div class="fragment"><div class="line">:pad-start</div><div class="line">:pad-back</div><div class="line">:pad-a</div><div class="line">:pad-b</div><div class="line">:pad-y</div><div class="line">:pad-ls</div><div class="line">:pad-rs</div><div class="line">:pad-d-up</div><div class="line">:pad-d-down</div><div class="line">:pad-d-left</div><div class="line">:pad-d-right</div><div class="line">:pad-lb</div><div class="line">:pad-lt</div><div class="line">:pad-rb</div><div class="line">:pad-rt</div></div><!-- fragment --><h2>Mouse Buttons</h2>
 <div class="fragment"><div class="line">:mouse-left</div><div class="line">:mouse-mid</div><div class="line">:mouse-right</div></div><!-- fragment --><h2>Coordinate Components</h2>
-<div class="fragment"><div class="line">:x</div><div class="line">:y</div><div class="line">:z</div><div class="line">:w</div></div><!-- fragment --><h2><a class="anchor" id="common"></a>
+<div class="fragment"><div class="line">:x</div><div class="line">:y</div><div class="line">:z</div><div class="line">:w</div></div><!-- fragment --><h2>Hardcoded Font Faces</h2>
+<div class="fragment"><div class="line">:typeface-fixedsys</div><div class="line">:typeface-gohu</div><div class="line">:typeface-fantasque</div><div class="line">:typeface-terminus</div></div><!-- fragment --><h2><a class="anchor" id="common"></a>
 Common API</h2>
 <p>All functions described here are available to all instantiated Schemes, be it the global Scheme REPL (controlled by oficina::ofScmXXX C++ functions) or the object-based Scheme (<a class="el" href="classoficina_1_1of_scheme.html" title="Defines one Scheme environment to be used inside an entity. ">oficina::ofScheme</a> class).</p>
+<p>To access these functions, one must use the module (oficina common).</p>
 <h3><a class="anchor" id="output"></a>
 Output</h3>
 <p>These functions will write or affect directly the debugger's REPL output.</p>
-<h4><a class="anchor" id="DISPLAY"></a>
-display</h4>
-<p>Displays a string on the REPL's output. </p><div class="fragment"><div class="line">(display string) </div></div><!-- fragment --><h4><a class="anchor" id="PRINT-HEX"></a>
+<h4><a class="anchor" id="HEX"></a>
+hex</h4>
+<div class="fragment"><div class="line">(hex number)</div></div><!-- fragment --><p> Returns a string with a hexadecimal format of 0x00000000 for the given number. Ideal for representing memory pointers. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>Number to be formatted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string containing the formatted number.</dd></dl>
+<h4><a class="anchor" id="PRINT-HEX"></a>
 print-hex</h4>
-<p>Prints an integer on REPL's output with hexadecimal format 0x00000000 </p><div class="fragment"><div class="line">(print-hex number) </div></div><!-- fragment --><h4><a class="anchor" id="NEWLINE"></a>
+<div class="fragment"><div class="line">(print-hex number)</div></div><!-- fragment --><p> Prints an integer on REPL's output with hexadecimal format 0x00000000. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>Number to be printed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Undefined.</dd></dl>
+<h4><a class="anchor" id="NEWLINE"></a>
 newline</h4>
-<p>Inputs new line on REPL's output </p><div class="fragment"><div class="line">(newline) </div></div><!-- fragment --><h4><a class="anchor" id="CLEAR"></a>
+<div class="fragment"><div class="line">(newline)</div></div><!-- fragment --><p> Inputs new line on REPL's output. </p><dl class="section return"><dt>Returns</dt><dd>Undefined.</dd></dl>
+<h4><a class="anchor" id="CLEAR"></a>
 clear</h4>
-<p>Clears REPL's output </p><div class="fragment"><div class="line">(clear) </div></div><!-- fragment --><h4><a class="anchor" id="CANVASLIST"></a>
+<div class="fragment"><div class="line">(clear)</div></div><!-- fragment --><p> Clears REPL's output. </p><dl class="section return"><dt>Returns</dt><dd>Undefined.</dd></dl>
+<h4><a class="anchor" id="CANVASLIST"></a>
 canvas-list</h4>
-<p>Shows information on currently loaded canvases. </p><div class="fragment"><div class="line">(canvas-list) </div></div><!-- fragment --><h4><a class="anchor" id="QUIT"></a>
+<div class="fragment"><div class="line">(canvas-list)</div></div><!-- fragment --><p> Shows information on currently loaded canvases. </p><dl class="section return"><dt>Returns</dt><dd>Undefined.</dd></dl>
+<h4><a class="anchor" id="QUIT"></a>
 quit</h4>
-<p>Soft stops the entire engine and quits game. </p><div class="fragment"><div class="line">(quit) </div></div><!-- fragment --><h3><a class="anchor" id="input"></a>
+<div class="fragment"><div class="line">(quit)</div></div><!-- fragment --><p> Soft stops the entire engine and quits game. </p><dl class="section return"><dt>Returns</dt><dd>Undefined.</dd></dl>
+<h4><a class="anchor" id="SETFACE"></a>
+set-face!</h4>
+<div class="fragment"><div class="line">(<span class="keyword">set</span>-face! <span class="keyword">typename</span>-<span class="keyword">enum</span>)</div></div><!-- fragment --><p> Changes the font typeface used on the debugger in general. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">typename-enum</td><td>Enumeration specifying which typeface should be used. Possible values are :typeface-fixedsys, :typeface-gohu, :typeface-fantasque and :typeface-terminus. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Undefined.</dd></dl>
+<h3><a class="anchor" id="input"></a>
 Input</h3>
 <p>These functions will get player-related input from game controllers and such.</p>
 <h4><a class="anchor" id="LSTICK"></a>
 lstick?</h4>
-<p>Gets player's left stick. Returns an actual vector with two real coordinates ranging from -1.0 to 1.0. Use vector-ref to access each coordinate. </p><div class="fragment"><div class="line">(lstick? player) </div></div><!-- fragment --><h4><a class="anchor" id="RSTICK"></a>
+<div class="fragment"><div class="line">(lstick? #:optional player)</div></div><!-- fragment --><p> Gets player's left stick. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>(Optional) Player to be compared. Defaults to :player-one if ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Scheme vector with two real coordinates ranging from -1.0 to 1.0.</dd></dl>
+<h4><a class="anchor" id="RSTICK"></a>
 rstick?</h4>
-<p>Gets player's right stick. Refer to lstick? for usage tips. </p><div class="fragment"><div class="line">(rstick? player) </div></div><!-- fragment --><h4><a class="anchor" id="TRIGGER"></a>
+<div class="fragment"><div class="line">(rstick? #:optional player)</div></div><!-- fragment --><p> Gets player's right stick. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">player</td><td>(Optional) Player to be compared. Defaults to :player-one if ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A Scheme vector with two real coordinates ranging from -1.0 to 1.0.</dd></dl>
+<h4><a class="anchor" id="TRIGGER"></a>
 trigger?</h4>
-<p>Gets a controller's trigger pressing ratio value, for a specific player's controller. Ranges from 0.0 to 1.0, depending on how much the trigger is being pressed. </p><div class="fragment"><div class="line">(trigger? which player) </div></div><!-- fragment --><h4><a class="anchor" id="BTNPRESS"></a>
+<div class="fragment"><div class="line">(trigger? which #:optional player)</div></div><!-- fragment --><p> Gets a controller's trigger pressing ratio value, for a specific player's controller. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">which</td><td>Specification for which trigger should be compared. You may use :left-trigger or :right-trigger. </td></tr>
+    <tr><td class="paramname">player</td><td>(Optional) Player to be compared. Defaults to :player-one if ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A real value ranging from 0.0 to 1.0, depending on how much the trigger is being pressed.</dd></dl>
+<h4><a class="anchor" id="BTNPRESS"></a>
 btnpress?</h4>
-<p>Gets whether a button is being held at a specific player's controller. Returns #t or #f. </p><div class="fragment"><div class="line">(btnpress? which player) </div></div><!-- fragment --><h4><a class="anchor" id="BTNTAP"></a>
+<div class="fragment"><div class="line">(btnpress? which #:optional player)</div></div><!-- fragment --><p> Gets whether a button is being held at a specific player's controller. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">which</td><td>Button to be compared. All atoms similar to :pad-start, :pad-back and etcetera may be used. </td></tr>
+    <tr><td class="paramname">player</td><td>(Optional) Player to be compared. Defaults to :player-one if ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether the button is being held by the player or not.</dd></dl>
+<h4><a class="anchor" id="BTNTAP"></a>
 btntap?</h4>
-<p>Gets whether a button was pressed on the current frame. Different from btnpress?, a btntap? only lasts for one single frame. Also returns #t or #f. </p><div class="fragment"><div class="line">(btntap? which player) </div></div><!-- fragment --><h4><a class="anchor" id="MOUSEPOS"></a>
+<div class="fragment"><div class="line">(btntap? which #:optional player)</div></div><!-- fragment --><p> Gets whether a button was pressed on the current frame. Different from btnpress?, a btntap? only lasts for a single frame. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">which</td><td>Button to be compared. All atoms similar to :pad-start, :pad-back and etcetera may be used. </td></tr>
+    <tr><td class="paramname">player</td><td>(Optional) Player to be compared. Defaults to :player-one if ignored. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether the button was tapped by the player or not.</dd></dl>
+<h4><a class="anchor" id="MOUSEPOS"></a>
 mousepos?</h4>
-<p>Gets the current mouse position. Returns a vector with two real values representing screen coordinates. </p><div class="fragment"><div class="line">(mousepos?) </div></div><!-- fragment --><h4><a class="anchor" id="MOUSEPRESS"></a>
+<div class="fragment"><div class="line">(mousepos?)</div></div><!-- fragment --><p> Gets the current mouse position. </p><dl class="section return"><dt>Returns</dt><dd>A vector with two real values representing screen coordinates.</dd></dl>
+<h4><a class="anchor" id="MOUSEPRESS"></a>
 mousepress?</h4>
-<p>Gets whether a mouse button is being held. Returns #t or #f. </p><div class="fragment"><div class="line">(mousepress? which) </div></div><!-- fragment --><h4><a class="anchor" id="MOUSETAP"></a>
+<div class="fragment"><div class="line">(mousepress? which)</div></div><!-- fragment --><p> Gets whether a mouse button is being held. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">which</td><td>Mouse button to be compared. May be :mouse-left, :mouse-mid or :mouse-right. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether the mouse button is being pressed or not.</dd></dl>
+<h4><a class="anchor" id="MOUSETAP"></a>
 mousetap?</h4>
-<p>Gets whether a mouse button was tapped. To understand the difference between a press and a tap, please refer to btntap?. Also returns #t or #f. </p><div class="fragment"><div class="line">(mousetap? which) </div></div><!-- fragment --><h3><a class="anchor" id="display"></a>
+<div class="fragment"><div class="line">(mousetap? which)</div></div><!-- fragment --><p> Gets whether a mouse button was tapped on the current frame. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">which</td><td>Mouse button to be compared. May be :mouse-left, :mouse-mid or :mouse-right. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether the mouse button was tapped or not.</dd></dl>
+<h3><a class="anchor" id="display"></a>
 Display</h3>
 <p>Display-related stuff to get useful information regarding stuff, such as screen size, etc.</p>
 <h4><a class="anchor" id="VWPRT"></a>
 vwprt?</h4>
-<p>Gets a vector of two integers containing the current viewport size. </p><div class="fragment"><div class="line">(vwptr?) </div></div><!-- fragment --><h4><a class="anchor" id="SETFULLSCREEN"></a>
-set-fullscreen!</h4>
-<p>Sets the fullscreen state of the global display. State can be #t or #f. </p><div class="fragment"><div class="line">(<span class="keyword">set</span>-fullscreen! state) </div></div><!-- fragment --><h4><a class="anchor" id="FULLSCREEN"></a>
-fullscreen?</h4>
-<p>Gets the fullscreen state of the global display. Returns #t or #f. </p><div class="fragment"><div class="line">(fullscreen?) </div></div><!-- fragment --><h2><a class="anchor" id="object"></a>
-Object API</h2>
-<p>These functions are only available for Schemes executing within entities (class <a class="el" href="classoficina_1_1of_scheme.html" title="Defines one Scheme environment to be used inside an entity. ">oficina::ofScheme</a>).</p>
+<div class="fragment"><div class="line">(vwprt?)</div></div><!-- fragment --><p> Gets the viewport size. </p><dl class="section return"><dt>Returns</dt><dd>A vector of two integers containing the current viewport size.</dd></dl>
+<h4><a class="anchor" id="SETFULLSCREEN"></a>
+set-fullscr!</h4>
+<div class="fragment"><div class="line">(<span class="keyword">set</span>-fullscr! state)</div></div><!-- fragment --><p> Sets the fullscreen state of the global display. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>The new fullscreen state; Active (#t) or not (#f). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Undefined.</dd></dl>
+<h4><a class="anchor" id="FULLSCREEN"></a>
+fullscr?</h4>
+<div class="fragment"><div class="line">(fullscr?)</div></div><!-- fragment --><p> Gets the fullscreen state of the global display. </p><dl class="section return"><dt>Returns</dt><dd>Whether the screen is in fullscreen state or not.</dd></dl>
+<h2><a class="anchor" id="object"></a>
+Entity API</h2>
+<p>These functions serve the purpose of object manipulation.</p>
+<p>To access these functions, one must use the module (oficina entity).</p>
 <h3><a class="anchor" id="referencing"></a>
 Referencing objects</h3>
 <p>Most of these functions will use some of these resources or functions to refer to other objects. Each one holds/returns a handle to an object, which can be searched on the parent object collection.</p>
 <h4><a class="anchor" id="THIS"></a>
 +this+</h4>
-<p>Value referencing the current object, the one which loaded the current script. Use this value to save searching time. Each object has a different value. </p><div class="fragment"><div class="line">+<span class="keyword">this</span>+ </div></div><!-- fragment --><h3><a class="anchor" id="transform"></a>
+<div class="fragment"><div class="line">+<span class="keyword">this</span>+</div></div><!-- fragment --><p> Value referencing the current object, the one which loaded the current script. Use this value to save searching time. Each object has a different value.</p>
+<h3><a class="anchor" id="retriev_comps"></a>
+Retrieving components</h3>
+<p>These functions provide an interface to deal directly with an Entity's components. Said components, from the Scheme interface, will also retain the derived class' type saved on a string. Said type is deduced once the component is attached to an Entity, unless directly specified. For more info, see <a class="el" href="classoficina_1_1of_i_component.html" title="Defines a single component to be attached to an entity. ">oficina::ofIComponent</a>. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="classoficina_1_1of_i_component.html" title="Defines a single component to be attached to an entity. ">oficina::ofIComponent</a></dd></dl>
+<h4><a class="anchor" id="GETCOMPONENT"></a>
+get-component</h4>
+<div class="fragment"><div class="line">(<span class="keyword">get</span>-component name #:optional objref)</div></div><!-- fragment --><p> Retrieves a component from a specified entity or from +this+. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Name of the component, as registered on the Entity. </td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Defaults to +this+. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A SMOB containing a reference to the component, or NIL otherwise.</dd></dl>
+<h4><a class="anchor" id="COMPONENTTYPE"></a>
+component-type?</h4>
+<div class="fragment"><div class="line">(component-type? compref)</div></div><!-- fragment --><p> Retrieves a string specifying the component's type. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">compref</td><td>Reference to the component. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A string containing the component's type, as deduced when registering said component.</dd></dl>
+<h3><a class="anchor" id="transform"></a>
 Object transformation</h3>
 <p>Use this to change overall object's properties and matrices.</p>
 <h4><a class="anchor" id="TRL"></a>
 trl!</h4>
-<p>Translates object to/by a coordinate. </p><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line">(trl! coord #:optional load-identity objref)</div></div><!-- fragment --><p> Translates object to/by a coordinate. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">coord</td><td>A LIST of exactly three numeric values. </td></tr>
-    <tr><td class="paramname">load-identity</td><td>Whether the positioning matrix must be reset before positioning. </td></tr>
-    <tr><td class="paramname">objref</td><td>Reference to object or +this+.</td></tr>
+    <tr><td class="paramname">coord</td><td>List with translation coordinates in X, Y and Z axis. </td></tr>
+    <tr><td class="paramname">load-identity</td><td>(Optional) Whether the positioning matrix must be reset before positioning. Defaults to #f. </td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Defaults to +this+.</td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line">(trl! coord load-identity objref) </div></div><!-- fragment --><h4><a class="anchor" id="ROT"></a>
+<h4><a class="anchor" id="ROT"></a>
 rot!</h4>
-<p>Rotates object by an angle around a specified axis. </p><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line">(rot! theta axis #:optional load-identity objref)</div></div><!-- fragment --><p>Rotates object by an angle around a specified axis. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">theta</td><td>Angle of rotation, in radians. </td></tr>
-    <tr><td class="paramname">vector</td><td>A LIST with three numbers representing the axis of rotation. </td></tr>
-    <tr><td class="paramname">load-identity</td><td>Whether the positioning matrix must be reset before positioning. </td></tr>
-    <tr><td class="paramname">objref</td><td>Reference to object or +this+.</td></tr>
+    <tr><td class="paramname">axis</td><td>List describing the rotation axis in X, Y and Z axis. </td></tr>
+    <tr><td class="paramname">load-identity</td><td>(Optional) Whether the rotation matrix must be reset before rotating. Defaults to #f. </td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Default to +this+.</td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line">(rot! theta vector load-identity objref) </div></div><!-- fragment --><h4><a class="anchor" id="SCL"></a>
+<h4><a class="anchor" id="SCL"></a>
 scl!</h4>
-<p>Scales object to/by an amount. </p><dl class="section note"><dt>Note</dt><dd>Scaling defaults to 1.0 on all three axis, so if you feel like resetting the scaling, simply scale all axis by 1.0 and set load-identity to #t. </dd></dl>
+<div class="fragment"><div class="line">(scl! scl #:optional load-identity objref)</div></div><!-- fragment --><p> Scales object to/by an amount. </p><dl class="section note"><dt>Note</dt><dd>Scaling defaults to 1.0 on all three axis, so if you feel like resetting the scaling, simply scale all axis by 1.0 and set load-identity to #t. </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">vector</td><td>A LIST of exactly three numeric values. </td></tr>
-    <tr><td class="paramname">load-identity</td><td>Whether the positioning matrix must be reset before positioning. </td></tr>
-    <tr><td class="paramname">objref</td><td>Reference to object or +this+.</td></tr>
+    <tr><td class="paramname">scl</td><td>List describing scaling factors on X, Y and Z axis. Each axis defaults to 1.0. </td></tr>
+    <tr><td class="paramname">load-identity</td><td>(Optional) Whether the scaling patrix must be reset before scaling. Different from other functions, defaults to #t. </td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Defaults to +this+.</td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line">(scl! vector load-identity objref) </div></div><!-- fragment --><h4><a class="anchor" id="POS"></a>
+<h4><a class="anchor" id="POS"></a>
 pos?</h4>
-<p>Gets an object's position. </p><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line">(pos? #:optional objref)</div></div><!-- fragment --><p> Gets an object's position. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">objref</td><td>Reference to object or +this+. </td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Defaults to +this+. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A VECTOR containing two real values, representing the position of an object.</dd></dl>
-<div class="fragment"><div class="line">(pos? objref) </div></div><!-- fragment --><h4><a class="anchor" id="EULERANGLE"></a>
+<h4><a class="anchor" id="EULERANGLE"></a>
 eulerangle?</h4>
-<p>Gets the Euler angle related to a specific rotated axis. </p><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line">(eulerangle? axis #:optional objref)</div></div><!-- fragment --><p> Gets the Euler angle related to a specific rotated axis. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">axis</td><td>Desired axis of rotation to reference. </td></tr>
-    <tr><td class="paramname">objref</td><td>Reference to object or +this+. </td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Defaults to +this+. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A real value containing the euler value of the desired axis.</dd></dl>
-<div class="fragment"><div class="line">(eulerangle? axis objref) </div></div><!-- fragment --><h4><a class="anchor" id="MAG"></a>
+<h4><a class="anchor" id="MAG"></a>
 mag?</h4>
-<p>Gets ratio of magnification (scaling) related to a specific coordinate axis. </p><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line">(mag? axis #:optional objref)</div></div><!-- fragment --><p> Gets ratio of magnification (scaling) related to a specific coordinate axis. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">axis</td><td>Desired axis of rotation to reference. </td></tr>
-    <tr><td class="paramname">objref</td><td>Reference to object or +this+. </td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Defaults to +this+. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>A real value containing the magnitude of the object on the desired axis.</dd></dl>
-<div class="fragment"><div class="line">(mag? axis objref) </div></div><!-- fragment --><h4><a class="anchor" id="PROPSET"></a>
+<h4><a class="anchor" id="PROPSET"></a>
 propset!</h4>
-<p>Sets a specific property to true or false. </p><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line">(propset! which state #:optional objref)</div></div><!-- fragment --><p> Sets a specific property to true or false. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">which</td><td>Property index, ranging from 0 to 31 </td></tr>
     <tr><td class="paramname">state</td><td>Active (#t) or inactive (#f). </td></tr>
-    <tr><td class="paramname">objref</td><td>Reference to object or +this+.</td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Defaults to +this+.</td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line">(propset! which state objref) </div></div><!-- fragment --><h4><a class="anchor" id="PROPTOG"></a>
+<h4><a class="anchor" id="PROPTOG"></a>
 proptog!</h4>
-<p>Toggles a specific property's state. </p><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line">(proptog! which #:optional objref)</div></div><!-- fragment --><p> Toggles a specific property's state. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">which</td><td>Property index, ranging from 0 to 31 </td></tr>
-    <tr><td class="paramname">objref</td><td>Reference to object or +this+.</td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Defaults to +this+.</td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line">(proptog! which objref) </div></div><!-- fragment --><h4><a class="anchor" id="PROPGET"></a>
+<h4><a class="anchor" id="PROPGET"></a>
 propget?</h4>
-<p>Gets whether a property is active or inactive. </p><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line">(propget? which #:optional objref)</div></div><!-- fragment --><p> Gets whether a property is active or inactive. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">which</td><td>Property index, ranging from 0 to 31 </td></tr>
-    <tr><td class="paramname">objref</td><td>Reference to object or +this+. </td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Defaults to +this+. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>True (#t) or False (#f), depending on the state of the property.</dd></dl>
-<div class="fragment"><div class="line">(propget? which objref) </div></div><!-- fragment --><h4><a class="anchor" id="PROPMASK"></a>
+<h4><a class="anchor" id="PROPMASK"></a>
 propmask?</h4>
-<p>Gets the properties mask as an integer. Can be printed with print-hex. </p><dl class="params"><dt>Parameters</dt><dd>
+<div class="fragment"><div class="line">(propmask? #:optional objref)</div></div><!-- fragment --><p> Gets the properties mask as an integer. Can be printed with print-hex. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">objref</td><td>Reference to object or +this+. </td></tr>
+    <tr><td class="paramname">objref</td><td>(Optional) Reference to object. Defaults to +this+. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>An integer value containing the properties mask of an object.</dd></dl>
-<div class="fragment"><div class="line">(propmask? objref) </div></div><!-- fragment --><h1><a class="anchor" id="usage"></a>
+<h1><a class="anchor" id="usage"></a>
 Usage Guide</h1>
 <h2><a class="anchor" id="basic"></a>
 Basic Example</h2>
-<p>Every script needs two functions defined to work properly: (init) and (update dt). Below is an example of an empty script with those requirements:</p>
-<div class="fragment"><div class="line">(define init</div><div class="line">  (lambda ()</div><div class="line">    #t))</div><div class="line"></div><div class="line">(define update</div><div class="line">  (lambda (dt)</div><div class="line">    #t))</div></div><!-- fragment --><p>If you wish to use a more compact form, you can omit the lambda:</p>
-<div class="fragment"><div class="line">(define (init)</div><div class="line">  #t)</div><div class="line"></div><div class="line">(define (update dt)</div><div class="line">  #t)</div></div><!-- fragment --><p>The reason for those functions is that, any time your script is loaded, everything is evaluated. This is why you must encapsulate your code inside functions (or lambdas), so the whole code is not executed at once.</p>
+<p>Every script needs a module, for the object which the behaviour should be defined, exporting two public functions, to work properly: (init) and (update dt). Below is an example of an empty script with those requirements:</p>
+<div class="fragment"><div class="line">(define-module (module name)</div><div class="line">               :export (init update))</div><div class="line">(use-modules ((oficina common))</div><div class="line">             ((oficina entity)))</div><div class="line"></div><div class="line">(define init</div><div class="line">  (lambda ()</div><div class="line">    #f))</div><div class="line"></div><div class="line">(define update</div><div class="line">  (lambda (dt)</div><div class="line">    #f))</div></div><!-- fragment --><p>If you wish to use a more compact form, you can omit the lambda:</p>
+<div class="fragment"><div class="line">(define-module (module name)</div><div class="line">               :export (init update))</div><div class="line">(use-modules ((oficina common))</div><div class="line">             ((oficina entity)))</div><div class="line"></div><div class="line">(define (init)</div><div class="line">  #t)</div><div class="line"></div><div class="line">(define (update dt)</div><div class="line">  #t)</div></div><!-- fragment --><p>The reason for those functions is that, any time your script is loaded, everything is evaluated. This is why you must encapsulate your code inside functions (or lambdas), so the whole code is not executed at once.</p>
 <h2><a class="anchor" id="complex"></a>
 A More Complex Example</h2>
 <p>You can, though, predefine some variables outside of functions for later use. The following example will rotate a specific object by 0.5rad per second in the Z axis:</p>
-<div class="fragment"><div class="line">(define *rotation-speed* 0.5)</div><div class="line"></div><div class="line">(define init</div><div class="line">  (lambda ()</div><div class="line">    #t))</div><div class="line"></div><div class="line">(define update</div><div class="line">  (lambda (dt)</div><div class="line">    (rot! (* *rotation-speed* dt)</div><div class="line">      &#39;(0.0 0.0 1.0)</div><div class="line">      #f</div><div class="line">      +this+)))</div></div><!-- fragment --><p>Notice that, in the first line of code, we define a global object variable called rotation-speed*. Despite the use of the "define" keyword, it is just a variable.</p>
-<p>By multiplying <em>rotation-speed</em> by dt, we ensure that the current frame's rotation is corrected so each second spins our object by 0.5rad. dt represents the Delta-Time, which is the amount of time, in seconds (as a real number) the game has taken to get from the last frame to the current frame. If we did not correct our rotation speed on a per-frame basis, the object would spin 0.5rad PER FRAME. That could be dangerous if you're not purposely limiting your frame rate; your game could run at less than 30 or at much more than 1000 frames per second! To better understand that, you can remove the speed correction and try disabling and enabling VSync on Oficina to spot the difference. </p>
-</div></div><!-- contents -->
+<div class="fragment"><div class="line">(define-module (oficina my-rotating-object)</div><div class="line">               :export (init update))</div><div class="line">(use-modules ((oficina common))</div><div class="line">             ((oficina entity)))</div><div class="line"></div><div class="line">(define *rotation-speed* 0.5)</div><div class="line"></div><div class="line">(define init</div><div class="line">  (lambda ()</div><div class="line">    #t))</div><div class="line"></div><div class="line">(define update</div><div class="line">  (lambda (dt)</div><div class="line">    (rot! (* *rotation-speed* dt)</div><div class="line">          (list 0.0 0.0 1.0)</div><div class="line">          #f)))</div></div><!-- fragment --><p>Notice that, in the first line of code, we define a global object variable called <em>rotation-speed</em>. Despite the use of the "define" keyword, it is just a variable.</p>
+<p>By multiplying <em>rotation-speed</em> by dt, we ensure that the current frame's rotation is corrected so each second spins our object by 0.5rad. dt represents the Delta-Time, which is the amount of time, in seconds (as a real number) the game has taken to get from the last frame to the current frame. If we did not correct our rotation speed on a per-frame basis, the object would spin 0.5rad PER FRAME. That could be dangerous if you're not purposely limiting your frame rate; your game could run at less than 30 or at much more than 1000 frames per second! To better understand that, you can remove the speed correction and try disabling and enabling VSync on Oficina to spot the difference.</p>
+<h1><a class="anchor" id="schemeexample"></a>
+IronScheme Example</h1>
+<p>The example below defines a behaviour for an object called MyObject.</p>
+<div class="fragment"><div class="line">;;;; MyObject.scm</div><div class="line">;;;; Oficina Scheme Script file for class MyObject</div><div class="line"></div><div class="line">;;; Defines the object&#39;s module</div><div class="line">(define-module (oficina my-object)</div><div class="line">               :export (init update))</div><div class="line">;;; Imports oficina&#39;s general modules so we can</div><div class="line">;;; manipulate our object</div><div class="line">(use-modules ((oficina common))</div><div class="line">             ((oficina entity)))</div><div class="line"></div><div class="line">;;; Default movement speed for object</div><div class="line">(define *spd* 300.0)</div><div class="line">;;; Default scaling speed for object</div><div class="line">(define *scale-speed* 10.0)</div><div class="line"></div><div class="line">;;; Keeps track of object&#39;s magnification on X</div><div class="line">;;; and Y axis</div><div class="line">(define *x-mag* 1.0)</div><div class="line">(define *y-mag* 1.0)</div><div class="line"></div><div class="line">;;; This variable will hold a reference to the</div><div class="line">;;; component which executes this script</div><div class="line">(define *this-component* #f)</div><div class="line"></div><div class="line">(define clamp</div><div class="line">  (lambda (value min max)</div><div class="line">    &quot;Helper function to clamp a value to a minimum and a maximum value&quot;</div><div class="line">    (if (&lt; value min)</div><div class="line">        min</div><div class="line">      (if (&gt; value max)</div><div class="line">          max</div><div class="line">        value))))</div><div class="line"></div><div class="line">(define print-object-properties</div><div class="line">  (lambda ()</div><div class="line">    &quot;Helper function to display stuff on REPL&quot;</div><div class="line">    (clear)</div><div class="line">    ;; My reference</div><div class="line">    (format #t &quot;Entity:               ~a\n&quot; +this+)</div><div class="line">    (format #t &quot;Component:            ~a\n&quot; *this-component*)</div><div class="line">    (format #t &quot;Component Type:       ~a\n&quot;</div><div class="line">            (component-type? *this-component*))</div><div class="line">    (format #t &quot;Is a Scheme script?   ~a\n&quot;</div><div class="line">            (string=? (component-type? *this-component*)</div><div class="line">                      &quot;oficina::ofScheme&quot;))</div><div class="line">    (newline)</div><div class="line"></div><div class="line">    ;; Show player stuff</div><div class="line">    (format #t &quot;Object Position:      ~a\n&quot; (pos?))</div><div class="line">    (format #t &quot;Object Rotation:      ~a\n&quot; (eulerangle? :z))</div><div class="line">    (format #t &quot;Object Magnification: ~a\n&quot;</div><div class="line">               (list (mag? :x) (mag? :y) (mag? :z)))</div><div class="line">    (format #t &quot;Object Property Mask: ~a\n&quot; (hex (propmask?)))))</div><div class="line"></div><div class="line"></div><div class="line">(define init</div><div class="line">  (lambda ()</div><div class="line">    &quot;Initialization function&quot;</div><div class="line">    ;; Define three properties for example</div><div class="line">    (propset! 1 #t)</div><div class="line">    (propset! 31 #t)</div><div class="line">    (propset! 30 #t)</div><div class="line"></div><div class="line">    ;; Set initial angle</div><div class="line">    (rot! 0.0 (list 0.0 0.0 1.0) #t)</div><div class="line"></div><div class="line">    ;; Set initial position to 200, 200</div><div class="line">    (trl! (list 600.0 400.0 0.0) #t)</div><div class="line"></div><div class="line">    ;; Retrieve reference for component</div><div class="line">    (set! *this-component* (get-component &quot;Scheme&quot;))))</div><div class="line"></div><div class="line"></div><div class="line">(define update</div><div class="line">  (lambda (dt)</div><div class="line">    &quot;Update function&quot;</div><div class="line">    ;; Rotate object</div><div class="line">    (rot! (* 0.5 dt) (list 0.0 0.0 1.0))</div><div class="line"></div><div class="line">    ;; Magnify/minify object according to</div><div class="line">    ;; right stick input</div><div class="line">    (let ((rstk (rstick?)))</div><div class="line">      (set! *x-mag* (+ *x-mag*</div><div class="line">                    (* (vector-ref rstk :x) dt)))</div><div class="line">      (set! *y-mag* (+ *y-mag*</div><div class="line">                    (* (vector-ref rstk :y) dt)))</div><div class="line">      (set! *x-mag* (clamp *x-mag* 0.5 2.0))</div><div class="line">      (set! *y-mag* (clamp *y-mag* 0.5 2.0)))</div><div class="line">    (scl! (list *x-mag* *y-mag* 1.0) #t)</div><div class="line"></div><div class="line"></div><div class="line">    ;; Toggle property #10 when pressing B button</div><div class="line">    (if (btntap? :pad-b)</div><div class="line">      (proptog! 10))</div><div class="line">    </div><div class="line">    ;; Translate object according to stick</div><div class="line">    (let ((lstk (lstick?)))</div><div class="line">      (trl! (list (* *spd* (vector-ref lstk :x) dt)</div><div class="line">                  (* *spd* (vector-ref lstk :y) dt)</div><div class="line">                  0.0)))</div><div class="line"></div><div class="line">    ;; Print object info</div><div class="line">    (print-object-properties)))</div></div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Feb 23 2017 15:46:05 for OficinaFramework by
+    <li class="footer">Generated on Thu Mar 16 2017 22:35:30 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

@@ -8,8 +8,8 @@ var indexSectionsWithContent =
   5: "o",
   6: "o",
   7: "o",
-  8: "o",
-  9: "o"
+  8: "os",
+  9: "io"
 };
 
 var indexSectionNames =

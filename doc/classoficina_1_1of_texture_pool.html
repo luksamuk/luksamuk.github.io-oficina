@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0a</span>
+   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -102,9 +102,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c962a5e179bd150dbd33a13c3529df2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_pool.html#a4c962a5e179bd150dbd33a13c3529df2">load</a> (SDL_Surface *surf)</td></tr>
 <tr class="memdesc:a4c962a5e179bd150dbd33a13c3529df2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a texture from memory.  <a href="#a4c962a5e179bd150dbd33a13c3529df2">More...</a><br /></td></tr>
 <tr class="separator:a4c962a5e179bd150dbd33a13c3529df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f43b495ac2d45a19bb10b8875edc959"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classoficina_1_1of_font.html">ofFont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_pool.html#a7f43b495ac2d45a19bb10b8875edc959">loadDefaultFont</a> ()</td></tr>
-<tr class="memdesc:a7f43b495ac2d45a19bb10b8875edc959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads Oficina's default font (GohuFont 11).  <a href="#a7f43b495ac2d45a19bb10b8875edc959">More...</a><br /></td></tr>
-<tr class="separator:a7f43b495ac2d45a19bb10b8875edc959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b74c2864b1b6a6cd082ded08f46b6a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classoficina_1_1of_font.html">ofFont</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_pool.html#a07b74c2864b1b6a6cd082ded08f46b6a">loadDefaultFont</a> (<a class="el" href="render_8hpp.html#a2967c15438c5f32054507523ab8aba84">ofFontFaces</a> fontface=ofFontFaceGohuFont)</td></tr>
+<tr class="memdesc:a07b74c2864b1b6a6cd082ded08f46b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads one of Oficina's default font faces.  <a href="#a07b74c2864b1b6a6cd082ded08f46b6a">More...</a><br /></td></tr>
+<tr class="separator:a07b74c2864b1b6a6cd082ded08f46b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeacd1af3470918881256531273020c6a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_texture_pool.html#aeacd1af3470918881256531273020c6a">unload</a> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> &amp;t)</td></tr>
 <tr class="memdesc:aeacd1af3470918881256531273020c6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads a font.  <a href="#aeacd1af3470918881256531273020c6a">More...</a><br /></td></tr>
 <tr class="separator:aeacd1af3470918881256531273020c6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,7 +117,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <div class="textblock"><p>Static object for managing textures. Most (if not all) textures should be loaded using this tool. </p>
 <dl class="section note"><dt>Note</dt><dd>The use of this tool for managing textures is so that, when requiring a specific texture, it would never be loaded more than once. Furthermore, closing Oficina will also dispose all textures initialized, so if there is any leak of sorts, Oficina should be able to handle it nonetheless. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00678">678</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00694">694</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a50027af787ad1203f34b3f59381ee846"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50027af787ad1203f34b3f59381ee846">&#9670;&nbsp;</a></span>load() <span class="overload">[1/2]</span></h2>
@@ -189,8 +189,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a id="a7f43b495ac2d45a19bb10b8875edc959"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f43b495ac2d45a19bb10b8875edc959">&#9670;&nbsp;</a></span>loadDefaultFont()</h2>
+<a id="a07b74c2864b1b6a6cd082ded08f46b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b74c2864b1b6a6cd082ded08f46b6a">&#9670;&nbsp;</a></span>loadDefaultFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,7 +201,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
         <tr>
           <td class="memname">static <a class="el" href="classoficina_1_1of_font.html">ofFont</a> oficina::ofTexturePool::loadDefaultFont </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="render_8hpp.html#a2967c15438c5f32054507523ab8aba84">ofFontFaces</a>&#160;</td>
+          <td class="paramname"><em>fontface</em> = <code>ofFontFaceGohuFont</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -212,7 +213,13 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </table>
 </div><div class="memdoc">
 
-<p>Loads Oficina's default font (GohuFont 11). </p>
+<p>Loads one of Oficina's default font faces. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fontface</td><td>The default font to be loaded. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>A reference to the default font. </dd></dl>
 
 </div>
@@ -260,7 +267,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_texture_pool.html">ofTexturePool</a></li>
-    <li class="footer">Generated on Thu Feb 23 2017 15:46:07 for OficinaFramework by
+    <li class="footer">Generated on Thu Mar 16 2017 22:35:31 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

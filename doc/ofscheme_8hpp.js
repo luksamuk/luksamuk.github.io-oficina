@@ -1,13 +1,14 @@
 var ofscheme_8hpp =
 [
     [ "ofScheme", "classoficina_1_1of_scheme.html", "classoficina_1_1of_scheme" ],
-    [ "ofScmDefineFunc", "ofscheme_8hpp.html#a7ea95439d36ca55f25485eaa53c7a3f6", null ],
+    [ "SCHEME_FUNCAST", "ofscheme_8hpp.html#ae918b3402aa9d55e7928b109ca43fde1", null ],
+    [ "ofScmDefineFunc", "ofscheme_8hpp.html#ac99edf2d84a7d9b524a28e2448dc4975", null ],
+    [ "ofScmDefineSymbol", "ofscheme_8hpp.html#a65c7403345f9792db85b66a544ee2752", null ],
     [ "ofScmDeinit", "ofscheme_8hpp.html#aeb3dd6607e63ea8d00e5e9f3f09a4ade", null ],
-    [ "ofScmEval", "ofscheme_8hpp.html#afb1d5f694aca004af72dcebee9ca4d93", null ],
-    [ "ofScmGetOutputPtr", "ofscheme_8hpp.html#a6a05b99763e8e902739b5d9fc0094a1b", null ],
+    [ "ofScmDumpOutput", "ofscheme_8hpp.html#a101ef4fa98600a112730d935faf6d8d1", null ],
+    [ "ofScmEval", "ofscheme_8hpp.html#a289cee63dd679eedc1a35c755565806a", null ],
+    [ "ofScmGetReference", "ofscheme_8hpp.html#a92d95c09dc6e344383098515e0a40144", null ],
     [ "ofScmInit", "ofscheme_8hpp.html#a0ade2bd03d0de98e11306b47ccf85601", null ],
     [ "ofScmIsInit", "ofscheme_8hpp.html#ab76e0a1c2648c9963a0846dba09597d2", null ],
-    [ "ofScmResetOutput", "ofscheme_8hpp.html#ab8a1214e740541020f7ee36ee8da6d6d", null ],
-    [ "ofScmUndefineFunc", "ofscheme_8hpp.html#a41700db76ae4212455f6ec678288f9b3", null ],
-    [ "ofScmInitSrc", "ofscheme_8hpp.html#a8950eacfc8b9dd739991e605dbf3ee88", null ]
+    [ "ofScmUndefine", "ofscheme_8hpp.html#ad247f246df41e7c32a8543c91b9f55a0", null ]
 ];

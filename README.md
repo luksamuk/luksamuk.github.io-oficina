@@ -28,7 +28,7 @@ Download
 
 Coming soon.
 
-Dependancies
+Dependencies
 ------------
 
 - SDL2 >= 2.0.5
@@ -36,8 +36,7 @@ Dependancies
 - OpenGL 3.3 support or higher
 - GLEW >= 2.0.0
 - GL Mathematics (GLM) >= 0.9.8
-
-This engine also uses code from TinyScheme project by Dimitrios Souflis, (c) 2000. See src/oficina2/scheme/COPYING for details.
+- (Optional) GNU Guile >= 2.0
 
 
 Build
@@ -53,8 +52,28 @@ make
 sudo make install
 ```
 
+Build (Without GNU Guile)
+-------------------------
+
+There's a possibility that you don't want to use Scheme, or you don't have GNU Guile installed in your system
+(specially on Windows, which, by the time of this writing, has no proper port of GNU Guile - some of the ports
+will make your application crash on startup, due to lack of stable multithread support).
+
+Given that, you might want to disable the IronScheme support.
+Follow the following procedures:
+
+```bash
+mkdir build
+cd build
+cmake .. -DNO_SCHEME=on
+make
+sudo make install
+```
+
+Or just define `-DNO_SCHEME` as `on` on your CMake GUI, before building.
+
 
 Copyright
 ---------
 
-(c) 2016 Lucas Vieira
+(c) 2017 Lucas Vieira

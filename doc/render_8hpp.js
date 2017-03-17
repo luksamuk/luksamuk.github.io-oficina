@@ -41,6 +41,12 @@ var render_8hpp =
       [ "ofDataDouble", "render_8hpp.html#af613600522accaa6ba0886b99d4d8f10a7d8e90d4c52f303caa0b018c1b68ed39", null ],
       [ "ofDataFixed", "render_8hpp.html#af613600522accaa6ba0886b99d4d8f10acd938db5de3abe6841202b4ac695a442", null ]
     ] ],
+    [ "ofFontFaces", "render_8hpp.html#a2967c15438c5f32054507523ab8aba84", [
+      [ "ofFontFaceFixedsysExcelsior", "render_8hpp.html#a2967c15438c5f32054507523ab8aba84a57f3d75d1f7ce1c73cabc134bd3ec2fa", null ],
+      [ "ofFontFaceGohuFont", "render_8hpp.html#a2967c15438c5f32054507523ab8aba84aec69ce9435ab7d9f242564c10ca6f690", null ],
+      [ "ofFontFaceFantasqueSans", "render_8hpp.html#a2967c15438c5f32054507523ab8aba84a9ba82777e07b7f28e4b3593b8c6573d5", null ],
+      [ "ofFontFaceTerminus", "render_8hpp.html#a2967c15438c5f32054507523ab8aba84aa71be08f75ca121de91c27a2d8777226", null ]
+    ] ],
     [ "ofPrimitiveType", "render_8hpp.html#aaf449607910abcc35a1346ac5daec340", [
       [ "ofPoints", "render_8hpp.html#aaf449607910abcc35a1346ac5daec340a33c92c4e249e41b524d61191ac90b9c1", null ],
       [ "ofLineStrip", "render_8hpp.html#aaf449607910abcc35a1346ac5daec340a0a6ebb5e5ca2a89961f05c0967b0a74f", null ],

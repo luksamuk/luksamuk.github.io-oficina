@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0a</span>
+   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -149,13 +149,19 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_canvas_manager.html#aaabef17a376868de9c3927f992012adb">dbg_ReplHistoryNext</a> ()</td></tr>
 <tr class="memdesc:aaabef17a376868de9c3927f992012adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Walks forward on the Repl's history. <br /></td></tr>
 <tr class="separator:aaabef17a376868de9c3927f992012adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ad4813eb5e5a45092bd2bcd5a6e4a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_canvas_manager.html#a60ad4813eb5e5a45092bd2bcd5a6e4a2">dbg_ReplLineNumber</a> ()</td></tr>
+<tr class="memdesc:a60ad4813eb5e5a45092bd2bcd5a6e4a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves current command number on Repl.  <a href="#a60ad4813eb5e5a45092bd2bcd5a6e4a2">More...</a><br /></td></tr>
+<tr class="separator:a60ad4813eb5e5a45092bd2bcd5a6e4a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b97f09174fce1bbbf4d6d8a41b5a67e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_canvas_manager.html#a6b97f09174fce1bbbf4d6d8a41b5a67e">dbg_setFont</a> (<a class="el" href="render_8hpp.html#a2967c15438c5f32054507523ab8aba84">oficina::ofFontFaces</a> fontFace)</td></tr>
+<tr class="memdesc:a6b97f09174fce1bbbf4d6d8a41b5a67e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a new hardcoded font for the debugger.  <a href="#a6b97f09174fce1bbbf4d6d8a41b5a67e">More...</a><br /></td></tr>
+<tr class="separator:a6b97f09174fce1bbbf4d6d8a41b5a67e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Static class for handling canvases in general. </p>
 <p>General manager for canvases and the debugger. Can add, remove and reorder canvases. Will also load and unload canvases accordingly.<br />
 Includes a set of methods beginning with dbg_ to handle the debugger, namely the Variable Watcher and the REPL. </p><dl class="section note"><dt>Note</dt><dd>You should never have to actually instantiate this class, since its methods are all static. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="canvas_8hpp_source.html#l00085">85</a> of file <a class="el" href="canvas_8hpp_source.html">canvas.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvas_8hpp_source.html#l00086">86</a> of file <a class="el" href="canvas_8hpp_source.html">canvas.hpp</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="ab2fca772b93cc7658d0b1f36ad1e95df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2fca772b93cc7658d0b1f36ad1e95df">&#9670;&nbsp;</a></span>ofDebuggerState</h2>
@@ -177,7 +183,7 @@ Includes a set of methods beginning with dbg_ to handle the debugger, namely the
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="canvas_8hpp_source.html#l00089">89</a> of file <a class="el" href="canvas_8hpp_source.html">canvas.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="canvas_8hpp_source.html#l00090">90</a> of file <a class="el" href="canvas_8hpp_source.html">canvas.hpp</a>.</p>
 
 </div>
 </div>
@@ -326,6 +332,34 @@ ofClearTextInput </dd></dl>
 
 </div>
 </div>
+<a id="a60ad4813eb5e5a45092bd2bcd5a6e4a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ad4813eb5e5a45092bd2bcd5a6e4a2">&#9670;&nbsp;</a></span>dbg_ReplLineNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> oficina::ofCanvasManager::dbg_ReplLineNumber </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieves current command number on Repl. </p>
+<dl class="section return"><dt>Returns</dt><dd>An unsigned integer representing the repl command number since the last input. </dd></dl>
+
+</div>
+</div>
 <a id="a1fb0112c5e60dc5ad26e296c7ab01286"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1fb0112c5e60dc5ad26e296c7ab01286">&#9670;&nbsp;</a></span>dbg_ReplOutStream()</h2>
 
@@ -351,6 +385,40 @@ ofClearTextInput </dd></dl>
 
 <p>References the Repl output stream. </p>
 <p>References the Repl's output stream. You can use this to output your own text to the Repl output. </p><dl class="section return"><dt>Returns</dt><dd>A reference to the Repl output. </dd></dl>
+
+</div>
+</div>
+<a id="a6b97f09174fce1bbbf4d6d8a41b5a67e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b97f09174fce1bbbf4d6d8a41b5a67e">&#9670;&nbsp;</a></span>dbg_setFont()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void oficina::ofCanvasManager::dbg_setFont </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="render_8hpp.html#a2967c15438c5f32054507523ab8aba84">oficina::ofFontFaces</a>&#160;</td>
+          <td class="paramname"><em>fontFace</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets a new hardcoded font for the debugger. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fontFace</td><td>An enumeration specifying which font face (from the hardcoded fonts) should be used. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -517,7 +585,7 @@ ofClearTextInput </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_canvas_manager.html">ofCanvasManager</a></li>
-    <li class="footer">Generated on Thu Feb 23 2017 15:46:06 for OficinaFramework by
+    <li class="footer">Generated on Thu Mar 16 2017 22:35:31 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

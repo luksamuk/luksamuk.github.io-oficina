@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0a</span>
+   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('classoficina_1_1of_i_component.html','
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classoficina_1_1of_i_component-members.html">List of all members</a>  </div>
@@ -131,6 +132,16 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a49fec000bce223717023b080cfbf0e0f">draw</a> ()</td></tr>
 <tr class="memdesc:a49fec000bce223717023b080cfbf0e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the component. Overriding is optional. <br /></td></tr>
 <tr class="separator:a49fec000bce223717023b080cfbf0e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9951647f0543fc133756272849e1ea2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#af9951647f0543fc133756272849e1ea2">getType</a> () const</td></tr>
+<tr class="memdesc:af9951647f0543fc133756272849e1ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a getter for a string which informs the type of this component.  <a href="#af9951647f0543fc133756272849e1ea2">More...</a><br /></td></tr>
+<tr class="separator:af9951647f0543fc133756272849e1ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a3f7ac2178111cf134a4f2f38bbb09c58"><td class="memItemLeft" align="right" valign="top"><a id="a3f7ac2178111cf134a4f2f38bbb09c58"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a3f7ac2178111cf134a4f2f38bbb09c58">parseType</a> ()</td></tr>
+<tr class="memdesc:a3f7ac2178111cf134a4f2f38bbb09c58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the type of current component. If creating a component without attaching it to an entity, you might want to call this anywhere on your constructor, init or load methods. <br /></td></tr>
+<tr class="separator:a3f7ac2178111cf134a4f2f38bbb09c58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -149,8 +160,29 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ofEntity</b></td></t
 <div class="textblock"><p>Defines a single component to be attached to an entity. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classoficina_1_1of_entity.html" title="Abstract class representing one ingame entity. ">ofEntity</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00038">38</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00037">37</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="af9951647f0543fc133756272849e1ea2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9951647f0543fc133756272849e1ea2">&#9670;&nbsp;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string oficina::ofIComponent::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Provides a getter for a string which informs the type of this component. </p>
+<dl class="section return"><dt>Returns</dt><dd>A string specifying the type of this component, if already attached to an entity; otherwise outputs "oficina::ofIComponent". </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="entity_8hpp_source.html">entity.hpp</a></li>
 </ul>
 </div><!-- contents -->
@@ -159,7 +191,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ofEntity</b></td></t
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_i_component.html">ofIComponent</a></li>
-    <li class="footer">Generated on Thu Feb 23 2017 15:46:07 for OficinaFramework by
+    <li class="footer">Generated on Thu Mar 16 2017 22:35:31 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

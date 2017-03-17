@@ -4,21 +4,23 @@ var NAVTREE =
     [ "Oficina Framework", "index.html", [
       [ "About", "index.html#about", null ],
       [ "License", "index.html#license", null ],
-      [ "Dependancies", "index.html#depends", null ],
-      [ "Building", "index.html#build", null ]
+      [ "Dependencies", "index.html#depends", null ],
+      [ "Building", "index.html#build", null ],
+      [ "Building (Without GNU Guile)", "index.html#build-noguile", null ]
     ] ],
-    [ "ofScheme API Reference", "schemeref.html", [
+    [ "IronScheme API Reference v0.3", "schemeref.html", [
       [ "General Scheme Syntax", "schemeref.html#general", null ],
-      [ "ofScheme Specific Syntax", "schemeref.html#specific", [
+      [ "IronScheme Specific Syntax", "schemeref.html#specific", [
         [ "Global symbols", "schemeref.html#global", null ],
         [ "Common API", "schemeref.html#common", [
           [ "Output", "schemeref.html#output", [
-            [ "display", "schemeref.html#DISPLAY", null ],
+            [ "hex", "schemeref.html#HEX", null ],
             [ "print-hex", "schemeref.html#PRINT-HEX", null ],
             [ "newline", "schemeref.html#NEWLINE", null ],
             [ "clear", "schemeref.html#CLEAR", null ],
             [ "canvas-list", "schemeref.html#CANVASLIST", null ],
-            [ "quit", "schemeref.html#QUIT", null ]
+            [ "quit", "schemeref.html#QUIT", null ],
+            [ "set-face!", "schemeref.html#SETFACE", null ]
           ] ],
           [ "Input", "schemeref.html#input", [
             [ "lstick?", "schemeref.html#LSTICK", null ],
@@ -32,13 +34,17 @@ var NAVTREE =
           ] ],
           [ "Display", "schemeref.html#display", [
             [ "vwprt?", "schemeref.html#VWPRT", null ],
-            [ "set-fullscreen!", "schemeref.html#SETFULLSCREEN", null ],
-            [ "fullscreen?", "schemeref.html#FULLSCREEN", null ]
+            [ "set-fullscr!", "schemeref.html#SETFULLSCREEN", null ],
+            [ "fullscr?", "schemeref.html#FULLSCREEN", null ]
           ] ]
         ] ],
-        [ "Object API", "schemeref.html#object", [
+        [ "Entity API", "schemeref.html#object", [
           [ "Referencing objects", "schemeref.html#referencing", [
             [ "+this+", "schemeref.html#THIS", null ]
+          ] ],
+          [ "Retrieving components", "schemeref.html#retriev_comps", [
+            [ "get-component", "schemeref.html#GETCOMPONENT", null ],
+            [ "component-type?", "schemeref.html#COMPONENTTYPE", null ]
           ] ],
           [ "Object transformation", "schemeref.html#transform", [
             [ "trl!", "schemeref.html#TRL", null ],
@@ -57,7 +63,8 @@ var NAVTREE =
       [ "Usage Guide", "schemeref.html#usage", [
         [ "Basic Example", "schemeref.html#basic", null ],
         [ "A More Complex Example", "schemeref.html#complex", null ]
-      ] ]
+      ] ],
+      [ "IronScheme Example", "schemeref.html#schemeexample", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -86,8 +93,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"functions_b.html",
-"schemeref.html#PROPSET"
+"files.html",
+"schemeref.html#FULLSCREEN"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
