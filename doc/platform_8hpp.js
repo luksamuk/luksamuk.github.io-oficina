@@ -12,5 +12,8 @@ var platform_8hpp =
     [ "OF_PLATFORM_LINUX", "platform_8hpp.html#ab8f490c27839491d62ac436da6283e76", null ],
     [ "OF_PLATFORM_MACOSX", "platform_8hpp.html#afbf6cb3174ecfddfcee3497b5cf3f628", null ],
     [ "OF_PLATFORM_UNKNOWN", "platform_8hpp.html#ac73db05a368dd03f35af7399659329f9", null ],
-    [ "OF_PLATFORM_WINDOWS", "platform_8hpp.html#afda820a400d0327f72197f38279fac2b", null ]
+    [ "OF_PLATFORM_WINDOWS", "platform_8hpp.html#afda820a400d0327f72197f38279fac2b", null ],
+    [ "OF_SCRIPTING_LUA", "platform_8hpp.html#a6c4de5b449c3cdaf3bc18610e7b2b339", null ],
+    [ "OF_SCRIPTING_NONE", "platform_8hpp.html#a87e26c54c045c76e585f1fa8e1b5ac8c", null ],
+    [ "OF_SCRIPTING_SCHEME", "platform_8hpp.html#a15aa4ca48930c7cfce1eb353e73c515c", null ]
 ];

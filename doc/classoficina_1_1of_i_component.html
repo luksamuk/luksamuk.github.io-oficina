@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
+   &#160;<span id="projectnumber">2.0.11-master-4122017</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -102,7 +103,9 @@ Inheritance diagram for oficina::ofIComponent:</div>
  <div class="center">
   <img src="classoficina_1_1of_i_component.png" usemap="#oficina::ofIComponent_map" alt=""/>
   <map id="oficina::ofIComponent_map" name="oficina::ofIComponent_map">
-<area href="classoficina_1_1of_scheme.html" title="Defines one Scheme environment to be used inside an entity. " alt="oficina::ofScheme" shape="rect" coords="0,56,133,80"/>
+<area href="classoficina_1_1of_animator.html" title="Tool for controlling a texture renderer to generate animations. " alt="oficina::ofAnimator" shape="rect" coords="0,56,133,80"/>
+<area href="classoficina_1_1of_lua.html" title="Defines one Lua environment to be used inside an entity. " alt="oficina::ofLua" shape="rect" coords="143,56,276,80"/>
+<area href="classoficina_1_1of_scheme.html" title="Defines one Scheme environment to be used inside an entity. " alt="oficina::ofScheme" shape="rect" coords="286,56,419,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -128,10 +131,9 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#ac782477d3ab295d8d924b0a0565419e4">update</a> (float dt)=0</td></tr>
 <tr class="memdesc:ac782477d3ab295d8d924b0a0565419e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates logic for the component. Overriding is obligatory. <br /></td></tr>
 <tr class="separator:ac782477d3ab295d8d924b0a0565419e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49fec000bce223717023b080cfbf0e0f"><td class="memItemLeft" align="right" valign="top"><a id="a49fec000bce223717023b080cfbf0e0f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a49fec000bce223717023b080cfbf0e0f">draw</a> ()</td></tr>
-<tr class="memdesc:a49fec000bce223717023b080cfbf0e0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the component. Overriding is optional. <br /></td></tr>
-<tr class="separator:a49fec000bce223717023b080cfbf0e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5da2bad454e1635c545a4ea5bd2aedc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#ae5da2bad454e1635c545a4ea5bd2aedc">draw</a> (glm::mat4 ViewProjection)</td></tr>
+<tr class="memdesc:ae5da2bad454e1635c545a4ea5bd2aedc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the component. Overriding is optional.  <a href="#ae5da2bad454e1635c545a4ea5bd2aedc">More...</a><br /></td></tr>
+<tr class="separator:ae5da2bad454e1635c545a4ea5bd2aedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9951647f0543fc133756272849e1ea2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#af9951647f0543fc133756272849e1ea2">getType</a> () const</td></tr>
 <tr class="memdesc:af9951647f0543fc133756272849e1ea2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a getter for a string which informs the type of this component.  <a href="#af9951647f0543fc133756272849e1ea2">More...</a><br /></td></tr>
 <tr class="separator:af9951647f0543fc133756272849e1ea2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,6 +164,44 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ofEntity</b></td></t
 
 <p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00037">37</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae5da2bad454e1635c545a4ea5bd2aedc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5da2bad454e1635c545a4ea5bd2aedc">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void oficina::ofIComponent::draw </td>
+          <td>(</td>
+          <td class="paramtype">glm::mat4&#160;</td>
+          <td class="paramname"><em>ViewProjection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Draws the component. Overriding is optional. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ViewProjection</td><td>ViewProjection matrix containing information on the viewport and the projection frustum. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classoficina_1_1of_animator.html#ac296e1b080f4bd45024b9372a6003584">oficina::ofAnimator</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00059">59</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+
+</div>
+</div>
 <a id="af9951647f0543fc133756272849e1ea2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9951647f0543fc133756272849e1ea2">&#9670;&nbsp;</a></span>getType()</h2>
 
@@ -191,7 +231,7 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>ofEntity</b></td></t
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_i_component.html">ofIComponent</a></li>
-    <li class="footer">Generated on Thu Mar 16 2017 22:35:31 for OficinaFramework by
+    <li class="footer">Generated on Wed Apr 12 2017 12:45:57 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

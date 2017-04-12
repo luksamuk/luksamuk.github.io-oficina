@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
+   &#160;<span id="projectnumber">2.0.11-master-4122017</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -172,10 +173,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aa309b0b3db2337d6b2616c51f0e8e7cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_entity.html#aa309b0b3db2337d6b2616c51f0e8e7cf">UpdateComponents</a> (float dt)</td></tr>
 <tr class="memdesc:aa309b0b3db2337d6b2616c51f0e8e7cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates all components of this entity.  <a href="#aa309b0b3db2337d6b2616c51f0e8e7cf">More...</a><br /></td></tr>
 <tr class="separator:aa309b0b3db2337d6b2616c51f0e8e7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7b03846edc59e38ca01a3bb8f8e81f7"><td class="memItemLeft" align="right" valign="top"><a id="ad7b03846edc59e38ca01a3bb8f8e81f7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_entity.html#ad7b03846edc59e38ca01a3bb8f8e81f7">DrawComponents</a> ()</td></tr>
-<tr class="memdesc:ad7b03846edc59e38ca01a3bb8f8e81f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws all components of this entity (when the draw method of such component is overriden). <br /></td></tr>
-<tr class="separator:ad7b03846edc59e38ca01a3bb8f8e81f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73eb26e0624b5422f46fb692c19f7e25"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_entity.html#a73eb26e0624b5422f46fb692c19f7e25">DrawComponents</a> (glm::mat4 ViewProjection)</td></tr>
+<tr class="memdesc:a73eb26e0624b5422f46fb692c19f7e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws all components of this entity (when the draw method of such component is overriden).  <a href="#a73eb26e0624b5422f46fb692c19f7e25">More...</a><br /></td></tr>
+<tr class="separator:a73eb26e0624b5422f46fb692c19f7e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -217,7 +217,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <div class="textblock"><p>Abstract class representing one ingame entity. </p>
 <dl class="section note"><dt>Note</dt><dd>When handling entities and, specially, components, be wary to use the component handling methods when necessary. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00086">86</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00088">88</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abf8a197a18da1e0c747fef94426f8e10"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abf8a197a18da1e0c747fef94426f8e10">&#9670;&nbsp;</a></span>AddComponent()</h2>
@@ -286,6 +286,32 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ViewProjection</td><td>View * Projection matrix. Notice that the lack of a Model matrix is on purpose, since you should manipulate the object's model using the translation, rotation and scale methods. But you can also ignore them and pass the MVP to this method at once. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73eb26e0624b5422f46fb692c19f7e25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73eb26e0624b5422f46fb692c19f7e25">&#9670;&nbsp;</a></span>DrawComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofEntity::DrawComponents </td>
+          <td>(</td>
+          <td class="paramtype">glm::mat4&#160;</td>
+          <td class="paramname"><em>ViewProjection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draws all components of this entity (when the draw method of such component is overriden). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ViewProjection</td><td>ViewProjection matrix containing information on the viewport and the projection frustum. </td></tr>
   </table>
   </dd>
 </dl>
@@ -840,7 +866,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <p>The rotation matrix. </p>
 <dl class="section note"><dt>Note</dt><dd>This is automatically included when retrieving/generating the Model matrix. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00210">210</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00214">214</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -867,7 +893,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <p>The scale matrix. </p>
 <dl class="section note"><dt>Note</dt><dd>This is automatically included when retrieving/generating the Model matrix.A </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00214">214</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00218">218</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -894,7 +920,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <p>The translation matrix. </p>
 <dl class="section note"><dt>Note</dt><dd>This is automatically included when retrieving/generating the Model matrix. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00206">206</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="entity_8hpp_source.html#l00210">210</a> of file <a class="el" href="entity_8hpp_source.html">entity.hpp</a>.</p>
 
 </div>
 </div>
@@ -907,7 +933,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_entity.html">ofEntity</a></li>
-    <li class="footer">Generated on Thu Mar 16 2017 22:35:31 for OficinaFramework by
+    <li class="footer">Generated on Wed Apr 12 2017 12:45:57 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

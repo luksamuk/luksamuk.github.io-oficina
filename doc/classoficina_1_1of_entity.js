@@ -4,7 +4,7 @@ var classoficina_1_1of_entity =
     [ "AddComponent", "classoficina_1_1of_entity.html#abf8a197a18da1e0c747fef94426f8e10", null ],
     [ "ClearComponents", "classoficina_1_1of_entity.html#ac8379a44f7257b5fce6c73da664e6259", null ],
     [ "draw", "classoficina_1_1of_entity.html#aa90bbcb7ea100e627b86e13bac9671d4", null ],
-    [ "DrawComponents", "classoficina_1_1of_entity.html#ad7b03846edc59e38ca01a3bb8f8e81f7", null ],
+    [ "DrawComponents", "classoficina_1_1of_entity.html#a73eb26e0624b5422f46fb692c19f7e25", null ],
     [ "GetComponent", "classoficina_1_1of_entity.html#aa08668685b24c3bca1c606d4162acdf2", null ],
     [ "getEulerAngles", "classoficina_1_1of_entity.html#a6d3616161e341ed0b630ce65d3a1d381", null ],
     [ "getModelMatrix", "classoficina_1_1of_entity.html#a77032eafe2c0f6a93136c6b0bc72b8e0", null ],

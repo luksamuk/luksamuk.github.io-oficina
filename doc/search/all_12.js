@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_7eofcanvas',['~ofCanvas',['../classoficina_1_1of_canvas.html#a2dea60a517765a9bfab92ed492f931ff',1,'oficina::ofCanvas']]],
-  ['_7eofentity',['~ofEntity',['../classoficina_1_1of_entity.html#a4787e05d6409757b58057b5b44b55203',1,'oficina::ofEntity']]],
-  ['_7eoficomponent',['~ofIComponent',['../classoficina_1_1of_i_component.html#a161dea4d5c08069df1a06d98a669e054',1,'oficina::ofIComponent']]]
+  ['yieldspan',['yieldSpan',['../classoficina_1_1of_time_span.html#adb35e70347c16e273a066569c9ef1160',1,'oficina::ofTimeSpan::yieldSpan()'],['../classoficina_1_1of_frame_span.html#a50bcc1832f635948bc08ab08202c78ed',1,'oficina::ofFrameSpan::yieldSpan()']]]
 ];

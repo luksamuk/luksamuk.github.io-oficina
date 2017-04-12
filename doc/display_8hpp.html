@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
+   &#160;<span id="projectnumber">2.0.11-master-4122017</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -82,7 +83,8 @@ $(document).ready(function(){initNavTree('display_8hpp.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">display.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -94,6 +96,7 @@ $(document).ready(function(){initNavTree('display_8hpp.html','');});
 <code>#include &lt;list&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &quot;<a class="el" href="types_8hpp_source.html">oficina2/types.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="timer_8hpp_source.html">oficina2/timer.hpp</a>&quot;</code><br />
 </div>
 <p><a href="display_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -102,19 +105,58 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_display.html">oficina::ofDisplay</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a single window prepared for receiving a context.  <a href="classoficina_1_1of_display.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:aaa764dcec69b1ebefb447d911e00cc76"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8hpp.html#aaa764dcec69b1ebefb447d911e00cc76">oficina::ofFrameRateConfig</a> { <a class="el" href="display_8hpp.html#aaa764dcec69b1ebefb447d911e00cc76a2ce2365c4baa59e3254cb159946f93a3">oficina::ofFPSVariable</a> = 0x00, 
+<a class="el" href="display_8hpp.html#aaa764dcec69b1ebefb447d911e00cc76a3110076f3302a7befe409b59e891d304">oficina::ofFPSCapped</a> = 0x01, 
+<a class="el" href="display_8hpp.html#aaa764dcec69b1ebefb447d911e00cc76a587fe56704ff22624fbd123336dedaed">oficina::ofFPSMinimum</a> = 0x02, 
+<a class="el" href="display_8hpp.html#aaa764dcec69b1ebefb447d911e00cc76a799f1ab0642af283d7a511a50639e365">oficina::ofFPSBoth</a> = 0x04
+ }<tr class="memdesc:aaa764dcec69b1ebefb447d911e00cc76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes the types of framerate.  <a href="display_8hpp.html#aaa764dcec69b1ebefb447d911e00cc76">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:aaa764dcec69b1ebefb447d911e00cc76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tools for configuring windows for video output. </p>
 <p>Provides tools for creating displays (game windows). </p><dl class="section author"><dt>Author</dt><dd>Lucas Vieira </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="display_8hpp_source.html">display.hpp</a>.</p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="file_aaa764dcec69b1ebefb447d911e00cc76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_aaa764dcec69b1ebefb447d911e00cc76">&#9670;&nbsp;</a></span>ofFrameRateConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="display_8hpp.html#aaa764dcec69b1ebefb447d911e00cc76">oficina::ofFrameRateConfig</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Describes the types of framerate. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aaa764dcec69b1ebefb447d911e00cc76a2ce2365c4baa59e3254cb159946f93a3"></a>ofFPSVariable&#160;</td><td class="fielddoc"><p>Freely allows FPS to float. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa764dcec69b1ebefb447d911e00cc76a3110076f3302a7befe409b59e891d304"></a>ofFPSCapped&#160;</td><td class="fielddoc"><p>Caps FPS to a maximum number. This will ignore further rendering frames after the nth frame is rendered. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa764dcec69b1ebefb447d911e00cc76a587fe56704ff22624fbd123336dedaed"></a>ofFPSMinimum&#160;</td><td class="fielddoc"><p>Caps minimal FPS so that, when FPS goes below the minimum number, the application will force the time variation to assume the minimum number's. The practical explanation is that this will force a slowdown so there are no strange frame jumps. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aaa764dcec69b1ebefb447d911e00cc76a799f1ab0642af283d7a511a50639e365"></a>ofFPSBoth&#160;</td><td class="fielddoc"><p>Induces FPS to assume both behaviours of Capped and Minimum. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="display_8hpp_source.html#l00036">36</a> of file <a class="el" href="display_8hpp_source.html">display.hpp</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0f9f0e1a7b56d3be1045a2960b921939.html">oficina2</a></li><li class="navelem"><a class="el" href="display_8hpp.html">display.hpp</a></li>
-    <li class="footer">Generated on Thu Mar 16 2017 22:35:30 for OficinaFramework by
+    <li class="footer">Generated on Wed Apr 12 2017 12:45:57 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "oficina::ofAnimator", "classoficina_1_1of_animator.html", null ],
     [ "oficina::ofBuffer", "classoficina_1_1of_buffer.html", [
       [ "oficina::ofElementBuffer", "classoficina_1_1of_element_buffer.html", null ],
       [ "oficina::ofVertexBuffer", "classoficina_1_1of_vertex_buffer.html", null ]
@@ -13,9 +12,13 @@ var hierarchy =
     [ "oficina::ofFont", "classoficina_1_1of_font.html", null ],
     [ "oficina::ofFrameSpan", "classoficina_1_1of_frame_span.html", null ],
     [ "oficina::ofIComponent", "classoficina_1_1of_i_component.html", [
+      [ "oficina::ofAnimator", "classoficina_1_1of_animator.html", null ],
+      [ "oficina::ofLua", "classoficina_1_1of_lua.html", null ],
       [ "oficina::ofScheme", "classoficina_1_1of_scheme.html", null ]
     ] ],
     [ "oficina::ofInputState", "structoficina_1_1of_input_state.html", null ],
+    [ "oficina::ofPrimitive", "structoficina_1_1of_primitive.html", null ],
+    [ "oficina::ofPrimitiveRenderer", "classoficina_1_1of_primitive_renderer.html", null ],
     [ "oficina::ofShader", "classoficina_1_1of_shader.html", null ],
     [ "oficina::ofShaderAttribute", "classoficina_1_1of_shader_attribute.html", null ],
     [ "oficina::ofShaderProgram", "classoficina_1_1of_shader_program.html", null ],

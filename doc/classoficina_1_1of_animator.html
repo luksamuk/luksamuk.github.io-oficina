@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
+   &#160;<span id="projectnumber">2.0.11-master-4122017</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -94,12 +95,21 @@ $(document).ready(function(){initNavTree('classoficina_1_1of_animator.html','');
  <a href="classoficina_1_1of_animator.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="render_8hpp_source.html">render.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for oficina::ofAnimator:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classoficina_1_1of_animator.png" usemap="#oficina::ofAnimator_map" alt=""/>
+  <map id="oficina::ofAnimator_map" name="oficina::ofAnimator_map">
+<area href="classoficina_1_1of_i_component.html" title="Defines a single component to be attached to an entity. " alt="oficina::ofIComponent" shape="rect" coords="0,0,133,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab985d22f97e78a770db7370f80a3a226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#ab985d22f97e78a770db7370f80a3a226">init</a> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> t, glm::uvec2 frameSize, bool manageTexture=false)</td></tr>
-<tr class="memdesc:ab985d22f97e78a770db7370f80a3a226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the animator.  <a href="#ab985d22f97e78a770db7370f80a3a226">More...</a><br /></td></tr>
-<tr class="separator:ab985d22f97e78a770db7370f80a3a226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb6c7eed49194401288b9f0d273c6b7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#afb6c7eed49194401288b9f0d273c6b7b">init</a> ()</td></tr>
+<tr class="memdesc:afb6c7eed49194401288b9f0d273c6b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the animator.  <a href="#afb6c7eed49194401288b9f0d273c6b7b">More...</a><br /></td></tr>
+<tr class="separator:afb6c7eed49194401288b9f0d273c6b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b2ee5748e4bd68816d698d813232616"><td class="memItemLeft" align="right" valign="top"><a id="a1b2ee5748e4bd68816d698d813232616"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a1b2ee5748e4bd68816d698d813232616">unload</a> ()</td></tr>
 <tr class="memdesc:a1b2ee5748e4bd68816d698d813232616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unloads the animator, and unloads the texture if texture is being managed by this tool. <br /></td></tr>
@@ -107,9 +117,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a933297c2388ea81f359b4864cab3b9f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a933297c2388ea81f359b4864cab3b9f8">update</a> (float dt)</td></tr>
 <tr class="memdesc:a933297c2388ea81f359b4864cab3b9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the animation step.  <a href="#a933297c2388ea81f359b4864cab3b9f8">More...</a><br /></td></tr>
 <tr class="separator:a933297c2388ea81f359b4864cab3b9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d42be6197fbaf9186f10b89355ae5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#af5d42be6197fbaf9186f10b89355ae5c">draw</a> (glm::mat4 ViewProjection, float magnification=1.0f)</td></tr>
-<tr class="memdesc:af5d42be6197fbaf9186f10b89355ae5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the animation.  <a href="#af5d42be6197fbaf9186f10b89355ae5c">More...</a><br /></td></tr>
-<tr class="separator:af5d42be6197fbaf9186f10b89355ae5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac296e1b080f4bd45024b9372a6003584"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#ac296e1b080f4bd45024b9372a6003584">draw</a> (glm::mat4 ViewProjection)</td></tr>
+<tr class="memdesc:ac296e1b080f4bd45024b9372a6003584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the animation.  <a href="#ac296e1b080f4bd45024b9372a6003584">More...</a><br /></td></tr>
+<tr class="separator:ac296e1b080f4bd45024b9372a6003584"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98ed6ee3f01d03625e48a674a670c567"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a98ed6ee3f01d03625e48a674a670c567">reg</a> (std::string animName, <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> nFrames, const <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> *animFrames, float speed, bool loops=false, <a class="el" href="types_8hpp.html#a970d4bb7a657d0b06d4fe00e4da519d1">ofdword</a> loopBackTo=0u)</td></tr>
 <tr class="memdesc:a98ed6ee3f01d03625e48a674a670c567"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers an animation by name.  <a href="#a98ed6ee3f01d03625e48a674a670c567">More...</a><br /></td></tr>
 <tr class="separator:a98ed6ee3f01d03625e48a674a670c567"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,6 +144,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a94c87e4b818627089732d9438ee356ed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a94c87e4b818627089732d9438ee356ed">SetAnimationRunning</a> (bool state)</td></tr>
 <tr class="memdesc:a94c87e4b818627089732d9438ee356ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets whether the animation should be played or not. Defaults to true.  <a href="#a94c87e4b818627089732d9438ee356ed">More...</a><br /></td></tr>
 <tr class="separator:a94c87e4b818627089732d9438ee356ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a968e937011a4db50124184c6186cc0a0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a968e937011a4db50124184c6186cc0a0">GetCurrentAnimationName</a> () const</td></tr>
+<tr class="memdesc:a968e937011a4db50124184c6186cc0a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves which is the current animation.  <a href="#a968e937011a4db50124184c6186cc0a0">More...</a><br /></td></tr>
+<tr class="separator:a968e937011a4db50124184c6186cc0a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c175ad620f895d8917c09d7319a46a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#ad9c175ad620f895d8917c09d7319a46a">SetRenderer</a> (<a class="el" href="classoficina_1_1of_texture_renderer.html">ofTextureRenderer</a> renderer, bool manage=false)</td></tr>
+<tr class="memdesc:ad9c175ad620f895d8917c09d7319a46a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines a texture renderer for the animation, which should hold the texture atlas.  <a href="#ad9c175ad620f895d8917c09d7319a46a">More...</a><br /></td></tr>
+<tr class="separator:ad9c175ad620f895d8917c09d7319a46a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2e7516f8d5a34fff5c7245b0932c871"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#af2e7516f8d5a34fff5c7245b0932c871">SetAnimationTexture</a> (<a class="el" href="classoficina_1_1of_texture.html">ofTexture</a> t)</td></tr>
 <tr class="memdesc:af2e7516f8d5a34fff5c7245b0932c871"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dynamically changes the internal texture atlas. Particularly useful for handling skins and such.  <a href="#af2e7516f8d5a34fff5c7245b0932c871">More...</a><br /></td></tr>
 <tr class="separator:af2e7516f8d5a34fff5c7245b0932c871"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,52 +165,71 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a00a3ebaae27d4910d52756efbbb59b81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html#a00a3ebaae27d4910d52756efbbb59b81">GetAnimationRunning</a> () const</td></tr>
 <tr class="memdesc:a00a3ebaae27d4910d52756efbbb59b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the animation is currently running.  <a href="#a00a3ebaae27d4910d52756efbbb59b81">More...</a><br /></td></tr>
 <tr class="separator:a00a3ebaae27d4910d52756efbbb59b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classoficina_1_1of_i_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classoficina_1_1of_i_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classoficina_1_1of_i_component.html">oficina::ofIComponent</a></td></tr>
+<tr class="memitem:a161dea4d5c08069df1a06d98a669e054 inherit pub_methods_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a161dea4d5c08069df1a06d98a669e054"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a161dea4d5c08069df1a06d98a669e054">~ofIComponent</a> ()</td></tr>
+<tr class="memdesc:a161dea4d5c08069df1a06d98a669e054 inherit pub_methods_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
+<tr class="separator:a161dea4d5c08069df1a06d98a669e054 inherit pub_methods_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1649f7a3944ac68abf35b9f7b0580054 inherit pub_methods_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a1649f7a3944ac68abf35b9f7b0580054"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a1649f7a3944ac68abf35b9f7b0580054">load</a> ()</td></tr>
+<tr class="memdesc:a1649f7a3944ac68abf35b9f7b0580054 inherit pub_methods_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads assets and such for the component. Overriding is optional. <br /></td></tr>
+<tr class="separator:a1649f7a3944ac68abf35b9f7b0580054 inherit pub_methods_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9951647f0543fc133756272849e1ea2 inherit pub_methods_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#af9951647f0543fc133756272849e1ea2">getType</a> () const</td></tr>
+<tr class="memdesc:af9951647f0543fc133756272849e1ea2 inherit pub_methods_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides a getter for a string which informs the type of this component.  <a href="classoficina_1_1of_i_component.html#af9951647f0543fc133756272849e1ea2">More...</a><br /></td></tr>
+<tr class="separator:af9951647f0543fc133756272849e1ea2 inherit pub_methods_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_methods_classoficina_1_1of_i_component"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classoficina_1_1of_i_component')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classoficina_1_1of_i_component.html">oficina::ofIComponent</a></td></tr>
+<tr class="memitem:a3f7ac2178111cf134a4f2f38bbb09c58 inherit pro_methods_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a3f7ac2178111cf134a4f2f38bbb09c58"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a3f7ac2178111cf134a4f2f38bbb09c58">parseType</a> ()</td></tr>
+<tr class="memdesc:a3f7ac2178111cf134a4f2f38bbb09c58 inherit pro_methods_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parses the type of current component. If creating a component without attaching it to an entity, you might want to call this anywhere on your constructor, init or load methods. <br /></td></tr>
+<tr class="separator:a3f7ac2178111cf134a4f2f38bbb09c58 inherit pro_methods_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_classoficina_1_1of_i_component"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classoficina_1_1of_i_component')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classoficina_1_1of_i_component.html">oficina::ofIComponent</a></td></tr>
+<tr class="memitem:a1d2ff6acbb5ceec9303275ed3bfbb200 inherit pro_attribs_classoficina_1_1of_i_component"><td class="memItemLeft" align="right" valign="top"><a id="a1d2ff6acbb5ceec9303275ed3bfbb200"></a>
+<a class="el" href="classoficina_1_1of_entity.html">ofEntity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_i_component.html#a1d2ff6acbb5ceec9303275ed3bfbb200">parent</a></td></tr>
+<tr class="memdesc:a1d2ff6acbb5ceec9303275ed3bfbb200 inherit pro_attribs_classoficina_1_1of_i_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direct pointer to this component's parent entity. It is advised not to change this pointer. <br /></td></tr>
+<tr class="separator:a1d2ff6acbb5ceec9303275ed3bfbb200 inherit pro_attribs_classoficina_1_1of_i_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tool for controlling a texture renderer to generate animations. </p>
 
-<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00825">825</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00851">851</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="af5d42be6197fbaf9186f10b89355ae5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af5d42be6197fbaf9186f10b89355ae5c">&#9670;&nbsp;</a></span>draw()</h2>
+<a id="ac296e1b080f4bd45024b9372a6003584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac296e1b080f4bd45024b9372a6003584">&#9670;&nbsp;</a></span>draw()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void oficina::ofAnimator::draw </td>
           <td>(</td>
           <td class="paramtype">glm::mat4&#160;</td>
-          <td class="paramname"><em>ViewProjection</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>ViewProjection</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">float&#160;</td>
-          <td class="paramname"><em>magnification</em> = <code>1.0f</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Draws the animation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ViewProjection</td><td>View-Projection matrix. </td></tr>
+    <tr><td class="paramname">ViewProjection</td><td>ViewProjection matrix containing information on the viewport and the projection frustum. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>If you wish to ignore the animator's own positioning controls, you can pass a whole Model-View-Projection matrix here. </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">magnification</td><td>Scaling of the animation. Defaults to 1.0 (default frame size). </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section note"><dt>Note</dt><dd>If you're looking for a way to define the animation's position, rotation and scale, you should define both on the parent <a class="el" href="classoficina_1_1of_entity.html" title="Abstract class representing one ingame entity. ">ofEntity</a>. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classoficina_1_1of_i_component.html#ae5da2bad454e1635c545a4ea5bd2aedc">oficina::ofIComponent</a>.</p>
 
 </div>
 </div>
@@ -240,6 +275,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
+<a id="a968e937011a4db50124184c6186cc0a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a968e937011a4db50124184c6186cc0a0">&#9670;&nbsp;</a></span>GetCurrentAnimationName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string oficina::ofAnimator::GetCurrentAnimationName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves which is the current animation. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of the animation which is currently being played. </dd></dl>
+
+</div>
+</div>
 <a id="a55282ef661149b256fe8e15c0da311ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55282ef661149b256fe8e15c0da311ac">&#9670;&nbsp;</a></span>GetDefaultAnimationSpeed()</h2>
 
@@ -282,53 +337,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a id="ab985d22f97e78a770db7370f80a3a226"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab985d22f97e78a770db7370f80a3a226">&#9670;&nbsp;</a></span>init()</h2>
+<a id="afb6c7eed49194401288b9f0d273c6b7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb6c7eed49194401288b9f0d273c6b7b">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void oficina::ofAnimator::init </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classoficina_1_1of_texture.html">ofTexture</a>&#160;</td>
-          <td class="paramname"><em>t</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">glm::uvec2&#160;</td>
-          <td class="paramname"><em>frameSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>manageTexture</em> = <code>false</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Initializes the animator. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">t</td><td>Texture atlas containing the animation frames. </td></tr>
-    <tr><td class="paramname">frameSize</td><td>Frame size, as per <a class="el" href="classoficina_1_1of_texture_renderer.html" title="Tool for easily rendering 2D textures or texture atlases. ">ofTextureRenderer</a> specification. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="classoficina_1_1of_texture_renderer.html" title="Tool for easily rendering 2D textures or texture atlases. ">ofTextureRenderer</a> </dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">manageTexture</td><td>Whether the given texture should be managed by this tool (disposed when the animator is disposed). </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section warning"><dt>Warning</dt><dd>Be wary that this function should only be called after specifying the renderer with <a class="el" href="classoficina_1_1of_animator.html#ad9c175ad620f895d8917c09d7319a46a" title="Defines a texture renderer for the animation, which should hold the texture atlas. ">ofAnimator::SetRenderer</a>. </dd></dl>
+
+<p>Implements <a class="el" href="classoficina_1_1of_i_component.html#ae03575a492e3bc2a350d03d9d135c3eb">oficina::ofIComponent</a>.</p>
 
 </div>
 </div>
@@ -558,6 +593,43 @@ Animation speed handling changes depending on the syncing type.<br />
 
 </div>
 </div>
+<a id="ad9c175ad620f895d8917c09d7319a46a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9c175ad620f895d8917c09d7319a46a">&#9670;&nbsp;</a></span>SetRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofAnimator::SetRenderer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classoficina_1_1of_texture_renderer.html">ofTextureRenderer</a>&#160;</td>
+          <td class="paramname"><em>renderer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>manage</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines a texture renderer for the animation, which should hold the texture atlas. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">renderer</td><td>Instantiated Texture Renderer to be used. </td></tr>
+    <tr><td class="paramname">manage</td><td>Whether the given renderer should be managed by this tool (disposed when the animator is disposed). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a26e67484c29f5c650e2feb48e4531f92"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26e67484c29f5c650e2feb48e4531f92">&#9670;&nbsp;</a></span>SyncToFrameRate()</h2>
 
@@ -615,6 +687,9 @@ Animation speed handling changes depending on the syncing type.<br />
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void oficina::ofAnimator::update </td>
@@ -624,6 +699,11 @@ Animation speed handling changes depending on the syncing type.<br />
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Updates the animation step. </p>
@@ -633,6 +713,8 @@ Animation speed handling changes depending on the syncing type.<br />
   </table>
   </dd>
 </dl>
+
+<p>Implements <a class="el" href="classoficina_1_1of_i_component.html#ac782477d3ab295d8d924b0a0565419e4">oficina::ofIComponent</a>.</p>
 
 </div>
 </div>
@@ -645,7 +727,7 @@ Animation speed handling changes depending on the syncing type.<br />
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_animator.html">ofAnimator</a></li>
-    <li class="footer">Generated on Thu Mar 16 2017 22:35:30 for OficinaFramework by
+    <li class="footer">Generated on Wed Apr 12 2017 12:45:57 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

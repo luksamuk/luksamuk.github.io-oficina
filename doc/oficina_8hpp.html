@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
+   &#160;<span id="projectnumber">2.0.11-master-4122017</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -83,6 +84,7 @@ $(document).ready(function(){initNavTree('oficina_8hpp.html','');});
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">oficina.hpp File Reference</div>  </div>
@@ -98,6 +100,7 @@ $(document).ready(function(){initNavTree('oficina_8hpp.html','');});
 <code>#include &quot;<a class="el" href="canvas_8hpp_source.html">oficina2/canvas.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="timer_8hpp_source.html">oficina2/timer.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ofscheme_8hpp_source.html">oficina2/ofscheme.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="oflua_8hpp_source.html">oficina2/oflua.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="entity_8hpp_source.html">oficina2/entity.hpp</a>&quot;</code><br />
 </div>
 <p><a href="oficina_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -105,14 +108,26 @@ $(document).ready(function(){initNavTree('oficina_8hpp.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:aff8463fd04ea0c6af9cfba2359033b88"><td class="memItemLeft" align="right" valign="top"><a id="aff8463fd04ea0c6af9cfba2359033b88"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#aff8463fd04ea0c6af9cfba2359033b88">OF_VERSION_STRING</a>&#160;&#160;&#160;&quot;2.0.0a-ofscheme-guile&quot;</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#aff8463fd04ea0c6af9cfba2359033b88">OF_VERSION_STRING</a>&#160;&#160;&#160;&quot;2.0.11-master-4122017&quot;</td></tr>
 <tr class="memdesc:aff8463fd04ea0c6af9cfba2359033b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">String banner containing the current version of OficinaFramework. <br /></td></tr>
 <tr class="separator:aff8463fd04ea0c6af9cfba2359033b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:adfd664b6451a8f872d5287bac43142a1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#adfd664b6451a8f872d5287bac43142a1">oficina::ofReplType</a> { <a class="el" href="oficina_8hpp.html#adfd664b6451a8f872d5287bac43142a1a4a73b0dd84fdcb69a8926f47fdbb76ef">oficina::ofReplNone</a>, 
+<a class="el" href="oficina_8hpp.html#adfd664b6451a8f872d5287bac43142a1a3ff4584001fced59318e5c12ce3e32a3">oficina::ofReplScheme</a>, 
+<a class="el" href="oficina_8hpp.html#adfd664b6451a8f872d5287bac43142a1a03a79587978a48aed6149aa0ae2a0cda">oficina::ofReplLua</a>
+ }<tr class="memdesc:adfd664b6451a8f872d5287bac43142a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the types of REPL.  <a href="oficina_8hpp.html#adfd664b6451a8f872d5287bac43142a1">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:adfd664b6451a8f872d5287bac43142a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a2fc8f54b89b7ddc3cd2b28d2e030cf67"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#a2fc8f54b89b7ddc3cd2b28d2e030cf67">oficina::ofInit</a> (std::vector&lt; std::string &gt; args)</td></tr>
+<tr class="memdesc:a2fc8f54b89b7ddc3cd2b28d2e030cf67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes OficinaFramework.  <a href="oficina_8hpp.html#a2fc8f54b89b7ddc3cd2b28d2e030cf67">More...</a><br /></td></tr>
+<tr class="separator:a2fc8f54b89b7ddc3cd2b28d2e030cf67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0029465cbd8d1f8345bc43e0e19f6b1b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#a0029465cbd8d1f8345bc43e0e19f6b1b">oficina::ofInit</a> ()</td></tr>
-<tr class="memdesc:a0029465cbd8d1f8345bc43e0e19f6b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialized OficinaFramework.  <a href="oficina_8hpp.html#a0029465cbd8d1f8345bc43e0e19f6b1b">More...</a><br /></td></tr>
+<tr class="memdesc:a0029465cbd8d1f8345bc43e0e19f6b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes OficinaFramework.  <a href="oficina_8hpp.html#a0029465cbd8d1f8345bc43e0e19f6b1b">More...</a><br /></td></tr>
 <tr class="separator:a0029465cbd8d1f8345bc43e0e19f6b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a052b1f748b826bdf9585448deded43f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#a052b1f748b826bdf9585448deded43f4">oficina::ofGameLoop</a> ()</td></tr>
 <tr class="memdesc:a052b1f748b826bdf9585448deded43f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executes the Game Loop, once the default subsystems are initialized. Finishes when the Soft Stop flag is raised.  <a href="oficina_8hpp.html#a052b1f748b826bdf9585448deded43f4">More...</a><br /></td></tr>
@@ -138,13 +153,59 @@ Functions</h2></td></tr>
 <tr class="memitem:a6912097ed6c43dfb0c932674d3fa3d58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#a6912097ed6c43dfb0c932674d3fa3d58">oficina::ofIsFullscreen</a> ()</td></tr>
 <tr class="memdesc:a6912097ed6c43dfb0c932674d3fa3d58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for the fullscreen state of the application.  <a href="oficina_8hpp.html#a6912097ed6c43dfb0c932674d3fa3d58">More...</a><br /></td></tr>
 <tr class="separator:a6912097ed6c43dfb0c932674d3fa3d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ad7ef9338a2bfc4cc0aae88a9301fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#a69ad7ef9338a2bfc4cc0aae88a9301fa">oficina::ofSetReplType</a> (ofReplType type)</td></tr>
+<tr class="memdesc:a69ad7ef9338a2bfc4cc0aae88a9301fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current type of REPL to be used.  <a href="oficina_8hpp.html#a69ad7ef9338a2bfc4cc0aae88a9301fa">More...</a><br /></td></tr>
+<tr class="separator:a69ad7ef9338a2bfc4cc0aae88a9301fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6c002fecb15ed2939fd82a0bb792227"><td class="memItemLeft" align="right" valign="top">ofReplType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#ab6c002fecb15ed2939fd82a0bb792227">oficina::ofGetReplType</a> ()</td></tr>
+<tr class="memdesc:ab6c002fecb15ed2939fd82a0bb792227"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current type of REPL.  <a href="oficina_8hpp.html#ab6c002fecb15ed2939fd82a0bb792227">More...</a><br /></td></tr>
+<tr class="separator:ab6c002fecb15ed2939fd82a0bb792227"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b5e679589098ed7844dac62868cba3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#a9b5e679589098ed7844dac62868cba3a">oficina::ofReplEval</a> (std::string str, bool suppressAns=false)</td></tr>
+<tr class="memdesc:a9b5e679589098ed7844dac62868cba3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates a string on the REPL, regardless of language.  <a href="oficina_8hpp.html#a9b5e679589098ed7844dac62868cba3a">More...</a><br /></td></tr>
+<tr class="separator:a9b5e679589098ed7844dac62868cba3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e84b182c26f21c775fb7d4fbcd05d6e"><td class="memItemLeft" align="right" valign="top"><a id="a4e84b182c26f21c775fb7d4fbcd05d6e"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#a4e84b182c26f21c775fb7d4fbcd05d6e">oficina::ofReplDumpOutput</a> ()</td></tr>
+<tr class="memdesc:a4e84b182c26f21c775fb7d4fbcd05d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dumps REPL output for current REPL type. <br /></td></tr>
+<tr class="separator:a4e84b182c26f21c775fb7d4fbcd05d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae43f95d153c2e401d2f976f5736c73e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#ae43f95d153c2e401d2f976f5736c73e9">oficina::ofSetSwapInterval</a> (ofFrameRateConfig cfg, float max=0.0f, float min=0.0f)</td></tr>
+<tr class="memdesc:ae43f95d153c2e401d2f976f5736c73e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the way that the global display deals with swap interval.  <a href="oficina_8hpp.html#ae43f95d153c2e401d2f976f5736c73e9">More...</a><br /></td></tr>
+<tr class="separator:ae43f95d153c2e401d2f976f5736c73e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59e789dd67e8bec5c03191238afaa3c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="oficina_8hpp.html#a59e789dd67e8bec5c03191238afaa3c7">oficina::ofSetClearColor</a> (glm::vec4 color)</td></tr>
+<tr class="memdesc:a59e789dd67e8bec5c03191238afaa3c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the background color for the global renderer.  <a href="oficina_8hpp.html#a59e789dd67e8bec5c03191238afaa3c7">More...</a><br /></td></tr>
+<tr class="separator:a59e789dd67e8bec5c03191238afaa3c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Default tools for easily initializing Oficina. </p>
 <p>Functions and tools for starting and finishing Oficina in its entirety, for a quick and easy game development. </p><dl class="section author"><dt>Author</dt><dd>Lucas Vieira </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="oficina_8hpp_source.html">oficina.hpp</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="file_adfd664b6451a8f872d5287bac43142a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_adfd664b6451a8f872d5287bac43142a1">&#9670;&nbsp;</a></span>ofReplType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="oficina_8hpp.html#adfd664b6451a8f872d5287bac43142a1">oficina::ofReplType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Specifies the types of REPL. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adfd664b6451a8f872d5287bac43142a1a4a73b0dd84fdcb69a8926f47fdbb76ef"></a>ofReplNone&#160;</td><td class="fielddoc"><p>No REPL language at all. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfd664b6451a8f872d5287bac43142a1a3ff4584001fced59318e5c12ce3e32a3"></a>ofReplScheme&#160;</td><td class="fielddoc"><p>Use IronScheme on REPL. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="adfd664b6451a8f872d5287bac43142a1a03a79587978a48aed6149aa0ae2a0cda"></a>ofReplLua&#160;</td><td class="fielddoc"><p>Use IronLua on REPL. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="oficina_8hpp_source.html#l00107">107</a> of file <a class="el" href="oficina_8hpp_source.html">oficina.hpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="file_a052b1f748b826bdf9585448deded43f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#file_a052b1f748b826bdf9585448deded43f4">&#9670;&nbsp;</a></span>ofGameLoop()</h2>
 
@@ -164,6 +225,26 @@ Functions</h2></td></tr>
 <dl class="section see"><dt>See also</dt><dd>ofInit </dd>
 <dd>
 ofSoftStop </dd></dl>
+
+</div>
+</div>
+<a id="file_ab6c002fecb15ed2939fd82a0bb792227"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_ab6c002fecb15ed2939fd82a0bb792227">&#9670;&nbsp;</a></span>ofGetReplType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ofReplType oficina::ofGetReplType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the current type of REPL. </p>
+<dl class="section return"><dt>Returns</dt><dd>The currently used REPL language. </dd></dl>
 
 </div>
 </div>
@@ -188,8 +269,34 @@ ofSoftStop </dd></dl>
 
 </div>
 </div>
+<a id="file_a2fc8f54b89b7ddc3cd2b28d2e030cf67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a2fc8f54b89b7ddc3cd2b28d2e030cf67">&#9670;&nbsp;</a></span>ofInit() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofInit </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::string &gt;&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes OficinaFramework. </p>
+<p>This will automatically initialize a new display and context for your game, and also all necessary subsystems such as canvas manager, debugger, global Scheme intepreter (for Repl), etc. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>Vector of arguments to be passed for initialization. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="file_a0029465cbd8d1f8345bc43e0e19f6b1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a0029465cbd8d1f8345bc43e0e19f6b1b">&#9670;&nbsp;</a></span>ofInit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a0029465cbd8d1f8345bc43e0e19f6b1b">&#9670;&nbsp;</a></span>ofInit() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +310,7 @@ ofSoftStop </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Initialized OficinaFramework. </p>
+<p>Initializes OficinaFramework. </p>
 <p>This will automatically initialize a new display and context for your game, and also all necessary subsystems such as canvas manager, debugger, global Scheme intepreter (for Repl), etc. </p>
 
 </div>
@@ -272,6 +379,69 @@ ofSoftStop </dd></dl>
 
 </div>
 </div>
+<a id="file_a9b5e679589098ed7844dac62868cba3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a9b5e679589098ed7844dac62868cba3a">&#9670;&nbsp;</a></span>ofReplEval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofReplEval </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>suppressAns</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates a string on the REPL, regardless of language. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>String to be evaluated. </td></tr>
+    <tr><td class="paramname">suppressAns</td><td>Whether the answer should be suppressed from REPL output. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_a59e789dd67e8bec5c03191238afaa3c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a59e789dd67e8bec5c03191238afaa3c7">&#9670;&nbsp;</a></span>ofSetClearColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofSetClearColor </td>
+          <td>(</td>
+          <td class="paramtype">glm::vec4&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the background color for the global renderer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color</td><td>Four-dimensional vector containing RGBA colors, normalized. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="file_a5a6d39d915b923365c15c7342ac2dd34"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#file_a5a6d39d915b923365c15c7342ac2dd34">&#9670;&nbsp;</a></span>ofSetFullscreen()</h2>
 
@@ -292,6 +462,76 @@ ofSoftStop </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">state</td><td>State to be assumed: Fullscreen (true) or Windowed (false). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_a69ad7ef9338a2bfc4cc0aae88a9301fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_a69ad7ef9338a2bfc4cc0aae88a9301fa">&#9670;&nbsp;</a></span>ofSetReplType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofSetReplType </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="oficina_8hpp.html#adfd664b6451a8f872d5287bac43142a1">ofReplType</a>&#160;</td>
+          <td class="paramname"><em>type</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets the current type of REPL to be used. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Type of REPL to be used from now on. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="file_ae43f95d153c2e401d2f976f5736c73e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#file_ae43f95d153c2e401d2f976f5736c73e9">&#9670;&nbsp;</a></span>ofSetSwapInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofSetSwapInterval </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="display_8hpp.html#aaa764dcec69b1ebefb447d911e00cc76">ofFrameRateConfig</a>&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>max</em> = <code>0.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>min</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the way that the global display deals with swap interval. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td>Desired swap interval configuration. </td></tr>
+    <tr><td class="paramname">max</td><td>Maximum swap interval, in frames per second (FPS). If applicable. </td></tr>
+    <tr><td class="paramname">min</td><td>Minimum swap interval, in frames per second (FPS). If applicable. </td></tr>
   </table>
   </dd>
 </dl>
@@ -362,7 +602,7 @@ ofSoftStop </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0f9f0e1a7b56d3be1045a2960b921939.html">oficina2</a></li><li class="navelem"><a class="el" href="oficina_8hpp.html">oficina.hpp</a></li>
-    <li class="footer">Generated on Thu Mar 16 2017 22:35:30 for OficinaFramework by
+    <li class="footer">Generated on Wed Apr 12 2017 12:45:57 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

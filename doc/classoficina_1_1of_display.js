@@ -1,6 +1,7 @@
 var classoficina_1_1of_display =
 [
     [ "close", "classoficina_1_1of_display.html#af0bfec8e30fd2709bf724ef5f2fd8f5b", null ],
+    [ "getDeltaTime", "classoficina_1_1of_display.html#a614980d31fe5740565a4568782fc3ded", null ],
     [ "getHandle", "classoficina_1_1of_display.html#a4947bad685dc61ee1d3ac0adc8210d76", null ],
     [ "getSize", "classoficina_1_1of_display.html#ad2017370dbaac9e4efda37fcbe44158b", null ],
     [ "isFullscreen", "classoficina_1_1of_display.html#a6d7525efe1e76008714f1d49679d2b0c", null ],
@@ -9,5 +10,6 @@ var classoficina_1_1of_display =
     [ "pushArg", "classoficina_1_1of_display.html#a574ca5db64388ccde11a58203041e09b", null ],
     [ "setFullscreen", "classoficina_1_1of_display.html#aafb7af91a9ffe3b0b8d0b9addf601fba", null ],
     [ "setSize", "classoficina_1_1of_display.html#a0d65615ec365e4e93181c74c650d3413", null ],
+    [ "setSwapInterval", "classoficina_1_1of_display.html#a9e6b83fa134cd8cbbc175c8ffb86880c", null ],
     [ "swap", "classoficina_1_1of_display.html#a11f10428fe92bc08adda79e1766bf632", null ]
 ];

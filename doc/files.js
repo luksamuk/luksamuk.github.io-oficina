@@ -5,9 +5,7 @@ var files =
       [ "ofCanvas", "classoficina_1_1of_canvas.html", "classoficina_1_1of_canvas" ],
       [ "ofCanvasManager", "classoficina_1_1of_canvas_manager.html", "classoficina_1_1of_canvas_manager" ]
     ] ],
-    [ "display.hpp", "display_8hpp.html", [
-      [ "ofDisplay", "classoficina_1_1of_display.html", "classoficina_1_1of_display" ]
-    ] ],
+    [ "display.hpp", "display_8hpp.html", "display_8hpp" ],
     [ "entity.hpp", "entity_8hpp.html", [
       [ "ofIComponent", "classoficina_1_1of_i_component.html", "classoficina_1_1of_i_component" ],
       [ "ofEntity", "classoficina_1_1of_entity.html", "classoficina_1_1of_entity" ]
@@ -15,6 +13,7 @@ var files =
     [ "input.hpp", "input_8hpp.html", "input_8hpp" ],
     [ "io.hpp", "io_8hpp.html", "io_8hpp" ],
     [ "oficina.hpp", "oficina_8hpp.html", "oficina_8hpp" ],
+    [ "oflua.hpp", "oflua_8hpp.html", "oflua_8hpp" ],
     [ "ofscheme.hpp", "ofscheme_8hpp.html", "ofscheme_8hpp" ],
     [ "platform.hpp", "platform_8hpp.html", "platform_8hpp" ],
     [ "render.hpp", "render_8hpp.html", "render_8hpp" ],

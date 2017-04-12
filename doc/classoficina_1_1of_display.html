@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
+   &#160;<span id="projectnumber">2.0.11-master-4122017</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -120,18 +121,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0d65615ec365e4e93181c74c650d3413"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_display.html#a0d65615ec365e4e93181c74c650d3413">setSize</a> (glm::uvec2 NewSize)</td></tr>
 <tr class="memdesc:a0d65615ec365e4e93181c74c650d3413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets size of the window.  <a href="#a0d65615ec365e4e93181c74c650d3413">More...</a><br /></td></tr>
 <tr class="separator:a0d65615ec365e4e93181c74c650d3413"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e6b83fa134cd8cbbc175c8ffb86880c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_display.html#a9e6b83fa134cd8cbbc175c8ffb86880c">setSwapInterval</a> (<a class="el" href="display_8hpp.html#aaa764dcec69b1ebefb447d911e00cc76">ofFrameRateConfig</a> cfg, float max=0.0f, float min=0.0f)</td></tr>
+<tr class="memdesc:a9e6b83fa134cd8cbbc175c8ffb86880c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the way that the display deals with swap interval.  <a href="#a9e6b83fa134cd8cbbc175c8ffb86880c">More...</a><br /></td></tr>
+<tr class="separator:a9e6b83fa134cd8cbbc175c8ffb86880c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d7525efe1e76008714f1d49679d2b0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_display.html#a6d7525efe1e76008714f1d49679d2b0c">isFullscreen</a> () const</td></tr>
 <tr class="memdesc:a6d7525efe1e76008714f1d49679d2b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the state of the window (fullscreen/windowed).  <a href="#a6d7525efe1e76008714f1d49679d2b0c">More...</a><br /></td></tr>
 <tr class="separator:a6d7525efe1e76008714f1d49679d2b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb7af91a9ffe3b0b8d0b9addf601fba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_display.html#aafb7af91a9ffe3b0b8d0b9addf601fba">setFullscreen</a> (bool state)</td></tr>
 <tr class="memdesc:aafb7af91a9ffe3b0b8d0b9addf601fba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state of the window on screen.  <a href="#aafb7af91a9ffe3b0b8d0b9addf601fba">More...</a><br /></td></tr>
 <tr class="separator:aafb7af91a9ffe3b0b8d0b9addf601fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a614980d31fe5740565a4568782fc3ded"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_display.html#a614980d31fe5740565a4568782fc3ded">getDeltaTime</a> () const</td></tr>
+<tr class="memdesc:a614980d31fe5740565a4568782fc3ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the DeltaTime for swapping this display.  <a href="#a614980d31fe5740565a4568782fc3ded">More...</a><br /></td></tr>
+<tr class="separator:a614980d31fe5740565a4568782fc3ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Represents a single window prepared for receiving a context. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="classoficina_1_1of_context.html" title="Describes a context for your display. ">ofContext</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="display_8hpp_source.html#l00036">36</a> of file <a class="el" href="display_8hpp_source.html">display.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="display_8hpp_source.html#l00059">59</a> of file <a class="el" href="display_8hpp_source.html">display.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af0bfec8e30fd2709bf724ef5f2fd8f5b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af0bfec8e30fd2709bf724ef5f2fd8f5b">&#9670;&nbsp;</a></span>close()</h2>
@@ -150,6 +157,26 @@ Public Member Functions</h2></td></tr>
 
 <p>Closes the display. </p>
 <p>Closes the display, effectively closing the window. </p>
+
+</div>
+</div>
+<a id="a614980d31fe5740565a4568782fc3ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a614980d31fe5740565a4568782fc3ded">&#9670;&nbsp;</a></span>getDeltaTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float oficina::ofDisplay::getDeltaTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the DeltaTime for swapping this display. </p>
+<dl class="section return"><dt>Returns</dt><dd>Display time variation for the latest swap. </dd></dl>
 
 </div>
 </div>
@@ -270,7 +297,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Handles display arguments. </p>
-<p>Handles display arguments for display configuration, such as size, name, etc. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Handles display arguments for display configuration. See documentation for details. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">arg</td><td>Argument to be treated and added to the configuration. </td></tr>
   </table>
@@ -326,6 +353,50 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9e6b83fa134cd8cbbc175c8ffb86880c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e6b83fa134cd8cbbc175c8ffb86880c">&#9670;&nbsp;</a></span>setSwapInterval()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void oficina::ofDisplay::setSwapInterval </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="display_8hpp.html#aaa764dcec69b1ebefb447d911e00cc76">ofFrameRateConfig</a>&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>max</em> = <code>0.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>min</em> = <code>0.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the way that the display deals with swap interval. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cfg</td><td>Desired swap interval configuration. </td></tr>
+    <tr><td class="paramname">max</td><td>Maximum swap interval, in frames per second (FPS). If applicable. </td></tr>
+    <tr><td class="paramname">min</td><td>Minimum swap interval, in frames per second (FPS). If applicable. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a11f10428fe92bc08adda79e1766bf632"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a11f10428fe92bc08adda79e1766bf632">&#9670;&nbsp;</a></span>swap()</h2>
 
@@ -355,7 +426,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_display.html">ofDisplay</a></li>
-    <li class="footer">Generated on Thu Mar 16 2017 22:35:31 for OficinaFramework by
+    <li class="footer">Generated on Wed Apr 12 2017 12:45:57 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

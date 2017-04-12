@@ -14,6 +14,8 @@ var render_8hpp =
     [ "ofTextureRenderer", "classoficina_1_1of_texture_renderer.html", "classoficina_1_1of_texture_renderer" ],
     [ "ofFont", "classoficina_1_1of_font.html", "classoficina_1_1of_font" ],
     [ "ofAnimator", "classoficina_1_1of_animator.html", "classoficina_1_1of_animator" ],
+    [ "ofPrimitive", "structoficina_1_1of_primitive.html", "structoficina_1_1of_primitive" ],
+    [ "ofPrimitiveRenderer", "classoficina_1_1of_primitive_renderer.html", null ],
     [ "ofBufferUsage", "render_8hpp.html#a42c38585c6390e5f38ed7c1b13516b21", [
       [ "ofBufferStaticDraw", "render_8hpp.html#a42c38585c6390e5f38ed7c1b13516b21aa289ec6e428d0feef519ea449b2cc561", null ],
       [ "ofBufferDynamicDraw", "render_8hpp.html#a42c38585c6390e5f38ed7c1b13516b21a885cd8c66184cce517afee0554d3e0b6", null ],
@@ -56,6 +58,7 @@ var render_8hpp =
       [ "ofLinesAdj", "render_8hpp.html#aaf449607910abcc35a1346ac5daec340a95111fa77760066413bc977f734b58f6", null ],
       [ "ofTriangleStrip", "render_8hpp.html#aaf449607910abcc35a1346ac5daec340adad9d98da908c701e9ef471181f94f8f", null ],
       [ "ofTriangleFan", "render_8hpp.html#aaf449607910abcc35a1346ac5daec340aa02e27b9495fc76bf64fe9a9bcc05de9", null ],
+      [ "ofQuad", "render_8hpp.html#aaf449607910abcc35a1346ac5daec340a4ecb6a701fb8d8c8e8ef9a310fecbd8d", null ],
       [ "ofTriangles", "render_8hpp.html#aaf449607910abcc35a1346ac5daec340a1d87efe21fc26143b6868f578cbe509f", null ],
       [ "ofTriangleStripAdj", "render_8hpp.html#aaf449607910abcc35a1346ac5daec340a24f9cbed06a81fe873eb16443168998d", null ],
       [ "ofTrianglesAdj", "render_8hpp.html#aaf449607910abcc35a1346ac5daec340abc4ad94766773d02d23dfc29d3681df7", null ],

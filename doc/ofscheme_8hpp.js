@@ -4,6 +4,8 @@ var ofscheme_8hpp =
     [ "SCHEME_FUNCAST", "ofscheme_8hpp.html#ae918b3402aa9d55e7928b109ca43fde1", null ],
     [ "ofScmDefineFunc", "ofscheme_8hpp.html#ac99edf2d84a7d9b524a28e2448dc4975", null ],
     [ "ofScmDefineSymbol", "ofscheme_8hpp.html#a65c7403345f9792db85b66a544ee2752", null ],
+    [ "ofScmDefineSymbol", "ofscheme_8hpp.html#a7c5f516aa0723ea9d61fb3a3fcd0a07c", null ],
+    [ "ofScmDefineSymbol", "ofscheme_8hpp.html#afc87e953d0ee43df0b521202a5ea4760", null ],
     [ "ofScmDeinit", "ofscheme_8hpp.html#aeb3dd6607e63ea8d00e5e9f3f09a4ade", null ],
     [ "ofScmDumpOutput", "ofscheme_8hpp.html#a101ef4fa98600a112730d935faf6d8d1", null ],
     [ "ofScmEval", "ofscheme_8hpp.html#a289cee63dd679eedc1a35c755565806a", null ],

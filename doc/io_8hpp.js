@@ -21,6 +21,7 @@ var io_8hpp =
       [ "ofLogConsole", "io_8hpp.html#ac4c9fb6871e6d6bc55362631297eb7ddad980ba9404a3c3e0c281e460aae0e2fc", null ],
       [ "ofLogFile", "io_8hpp.html#ac4c9fb6871e6d6bc55362631297eb7dda1184c00b77688b89a424c1b95902d522", null ]
     ] ],
+    [ "ofFindAsset", "io_8hpp.html#a9191d37fba26cb4d28baedb17cd64edc", null ],
     [ "ofLoadImage", "io_8hpp.html#a436b203d0f1a2ac16b70d30d0b6e99f6", null ],
     [ "ofLoadText", "io_8hpp.html#a5460c0cf887e6bf6864c18c5d3fc9989", null ],
     [ "ofLog", "io_8hpp.html#a188768a864f99fd2133e6ced9c9e63f4", null ],
@@ -28,5 +29,6 @@ var io_8hpp =
     [ "ofLogGetType", "io_8hpp.html#a71f300bf5be3d3ae5fc2ef379d0bc265", null ],
     [ "ofLogSetLevel", "io_8hpp.html#afda0f210838fb5cfb8a9901eea8b2931", null ],
     [ "ofLogUseConsole", "io_8hpp.html#aba9e9a82217cf2a9a7937f3128500324", null ],
-    [ "ofLogUseFile", "io_8hpp.html#afd1a38fa14844fd7f3838f8d6a5999b9", null ]
+    [ "ofLogUseFile", "io_8hpp.html#afd1a38fa14844fd7f3838f8d6a5999b9", null ],
+    [ "ofSetDataDirectoryName", "io_8hpp.html#affaeadda92801c9902bc4aa398a07928", null ]
 ];

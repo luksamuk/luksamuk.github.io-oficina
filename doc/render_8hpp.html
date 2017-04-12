@@ -27,9 +27,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.0-ofscheme-guile</span>
+   &#160;<span id="projectnumber">2.0.11-master-4122017</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -97,6 +98,7 @@ $(document).ready(function(){initNavTree('render_8hpp.html','');});
 <code>#include &quot;<a class="el" href="display_8hpp_source.html">oficina2/display.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="types_8hpp_source.html">oficina2/types.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="timer_8hpp_source.html">oficina2/timer.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="entity_8hpp_source.html">oficina2/entity.hpp</a>&quot;</code><br />
 <code>#include &lt;GL/glew.h&gt;</code><br />
 <code>#include &lt;GL/gl.h&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
@@ -148,6 +150,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_animator.html">oficina::ofAnimator</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tool for controlling a texture renderer to generate animations.  <a href="classoficina_1_1of_animator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structoficina_1_1of_primitive.html">oficina::ofPrimitive</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A structure representing a primitive. Can be used for rendering.  <a href="structoficina_1_1of_primitive.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_primitive_renderer.html">oficina::ofPrimitiveRenderer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A static class containing methods for creating and drawing simple primitives onscreen.  <a href="classoficina_1_1of_primitive_renderer.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -196,10 +204,12 @@ Enumerations</h2></td></tr>
 <a class="el" href="render_8hpp.html#aaf449607910abcc35a1346ac5daec340adad9d98da908c701e9ef471181f94f8f">oficina::ofTriangleStrip</a> = GL_TRIANGLE_STRIP, 
 <a class="el" href="render_8hpp.html#aaf449607910abcc35a1346ac5daec340aa02e27b9495fc76bf64fe9a9bcc05de9">oficina::ofTriangleFan</a> = GL_TRIANGLE_FAN, 
 <br />
-&#160;&#160;<a class="el" href="render_8hpp.html#aaf449607910abcc35a1346ac5daec340a1d87efe21fc26143b6868f578cbe509f">oficina::ofTriangles</a> = GL_TRIANGLES, 
+&#160;&#160;<a class="el" href="render_8hpp.html#aaf449607910abcc35a1346ac5daec340a4ecb6a701fb8d8c8e8ef9a310fecbd8d">oficina::ofQuad</a> = GL_TRIANGLE_FAN, 
+<a class="el" href="render_8hpp.html#aaf449607910abcc35a1346ac5daec340a1d87efe21fc26143b6868f578cbe509f">oficina::ofTriangles</a> = GL_TRIANGLES, 
 <a class="el" href="render_8hpp.html#aaf449607910abcc35a1346ac5daec340a24f9cbed06a81fe873eb16443168998d">oficina::ofTriangleStripAdj</a> = GL_TRIANGLE_STRIP_ADJACENCY, 
 <a class="el" href="render_8hpp.html#aaf449607910abcc35a1346ac5daec340abc4ad94766773d02d23dfc29d3681df7">oficina::ofTrianglesAdj</a> = GL_TRIANGLES_ADJACENCY, 
-<a class="el" href="render_8hpp.html#aaf449607910abcc35a1346ac5daec340a16fe64e0adf822693f5a002760b76681">oficina::ofPatches</a> = GL_PATCHES
+<br />
+&#160;&#160;<a class="el" href="render_8hpp.html#aaf449607910abcc35a1346ac5daec340a16fe64e0adf822693f5a002760b76681">oficina::ofPatches</a> = GL_PATCHES
 <br />
  }<tr class="memdesc:aaf449607910abcc35a1346ac5daec340"><td class="mdescLeft">&#160;</td><td class="mdescRight">Describes a type for a primitive.  <a href="render_8hpp.html#aaf449607910abcc35a1346ac5daec340">More...</a><br /></td></tr>
 </td></tr>
@@ -293,7 +303,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00049">49</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00050">50</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
 
 </div>
 </div>
@@ -320,7 +330,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00037">37</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00038">38</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
 
 </div>
 </div>
@@ -358,7 +368,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00120">120</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00123">123</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
 
 </div>
 </div>
@@ -386,7 +396,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00669">669</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00686">686</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
 
 </div>
 </div>
@@ -420,6 +430,8 @@ Variables</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="aaf449607910abcc35a1346ac5daec340aa02e27b9495fc76bf64fe9a9bcc05de9"></a>ofTriangleFan&#160;</td><td class="fielddoc"><p>A triangle fan. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="aaf449607910abcc35a1346ac5daec340a4ecb6a701fb8d8c8e8ef9a310fecbd8d"></a>ofQuad&#160;</td><td class="fielddoc"><p>A quad. In reality, nothing more than a triangle fan. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="aaf449607910abcc35a1346ac5daec340a1d87efe21fc26143b6868f578cbe509f"></a>ofTriangles&#160;</td><td class="fielddoc"><p>A set of triangles. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="aaf449607910abcc35a1346ac5daec340a24f9cbed06a81fe873eb16443168998d"></a>ofTriangleStripAdj&#160;</td><td class="fielddoc"><p>A triangle strip formed by the triangles' adjacency. </p>
@@ -430,7 +442,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00091">91</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00092">92</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
 
 </div>
 </div>
@@ -462,7 +474,7 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00074">74</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00075">75</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
 
 </div>
 </div>
@@ -565,11 +577,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">        <span class="stringliteral">&quot;#version 330                                      \n&quot;</span></div><div class="line"></div><div class="line">        <span class="stringliteral">&quot;in vec3 Color;                                    \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;in vec2 Texcoord;                                 \n&quot;</span></div><div class="line"></div><div class="line">        <span class="stringliteral">&quot;out vec4 outColor;                                \n&quot;</span></div><div class="line"></div><div class="line">        <span class="stringliteral">&quot;uniform sampler2D tex;                            \n&quot;</span></div><div class="line"></div><div class="line">        <span class="stringliteral">&quot;void main()                                       \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;{                                                 \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;    vec4 texColor = texture(tex, Texcoord);       \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;    outColor = texColor * vec4(Color, 1.0);       \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;}                                                 \n&quot;</span></div></div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">        R<span class="stringliteral">&quot;(#version 330</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">        in vec3 Color;</span></div><div class="line"><span class="stringliteral">        in vec2 Texcoord;</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">        out vec4 outColor;</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">        uniform sampler2D tex;</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">        void main()</span></div><div class="line"><span class="stringliteral">        {</span></div><div class="line"><span class="stringliteral">            vec4 texColor = texture(tex, Texcoord);</span></div><div class="line"><span class="stringliteral">            outColor = texColor * vec4(Color, 1.0);</span></div><div class="line"><span class="stringliteral">        })&quot;</span></div></div><!-- fragment -->
 <p>Default fragment shader source. </p>
 <p>By default, receives color and texture coordinates from the default vertex shader, and asks for a texture to be bound on unit 0 so it can access the texture using a uniform sampler2D. </p>
 
-<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00173">173</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00176">176</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
 
 </div>
 </div>
@@ -584,11 +596,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">        <span class="stringliteral">&quot;#version 330                                      \n&quot;</span></div><div class="line"></div><div class="line">        <span class="stringliteral">&quot;in vec3 position;                                 \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;in vec3 color;                                    \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;in vec2 texcoord;                                 \n&quot;</span></div><div class="line"></div><div class="line">        <span class="stringliteral">&quot;out vec3 Color;                                   \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;out vec2 Texcoord;                                \n&quot;</span></div><div class="line"></div><div class="line">        <span class="stringliteral">&quot;uniform mat4 mvp;                                 \n&quot;</span></div><div class="line"></div><div class="line">        <span class="stringliteral">&quot;void main()                                       \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;{                                                 \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;    Color = color;                                \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;    Texcoord = texcoord;                          \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;    gl_Position = mvp * vec4(position, 1.0);      \n&quot;</span></div><div class="line">        <span class="stringliteral">&quot;}                                                 \n&quot;</span></div></div><!-- fragment -->
+<b>Initial value:</b><div class="fragment"><div class="line">=</div><div class="line">        R<span class="stringliteral">&quot;(#version 330</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">        in vec3 position;</span></div><div class="line"><span class="stringliteral">        in vec3 color;</span></div><div class="line"><span class="stringliteral">        in vec2 texcoord;</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">        out vec3 Color;</span></div><div class="line"><span class="stringliteral">        out vec2 Texcoord;</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">        uniform mat4 mvp;</span></div><div class="line"><span class="stringliteral"></span></div><div class="line"><span class="stringliteral">        void main()</span></div><div class="line"><span class="stringliteral">        {</span></div><div class="line"><span class="stringliteral">            Color = color;</span></div><div class="line"><span class="stringliteral">            Texcoord = texcoord;</span></div><div class="line"><span class="stringliteral">            gl_Position = mvp * vec4(position, 1.0);</span></div><div class="line"><span class="stringliteral">        })&quot;</span></div></div><!-- fragment -->
 <p>Default vertex shader source. </p>
 <p>By default, asks for position, color and texture coordinates to be fed using a vertex buffer, and an MVP matrix fed by an uniform. </p>
 
-<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00149">149</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_8hpp_source.html#l00152">152</a> of file <a class="el" href="render_8hpp_source.html">render.hpp</a>.</p>
 
 </div>
 </div>
@@ -598,7 +610,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0f9f0e1a7b56d3be1045a2960b921939.html">oficina2</a></li><li class="navelem"><a class="el" href="render_8hpp.html">render.hpp</a></li>
-    <li class="footer">Generated on Thu Mar 16 2017 22:35:30 for OficinaFramework by
+    <li class="footer">Generated on Wed Apr 12 2017 12:45:57 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
