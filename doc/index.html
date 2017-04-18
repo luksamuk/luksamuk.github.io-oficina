@@ -107,17 +107,21 @@ Dependencies</h1>
 Building Your Own Projects With Oficina2</h1>
 <p>If you're using a Linux environment, building projects with Oficina2 is very easy, as you can use the <code>oficina2-config</code> tool for that.</p>
 <p>Suppose you created a file called <code>game.cpp</code> which holds the code for your game. To build your oficina2 app with GCC, simply use:</p>
-<div class="fragment"><div class="line">{g++}</div><div class="line"></div><div class="line">This will also work with LLVM Clang, and will respect the libraries which you build Oficina2 with, so it<span class="stringliteral">&#39;s very important to build</span></div><div class="line"><span class="stringliteral">the `oficina2-config` target on CMake along with Oficina2&#39;</span>s <span class="keyword">static</span> library and test app.</div><div class="line"></div><div class="line"></div><div class="line">@section build Building</div><div class="line">Just `cd` to the repo<span class="stringliteral">&#39;s folder and use CMAKE. This will create a static library. You&#39;</span>ll then be able to install it to your path.</div><div class="line"></div><div class="line">```bash</div><div class="line">mkdir build</div><div class="line">cd build</div><div class="line">cmake ..</div><div class="line">make</div><div class="line">sudo make install</div></div><!-- fragment --><h1><a class="anchor" id="build-nolib"></a>
+<div class="fragment"><div class="line">g++ `oficina2-config --cppflags` game.cpp `oficina2-config --libs` -o MyGameBinary</div></div><!-- fragment --><p>This will also work with LLVM Clang, and will respect the libraries which you build Oficina2 with, so it's very important to build the <code>oficina2-config</code> target on CMake along with Oficina2's static library and test app.</p>
+<h1><a class="anchor" id="build"></a>
+Building</h1>
+<p>Just <code>cd</code> to the repo's folder and use CMAKE. This will create a static library. You'll then be able to install it to your path.</p>
+<div class="fragment"><div class="line">mkdir build</div><div class="line">cd build</div><div class="line">cmake ..</div><div class="line">make</div><div class="line">sudo make install</div></div><!-- fragment --><h1><a class="anchor" id="build-nolib"></a>
 Building (Without GNU Guile or Lua)</h1>
 <h2><a class="anchor" id="build-noguile"></a>
 Without Guile</h2>
 <p>There's a possibility that you don't want to use Scheme, or you don't have GNU Guile installed in your system (specially on Windows, which, by the time of this writing, has no proper port of GNU Guile - some of the ports will make your application crash on startup, due to lack of stable multithread support).</p>
 <p>Given that, you might want to disable the IronScheme support. When running CMake, use this command:</p>
-<div class="fragment"></div><!-- fragment --><p>Notice that, on Windows systems, IronScheme support is DISABLED BY DEFAULT. This is due to the current GNU Guile version (2.0.14, by the time of this writing)</p>
+<div class="fragment"><div class="line">cmake .. -DNO_SCHEME=o</div></div><!-- fragment --><p>Notice that, on Windows systems, IronScheme support is DISABLED BY DEFAULT. This is due to the current GNU Guile version (2.0.14, by the time of this writing)</p>
 <h2><a class="anchor" id="build-nolua"></a>
 Without Lua</h2>
 <p>There's also a possibility that you don't want to use Lua, with no scripting nor REPL language at all. In that case, you should run CMake, when building, as the following command:</p>
-<div class="fragment"></div><!-- fragment --><p>That will disable building and linking of Lua libraries for Oficina.</p>
+<div class="fragment"><div class="line">cmake .. -DNO_LUA=o</div></div><!-- fragment --><p>That will disable building and linking of Lua libraries for Oficina.</p>
 <h2><a class="anchor" id="build-noguilenolua"></a>
 Without Both</h2>
 <p>If you want to disable both Scheme and Lua support, just combine the two commands into one:</p>
@@ -130,7 +134,7 @@ Learn</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 17 2017 22:32:21 for OficinaFramework by
+    <li class="footer">Generated on Mon Apr 17 2017 23:08:07 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
