@@ -107,7 +107,7 @@ Dependencies</h1>
 Building Your Own Projects With Oficina2</h1>
 <p>If you're using a Linux environment, building projects with Oficina2 is very easy, as you can use the <code>oficina2-config</code> tool for that.</p>
 <p>Suppose you created a file called <code>game.cpp</code> which holds the code for your game. To build your oficina2 app with GCC, simply use:</p>
-<div class="fragment"><div class="line">g++ `oficina2-config --cppflags` game.cpp `oficina2-config --libs` -o MyGameBinary</div></div><!-- fragment --><p>This will also work with LLVM Clang, and will respect the libraries which you build Oficina2 with, so it's very important to build the <code>oficina2-config</code> target on CMake along with Oficina2's static library and test app.</p>
+<div class="fragment"><div class="line">g++ game.cpp `oficina2-config --cppflags` `oficina2-config --libs` -o MyGameBinary</div></div><!-- fragment --><p>This will also work with LLVM Clang, and will respect the libraries which you build Oficina2 with, so it's very important to build the <code>oficina2-config</code> target on CMake along with Oficina2's static library and test app.</p>
 <h1><a class="anchor" id="build"></a>
 Building</h1>
 <p>Just <code>cd</code> to the repo's folder and use CMAKE. This will create a static library. You'll then be able to install it to your path.</p>
@@ -134,7 +134,7 @@ Learn</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Apr 18 2017 09:18:13 for OficinaFramework by
+    <li class="footer">Generated on Tue Apr 18 2017 11:05:31 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

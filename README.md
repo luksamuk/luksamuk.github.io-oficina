@@ -47,7 +47,7 @@ If you're using a Linux environment, building projects with Oficina2 is very eas
 
 Suppose you created a file called `game.cpp` which holds the code for your game. To build your oficina2 app with GCC, simply use:
 
-```g++ `oficina2-config --cppflags` game.cpp `oficina2-config --libs` -o MyGameBinary```
+```g++ game.cpp `oficina2-config --cppflags` `oficina2-config --libs` -o MyGameBinary```
 
 This will also work with LLVM Clang, and will respect the libraries which you build Oficina2 with, so it's very important to build
 the `oficina2-config` target on CMake along with Oficina2's static library and test app.
