@@ -1,5 +1,10 @@
 var NAVTREEINDEX2 =
 {
+"luaref.html#ofluaSETANIMRUN":[2,1,3,1,2],
+"luaref.html#ofluaSETANIMSPD":[2,1,3,1,1],
+"luaref.html#ofluaSETCLEARCOL":[2,1,3,0,0],
+"luaref.html#ofluaSETFACE":[2,1,1,0,5],
+"luaref.html#ofluaSETFULLSCREEN":[2,1,1,2,1],
 "luaref.html#ofluaSETPROP":[2,1,2,2,6],
 "luaref.html#ofluaTHIS":[2,1,2,0,0],
 "luaref.html#ofluaTOGPROP":[2,1,2,2,7],

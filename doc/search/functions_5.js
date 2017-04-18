@@ -4,7 +4,7 @@ var searchData=
   ['getanimationspeed',['GetAnimationSpeed',['../classoficina_1_1of_animator.html#ac78c53d4c9d300b58659c47b943eeca9',1,'oficina::ofAnimator']]],
   ['getattributelocation',['getAttributeLocation',['../classoficina_1_1of_shader_program.html#a39aaa9becbf63a48417aef134185c249',1,'oficina::ofShaderProgram']]],
   ['getboolean',['getBoolean',['../classoficina_1_1of_lua.html#a71037e6b8c9197fca00874ebec72cf6e',1,'oficina::ofLua']]],
-  ['getcanvaslist',['getCanvasList',['../classoficina_1_1of_canvas_manager.html#ae498c6dcfef23b0677d505f1d25b5346',1,'oficina::ofCanvasManager']]],
+  ['getcanvaslist',['getCanvasList',['../classoficina_1_1of_canvas_manager.html#a1a9ccafbc58ed0421fddf53032e08616',1,'oficina::ofCanvasManager']]],
   ['getcomponent',['GetComponent',['../classoficina_1_1of_entity.html#aa08668685b24c3bca1c606d4162acdf2',1,'oficina::ofEntity::GetComponent()'],['../classoficina_1_1of_lua.html#ad66dae18c3fc0e2db4aa77d71239a9b1',1,'oficina::ofLua::getComponent()']]],
   ['getcount',['getCount',['../classoficina_1_1of_element_buffer.html#a826ba2b454413530acea23df3c876fe2',1,'oficina::ofElementBuffer']]],
   ['getcurrentanimationname',['GetCurrentAnimationName',['../classoficina_1_1of_animator.html#a968e937011a4db50124184c6186cc0a0',1,'oficina::ofAnimator']]],

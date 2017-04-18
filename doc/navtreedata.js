@@ -5,8 +5,14 @@ var NAVTREE =
       [ "About", "index.html#about", null ],
       [ "License", "index.html#license", null ],
       [ "Dependencies", "index.html#depends", null ],
+      [ "Building Your Own Projects With Oficina2", "index.html#buildproj", null ],
       [ "Building", "index.html#build", null ],
-      [ "Building (Without GNU Guile)", "index.html#build-noguile", null ]
+      [ "Building (Without GNU Guile or Lua)", "index.html#build-nolib", [
+        [ "Without Guile", "index.html#build-noguile", null ],
+        [ "Without Lua", "index.html#build-nolua", null ],
+        [ "Without Both", "index.html#build-noguilenolua", null ]
+      ] ],
+      [ "Learn", "index.html#learn", null ]
     ] ],
     [ "IronScheme API Reference v0.3.5b", "schemeref.html", [
       [ "General Scheme Syntax", "schemeref.html#scmgeneral", null ],
@@ -197,7 +203,7 @@ var NAVTREEINDEX =
 [
 ".html",
 "classoficina_1_1of_shader_uniform.html#aaa8aeb48f850e5d3ad9c4b0b02805322",
-"luaref.html#ofluaSETPROP"
+"luaref.html#ofluaSETANIMRUN"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

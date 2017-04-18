@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OficinaFramework
-   &#160;<span id="projectnumber">2.0.11-master-4122017</span>
+   &#160;<span id="projectnumber">2.0.11</span>
    </div>
    <div id="projectbrief">OficinaFramework is a complete game engine in C++ made from scratch</div>
   </td>
@@ -127,9 +127,9 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="memitem:a840a8c3db09429614d0a6f0e760694d4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_canvas_manager.html#a840a8c3db09429614d0a6f0e760694d4">draw</a> ()</td></tr>
 <tr class="memdesc:a840a8c3db09429614d0a6f0e760694d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws all canvases registered within the manager.  <a href="#a840a8c3db09429614d0a6f0e760694d4">More...</a><br /></td></tr>
 <tr class="separator:a840a8c3db09429614d0a6f0e760694d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae498c6dcfef23b0677d505f1d25b5346"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_canvas_manager.html#ae498c6dcfef23b0677d505f1d25b5346">getCanvasList</a> ()</td></tr>
-<tr class="memdesc:ae498c6dcfef23b0677d505f1d25b5346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields text information regarding the canvas list.  <a href="#ae498c6dcfef23b0677d505f1d25b5346">More...</a><br /></td></tr>
-<tr class="separator:ae498c6dcfef23b0677d505f1d25b5346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a9ccafbc58ed0421fddf53032e08616"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_canvas_manager.html#a1a9ccafbc58ed0421fddf53032e08616">getCanvasList</a> ()</td></tr>
+<tr class="memdesc:a1a9ccafbc58ed0421fddf53032e08616"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yields text information regarding the canvas list.  <a href="#a1a9ccafbc58ed0421fddf53032e08616">More...</a><br /></td></tr>
+<tr class="separator:a1a9ccafbc58ed0421fddf53032e08616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fb0112c5e60dc5ad26e296c7ab01286"><td class="memItemLeft" align="right" valign="top">static std::ostringstream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classoficina_1_1of_canvas_manager.html#a1fb0112c5e60dc5ad26e296c7ab01286">dbg_ReplOutStream</a> ()</td></tr>
 <tr class="memdesc:a1fb0112c5e60dc5ad26e296c7ab01286"><td class="mdescLeft">&#160;</td><td class="mdescRight">References the Repl output stream.  <a href="#a1fb0112c5e60dc5ad26e296c7ab01286">More...</a><br /></td></tr>
 <tr class="separator:a1fb0112c5e60dc5ad26e296c7ab01286"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -451,8 +451,8 @@ ofClearTextInput </dd></dl>
 
 </div>
 </div>
-<a id="ae498c6dcfef23b0677d505f1d25b5346"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae498c6dcfef23b0677d505f1d25b5346">&#9670;&nbsp;</a></span>getCanvasList()</h2>
+<a id="a1a9ccafbc58ed0421fddf53032e08616"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a9ccafbc58ed0421fddf53032e08616">&#9670;&nbsp;</a></span>getCanvasList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -461,7 +461,7 @@ ofClearTextInput </dd></dl>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string oficina::ofCanvasManager::getCanvasList </td>
+          <td class="memname">static std::vector&lt;std::pair&lt;std::string, std::string&gt; &gt; oficina::ofCanvasManager::getCanvasList </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -475,7 +475,7 @@ ofClearTextInput </dd></dl>
 </div><div class="memdoc">
 
 <p>Yields text information regarding the canvas list. </p>
-<dl class="section return"><dt>Returns</dt><dd>A multiline string containing info on the canvas list. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A vector of string pairs. Each pair contains the canvas name and its pointer in hex form. </dd></dl>
 
 </div>
 </div>
@@ -586,7 +586,7 @@ ofClearTextInput </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>oficina</b></li><li class="navelem"><a class="el" href="classoficina_1_1of_canvas_manager.html">ofCanvasManager</a></li>
-    <li class="footer">Generated on Wed Apr 12 2017 12:45:57 for OficinaFramework by
+    <li class="footer">Generated on Mon Apr 17 2017 22:32:20 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
