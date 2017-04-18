@@ -117,15 +117,15 @@ Building (Without GNU Guile or Lua)</h1>
 Without Guile</h2>
 <p>There's a possibility that you don't want to use Scheme, or you don't have GNU Guile installed in your system (specially on Windows, which, by the time of this writing, has no proper port of GNU Guile - some of the ports will make your application crash on startup, due to lack of stable multithread support).</p>
 <p>Given that, you might want to disable the IronScheme support. When running CMake, use this command:</p>
-<div class="fragment"><div class="line">cmake .. -DNO_SCHEME=o</div></div><!-- fragment --><p>Notice that, on Windows systems, IronScheme support is DISABLED BY DEFAULT. This is due to the current GNU Guile version (2.0.14, by the time of this writing)</p>
+<div class="fragment"><div class="line">cmake .. -DNO_SCHEME=on</div></div><!-- fragment --><p>Notice that, on Windows systems, IronScheme support is DISABLED BY DEFAULT. This is due to the current GNU Guile version (2.0.14, by the time of this writing)</p>
 <h2><a class="anchor" id="build-nolua"></a>
 Without Lua</h2>
 <p>There's also a possibility that you don't want to use Lua, with no scripting nor REPL language at all. In that case, you should run CMake, when building, as the following command:</p>
-<div class="fragment"><div class="line">cmake .. -DNO_LUA=o</div></div><!-- fragment --><p>That will disable building and linking of Lua libraries for Oficina.</p>
+<div class="fragment"><div class="line">cmake .. -DNO_LUA=on</div></div><!-- fragment --><p>That will disable building and linking of Lua libraries for Oficina.</p>
 <h2><a class="anchor" id="build-noguilenolua"></a>
 Without Both</h2>
 <p>If you want to disable both Scheme and Lua support, just combine the two commands into one:</p>
-<div class="fragment"></div><!-- fragment --><h1><a class="anchor" id="learn"></a>
+<div class="fragment"><div class="line">cmake .. -DNO_SCHEME=on -DNO_LUA=on</div></div><!-- fragment --><h1><a class="anchor" id="learn"></a>
 Learn</h1>
 <p>You can access Oficina2 documentation online on <a href="https://luksamuk.github.io/oficina">https://luksamuk.github.io/oficina</a> or explore the <code>examples</code> folder, which is didatically commented so you can learn the basics.</p>
 <p>Be mindful that these libraries are still in development, so some intended features are still lacking. The same applies for tutorials and documentations, which hopefully will be delivered soon. </p>
@@ -134,7 +134,7 @@ Learn</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 17 2017 23:08:07 for OficinaFramework by
+    <li class="footer">Generated on Tue Apr 18 2017 09:18:13 for OficinaFramework by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
