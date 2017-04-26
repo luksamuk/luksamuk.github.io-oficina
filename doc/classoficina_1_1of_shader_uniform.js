@@ -1,5 +1,7 @@
 var classoficina_1_1of_shader_uniform =
 [
+    [ "ofShaderUniform", "classoficina_1_1of_shader_uniform.html#a477e79186a19ca1a4006cf9a6688065a", null ],
+    [ "ofShaderUniform", "classoficina_1_1of_shader_uniform.html#a98005a3b8cf95d21bf0a804687b5087d", null ],
     [ "isValid", "classoficina_1_1of_shader_uniform.html#a0d531749b855cce41a899e6b58504467", null ],
     [ "operator=", "classoficina_1_1of_shader_uniform.html#a5b6b2673aaa1dad7c031a04c7175882e", null ],
     [ "set", "classoficina_1_1of_shader_uniform.html#aaa8aeb48f850e5d3ad9c4b0b02805322", null ],

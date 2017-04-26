@@ -6,11 +6,15 @@ var NAVTREE =
       [ "License", "index.html#license", null ],
       [ "Dependencies", "index.html#depends", null ],
       [ "Building Your Own Projects With Oficina2", "index.html#buildproj", null ],
-      [ "Building", "index.html#build", null ],
-      [ "Building (Without GNU Guile or Lua)", "index.html#build-nolib", [
-        [ "Without Guile", "index.html#build-noguile", null ],
-        [ "Without Lua", "index.html#build-nolua", null ],
-        [ "Without Both", "index.html#build-noguilenolua", null ]
+      [ "Building", "index.html#build", [
+        [ "Building on Linux", "index.html#buildlin", [
+          [ "Building Without GNU Guile or Lua", "index.html#buildlin_nodeps", [
+            [ "Without Guile", "index.html#buildlin_noguile", null ],
+            [ "Without Lua", "index.html#buildlin_nolua", null ],
+            [ "Without Both", "index.html#buildlin_noboth", null ]
+          ] ]
+        ] ],
+        [ "Building on Windows", "index.html#buildwin", null ]
       ] ],
       [ "Learn", "index.html#learn", null ]
     ] ],
@@ -202,8 +206,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classoficina_1_1of_shader_uniform.html#aaa8aeb48f850e5d3ad9c4b0b02805322",
-"luaref.html#ofluaSETANIMRUN"
+"classoficina_1_1of_shader_uniform.html#a373656f8ac2daaf0d7df4edbee2d3082",
+"luaref.html#ofluaFORMAT",
+"types_8hpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

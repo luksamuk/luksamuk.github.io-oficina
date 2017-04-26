@@ -1,5 +1,7 @@
 var classoficina_1_1of_shader =
 [
+    [ "ofShader", "classoficina_1_1of_shader.html#abcd34f1de0fc4ac1e6f203f70a0cc156", null ],
+    [ "ofShader", "classoficina_1_1of_shader.html#aa16b4e62c963fefa130ee0880ab1a3f4", null ],
     [ "compile", "classoficina_1_1of_shader.html#af0259d9615528febe2afcafd6295f34b", null ],
     [ "getName", "classoficina_1_1of_shader.html#a2fce61aa62314bd9358dc880d0ad83e3", null ],
     [ "init", "classoficina_1_1of_shader.html#ae937892d34e8ea90db7f64218f767785", null ],

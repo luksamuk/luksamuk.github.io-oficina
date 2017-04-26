@@ -30,5 +30,5 @@ var io_8hpp =
     [ "ofLogSetLevel", "io_8hpp.html#afda0f210838fb5cfb8a9901eea8b2931", null ],
     [ "ofLogUseConsole", "io_8hpp.html#aba9e9a82217cf2a9a7937f3128500324", null ],
     [ "ofLogUseFile", "io_8hpp.html#afd1a38fa14844fd7f3838f8d6a5999b9", null ],
-    [ "ofSetDataDirectoryName", "io_8hpp.html#affaeadda92801c9902bc4aa398a07928", null ]
+    [ "ofSetDataDirectoryName", "io_8hpp.html#a455ae826f268da16593c942248b4d5df", null ]
 ];

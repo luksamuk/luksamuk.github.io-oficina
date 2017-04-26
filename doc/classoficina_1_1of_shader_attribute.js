@@ -1,5 +1,7 @@
 var classoficina_1_1of_shader_attribute =
 [
+    [ "ofShaderAttribute", "classoficina_1_1of_shader_attribute.html#a33c4452b19550fa1e1465e124f41cfe1", null ],
+    [ "ofShaderAttribute", "classoficina_1_1of_shader_attribute.html#aac5e7ea5c3e0519038a682e695495f36", null ],
     [ "bindVertexArrayData", "classoficina_1_1of_shader_attribute.html#a067259082d5128f463f0b37d02f3f041", null ],
     [ "enable", "classoficina_1_1of_shader_attribute.html#ac89b02eb8e0e3727a7e08f65e0901712", null ],
     [ "getSize", "classoficina_1_1of_shader_attribute.html#a7529a39b8725b388b8625f32f0a046c6", null ],

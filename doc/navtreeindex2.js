@@ -1,5 +1,25 @@
 var NAVTREEINDEX2 =
 {
+"luaref.html#ofluaFORMAT":[2,1,1,0,0],
+"luaref.html#ofluaGETANIMDEFSPD":[2,1,3,1,5],
+"luaref.html#ofluaGETANIMSPD":[2,1,3,1,4],
+"luaref.html#ofluaGETCOMPONENT":[2,1,2,1,0],
+"luaref.html#ofluaGETPOS":[2,1,2,2,3],
+"luaref.html#ofluaGETPROP":[2,1,2,2,8],
+"luaref.html#ofluaHEX":[2,1,1,0,1],
+"luaref.html#ofluaISFULLSCR":[2,1,1,2,2],
+"luaref.html#ofluaLSTICK":[2,1,1,1,0],
+"luaref.html#ofluaMAG":[2,1,2,2,5],
+"luaref.html#ofluaMOUSEPOS":[2,1,1,1,5],
+"luaref.html#ofluaMOUSEPRESS":[2,1,1,1,6],
+"luaref.html#ofluaMOUSETAP":[2,1,1,1,7],
+"luaref.html#ofluaPROPMASK":[2,1,2,2,9],
+"luaref.html#ofluaQUIT":[2,1,1,0,4],
+"luaref.html#ofluaROTATE":[2,1,2,2,1],
+"luaref.html#ofluaRSTICK":[2,1,1,1,1],
+"luaref.html#ofluaSCALE":[2,1,2,2,2],
+"luaref.html#ofluaSETANIM":[2,1,3,1,0],
+"luaref.html#ofluaSETANIMPOS":[2,1,3,1,3],
 "luaref.html#ofluaSETANIMRUN":[2,1,3,1,2],
 "luaref.html#ofluaSETANIMSPD":[2,1,3,1,1],
 "luaref.html#ofluaSETCLEARCOL":[2,1,3,0,0],
@@ -229,6 +249,5 @@ var NAVTREEINDEX2 =
 "types_8hpp.html#ae0456174c010800096647493fd524ac0":[8,0,12,5],
 "types_8hpp.html#ae8dfa40a273cc79a52b60e0700ab9757":[8,0,12,8],
 "types_8hpp.html#af3aa22dee697fc89cde4de040e6f9992":[8,0,12,6],
-"types_8hpp.html#af6230d26ce4db893907cd78cbec638b5":[8,0,12,0],
-"types_8hpp_source.html":[8,0,12]
+"types_8hpp.html#af6230d26ce4db893907cd78cbec638b5":[8,0,12,0]
 };

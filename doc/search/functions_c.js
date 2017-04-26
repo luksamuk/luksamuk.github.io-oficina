@@ -20,7 +20,7 @@ var searchData=
   ['setsource',['setSource',['../classoficina_1_1of_shader.html#ab18704367087504671ce76ec68de1e76',1,'oficina::ofShader']]],
   ['setstride',['setStride',['../classoficina_1_1of_shader_attribute.html#a2f4cb59c6087b81b92e03ef0d7e100ba',1,'oficina::ofShaderAttribute']]],
   ['setswapinterval',['setSwapInterval',['../classoficina_1_1of_display.html#a9e6b83fa134cd8cbbc175c8ffb86880c',1,'oficina::ofDisplay']]],
-  ['settexture',['SetTexture',['../classoficina_1_1of_texture_renderer.html#ac919c430849236e28e9a93646f8ef3ef',1,'oficina::ofTextureRenderer']]],
+  ['settexture',['SetTexture',['../classoficina_1_1of_texture_renderer.html#adc52ec0ef73d76f04aed501b6141b421',1,'oficina::ofTextureRenderer']]],
   ['settype',['setType',['../classoficina_1_1of_element_buffer.html#ac9d0c212606a2a12eee6475400f8dacd',1,'oficina::ofElementBuffer::setType()'],['../classoficina_1_1of_shader_attribute.html#a7d780c4c849e0553a04e7eb2ada606c1',1,'oficina::ofShaderAttribute::setType()']]],
   ['setviewportsize',['setViewportSize',['../classoficina_1_1of_context.html#a6f8a47078d85577e245ce63de250a293',1,'oficina::ofContext']]],
   ['stop',['stop',['../classoficina_1_1of_time_span.html#a09c6b3f0238f2c184492d844972d4a47',1,'oficina::ofTimeSpan::stop()'],['../classoficina_1_1of_frame_span.html#a215f7c09ed001519e5d0a66021b7dbc1',1,'oficina::ofFrameSpan::stop()']]],

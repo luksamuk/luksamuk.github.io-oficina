@@ -1,5 +1,7 @@
 var classoficina_1_1of_font =
 [
+    [ "ofFont", "classoficina_1_1of_font.html#aeffe9e5020c9b0bd78a5f2d7b8a550e2", null ],
+    [ "ofFont", "classoficina_1_1of_font.html#af958a3f7c7c7a3984920c28f64d35466", null ],
     [ "getGlyphSize", "classoficina_1_1of_font.html#a95d9769a4dbad1a3c902920f8f5c47dd", null ],
     [ "init", "classoficina_1_1of_font.html#a835839961cb6f1932147669e8c9c69e8", null ],
     [ "isInit", "classoficina_1_1of_font.html#aebee9f316afad203c9e57a64f921942e", null ],

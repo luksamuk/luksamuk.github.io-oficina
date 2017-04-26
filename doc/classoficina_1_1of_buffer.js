@@ -1,5 +1,7 @@
 var classoficina_1_1of_buffer =
 [
+    [ "ofBuffer", "classoficina_1_1of_buffer.html#a58c3c05ed28d93012cc255fc3b1faff4", null ],
+    [ "ofBuffer", "classoficina_1_1of_buffer.html#aa957377a47774ed6aa778fb5ac6f3e06", null ],
     [ "bind", "classoficina_1_1of_buffer.html#a251996d131e127ca0e73e80dd44536c0", null ],
     [ "getName", "classoficina_1_1of_buffer.html#a03964c3b839a0a0ded15fdbc19bbc392", null ],
     [ "init", "classoficina_1_1of_buffer.html#aa9b8e13f76d23cdaf4970ea52e4a7b46", null ],
