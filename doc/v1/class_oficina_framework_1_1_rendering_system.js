@@ -2,6 +2,9 @@ var class_oficina_framework_1_1_rendering_system =
 [
     [ "Animation", "class_oficina_framework_1_1_rendering_system_1_1_animation.html", "class_oficina_framework_1_1_rendering_system_1_1_animation" ],
     [ "Font", "class_oficina_framework_1_1_rendering_system_1_1_font.html", "class_oficina_framework_1_1_rendering_system_1_1_font" ],
+    [ "FrameBuffer", "class_oficina_framework_1_1_rendering_system_1_1_frame_buffer.html", "class_oficina_framework_1_1_rendering_system_1_1_frame_buffer" ],
+    [ "IRendererObject", "class_oficina_framework_1_1_rendering_system_1_1_i_renderer_object.html", "class_oficina_framework_1_1_rendering_system_1_1_i_renderer_object" ],
+    [ "RenderBuffer", "class_oficina_framework_1_1_rendering_system_1_1_render_buffer.html", "class_oficina_framework_1_1_rendering_system_1_1_render_buffer" ],
     [ "SpriteSheet", "class_oficina_framework_1_1_rendering_system_1_1_sprite_sheet.html", "class_oficina_framework_1_1_rendering_system_1_1_sprite_sheet" ],
     [ "Texture", "class_oficina_framework_1_1_rendering_system_1_1_texture.html", "class_oficina_framework_1_1_rendering_system_1_1_texture" ],
     [ "TexturePool", "class_oficina_framework_1_1_rendering_system_1_1_texture_pool.html", null ],

@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['playbgm',['PlayBGM',['../class_oficina_framework_1_1_audio_system.html#a87cf7334b6070bb5f0ab3a10e092793f',1,'OficinaFramework::AudioSystem']]],
-  ['playsfx',['PlaySFX',['../class_oficina_framework_1_1_audio_system.html#a447de67610a37667eb90fd137d5fa126',1,'OficinaFramework::AudioSystem::PlaySFX(byte id)'],['../class_oficina_framework_1_1_audio_system.html#a0370c1fde19e80723247b417aa876353',1,'OficinaFramework::AudioSystem::PlaySFX(SFX *sfx)']]],
+  ['play',['Play',['../class_oficina_framework_1_1_audio_system_1_1_audio_source.html#a8a82fb42d0dd54834094bf2558a9722c',1,'OficinaFramework::AudioSystem::AudioSource']]],
   ['pressedbutton',['PressedButton',['../class_oficina_framework_1_1_input_system.html#a494f5b08501935056092bbf99e662826',1,'OficinaFramework::InputSystem']]],
   ['pressedkey',['PressedKey',['../class_oficina_framework_1_1_input_system.html#a1522e1856de7f8e7035e860577cd1a5e',1,'OficinaFramework::InputSystem']]],
   ['pressedmouse',['PressedMouse',['../class_oficina_framework_1_1_input_system.html#ab9b148d0d73b6efea56bc9bc15959155',1,'OficinaFramework::InputSystem']]],

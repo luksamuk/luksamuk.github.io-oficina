@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['oficinaexceptions_2eh',['OficinaExceptions.h',['../_oficina_exceptions_8h.html',1,'']]],
-  ['oficinaframework_2eh',['OficinaFramework.h',['../_oficina_framework_8h.html',1,'']]]
+  ['enginecore_2ehpp',['EngineCore.hpp',['../_engine_core_8hpp.html',1,'']]],
+  ['entitysystem_2ehpp',['EntitySystem.hpp',['../_entity_system_8hpp.html',1,'']]]
 ];

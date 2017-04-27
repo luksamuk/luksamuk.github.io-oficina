@@ -1,0 +1,28 @@
+var class_oficina_framework_1_1_i_o_system_1_1_script_tools =
+[
+    [ "ScriptTools", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a1eea70fb8536988df838f23a5546acf2", null ],
+    [ "ScriptTools", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#ac60b02affd1d5288b57466389dc3bcf5", null ],
+    [ "~ScriptTools", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a7376f78b8f0db3245de95526d0b833a4", null ],
+    [ "GetBool", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a28a8a485e561c8b786cc7f086bcbabb7", null ],
+    [ "GetByte", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a7e8f0593a62a68d909833d83509584b0", null ],
+    [ "GetByte_s", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a25f39f4e946fe2517f2f3d79efe82c12", null ],
+    [ "GetDouble", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a476238bb0c0742296f5712b5c051f5f9", null ],
+    [ "GetDword", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#ae6ac9442d856778ddb46af3d0b2c7d2c", null ],
+    [ "GetDword_s", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a11cbe68ea790bd6afc9a6a98864d13a6", null ],
+    [ "GetEntityID", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#aa21f35c523bde6abe79e017e721a0b7e", null ],
+    [ "GetFloat", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a1547848fe09e0ac5337a232c83e29392", null ],
+    [ "GetInt", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#ae34f79106426723be1fb959e1b1a47a2", null ],
+    [ "GetQword", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#ab0f14ab24deaf69f15b8ab2f8fa6a0d0", null ],
+    [ "GetQword_s", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#ab5646ed160240a5ec280336404b5ca6f", null ],
+    [ "GetString", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a50693a484e3b7cbb581384270327f5c3", null ],
+    [ "GetVec2", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#ae389f444d51d42ca2b5df95a0a0430c1", null ],
+    [ "GetVec3", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a04597171e7064f1fb65619a5e57f8bc4", null ],
+    [ "GetVec4", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a14c27b0d818ac20172b5e431a6feaa25", null ],
+    [ "GetWord", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#aa954f702b857d401f82e2828211348d9", null ],
+    [ "GetWord_s", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a6999514bb27bf3ed134107d87780bfd4", null ],
+    [ "IsEOF", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a64bd8fe48c2c4d4f4fc56fc7a095196b", null ],
+    [ "IsScriptLoaded", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a7131a15585aa7ff2b65c690641019b20", null ],
+    [ "LoadScript", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a8c82d6eb0de3a2e5b6e0cc986cb0afba", null ],
+    [ "ToEOF", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a3ad5e2cf6c7d1ae45c84319d0cdf9ffe", null ],
+    [ "UnloadScript", "class_oficina_framework_1_1_i_o_system_1_1_script_tools.html#a23d6cf2fc449c6050f317db283e5b269", null ]
+];

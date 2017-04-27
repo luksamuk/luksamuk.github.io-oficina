@@ -1,7 +1,5 @@
 var group___datatypes =
 [
-    [ "aword", "group___datatypes.html#gadaf380905d6a1aea34c4bcc0f42ecf8a", null ],
-    [ "aword_s", "group___datatypes.html#ga00355a087f5afd6cfaae243c193611bf", null ],
     [ "byte", "group___datatypes.html#gab8ef12fab634c171394422d0ee8baf94", null ],
     [ "byte_s", "group___datatypes.html#ga8f08fd404b2762e966e48f0630650449", null ],
     [ "dword", "group___datatypes.html#gaa730159e2e39a4c35fbcb22c4f1f7eb9", null ],

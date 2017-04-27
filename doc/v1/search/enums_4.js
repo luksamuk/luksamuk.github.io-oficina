@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['playlistcommand',['PlaylistCommand',['../class_oficina_framework_1_1_audio_system.html#af94158846d099511f8ab55a3a955b1b4',1,'OficinaFramework::AudioSystem']]]
+  ['of_5floglevel',['OF_LogLevel',['../_oficina_types_8hpp.html#aa7a1b6a50f5b2c3310464c913ce1ba79',1,'OficinaTypes.hpp']]]
 ];

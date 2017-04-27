@@ -8,6 +8,6 @@ var class_oficina_framework_1_1_rendering_system_1_1_sprite_sheet =
     [ "DrawFrame", "class_oficina_framework_1_1_rendering_system_1_1_sprite_sheet.html#a484140e4989d6a5b110564d4ab5e86c7", null ],
     [ "DrawFrame", "class_oficina_framework_1_1_rendering_system_1_1_sprite_sheet.html#a85e12b99b823145b952727e0500d5047", null ],
     [ "DrawFrame", "class_oficina_framework_1_1_rendering_system_1_1_sprite_sheet.html#ae105e894f971c9a012ebd0b0f6d07c5f", null ],
-    [ "GetFrameSize", "class_oficina_framework_1_1_rendering_system_1_1_sprite_sheet.html#abe70c4522ea82ce6a187c7387093969e", null ],
-    [ "GetHotspot", "class_oficina_framework_1_1_rendering_system_1_1_sprite_sheet.html#a7a7d7f13e07f9ffa57b2bd5fc5a9a29c", null ]
+    [ "GetFrameSize", "class_oficina_framework_1_1_rendering_system_1_1_sprite_sheet.html#a82a500fcd86a298943e15134d046daf5", null ],
+    [ "GetHotspot", "class_oficina_framework_1_1_rendering_system_1_1_sprite_sheet.html#ae649526535bc84cfb0a3e6ee12dbbc26", null ]
 ];

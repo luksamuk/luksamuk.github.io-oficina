@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['qword',['qword',['../group___datatypes.html#gae431971f1a22ac02bbdb7ce0642907e6',1,'types.h']]],
-  ['qword_5fs',['qword_s',['../group___datatypes.html#ga1fe90e3e2f40e96beb6235d5d96dba55',1,'types.h']]]
+  ['word',['word',['../group___datatypes.html#gaacc262b7acb8ef2b1d38df8b855bc0f6',1,'OficinaTypes.hpp']]],
+  ['word_5fs',['word_s',['../group___datatypes.html#gab3edbf02cf78491929ba702553d143ca',1,'OficinaTypes.hpp']]]
 ];

@@ -34,6 +34,7 @@ var classvec2t =
     [ "operator>=", "classvec2t.html#ace2ce923fcfb33afbeee5f4515dad2f5", null ],
     [ "operator>=", "classvec2t.html#a24cb39cf1b35b8873f1bf7457c0aaa82", null ],
     [ "toVec2", "classvec2t.html#a76ff3272f3115713b09e7eaf8941dba9", null ],
+    [ "v", "classvec2t.html#acdc6ec6f0dc809d8191a092132ecbb40", null ],
     [ "x", "classvec2t.html#a0859f69e28b4602aaf4e98505be9b2ef", null ],
     [ "y", "classvec2t.html#a31e48526f3bd3d7ac08590cda28b80ea", null ]
 ];

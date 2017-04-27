@@ -1,10 +1,11 @@
 var class_oficina_framework_1_1_rendering_system_1_1_font =
 [
     [ "Font", "class_oficina_framework_1_1_rendering_system_1_1_font.html#acc92db9c92f6ddb4b325176abf6c5b0c", null ],
-    [ "DrawString", "class_oficina_framework_1_1_rendering_system_1_1_font.html#a4d7006d07538b4e836266cac8eeb4ad2", null ],
-    [ "DrawString", "class_oficina_framework_1_1_rendering_system_1_1_font.html#a694d2346ee404abb30a941a5c4f8d252", null ],
-    [ "DrawString", "class_oficina_framework_1_1_rendering_system_1_1_font.html#aebd6f837001f883e922a58788386129b", null ],
-    [ "GetCharacterSize", "class_oficina_framework_1_1_rendering_system_1_1_font.html#a8166bb3edc55358ca694dd82a0daf780", null ],
-    [ "GetPaddingSize", "class_oficina_framework_1_1_rendering_system_1_1_font.html#ae862f574d90ccec7ebf0a99469ad5e77", null ],
-    [ "MeasureString", "class_oficina_framework_1_1_rendering_system_1_1_font.html#a4f833f9f48e4815e9091c1b390d5e354", null ]
+    [ "~Font", "class_oficina_framework_1_1_rendering_system_1_1_font.html#ab038d9199f19ce0aa1e0b0fb7077b828", null ],
+    [ "DrawString", "class_oficina_framework_1_1_rendering_system_1_1_font.html#a7680081c02b64a07d716ecc298f870a1", null ],
+    [ "DrawString", "class_oficina_framework_1_1_rendering_system_1_1_font.html#ad243b0a305f03a77bedaaf914d26afb0", null ],
+    [ "DrawString", "class_oficina_framework_1_1_rendering_system_1_1_font.html#a8f365d81f39ef63b373caa63c035c853", null ],
+    [ "GetCharacterSize", "class_oficina_framework_1_1_rendering_system_1_1_font.html#a07d0c5aea2cc1dbbe526ef157ea93e81", null ],
+    [ "GetPaddingSize", "class_oficina_framework_1_1_rendering_system_1_1_font.html#ac6aec6465a2f2f800aea03400acc2b51", null ],
+    [ "MeasureString", "class_oficina_framework_1_1_rendering_system_1_1_font.html#a0981e050e671782417013d467d68d59b", null ]
 ];

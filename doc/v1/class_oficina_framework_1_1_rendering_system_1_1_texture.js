@@ -8,8 +8,8 @@ var class_oficina_framework_1_1_rendering_system_1_1_texture =
     [ "Draw", "class_oficina_framework_1_1_rendering_system_1_1_texture.html#a69df3020daf0200f2b37ee45d4b3a01b", null ],
     [ "Draw", "class_oficina_framework_1_1_rendering_system_1_1_texture.html#ae982c7c5c803af74d4f14af9904f76a6", null ],
     [ "Draw", "class_oficina_framework_1_1_rendering_system_1_1_texture.html#ad0a39db1098422d628aec6890e4a6b55", null ],
-    [ "GetName", "class_oficina_framework_1_1_rendering_system_1_1_texture.html#a419401a279f59b225f087a81828396c5", null ],
-    [ "GetPath", "class_oficina_framework_1_1_rendering_system_1_1_texture.html#af835289c0f12b88ccc2c7cc81a41291a", null ],
-    [ "GetSize", "class_oficina_framework_1_1_rendering_system_1_1_texture.html#a9f0568ed6d73bba5a67828524a0b729d", null ],
+    [ "GetName", "class_oficina_framework_1_1_rendering_system_1_1_texture.html#a8051d7fa69fc3110932baf42716abd83", null ],
+    [ "GetPath", "class_oficina_framework_1_1_rendering_system_1_1_texture.html#ae06aa6cb460088f2d1e4711a89bb9b5a", null ],
+    [ "GetSize", "class_oficina_framework_1_1_rendering_system_1_1_texture.html#af3bde3ed4d2e96037de6ea367faee537", null ],
     [ "RenderingSystem::TexturePool", "class_oficina_framework_1_1_rendering_system_1_1_texture.html#a765ff13875bdc5bdf77e92bb1bc8af42", null ]
 ];

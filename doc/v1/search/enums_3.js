@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['of_5floglevel',['OF_LogLevel',['../types_8h.html#aa7a1b6a50f5b2c3310464c913ce1ba79',1,'types.h']]]
+  ['mousebutton',['MouseButton',['../class_oficina_framework_1_1_input_system.html#a999b7626cd4e626346fa38cffdc0d34a',1,'OficinaFramework::InputSystem']]]
 ];
