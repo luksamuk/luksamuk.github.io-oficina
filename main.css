@@ -1,18 +1,19 @@
 .panel-footer {
-    height: 100px;
+
     background-color: #4d8ecf;
     outline-color: #4d8ecf;
 }
 
 .panel-footer .container {
-    margin-left:auto;
-    margin-right:auto;
     margin-top:auto;
     margin-bottom:auto;
     display:block;
+    align-content: center;
 }
 
 .panel-footer .container p {
+    text-align: center;
+    margin: auto;
     color: #fff;
 }
 
