@@ -41,6 +41,10 @@ html, body {
     padding-bottom: 100px;
 }
 
+.jumbotron a {
+    color: #fff;
+}
+
 .jumbotron .container {
     height: auto;
     padding-bottom:auto;
@@ -151,7 +155,8 @@ html, body {
     font-size: 2.5rem;
 }
 
-.basic-info .light-block .row, .basic-info .bold-block .row {
+.basic-info .light-block .row,
+.basic-info .bold-block .row {
     padding-top: 100px;
     padding-bottom: 100px;
     margin-left:10%;
@@ -162,7 +167,9 @@ html, body {
     background-image: linear-gradient(60deg, #159957, #155799);
 }
 
-.basic-info .light-block h3, .basic-info .light-block h4 {
+.basic-info
+.light-block h3,
+.basic-info .light-block h4 {
     color: #159957;
 }
 
@@ -179,4 +186,9 @@ html, body {
 
 .basic-info .bold-block p {
     color: #cdcdcd;
+}
+
+.basic-info a {
+    color: #dedede;
+    font-weight: bold;
 }
