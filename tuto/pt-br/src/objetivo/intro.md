@@ -1,0 +1,4 @@
+# Objetivo
+O objetivo deste livro é familiarizar o programador com os procedimentos básicos de programação de jogos dentro da engine Oficina Framework. Este livro assume que você esteja usando Linux e tenha a Oficina instalada em seu Path, como especificado no README e na documentação da Oficina. Suporte a IronScheme e IronLua é desejável, porém não será um pré-requisito por completo; dado que este tutorial tem o objetivo de ser fluido no sentido de ser atualizado à medida que as versões da Oficina assim demandarem, atualmente, a Oficina Framework traz o suporte a essas linguagens de script como OPCIONAL no momento da compilação.
+
+É importante ressaltar que ESTE LIVRO AINDA ESTÁ EM FASE DE ESCRITA, bem como a engine em si, de forma que tanto o livro quanto a engine podem ter alterações aqui ainda não documentadas.

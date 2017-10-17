@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Inicialização e compilação do jogo - Oficina Framework 2: Guia Prático</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Construa seu jogo do zero com a engine Oficina Framework 2, em um modelo orientado a projetos.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="../">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li><a href="./objetivo/intro.html"><strong>1.</strong> Oficina Framework 2: Guia Prático</a></li><li><ul class="section"><li><a href="./objetivo/sobre.html"><strong>1.1.</strong> Sobre o livro</a></li><li><a href="./objetivo/pre-requisitos.html"><strong>1.2.</strong> Pré-requisitos</a></li></ul></li><li><a href="./projeto/intro.html"><strong>2.</strong> Criando o Projeto</a></li><li><ul class="section"><li><a href="./projeto/hierarquia.html"><strong>2.1.</strong> Hierarquia</a></li><li><a href="./projeto/arquivos.html" class="active"><strong>2.2.</strong> Inicialização e compilação do jogo</a></li><li><a href="./projeto/gameargs.html"><strong>2.3.</strong> GameArgs: Pré-configurando seu jogo</a></li></ul></li><li><a href="./primeirospassos/intro.html"><strong>3.</strong> Primeiros Passos</a></li><li><ul class="section"><li><a href="./primeirospassos/canvas.html"><strong>3.1.</strong> Criando uma Cena do jogo</a></li><li><a href="./primeirospassos/verifica.html"><strong>3.2.</strong> REPL: Verificando a existência da cena</a></li><li><a href="./primeirospassos/mvp.html"><strong>3.3.</strong> Configurando a visualização na tela</a></li><li><a href="./primeirospassos/texto.html"><strong>3.4.</strong> Exibindo texto básico</a></li><li><a href="./primeirospassos/entidades.html"><strong>3.5.</strong> Entidades, os objetos de um jogo</a></li><li><a href="./primeirospassos/log.html"><strong>3.6.</strong> Debug: Usando e manipulando o log</a></li><li><a href="./primeirospassos/primitivas.html"><strong>3.7.</strong> Desenhando primitivas</a></li><li><a href="./primeirospassos/input.html"><strong>3.8.</strong> Métodos de entrada do jogador</a></li></ul></li><li><a href="./graficosrenderiz/intro.html"><strong>4.</strong> Gráficos e Renderização</a></li><li><a href="./4_audio.html"><strong>5.</strong> Áudio e Efeitos Sonoros</a></li><li><a href="./5_scriptsrepl.html"><strong>6.</strong> Scripts e REPL</a></li><li><a href="./6_colisao.html"><strong>7.</strong> Detecção Básica de Colisão</a></li><li><a href="./7_lancamento.html"><strong>8.</strong> Lançamento e Distribuição</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title">Oficina Framework 2: Guia Prático</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="./projeto/arquivos.html#o-arquivo-maincpp" id="o-arquivo-maincpp"><h1>O arquivo &quot;main.cpp&quot;</h1></a>
+<p>Navegue até <code>MeuJogo/src</code> e crie um arquivo <code>main.cpp</code> (no Linux, você pode navegar até a pasta com um terminal e digitar <code>touch main.cpp</code> para criar este arquivo. Ou pode simplesmente inserir o código no seu editor de texto preferido e salvá-lo nesta pasta). Insira neste arquivo o seguinte código:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/oficina.hpp&gt;
+using namespace oficina;
+
+int main(int argc, char** argv)
+{
+    ofInit();
+    ofGameLoop();
+    ofQuit();
+    return 0;
+}
+</code></pre>
+<p>Neste código, começamos incluindo o cabeçalho C++ <code>oficina2/oficina.hpp</code>. Este é o cabeçalho geral da OficinaFramework que contém a maioria dos símbolos e definições que precisamos para criar uma aplicação rápida. Logo após, deixamos claro que usaremos símbolos do namespace <code>oficina</code>, onde absolutamente todas as funções, classes, enumerações e structs da engine estão definidos.</p>
+<p>O uso do <code>argc</code> e do <code>argv</code> na função <code>main</code> é essencial, por requerimento da biblioteca SDL2, que usaremos para criação e gerenciamento da janela e de seus eventos.</p>
+<p>A função <code>ofInit</code> inicializa a janela e um contexto de desenho automaticamente, sem que precisemos instanciar os pormenores da engine. Esta função também aceita argumentos, que veremos a seguir.</p>
+<p>A função <code>ofGameLoop</code> realiza o loop do jogo, onde ocorrerá toda a lógica de atualização de quadros (frames) do jogo, bem como toda a lógica dos objetos e entidades do jogo em geral. É imprescindível salientar que quaisquer telas ou objetos a serem inseridos no jogo devem, preferencialmente, serem adicionados DEPOIS de <code>ofInit</code> e ANTES de <code>ofGameLoop</code>. Isto exemplifica-se ao criarmos um Canvas de desenho, a ser visto na próxima seção.</p>
+<p>A função <code>ofQuit</code> executa toda a lógica de limpeza do jogo após o fim da execução do mesmo, ao ser encerrado. JAMAIS chame esta esta função dentro de uma lógica a ser executada dentro de <code>ofGameLoop</code> (como num método de atualização de um Canvas, por exemplo). Ao invés disso, uma bandeira para finalização do jogo pode ser levantada ao chamar a função <code>ofSoftStop</code>, a ser vista também em um outro momento.</p>
+<p>Este código bem básico vai assegurar que consigamos executar uma tela de desenho simples e sem absolutamente nada, mas será o suficiente para um início. Agora, vamos tratar de compilar este arquivo para que se torne o nosso jogo futuramente.</p>
+<a class="header" href="./projeto/arquivos.html#o-arquivo-makefile" id="o-arquivo-makefile"><h1>O arquivo &quot;Makefile&quot;</h1></a>
+<p>Agora, navegue até a pasta raiz do jogo (<code>MeuJogo</code>) e crie um arquivo chamado <code>Makefile</code> (sem extensões).</p>
+<p>Caso você não esteja familiarizado com Makefiles, estes arquivos são scripts de compilação muito usados no Linux, feitos para facilitar e automatizar a compilação de projetos. Não são muito avançados no sentido de que boa parte da configuração feita é crua mas, como estamos tratando de um projeto pequeno, Makefiles nos servirão bem.</p>
+<p>Abra este arquivo e coloque o seguinte texto. ATENÇÃO: Note que as indentações, após as linhas terminadas com &quot;:&quot;, devem ser feitas com O CARACTERE DE TABULAÇÃO (tecla Tab), e não com espaços; do contrário, a compilação mostrará erros.</p>
+<pre><code class="language-Makefile">CXX      = g++ --std=c++11
+CXXFLAGS = -g -Wall `oficina2-config --cppflags`
+CXXLIBS  = `oficina2-config --libs`
+CXXOUT   = -o
+CXXOBJ   = -c
+
+DEL      = rm -rf
+
+BIN      = bin/MeuJogo
+FILES    = src/main.cpp
+
+.PHONY: clean
+
+all: $(FILES)
+        $(CXX) $(FILES) $(CXXFLAGS) $(CXXLIBS) $(CXXOUT) $(BIN)
+
+clean:
+        $(DEL) obj/*.o
+</code></pre>
+<p>Aqui definimos, antes de mais nada, alguns símbolos (macros), sendo eles:</p>
+<ul>
+<li><code>CXX</code>: Denomina o compilador que usaremos. Aqui usaremos, necessariamente, o compilador GCC, com especificações de C++11. Estas especificações também são automaticamente ativadas ao inserirmos as flags de compilação da OficinaFramework, mas aqui as adicionamos para manter a clareza. Caso você prefira usar o compilador Clang, basta substituir <code>g++</code> por <code>clang++</code>.</li>
+<li><code>CXXFLAGS</code>: Flags de compilação a serem usadas. Aqui adicionamos <code>-g</code> para gerar símbolos de debug, <code>-Wall</code> para exibir todos os avisos de compilação, e um comando entre crases (também chamadas backquotes) que será executado como um comando bash durante a compilação. Este comando chamará o programa <code>oficina2-config</code>, que possui predefinições de todas as flags de compilação necessárias para a forma com a qual você compilou a OficinaFramework.</li>
+<li><code>CXXLIBS</code>: Flags de compilação a serem também usadas; mais especificamente, bibliotecas a serem linkadas pelo compilador como dependências do seu jogo. Aqui só reusamos o comando <code>oficina2-config</code>, desta vez exprimindo as bibliotecas que são dependências de qualquer jogo feito com a OficinaFramework.</li>
+<li><code>CXXOUT</code>: Flag que vem antes do nome do arquivo executável a ser gerado. Por padrão, é <code>-o</code> para GCC e Clang.</li>
+<li><code>CXXOBJ</code>: Flag que define a pré-compilação de um arquivo C/C++ em um arquivo de objeto (<code>*.o</code>, <code>*.obj</code>). Não usaremos esta flag por enquanto.</li>
+<li><code>DEL</code>: Comando da linha de comando para deleção de um arquivo ou pasta. Aqui um comando bash, para Linux.</li>
+<li><code>BIN</code>: Localização relativa e nome do arquivo binário (programa) a ser gerado na compilação.</li>
+<li><code>FILES</code>: Arquivos de código C++ a serem compilados e transformados no nosso programa, separados por espaço. Por enquanto, usaremos esta definição para compilar vários arquivos de uma vez, mas é aconselhável compilar nosso binário em partes, para que não precisemos recompilar arquivos que não alteramos.</li>
+<li><code>.PHONY</code>: Define os targets que NÃO GERAM arquivos. Aqui definimos <code>clean</code>, já que <code>clean</code> será apenas um comando para limpar os objetos que geramos (a ser visto mais adiante).</li>
+</ul>
+<p>Definimos, também, alguns alvos (targets) de compilação:</p>
+<ul>
+<li><code>all</code>: Alvo de compilação padrão de um Makefile. Tem como função compilar TODOS os outros alvos, ou compilar o projeto inteiro.</li>
+<li><code>clean</code>: Alvo de compilação que funciona apenas como um comando, para limpar os objetos pré-compilados.</li>
+</ul>
+<p>Após o texto <code>all:</code>, vemos o símbolo <code>FILES</code> (colocado entre parênteses e precedido por um cifrão). Isto faz com que esta anotação seja substituída pelo valor que guarda. Este valor, então, será tratado como uma DEPENDÊNCIA daquele target. Ou seja: <code>all</code> passará a depender, quando executado, da existência de <code>src/main.cpp</code>, e também passará a monitorar alterações neste arquivo. O mesmo valeria para outros arquivos, caso adicionados também a <code>FILES</code>.</p>
+<p>Abaixo do target <code>all</code> e após a indentação por tabulações, temos uma linha usando praticamente apenas símbolos definidos previamente. Estes símbolos, como já explicado, serão substituídos pelo seu valor. Sendo assim, na prática, esta linha será reescrita, durante a compilação, da seguinte forma:</p>
+<pre><code class="language-bash">g++ --std=c++11 src/main.cpp -g -Wall `oficina2-config --cppflags` `oficina2-config --libs` -o bin/MeuJogo
+</code></pre>
+<p>Caso você já esteja familiarizado com compilar seus programas C/C++ via terminal do Linux, fica claro que este comando apenas invoca o compilador, dando a ele algumas flags como argumento, bem como dando a ele, também, o nosso arquivo <code>main.cpp</code> para compilação. O compilador então gerará o arquivo de saída <code>MyGame</code> na pasta <code>bin</code>.</p>
+<p>A ordem dos argumentos do programa <code>g++</code> realmente não possui tanta relevância, EXCETO para as flags <code>CXXLIBS</code> e <code>FILES</code>. Ao compilar seu jogo feito com a OficinaFramework manualmente ou através de um Makefile, é IMPRESCINDÍVEL que seus arquivos de código-fonte venham ANTES das flags de dependências do projeto; do contrário, você poderá se deparar com erros de dependências indefinidas.</p>
+<p>O target <code>clean</code> realiza um trabalho parecido, porém removendo arquivos com a extensão <code>.o</code> que serão eventualmente gerados e armazenados na pasta <code>obj</code>. Por enquanto, não precisamos nos preocupar com isso, uma vez que não geraremos nenhum neste momento.</p>
+<a class="header" href="./projeto/arquivos.html#compilando-o-jogo-pela-primeira-vez" id="compilando-o-jogo-pela-primeira-vez"><h1>Compilando o jogo pela primeira vez</h1></a>
+<p>Feito tudo isso, basta agora compilar seu jogo.</p>
+<p>Assumindo que você tenha o programa <code>make</code> instalado, basta ir até a pasta raiz do jogo, via terminal, e executar o seguinte comando:</p>
+<pre><code class="language-bash">make
+</code></pre>
+<p>Algumas linhas de compilação devem ser exibidas e, caso não ocorra nenhum erro inesperado, um arquivo <code>MeuJogo</code> deve ser gerado na pasta <code>bin</code>.</p>
+<p>Você poderá executar este arquivo digitando, a partir da pasta raiz, o comando <code>bin/MeuJogo</code> ou <code>./bin/MeuJogo</code>, num sistema Linux. Também é possível ir até a pasta do jogo e executá-lo lá dentro, mas prefira executá-lo da pasta rai  para que, futuramente, o jogo consiga localizar seus recursos, que estarão localizados na pasta <code>res</code>.</p>
+<p>Você verá uma simples tela preta com um tamanho de 1280x720. Por enquanto, não temos absolutamente nada desenhado, o que apenas nos dá a opção de fechar a tela.</p>
+<p>Segue abaixo a hierarquia final da nossa pasta:</p>
+<pre><code class="language-bash">MeuJogo
+├── bin
+│   └── MeuJogo
+├── Makefile
+├── misc
+├── obj
+├── res
+└── src
+    └── main.cpp
+</code></pre>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a rel="prev" href="./projeto/hierarquia.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="./projeto/gameargs.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+
+            </div>
+
+            
+                <a href="./projeto/hierarquia.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+                <a href="./projeto/gameargs.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>

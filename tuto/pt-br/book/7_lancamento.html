@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lançamento e Distribuição - Oficina Framework 2: Guia Prático</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Construa seu jogo do zero com a engine Oficina Framework 2, em um modelo orientado a projetos.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li><a href="./objetivo/intro.html"><strong>1.</strong> Oficina Framework 2: Guia Prático</a></li><li><ul class="section"><li><a href="./objetivo/sobre.html"><strong>1.1.</strong> Sobre o livro</a></li><li><a href="./objetivo/pre-requisitos.html"><strong>1.2.</strong> Pré-requisitos</a></li></ul></li><li><a href="./projeto/intro.html"><strong>2.</strong> Criando o Projeto</a></li><li><ul class="section"><li><a href="./projeto/hierarquia.html"><strong>2.1.</strong> Hierarquia</a></li><li><a href="./projeto/arquivos.html"><strong>2.2.</strong> Inicialização e compilação do jogo</a></li><li><a href="./projeto/gameargs.html"><strong>2.3.</strong> GameArgs: Pré-configurando seu jogo</a></li></ul></li><li><a href="./primeirospassos/intro.html"><strong>3.</strong> Primeiros Passos</a></li><li><ul class="section"><li><a href="./primeirospassos/canvas.html"><strong>3.1.</strong> Criando uma Cena do jogo</a></li><li><a href="./primeirospassos/verifica.html"><strong>3.2.</strong> REPL: Verificando a existência da cena</a></li><li><a href="./primeirospassos/mvp.html"><strong>3.3.</strong> Configurando a visualização na tela</a></li><li><a href="./primeirospassos/texto.html"><strong>3.4.</strong> Exibindo texto básico</a></li><li><a href="./primeirospassos/entidades.html"><strong>3.5.</strong> Entidades, os objetos de um jogo</a></li><li><a href="./primeirospassos/log.html"><strong>3.6.</strong> Debug: Usando e manipulando o log</a></li><li><a href="./primeirospassos/primitivas.html"><strong>3.7.</strong> Desenhando primitivas</a></li><li><a href="./primeirospassos/input.html"><strong>3.8.</strong> Métodos de entrada do jogador</a></li></ul></li><li><a href="./graficosrenderiz/intro.html"><strong>4.</strong> Gráficos e Renderização</a></li><li><a href="./4_audio.html"><strong>5.</strong> Áudio e Efeitos Sonoros</a></li><li><a href="./5_scriptsrepl.html"><strong>6.</strong> Scripts e REPL</a></li><li><a href="./6_colisao.html"><strong>7.</strong> Detecção Básica de Colisão</a></li><li><a href="./7_lancamento.html" class="active"><strong>8.</strong> Lançamento e Distribuição</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title">Oficina Framework 2: Guia Prático</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="./7_lancamento.html#lançamento-e-distribuição" id="lançamento-e-distribuição"><h1>Lançamento e Distribuição</h1></a>
+<a class="header" href="./7_lancamento.html#lidando-com-recursos-do-jogo" id="lidando-com-recursos-do-jogo"><h2>Lidando com recursos do jogo</h2></a>
+<a class="header" href="./7_lancamento.html#distribuindo-o-jogo" id="distribuindo-o-jogo"><h2>Distribuindo o jogo</h2></a>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a rel="prev" href="./6_colisao.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+
+            </div>
+
+            
+                <a href="./6_colisao.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>

@@ -1,0 +1,910 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Oficina Framework 2: Guia Prático</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Construa seu jogo do zero com a engine Oficina Framework 2, em um modelo orientado a projetos.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li><a href="./objetivo/intro.html"><strong>1.</strong> Oficina Framework 2: Guia Prático</a></li><li><ul class="section"><li><a href="./objetivo/sobre.html"><strong>1.1.</strong> Sobre o livro</a></li><li><a href="./objetivo/pre-requisitos.html"><strong>1.2.</strong> Pré-requisitos</a></li></ul></li><li><a href="./projeto/intro.html"><strong>2.</strong> Criando o Projeto</a></li><li><ul class="section"><li><a href="./projeto/hierarquia.html"><strong>2.1.</strong> Hierarquia</a></li><li><a href="./projeto/arquivos.html"><strong>2.2.</strong> Inicialização e compilação do jogo</a></li><li><a href="./projeto/gameargs.html"><strong>2.3.</strong> GameArgs: Pré-configurando seu jogo</a></li></ul></li><li><a href="./primeirospassos/intro.html"><strong>3.</strong> Primeiros Passos</a></li><li><ul class="section"><li><a href="./primeirospassos/canvas.html"><strong>3.1.</strong> Criando uma Cena do jogo</a></li><li><a href="./primeirospassos/verifica.html"><strong>3.2.</strong> REPL: Verificando a existência da cena</a></li><li><a href="./primeirospassos/mvp.html"><strong>3.3.</strong> Configurando a visualização na tela</a></li><li><a href="./primeirospassos/texto.html"><strong>3.4.</strong> Exibindo texto básico</a></li><li><a href="./primeirospassos/entidades.html"><strong>3.5.</strong> Entidades, os objetos de um jogo</a></li><li><a href="./primeirospassos/log.html"><strong>3.6.</strong> Debug: Usando e manipulando o log</a></li><li><a href="./primeirospassos/primitivas.html"><strong>3.7.</strong> Desenhando primitivas</a></li><li><a href="./primeirospassos/input.html"><strong>3.8.</strong> Métodos de entrada do jogador</a></li></ul></li><li><a href="./graficosrenderiz/intro.html"><strong>4.</strong> Gráficos e Renderização</a></li><li><a href="./4_audio.html"><strong>5.</strong> Áudio e Efeitos Sonoros</a></li><li><a href="./5_scriptsrepl.html"><strong>6.</strong> Scripts e REPL</a></li><li><a href="./6_colisao.html"><strong>7.</strong> Detecção Básica de Colisão</a></li><li><a href="./7_lancamento.html"><strong>8.</strong> Lançamento e Distribuição</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title">Oficina Framework 2: Guia Prático</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="print.html#objetivo" id="objetivo"><h1>Objetivo</h1></a>
+<p>O objetivo deste livro é familiarizar o programador com os procedimentos básicos de programação de jogos dentro da engine Oficina Framework. Este livro assume que você esteja usando Linux e tenha a Oficina instalada em seu Path, como especificado no README e na documentação da Oficina. Suporte a IronScheme e IronLua é desejável, porém não será um pré-requisito por completo; dado que este tutorial tem o objetivo de ser fluido no sentido de ser atualizado à medida que as versões da Oficina assim demandarem, atualmente, a Oficina Framework traz o suporte a essas linguagens de script como OPCIONAL no momento da compilação.</p>
+<p>É importante ressaltar que ESTE LIVRO AINDA ESTÁ EM FASE DE ESCRITA, bem como a engine em si, de forma que tanto o livro quanto a engine podem ter alterações aqui ainda não documentadas.</p>
+<a class="header" href="print.html#sobre-o-livro" id="sobre-o-livro"><h1>Sobre o livro</h1></a>
+<p>Este livro surgiu da minha necessidade de explicar e mostrar a forma como a Oficina foi programada, seu foco e sua maleabilidade para desenvolvimento de jogos C++. Enquanto possui diversas alternativas no mercado, a Oficina foi criada com foco no código livre e aberto e em manter a simplicidade, mas ainda assim trazer certa portabilidade e poderosos recursos controláveis através de scripting, bem como um tom voltado para programação ao vivo de jogos.</p>
+<p>Trocando em miúdos, isso significa que seus jogos serão majoritariamente programados em C++, mas você possuirá ferramentas para alterar o comportamento do jogo ao vivo sem precisar recompilá-lo, e poderá também utilizar a sua própria linguagem de script escolhida para alterar o comportamento de objetos e variáveis enquanto o seu jogo está sendo executado. Poderá, também, debugar erros nestes scripts enquanto o jogo roda.</p>
+<a class="header" href="print.html#pré-requisitos" id="pré-requisitos"><h1>Pré-requisitos</h1></a>
+<p>Para criar um jogo com a Oficina, recomendo que você tenha conhecimentos básicos de C/C++, e alguma noção a respeito de programação orientada a objetos e gerenciamento manual de memória nestas linguagens.
+Caso vá se aventurar com scripting, recomendo conhecimentos nas linguagens Scheme (um dialeto de Lisp; mais especificamente a implementação GNU Guile) e Lua (amplamente usada na indústria de jogos como uma linguagem de script rápida, fácil e simples); você terá a opção de escolher qual linguagem usar mais à frente, nos capítulos sobre Scripting. Porém, recomendo a linguagem Scheme por uma gama de razões, e também por crer que uma linguagem mais voltada para um paradigma declarativo ou funcional possa melhorar a forma como você programa. Além disso, apesar da aparência intimidadora dos dialetos de Lisp, são linguagens que, ao escrever seu código, ou quando se tem experiência na linguagem, tornam-se muito mais sucintas e fáceis de acompanhar um raciocínio. Pretendo exemplificar mais à frente.</p>
+<p>Na verdade, o design da Oficina foi feito de forma a possibilitar que o programador não precise de conhecimentos tão profundos nestes conceitos; a maior parte das operações são generalizadas a partir das especificações das classes, e guardadas em um único namespace. Além disso, a maioria -- se não todas -- as estruturas possuem um prefixo &quot;of&quot;, para ajudar na compartimentalização do seu código e do código da engine.
+Mesmo o código da Oficina2 é totalmente NÃO-retrocompatível com a Oficina 1.3 por uma série de razões, incluindo o uso abusivo de ponteiros de memória na versão anterior. Oficina2 segue a filosofia de que fazer uma boa gerência de recursos no seu jogo é algo essencial e estimula boas práticas de programação em geral, mas soma, ao conceito da versão 1.3, a ideia de que não é preciso dificultar o código do seu programa para fazer esta tarefa de forma eficiente.</p>
+<a class="header" href="print.html#criando-o-projeto" id="criando-o-projeto"><h1>Criando o Projeto</h1></a>
+<p>Para começar a programar o nosso jogo, é imprescindível que iniciemos preparando o nosso diretório de trabalho.</p>
+<p>Para a próxima etapa, criaremos alguns arquivos importantes para o nosso projeto. Começaremos digitando código em C++ para a execução de uma aplicação básica; depois, configuraremos um Makefile simples para ambientes Linux, afim de compilar o executável do nosso jogo pela primeira vez.</p>
+<a class="header" href="print.html#hierarquia" id="hierarquia"><h1>Hierarquia</h1></a>
+<p>Comece criando um diretório para seu jogo. Por exemplo, criaremos um diretório chamado &quot;MeuJogo&quot;.
+Dentro deste diretório, vamos criar alguns subdiretórios chamadas &quot;bin&quot;, &quot;misc&quot;, &quot;obj&quot;, &quot;res&quot; e &quot;src&quot;.</p>
+<p>A pasta ficará com a seguinte hierarquia:</p>
+<pre><code class="language-bash">MeuJogo
+├── bin
+├── misc
+├── obj
+├── res
+└── src
+</code></pre>
+<p>Eis uma explicação para o uso de cada subdiretório:</p>
+<ul>
+<li><code>bin</code>: Diretório onde ficarão as compilações do nosso jogo;</li>
+<li><code>misc</code>: Diretório onde ficarão todos os arquivos extras do jogo, que não serão incluídos na distribuição dele;</li>
+<li><code>obj</code>: Diretório onde ficarão os objetos pré-compilados do jogo. No primeiro momento, não lidaremos com estes objetos;</li>
+<li><code>res</code>: Diretório onde ficarão os resources do jogo, ou seja, os arquivos que serão usados pelo jogo e incluidos na distribuição do mesmo. Isso inclui scripts, texturas, etc;</li>
+<li><code>src</code>: Diretório onde ficará o código-fonte do jogo a ser compilado.</li>
+</ul>
+<p>Lembre-se de que esta hierarquia de diretórios é apenas uma convenção, que aqui usaremos para organizar melhor nosso projeto.</p>
+<a class="header" href="print.html#o-arquivo-maincpp" id="o-arquivo-maincpp"><h1>O arquivo &quot;main.cpp&quot;</h1></a>
+<p>Navegue até <code>MeuJogo/src</code> e crie um arquivo <code>main.cpp</code> (no Linux, você pode navegar até a pasta com um terminal e digitar <code>touch main.cpp</code> para criar este arquivo. Ou pode simplesmente inserir o código no seu editor de texto preferido e salvá-lo nesta pasta). Insira neste arquivo o seguinte código:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/oficina.hpp&gt;
+using namespace oficina;
+
+int main(int argc, char** argv)
+{
+    ofInit();
+    ofGameLoop();
+    ofQuit();
+    return 0;
+}
+</code></pre>
+<p>Neste código, começamos incluindo o cabeçalho C++ <code>oficina2/oficina.hpp</code>. Este é o cabeçalho geral da OficinaFramework que contém a maioria dos símbolos e definições que precisamos para criar uma aplicação rápida. Logo após, deixamos claro que usaremos símbolos do namespace <code>oficina</code>, onde absolutamente todas as funções, classes, enumerações e structs da engine estão definidos.</p>
+<p>O uso do <code>argc</code> e do <code>argv</code> na função <code>main</code> é essencial, por requerimento da biblioteca SDL2, que usaremos para criação e gerenciamento da janela e de seus eventos.</p>
+<p>A função <code>ofInit</code> inicializa a janela e um contexto de desenho automaticamente, sem que precisemos instanciar os pormenores da engine. Esta função também aceita argumentos, que veremos a seguir.</p>
+<p>A função <code>ofGameLoop</code> realiza o loop do jogo, onde ocorrerá toda a lógica de atualização de quadros (frames) do jogo, bem como toda a lógica dos objetos e entidades do jogo em geral. É imprescindível salientar que quaisquer telas ou objetos a serem inseridos no jogo devem, preferencialmente, serem adicionados DEPOIS de <code>ofInit</code> e ANTES de <code>ofGameLoop</code>. Isto exemplifica-se ao criarmos um Canvas de desenho, a ser visto na próxima seção.</p>
+<p>A função <code>ofQuit</code> executa toda a lógica de limpeza do jogo após o fim da execução do mesmo, ao ser encerrado. JAMAIS chame esta esta função dentro de uma lógica a ser executada dentro de <code>ofGameLoop</code> (como num método de atualização de um Canvas, por exemplo). Ao invés disso, uma bandeira para finalização do jogo pode ser levantada ao chamar a função <code>ofSoftStop</code>, a ser vista também em um outro momento.</p>
+<p>Este código bem básico vai assegurar que consigamos executar uma tela de desenho simples e sem absolutamente nada, mas será o suficiente para um início. Agora, vamos tratar de compilar este arquivo para que se torne o nosso jogo futuramente.</p>
+<a class="header" href="print.html#o-arquivo-makefile" id="o-arquivo-makefile"><h1>O arquivo &quot;Makefile&quot;</h1></a>
+<p>Agora, navegue até a pasta raiz do jogo (<code>MeuJogo</code>) e crie um arquivo chamado <code>Makefile</code> (sem extensões).</p>
+<p>Caso você não esteja familiarizado com Makefiles, estes arquivos são scripts de compilação muito usados no Linux, feitos para facilitar e automatizar a compilação de projetos. Não são muito avançados no sentido de que boa parte da configuração feita é crua mas, como estamos tratando de um projeto pequeno, Makefiles nos servirão bem.</p>
+<p>Abra este arquivo e coloque o seguinte texto. ATENÇÃO: Note que as indentações, após as linhas terminadas com &quot;:&quot;, devem ser feitas com O CARACTERE DE TABULAÇÃO (tecla Tab), e não com espaços; do contrário, a compilação mostrará erros.</p>
+<pre><code class="language-Makefile">CXX      = g++ --std=c++11
+CXXFLAGS = -g -Wall `oficina2-config --cppflags`
+CXXLIBS  = `oficina2-config --libs`
+CXXOUT   = -o
+CXXOBJ   = -c
+
+DEL      = rm -rf
+
+BIN      = bin/MeuJogo
+FILES    = src/main.cpp
+
+.PHONY: clean
+
+all: $(FILES)
+        $(CXX) $(FILES) $(CXXFLAGS) $(CXXLIBS) $(CXXOUT) $(BIN)
+
+clean:
+        $(DEL) obj/*.o
+</code></pre>
+<p>Aqui definimos, antes de mais nada, alguns símbolos (macros), sendo eles:</p>
+<ul>
+<li><code>CXX</code>: Denomina o compilador que usaremos. Aqui usaremos, necessariamente, o compilador GCC, com especificações de C++11. Estas especificações também são automaticamente ativadas ao inserirmos as flags de compilação da OficinaFramework, mas aqui as adicionamos para manter a clareza. Caso você prefira usar o compilador Clang, basta substituir <code>g++</code> por <code>clang++</code>.</li>
+<li><code>CXXFLAGS</code>: Flags de compilação a serem usadas. Aqui adicionamos <code>-g</code> para gerar símbolos de debug, <code>-Wall</code> para exibir todos os avisos de compilação, e um comando entre crases (também chamadas backquotes) que será executado como um comando bash durante a compilação. Este comando chamará o programa <code>oficina2-config</code>, que possui predefinições de todas as flags de compilação necessárias para a forma com a qual você compilou a OficinaFramework.</li>
+<li><code>CXXLIBS</code>: Flags de compilação a serem também usadas; mais especificamente, bibliotecas a serem linkadas pelo compilador como dependências do seu jogo. Aqui só reusamos o comando <code>oficina2-config</code>, desta vez exprimindo as bibliotecas que são dependências de qualquer jogo feito com a OficinaFramework.</li>
+<li><code>CXXOUT</code>: Flag que vem antes do nome do arquivo executável a ser gerado. Por padrão, é <code>-o</code> para GCC e Clang.</li>
+<li><code>CXXOBJ</code>: Flag que define a pré-compilação de um arquivo C/C++ em um arquivo de objeto (<code>*.o</code>, <code>*.obj</code>). Não usaremos esta flag por enquanto.</li>
+<li><code>DEL</code>: Comando da linha de comando para deleção de um arquivo ou pasta. Aqui um comando bash, para Linux.</li>
+<li><code>BIN</code>: Localização relativa e nome do arquivo binário (programa) a ser gerado na compilação.</li>
+<li><code>FILES</code>: Arquivos de código C++ a serem compilados e transformados no nosso programa, separados por espaço. Por enquanto, usaremos esta definição para compilar vários arquivos de uma vez, mas é aconselhável compilar nosso binário em partes, para que não precisemos recompilar arquivos que não alteramos.</li>
+<li><code>.PHONY</code>: Define os targets que NÃO GERAM arquivos. Aqui definimos <code>clean</code>, já que <code>clean</code> será apenas um comando para limpar os objetos que geramos (a ser visto mais adiante).</li>
+</ul>
+<p>Definimos, também, alguns alvos (targets) de compilação:</p>
+<ul>
+<li><code>all</code>: Alvo de compilação padrão de um Makefile. Tem como função compilar TODOS os outros alvos, ou compilar o projeto inteiro.</li>
+<li><code>clean</code>: Alvo de compilação que funciona apenas como um comando, para limpar os objetos pré-compilados.</li>
+</ul>
+<p>Após o texto <code>all:</code>, vemos o símbolo <code>FILES</code> (colocado entre parênteses e precedido por um cifrão). Isto faz com que esta anotação seja substituída pelo valor que guarda. Este valor, então, será tratado como uma DEPENDÊNCIA daquele target. Ou seja: <code>all</code> passará a depender, quando executado, da existência de <code>src/main.cpp</code>, e também passará a monitorar alterações neste arquivo. O mesmo valeria para outros arquivos, caso adicionados também a <code>FILES</code>.</p>
+<p>Abaixo do target <code>all</code> e após a indentação por tabulações, temos uma linha usando praticamente apenas símbolos definidos previamente. Estes símbolos, como já explicado, serão substituídos pelo seu valor. Sendo assim, na prática, esta linha será reescrita, durante a compilação, da seguinte forma:</p>
+<pre><code class="language-bash">g++ --std=c++11 src/main.cpp -g -Wall `oficina2-config --cppflags` `oficina2-config --libs` -o bin/MeuJogo
+</code></pre>
+<p>Caso você já esteja familiarizado com compilar seus programas C/C++ via terminal do Linux, fica claro que este comando apenas invoca o compilador, dando a ele algumas flags como argumento, bem como dando a ele, também, o nosso arquivo <code>main.cpp</code> para compilação. O compilador então gerará o arquivo de saída <code>MyGame</code> na pasta <code>bin</code>.</p>
+<p>A ordem dos argumentos do programa <code>g++</code> realmente não possui tanta relevância, EXCETO para as flags <code>CXXLIBS</code> e <code>FILES</code>. Ao compilar seu jogo feito com a OficinaFramework manualmente ou através de um Makefile, é IMPRESCINDÍVEL que seus arquivos de código-fonte venham ANTES das flags de dependências do projeto; do contrário, você poderá se deparar com erros de dependências indefinidas.</p>
+<p>O target <code>clean</code> realiza um trabalho parecido, porém removendo arquivos com a extensão <code>.o</code> que serão eventualmente gerados e armazenados na pasta <code>obj</code>. Por enquanto, não precisamos nos preocupar com isso, uma vez que não geraremos nenhum neste momento.</p>
+<a class="header" href="print.html#compilando-o-jogo-pela-primeira-vez" id="compilando-o-jogo-pela-primeira-vez"><h1>Compilando o jogo pela primeira vez</h1></a>
+<p>Feito tudo isso, basta agora compilar seu jogo.</p>
+<p>Assumindo que você tenha o programa <code>make</code> instalado, basta ir até a pasta raiz do jogo, via terminal, e executar o seguinte comando:</p>
+<pre><code class="language-bash">make
+</code></pre>
+<p>Algumas linhas de compilação devem ser exibidas e, caso não ocorra nenhum erro inesperado, um arquivo <code>MeuJogo</code> deve ser gerado na pasta <code>bin</code>.</p>
+<p>Você poderá executar este arquivo digitando, a partir da pasta raiz, o comando <code>bin/MeuJogo</code> ou <code>./bin/MeuJogo</code>, num sistema Linux. Também é possível ir até a pasta do jogo e executá-lo lá dentro, mas prefira executá-lo da pasta rai  para que, futuramente, o jogo consiga localizar seus recursos, que estarão localizados na pasta <code>res</code>.</p>
+<p>Você verá uma simples tela preta com um tamanho de 1280x720. Por enquanto, não temos absolutamente nada desenhado, o que apenas nos dá a opção de fechar a tela.</p>
+<p>Segue abaixo a hierarquia final da nossa pasta:</p>
+<pre><code class="language-bash">MeuJogo
+├── bin
+│   └── MeuJogo
+├── Makefile
+├── misc
+├── obj
+├── res
+└── src
+    └── main.cpp
+</code></pre>
+<a class="header" href="print.html#gameargs-pré-configurando-seu-jogo" id="gameargs-pré-configurando-seu-jogo"><h1>GameArgs: Pré-configurando seu jogo</h1></a>
+<p>Como mencionado anteriormente, a função <code>ofInit</code> aceita alguns argumentos interessantes de pré-inicialização do seu jogo. Cobriremos, aqui, alguns deles, que são essenciais e vitais para a qualidade da sua aplicação.</p>
+<p>A função <code>ofInit</code> aceita, por padrão, nenhum argumento, ou um vetor de strings (<code>std::vector&lt;std::string&gt;</code>) contendo configurações iniciais para o seu jogo, como título da janela, localização do ícone da janela em runtime, etc.</p>
+<p>Abra o arquivo <code>src/main.cpp</code> e, onde se encontra a função <code>ofInit</code>, substitua-a por:</p>
+<pre><code class="language-cpp">ofInit({
+    &quot;wname=Meu Jogo&quot;,
+    &quot;datad=MeuJogo&quot;,
+    &quot;winsz=800x600&quot;,
+    &quot;frmrt=60c&quot;
+});
+</code></pre>
+<p>A função, agora, recebe como argumento uma lista de strings separada por vírgula, e envolta em colchetes.</p>
+<p>Esta é uma das formas práticas de inicialização de um vetor, e a mais sucinta para se passar o vetor de argumentos de inicialização para esta função.</p>
+<p>É importante ressaltar que as strings devem ser cuidadosamente separadas por vírgulas, uma vez que, por padrão, C++ concatenará duas strings que não estejam separadas por algum separador padrão da linguagem (como vírgulas ou ponto-e-vírgulas).</p>
+<p>Estes argumentos, referidos na documentação da Oficina como GameArgs, são argumentos de inicialização padrão para o seu jogo. Cada argumento é uma string de exatamente cinco caracteres, seguidos de um caractere <code>=</code>, e dos argumentos que cada GameArg espera. Os GameArgs aqui usados são:</p>
+<ul>
+<li><code>wname</code>: Define um nome da janela. Pode incluir espaços;</li>
+<li><code>datad</code>: Define o nome da pasta de dados do jogo. Uma pasta de dados do jogo é aquela que possui texturas e scripts de um jogo. Por padrão, o jogo primeiramente procura por seus recursos na atual pasta de execução do programa. Se não encontra, procura nas pastas onde o sistema operacional normalmente armazena dados de aplicativos. No Linux, estas pastas são <code>/usr/share/&lt;nome da pasta&gt;</code>, <code>/usr/local/share/&lt;nome da pasta&gt;</code> e <code>/home/&lt;usuário&gt;/.local/share/&lt;nome da pasta&gt;</code>; no Windows, são <code>C:\Arquivos de Programas\&lt;nome da pasta&gt;</code> ou <code>C:\Arquivos de Programas (x86)\&lt;nome da pasta&gt;</code>, dependendo da versão e arquitetura do seu sistema operacional. No nosso caso, nossos arquivos de recursos estarão em <code>res</code>, que deverá ser instalada, quando o jogo for publicado, em uma destas pastas, sob o subdiretório <code>&lt;nome da pasta&gt;/res</code> ou, mais precisamente, <code>MeuJogo/res</code>.</li>
+<li><code>winsz</code>: Define um tamanho em pixels para a janela do aplicativo. Neste caso, a janela terá um tamanho de 800x600 e estará centralizada no monitor principal.</li>
+<li><code>frmrt</code>: Define a configuração de quadros por segundo (FPS) da aplicação. Aqui, forçamos nossa aplicação (<code>c</code>, de &quot;capped&quot;/limitado) a um máximo de 60 quadros por segundo; ao ultrapassar esse valor, o jogo força um delay na aplicação até o próximo segundo.</li>
+</ul>
+<p>Para mais informações de GameArgs e outros valores/literais que podem ser usados nos GameArgs apresentados, consulte a documentação da OficinaFramework.</p>
+<p>Após está alteração, volte à pasta raiz do seu jogo, e compile-o novamente. Você deve ver uma nova janela preta, porém desta vez menor, e com outro título:</p>
+<p><img src="../img/001.png" alt="Janela preta e redimensionada após alteração dos GameArgs." title="Janela preta e redimensionada após alteração dos GameArgs." /></p>
+<a class="header" href="print.html#primeiros-passos" id="primeiros-passos"><h1>Primeiros Passos</h1></a>
+<p>Agora que temos, por fim, a nossa janela básica, podemos nos concentrar no principal: desenhar algo na tela.
+Por enquanto, manteremo-nos em desenho básico, ou seja, aprenderemos a criar primitivas comuns, a partir de vértices, e desenharemos estas primitivas na tela.</p>
+<p>Aprenderemos, também, a configurar o ambiente básico de desenho da Oficina. Este ambiente é comparável a uma tela de pintura (canvas), o que dá nome à estrutura na engine.</p>
+<a class="header" href="print.html#criando-uma-cena-ofcanvas" id="criando-uma-cena-ofcanvas"><h1>Criando uma cena (ofCanvas)</h1></a>
+<p>Antes de realizar quaisquer operações novas no nosso jogo, é necessário que haja algo que possa ser associado como uma &quot;tela de pintura&quot; na sua janela. Neste caso, a OficinaFramework possui uma classe de objetos que disponibiliza uma abstração neste sentido.
+A classe <code>oficina::ofCanvas</code> disponibiliza controles e métodos pré-instanciados para que possamos criar nossas próprias &quot;telas de pintura&quot;. Esta abstração, em conjunto com o objeto estático <code>oficina::ofCanvasManager</code> tornará possível a coexistência de uma ou mais cenas na tela, sendo renderizadas e tendo sua lógica atualizada ao mesmo tempo.</p>
+<a class="header" href="print.html#declarando-e-compilando-a-cena" id="declarando-e-compilando-a-cena"><h2>Declarando e compilando a cena</h2></a>
+<p>Para tanto, crie dois arquivos: <code>src/MinhaCena.hpp</code> e <code>src/MinhaCena.cpp</code>.</p>
+<p>Em <code>src/MinhaCena.hpp</code>, insira o código como mostrado abaixo:</p>
+<pre><code class="language-cpp">// MinhaCena.hpp
+#pragma once
+
+#include &lt;oficina2/canvas.hpp&gt;
+using namespace oficina;
+
+class MinhaCena : public ofCanvas
+{
+private:
+    glm::mat4 mvp;
+public:
+    void init();
+    void load();
+    void unload();
+    void update(float dt);
+    void draw();
+};
+</code></pre>
+<p>O código consiste na declaração de uma classe, que recebe como herança os métodos e campos internos da classe <code>oficina::ofCanvas</code>. Os métodos herdados são:</p>
+<ul>
+<li><code>init</code>: Método para inicialização de lógica em geral, sendo executado logo antes do método <code>load</code>;</li>
+<li><code>load</code>: Método especial para carregamento de recursos do jogo (texturas, scripts, etc), executado após o método <code>init</code>;</li>
+<li><code>unload</code>: Método especial para descarregamento de recursos do jogo, executado durante a remoção/deleção do <code>ofCanvas</code>;</li>
+<li><code>update</code>: Método para execução de lógica em geral, sendo chamado uma vez a cada quadro da aplicação. O parâmetro <code>dt</code> especifica, em SEGUNDOS, a diferença de tempo entre o quadro renderizado anteriormente e o quadro renderizado atualmente. Este número pode variar livremente ou ser fixo, de acordo com o especificado no controle de quadros do jogo. Não usaremos este parâmetro neste tutorial, uma vez que sabemos que nosso jogo executará sob um limite de 60 quadros por segundo, mas é um parâmetro muito útil ao realizar interpolações na física de um jogo.</li>
+<li><code>draw</code>: Método para execução da lógica de desenho da cena.</li>
+</ul>
+<p>Em adição, também declaramos um campo privado chamado <code>mvp</code>, uma matriz 4x4. O uso do prefixo <code>glm::</code> está relacionado à biblioteca onde ela é implementada, a GL Mathematics, da qual a Oficina faz extenso uso. Esta é uma sigla para a expressão &quot;Model-View-Projection&quot;, relacionada à multiplicação destas três importantes matrizes no mundo da computação gráfica. Trata-se da matriz que vai especificar a forma como a cena será renderizada na tela: a câmera e o tamanho da resolução interna, bem como a &quot;posição&quot; da mesma. Na realidade, especificaremos aqui apenas as matrizes View e Projection, já que a matriz Model será calculada para cada entidade que colocarmos na tela.</p>
+<p>Este não é um tutorial introdutório de computação gráfica ou de geometria analítica, mas é importante dizer que a ordem de multiplicação entre uma matriz e outra é extremamente importante. Para tanto, devemos fixar que, ao gerar a matriz <code>mvp</code> em qualquer linguagem similar a C++, devemos nos certificar de que multiplicamos as matrizes nesta ordem:</p>
+<pre><code>mvp = Projection * View * Model
+</code></pre>
+<p>Agora, digite este código no arquivo <code>src/MinhaCena.cpp</code>:</p>
+<pre><code class="language-cpp">// MinhaCena.cpp
+#include &quot;MinhaCena.hpp&quot;
+
+void MinhaCena::init()
+{
+}
+
+void MinhaCena::load()
+{
+}
+
+void MinhaCena::unload()
+{
+}
+
+void MinhaCena::update(float dt)
+{
+}
+
+void MinhaCena::draw()
+{
+}
+</code></pre>
+<p>Como você pode ver, o código acima não passa de definições vazias para a classe que declaramos.</p>
+<p>Agora, precisamos nos certificar de que o arquivo <code>MinhaCena.cpp</code> seja compilado. para tanto, abra o arquivo <code>Makefile</code>, e altere o macro <code>FILES</code> de forma que fique assim:</p>
+<pre><code class="language-Makefile">FILES    = src/main.cpp src/MinhaCena.cpp
+</code></pre>
+<p>Agora, daremos à engine uma instância da nossa cena, de forma que a engine gerencie-a e atualize-a como necessário.
+Abra o arquivo <code>src/main.cpp</code> e, entre as chamadas das funções <code>ofInit</code> e <code>ofGameLoop</code>, insira o seguinte:</p>
+<pre><code class="language-cpp">ofCanvasManager::add(new MinhaCena, 0, &quot;Minha Cena&quot;);
+</code></pre>
+<p>Esta chamada adicionará uma nova instância da nossa cena ao gerenciador de cenas interno da engine.
+O primeiro argumento é efetivamente um PONTEIRO para nossa cena, que obrigatoriamente deve ser um objeto que herdou os métodos de <code>ofCanvas</code>. O segundo argumento é a profundidade da cena, ou a ordem com a qual ela deve aparecer em relação às outras cenas; como só possuimos uma cena atualmente, esta ordem é irrelevante. O terceiro argumento é um nome opcional para a cena, que manteremos para fins didáticos.</p>
+<p>Por último, precisamos nos certificar de que o arquivo <code>src/main.cpp</code> conheça a declaração de classe da nossa cena. Ainda em <code>src/main.cpp</code>, logo após o cabeçalho da OficinaFramework, insira a seguinte linha:</p>
+<pre><code class="language-cpp">#include &quot;MinhaCena.hpp&quot;
+</code></pre>
+<p>O código final de <code>src/main.cpp</code> deverá estar assim:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/oficina.hpp&gt;
+using namespace oficina;
+
+#include &quot;MinhaCena.hpp&quot;
+
+int main(int argc, char** argv)
+{
+    ofInit({
+        &quot;wname=Meu Jogo&quot;,
+        &quot;datad=MeuJogo&quot;,
+        &quot;winsz=800x600&quot;,
+        &quot;frmrt=60c&quot;
+    });
+    ofCanvasManager::add(new MinhaCena, 0, &quot;Minha Cena&quot;);
+    ofGameLoop();
+    ofQuit();
+    return 0;
+}
+</code></pre>
+<a class="header" href="print.html#verificando-a-inserção-da-cena" id="verificando-a-inserção-da-cena"><h1>Verificando a inserção da cena</h1></a>
+<p>Ao compilar e executar o jogo, você vai perceber que absolutamente nada está aparente na tela. Isso é normal, mas nossa cena já foi adicionada à lista e podemos verificar isso através de uma ferramenta muito importante: o REPL.
+Entraremos realmente na forma como o REPL funciona mais tarde mas, por enquanto, veremos como verificar quantas e quais cenas estão inseridas no nosso gerenciador de cenas.</p>
+<p>Abra o programa compilado. Você será agraciado automaticamente com a tela preta que já conhece.
+Agora, então, faça com que o console de debug seja exibido: pressione o atalho Ctrl + X (de agora em diante, referenciaremos este atalho da mesma forma que é referenciado em um editor de texto como o Emacs: na forma <code>C-x</code>).
+Ao fazer isso, será exibido um pequeno console com algumas informações gerais, como tamanho da janela, FPS, status de VSync e etc, chamado &quot;Watcher&quot;. Pressione novamente <code>C-x</code>, e este console será substituido por outro, chamado &quot;REPL&quot;.</p>
+<p>O REPL é sempre iniciado com uma mensagem de boas-vindas da linguagem a ser usada; verifique se a linguagem em questão é <code>IronScheme</code> ou <code>IronLua</code>, precisaremos desta informação a seguir.</p>
+<p>Na borda inferior da tela, um outro mini-console terá alguns símbolos com um número de três algarismos. Este é o buffer de entrada de comandos do REPL. Use o atalho Alt + X (a partir daqui, referenciaremos como <code>M-x</code> no estilo Emacs) para alternar a digitação de comandos neste buffer entre ligada e desligada. Você poderá, então, a seguir, digitar comandos e pressionar Enter para que eles sejam executados.</p>
+<p>Dependendo da sua compilação da Oficina, o REPL poderá usar, de cara, a linguagem <code>IronScheme</code>, <code>IronLua</code> ou NENHUMA. Caso o REPL não use nenhuma das linguagens, você poderá PULAR ESTA SEÇÃO DO TUTORIAL.</p>
+<p>Se o REPL está usando <code>IronScheme</code>, ligue a entrada no buffer com <code>M-x</code> e digite:</p>
+<pre><code class="language-scm">(canvas-list)
+</code></pre>
+<p>Caso o REPL esteja usando <code>IronLua</code>, ligue a entrada no buffer com <code>M-x</code> e digite:</p>
+<pre><code class="language-lua">common.canvasList()
+</code></pre>
+<p>E pressione Enter logo em seguida.
+Você notará que uma nova informação será exibida no REPL, como abaixo:</p>
+<p><img src="../img/002.png" alt="Imagem do REPL logo após a entrada do comando (canvas-list), da linguagem IronScheme." title="Imagem do REPL logo após a entrada do comando (canvas-list), da linguagem IronScheme." /></p>
+<p>A imagem acima é uma foto de um comando dado na linguagem IronScheme; IronLua terá uma exibição similar. Como você pode ver, este comando exibe uma lista de todas as cenas atualmente sendo gerenciadas pela engine; neste caso, ele exibe o nome da nossa cena (&quot;Minha Cena&quot;), seguida de um ponteiro de memória onde a instância da cena está armazenada. Com isso, sabemos que nossa cena foi adicionada ao gerenciador e está em perfeito funcionamento, apesar de invisível.</p>
+<a class="header" href="print.html#configurando-a-matriz-de-visão-e-projeção" id="configurando-a-matriz-de-visão-e-projeção"><h1>Configurando a matriz de visão e projeção</h1></a>
+<p>Para desenhar nossa cena, é necessário que a placa de vídeo saiba para onde nossa câmera está apontada, e qual é o tamanho e o tipo da área de visualização a ser desenhada. Este pode ser um tópico complexo, por isso, apenas determinaremos alguns padrões fixos.</p>
+<p>Criaremos uma cena com um tamanho exato de 800x600, como o tamanho da nossa janela. Os valores da coordenada X crescerão da ESQUERDA para a DIREITA; os valores da coordenada Y, contra-intuitivamente (porém, como normalmente empregado em engines de jogos 2D), crescerão de CIMA para BAIXO. Além disso, a origem (coordenada {0, 0} do plano) ficará no canto superior esquerdo da tela. Como na figura a seguir:</p>
+<p><img src="../img/003.png" alt="Representação gráfica do plano cartesiano da cena." title="Representação gráfica do plano cartesiano da cena." /></p>
+<p>Abra o arquivo <code>src/MinhaCena.cpp</code>. No método <code>void MinhaCena::init</code>, insira o seguinte código:</p>
+<pre><code class="language-cpp">    glm::mat4 view =
+        glm::lookAt(
+            glm::vec3(0.0f, 0.0f, -1.2f),
+            glm::vec3(0.0f, 0.0f, 0.0f),
+            glm::vec3(0.0f, -1.0f, 0.0f));
+
+    glm::mat4 projection =
+        glm::ortho(
+            0.0f,
+            800.0f, -600.0f,
+            0.0f, 1.0f, 10.0f);
+
+    mvp = projection * view;
+</code></pre>
+<p>Para uma rápida explicação, definimos separadamente, a princípio, duas matrizes.</p>
+<p>A primeira é a matriz <code>view</code>. Através desta matriz, definimos o lado para o qual a câmera &quot;olha&quot;.
+Ela assume que estamos usando uma representação cartesiana clássica do OpenGL, e não a representação cartesiana que estabelecemos no desenho anterior; esta representação possui a origem no centro exato da tela, e o eixo X cresce normalmente para a esquerda, mas o eixo Y cresce para CIMA e ambos os eixos têm as suas extremidades da tela entre -1.0 e 1.0 (diferente da nossa projeção, que terá as extremidades entre 0 e 800 em X, e entre 0 e 600 em Y (Caso você não tenha entendido muito bem esta projeção padrão do OpenGL, ignore-a por enquanto).
+A função <code>glm::lookAt</code> recebe três vetores de 3 coordenadas (X, Y, Z) como argumento:</p>
+<ul>
+<li>O primeiro vetor é a posição onde a câmera/o olho está (no caso, 1.2 unidades na direção contrária à tela, a partir do centro dela);</li>
+<li>O segundo vetor é a localização do centro da tela (no caso, a origem do plano);</li>
+<li>O terceiro vetor é o vetor que aponta PARA QUAL LADO fica a direção &quot;para cima&quot;. No nosso caso, como queremos que nossas coordenadas Y cresçam PARA BAIXO, passamos um vetor que tem o valor Y definido como -1 (direção invertida em Y).</li>
+</ul>
+<p>A segunda é a matriz <code>projection</code>, que efetivamente determina o formato da nossa tela.
+Esta matriz é definida pela função <code>glm::ortho</code>, que cria uma projeção ortogonal (quadrada, diferente de uma projeção de perspectiva). Recebe seis argumentos:</p>
+<ul>
+<li><code>left</code>, <code>right</code>, <code>bottom</code> e <code>top</code>: Especificamente as posições de cada um dos limites da nossa tela, de acordo com seus respectivos nomes;</li>
+<li><code>near</code>, <code>far</code>: Especificamente os limites de desenho no plano Z. No nosso caso, quaisquer objetos desenhados com uma coordenada Z menor que 1.0 e maior que 10.0 seriam ignorados ou cortados por estes planos.</li>
+</ul>
+<p>Por fim, multiplicamos estas duas matrizes na ordem correta, e damos o resultado desta multiplicação à matriz <code>mvp</code> da nossa cena.</p>
+<a class="header" href="print.html#escrevendo-texto-na-tela" id="escrevendo-texto-na-tela"><h1>Escrevendo texto na tela</h1></a>
+<p>Para um pequeno teste básico, aprenderemos, agora, a desenhar texto na tela.</p>
+<p>Uma fonte de texto é carregada com métodos muito similares a uma textura, como veremos mais adiante. Porém, a Oficina possui algumas fontes de texto já predefinidas para uso imediato.
+Neste exemplo, usaremos a fonte Fixedsys Excelsior para escrever texto na tela.</p>
+<a class="header" href="print.html#carregando-e-descarregando-uma-fonte-padrão" id="carregando-e-descarregando-uma-fonte-padrão"><h2>Carregando e descarregando uma fonte padrão</h2></a>
+<p>Vá até o arquivo <code>src/MinhaCena.hpp</code>.</p>
+<p>Lidaremos, agora, diretamente, com uma estrutura de renderização, então precisaremos do cabeçalho da Oficina onde as estruturas e funções de renderização estão definidas. Abaixo da inclusão do cabeçalho <code>oficina2/canvas.hpp</code>, digite o seguinte:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/render.hpp&gt;
+</code></pre>
+<p>E logo abaixo da definição da nossa matriz <code>mvp</code>, ainda na região <code>private</code> da classe, adicione este novo campo:</p>
+<pre><code class="language-cpp">    ofFont fonte;
+</code></pre>
+<p>Vá, agora, para o arquivo <code>src/MinhaCena.cpp</code>. Você deverá adicionar aos métodos citados estes códigos:</p>
+<pre><code class="language-cpp">// Em &quot;void MinhaCena::load()&quot;:
+fonte = ofTexturePool::loadDefaultFont(ofFontFaceFixedsysExcelsior);
+
+// Em &quot;void MinhaCena::unload()&quot;:
+fonte.unload();
+</code></pre>
+<p>A explicação para estas linhas é bem intuitiva. No caso do código adicionado a <code>load</code>, trata-se do carregamento de uma das fontes predefinidas da Oficina, alteráveis através de uma enumeração; aqui usamos a fonte Fixedsys Excelsior. No caso de <code>unload</code>, o código apenas assegura que a fonte seja descarregada da GPU quando nossa cena for descarregada.</p>
+<p>É importante notar que a Oficina descarrega toda e qualquer fonte/textura da GPU ao abandonar a aplicação, porém, para evitar uso excessivo de recursos do computador, é aconselhável descarregar tudo o que não for mais usado ao fim de uma cena.</p>
+<p>Você pode compilar o projeto para verificar o carregamento da fonte. Caso o carregamento seja feito com sucesso, você verá, no log do console, uma linha escrita da seguinte forma:</p>
+<pre><code>INFO: ofLoadDefaultFont: Uploaded Fixedsys Excelsior (Hardcoded) to VRAM
+</code></pre>
+<a class="header" href="print.html#definindo-e-posicionando-um-texto" id="definindo-e-posicionando-um-texto"><h2>Definindo e posicionando um texto</h2></a>
+<p>Agora, por fim, desenharemos texto na tela.
+Ainda no arquivo <code>src/MinhaCena.cpp</code>, vá até o método <code>void MinhaCena::draw</code> e adicione o seguinte código:</p>
+<pre><code class="language-cpp">fonte.write(&quot;Hello, world!&quot;, glm::vec2(50.0f), mvp, glm::vec4(1.0f));
+</code></pre>
+<p>O código acima é um método da classe ofFont, que recebe, respectivamente, como parâmetro:</p>
+<ul>
+<li>Um texto a ser exibido (pode ser uma literal ou um texto compatível com uma <code>std::string</code>). Infelizmente, atualmente, uma <code>ofFont</code> só suporta texto ASCII sem acentuação, exceto pelo acento grave, que também pode ser usado no REPL -- sobretudo em IronScheme;</li>
+<li>A posição do texto (apenas eixos X e Y de coordenadas são suportados). Utilizando abstrações da GL Mathematics, definimos esta posição como 50x50;</li>
+<li>A matriz ModelViewProjection da cena. Teoricamente, você também pode reposicionar o texto usando diretamente essa matriz, especialmente se você tiver um texto sendo renderizado de dentro de uma <code>ofEntity</code> (que veremos a seguir), por exemplo. Neste caso, a posição do texto citada anteriormente se tornaria uma posição relativa à posição estipulada na matriz Model;</li>
+<li>Um vetor de quatro dimensões, definindo a COR do texto a ser exibido, em RGBA (vermelho, verde, azul, alpha/transparência) normalizado (valores de 0 a 1). Utilizando abstrações da GL Mathematics, definimos esta cor como branco sólido (R: 1, G: 1, B: 1, A: 1).</li>
+</ul>
+<p>Compile e execute o jogo mais uma vez. Você deverá ver texto inserido na tela.</p>
+<p><img src="../img/004.png" alt="Tela do jogo, agora com o texto sendo exibido." title="Tela do jogo, agora com o texto sendo exibido." /></p>
+<p>O arquivo <code>src/MinhaCena.cpp</code> deverá estar com o seguinte código, agora:</p>
+<pre><code class="language-cpp">#include &quot;MinhaCena.hpp&quot;
+
+void MinhaCena::init()
+{
+    glm::mat4 view =
+        glm::lookAt(
+            glm::vec3(0.0f, 0.0f, -1.2f),
+            glm::vec3(0.0f, 0.0f, 0.0f),
+            glm::vec3(0.0f, -1.0f, 0.0f));
+    glm::mat4 projection =
+        glm::ortho(
+            0.0f,
+            800.0f, -600.0f,
+            0.0f, 1.0f, 10.0f);
+    mvp = projection * view;
+}
+
+void MinhaCena::load()
+{
+    fonte = ofTexturePool::loadDefaultFont(ofFontFaceFixedsysExcelsior);
+}
+
+void MinhaCena::unload()
+{
+    fonte.unload();
+}
+
+void MinhaCena::update(float dt)
+{
+}
+
+void MinhaCena::draw()
+{
+    fonte.write(&quot;Hello, world!&quot;, glm::vec2(50.0f), mvp, glm::vec4(1.0f));
+}
+</code></pre>
+<a class="header" href="print.html#criando-uma-entidade-através-da-classe-ofentity" id="criando-uma-entidade-através-da-classe-ofentity"><h1>Criando uma entidade através da classe ofEntity</h1></a>
+<p>Após uma noção inicial da hierarquia de um <code>ofCanvas</code>/cena, poderemos, então, dar prosseguimento à definição de um objeto, entidade, ou, como definido na Oficina, <code>ofEntity</code>.</p>
+<p>Entidades funcionam de forma similar a uma cena, no sentido de que também herdam certos métodos e propriedades de uma classe abstrata. Porém, entidades possuem algumas coisas específicas, como sua própria matriz Model (ou melhor dizendo, as matrizes componentes do objeto); esta matriz fica responsável por armazenar posição, rotação e escala do objeto em questão.</p>
+<p>Vamos ao código e, logo depois, analisaremos o que precisamos.</p>
+<p>Você vai precisar criar mais dois arquivos: um cabeçalho e um arquivo de código, ambos na pasta <code>src</code>. Vá em frente e crie <code>src/MinhaEntidade.hpp</code> e <code>src/MinhaEntidade.cpp</code>, colocando, dentro de cada um desses arquivos, conforme mostrado abaixo:</p>
+<pre><code class="language-cpp">// MinhaEntidade.hpp
+#pragma once
+
+#include &lt;oficina2/entity.hpp&gt;
+using namespace oficina;
+
+class MinhaEntidade : public ofEntity
+{
+private:
+public:
+    void init();
+    void load();
+    void unload();
+    void update(float dt);
+    void draw(glm::mat4 mvp);
+};
+</code></pre>
+<pre><code class="language-cpp">// MinhaEntidade.cpp
+#include &quot;MinhaEntidade.hpp&quot;
+
+void MinhaEntidade::init()
+{
+}
+
+void MinhaEntidade::load()
+{
+}
+
+void MinhaEntidade::unload()
+{
+}
+
+void MinhaEntidade::update(float dt)
+{
+}
+
+void MinhaEntidade::draw(glm::mat4 mvp)
+{
+}
+</code></pre>
+<p>Além disso, você precisará, como feito com nossa cena na subseção anterior, adicionar uma referência ao cabeçalho em <code>src/MinhaCena.hpp</code> e uma referência ao arquivo de código em si no nosso <code>Makefile</code>.</p>
+<p>Em <code>src/MinhaCena.hpp</code>, após a inclusão do cabeçalho <code>oficina2/render.hpp</code>, digite:</p>
+<pre><code class="language-cpp">#include &quot;MinhaEntidade.hpp&quot;
+</code></pre>
+<p>Já em <code>Makefile</code>, substitua o macro <code>FILES</code> de forma que ele mostre o seguinte:</p>
+<pre><code class="language-Makefile">FILES    = src/main.cpp src/MinhaCena.cpp src/MinhaEntidade.cpp
+</code></pre>
+<p>Veja que, na realidade, uma entidade possui uma estrutura muito parecida com a cena, à exceção dos detalhes apresentados, que estão relacionados a transformações na entidade (detalhes com os quais ainda não tivemos contato direto).
+A única diferença destacável é o fato de que, em um método <code>draw</code> de uma entidade, recebemos, como argumento, a matriz <code>mvp</code> da nossa CENA. Veremos como lidar com isso no próximo tópico.</p>
+<p>Feito isso, você pode testar se ocorreu tudo bem, compilando sua aplicação mais uma vez.</p>
+<a class="header" href="print.html#instanciando-manualmente-uma-entidade" id="instanciando-manualmente-uma-entidade"><h1>Instanciando manualmente uma entidade</h1></a>
+<p>Após digitar o código, absolutamente tudo está apropriadamente definido, exceto pelo fato de que nós ainda não possuimos NENHUMA instância da entidade, que acabamos de criar, em nenhuma parte do nosso jogo.</p>
+<p>Por enquanto, vamos consertar isso instanciando manualmente UMA intidade do nosso jogo.</p>
+<p>Vá ao arquivo <code>src/MinhaCena.hpp</code>.  Abaixo da instância da nossa fonte, insira o seguinte:</p>
+<pre><code class="language-cpp">MinhaEntidade entidade;
+</code></pre>
+<p>Note que não estamos criando nossa entidade dinamicamente, mas isto também não significa que ela está inicializada, muito menos incluída na lógica da cena!
+Para tanto, vá agora ao arquivo <code>src/MinhaCena.cpp</code>. Lá, nós vamos nos assegurar de que:</p>
+<ul>
+<li>A entidade seja inicializada (método <code>init</code>);</li>
+<li>A entidade tenha seu conteúdo essencial carregado (método <code>load</code>);</li>
+<li>A entidade tenha seu conteúdo essencial descarregado ao fim da cena (método <code>unload</code>);</li>
+<li>A entidade tenha sua lógica atualizada quadro-a-quadro (método <code>update</code>);</li>
+<li>A entidade seja desenhada quadro-a-quadro (método <code>draw</code>).</li>
+</ul>
+<p>Você pode já ter percebido onde queremos chegar.
+Adicione as linhas de código a seguir nos respectivos métodos referidos:</p>
+<pre><code class="language-cpp">// em &quot;void MinhaCena::init&quot;, após a declaração da mvp:
+entidade.init();
+
+// em &quot;void MinhaCena::load&quot;, após o carregamento da fonte de texto:
+entidade.load();
+
+// em &quot;void MinhaCena::unload&quot;, após o descarregamento da fonte de texto:
+entidade.unload();
+
+// em &quot;void MinhaCena::update&quot;:
+entidade.update(dt);
+
+// em &quot;void MinhaCena::draw&quot;, após a escrita de texto na tela:
+entidade.draw(mvp);
+</code></pre>
+<p>Você pode compilar mais uma vez e verificar se o código corre sem erros; Porém, você pode verificar se seu código esta sendo executado sem problemas de outra forma, como veremos a seguir.</p>
+<a class="header" href="print.html#isolando-bugs-e-colhendo-informações-a-função-oflog" id="isolando-bugs-e-colhendo-informações-a-função-oflog"><h1>Isolando bugs e colhendo informações: A função ofLog</h1></a>
+<p>Para verificar melhor o funcionamento do programa, é bom que tenhamos um sistema de log, que imprima texto na tela. Para isso, temos a função <code>ofLog</code>.</p>
+<p>Na realidade, <code>ofLog</code> é uma função muito parecida com <code>sprintf</code> e <code>fprintf</code>. Porém, <code>ofLog</code> é dinâmica no sentido de que permite configuração de níveis de gravidade do texto de log a ser impresso, bem como redirecionamento: você pode escolher entre imprimir no console, imprimir num arquivo de texto, ou não imprimir os logs.</p>
+<p>Esta função pode ser usada da seguinte forma:</p>
+<pre><code class="language-cpp">ofLog(nivel, formato, ...);
+</code></pre>
+<ul>
+<li><code>nivel</code>: Nível de gravidade do log. Os níveis suportados são:
+<ul>
+<li><code>ofLogCrit</code>: Erro crítico, possivelmente ocasionando uma quebra no funcionamento do programa. Este tipo de erro, quando o log é suprimido, exibirá uma caixa de texto comuma mensagem de erro na tela;</li>
+<li><code>ofLogErr</code>: Mensagem de erro;</li>
+<li><code>ofLogWarn</code>: Mensagem de aviso;</li>
+<li><code>ofLogInfo</code>: Mensagem de informação;</li>
+<li><code>ofLogNone</code>: Mensagem sem nível de propósito simples.</li>
+</ul>
+</li>
+<li><code>formato</code>: Formato da string de saída, da mesma forma que <code>printf</code>. Recomenda-se encerrar a string com o caractere <code>\n</code>;</li>
+<li><code>...</code>: Elipses; variáveis que farão parte do formato, da mesma forma que em <code>printf</code>.</li>
+</ul>
+<p>Além disso, você ainda pode usar as seguintes funções para definir propriedades do seu log:</p>
+<pre><code class="language-cpp">ofLogSetLevel(nivel);
+</code></pre>
+<p>Onde <code>nivel</code> é o seu nível mínimo de log. Qualquer nível ABAIXO deste nível de log será automaticamente descartado da saída.</p>
+<pre><code class="language-cpp">ofLogUseFile(nome_do_arquivo);
+ofLogUseConsole();
+ofLogDisable();
+</code></pre>
+<p>Estas três funções estabelecem onde o log será impresso.</p>
+<ul>
+<li><code>ofLogUseFile</code> determina que o log seja impresso num arquivo à parte, caso <code>nome_do_arquivo</code> seja um arquivo válido ou possa ser criado;</li>
+<li><code>ofLogUseConsole</code> devolve o log ao console onde o jogo está sendo executado, caso o log esteja sendo feito em um arquivo ou esteja desabilitado;</li>
+<li><code>ofLogDisable</code> suprime toda e qualquer tentativa de impressão de log, a não ser janelas de mensagens de erro crítico.</li>
+</ul>
+<p>Abra o arquivo <code>src/MinhaEntidade.cpp</code>.
+Abaixo da inclusão do arquivo <code>MinhaEntidade.hpp</code>, escreva a seguinte linha:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/io.hpp&gt;
+</code></pre>
+<p>Agora, adicione as seguintes linhas aos seus respectivos métodos:</p>
+<pre><code class="language-cpp">// em &quot;void MinhaEntidade::init&quot;:
+ofLog(ofLogWarn, &quot;Entidade inicializada!\n&quot;);
+
+// em &quot;void MinhaEntidade::load&quot;:
+ofLog(ofLogWarn, &quot;Entidade carregada!\n&quot;);
+
+// em &quot;void MinhaEntidade::unload&quot;:
+ofLog(ofLogWarn, &quot;Entidade descarregada!\n&quot;);
+</code></pre>
+<p>Após inicializar e imediatamente fechar a aplicação, você verá uma mensagem de saída, no seu console, similar a este log:</p>
+<pre><code>INFO: Powered by OficinaFramework v2.0.11
+INFO: ofInit: Creating generic display and context
+INFO: ofInit: Pushing gameargs
+INFO: ofInit: Opening display and context
+INFO: ofDisplay.parseArgs: Window size set to (800, 600)
+INFO: ofDisplay.setSwapInterval: Set a cap to 60.00FPS.
+INFO: ofContext.open: 
+  OpenGL v3.3.0 NVIDIA 378.13
+  GLSL Shader Model v3.30 NVIDIA via Cg compiler
+  GL Extension Wrangler v2.0.0
+  Renderer: GeForce GT 525M/PCIe/SSE2
+  Vendor: NVIDIA Corporation
+  ARB Debug Log: Yes
+INFO: ofInit: Starting canvas manager
+INFO: ofLoadDefaultFont: Uploaded GohuFont (Hardcoded) to VRAM
+INFO: ofShader.compile: Compilation successful
+INFO: ofShader.compile: Compilation successful
+INFO: ofInit: Starting global REPL interpreter
+INFO: Initializing Scheme REPL...
+INFO: ofGameLoop
+WARN: Entidade inicializada!
+INFO: ofLoadDefaultFont: Uploaded Fixedsys Excelsior (Hardcoded) to VRAM
+WARN: Entidade carregada!
+INFO: ofSoftStop
+INFO: ofQuit: Unloading canvases
+INFO: ofTexturePool.unload: Deleted Fixedsys Excelsior (Hardcoded) from VRAM
+WARN: Entidade descarregada!
+INFO: ofTexturePool.unload: Deleted GohuFont (Hardcoded) from VRAM
+INFO: ofQuit: Unloading REPL interpreter
+INFO: Uninitializing Scheme REPL...
+INFO: ofQuit: Unloading texture pool
+INFO: ofTexturePool.clear: Clearing pool
+INFO: ofTexturePool.clear: Cleared
+INFO: ofQuit: Closing context and display
+</code></pre>
+<p>Observe que nossas mensagens de log na entidade receberam um prefixo <code>WARN:</code> (provavelmente na cor amarela, caso seu console suporte caracteres coloridos), em conformidade com o nível de log que demos a elas (<code>ofLogWarn</code>).</p>
+<p>Por último, você pode, também, imprimir texto colorido, caso seu console suporte isso. Através do truque de concatenação de strings de C++, existem alguns macros predefinidos no cabeçalho <code>oficina2/io.hpp</code> que auxiliam nesta façanha.
+Por exemplo, um comando como</p>
+<pre><code class="language-cpp">ofLog(ofLogInfo, OFLOG_GRN &quot;Hello, &quot; OFLOG_RESET &quot;world!\n&quot;);
+</code></pre>
+<p>imprimirá a string &quot;Hello, &quot; em letras verdes, enquanto &quot;world!\n&quot; será impresso na cor normal de texto do console.
+Na verdade, o que ocorre é uma concatenação automática de literais de string, feitas durante a compilação do jogo.</p>
+<p>Você pode consultar estes macros nas documentações. Apenas lembre-se de usar a macro <code>OFLOG_RESET</code> ao fim da sua string!</p>
+<a class="header" href="print.html#renderizando-um-ofprimitive" id="renderizando-um-ofprimitive"><h1>Renderizando um ofPrimitive</h1></a>
+<p>Nós já sabemos que nossa entidade está em nossa cena, mas não temos NENHUMA representação visual de que ela ao menos exista!</p>
+<p>É hora de usar um dos recursos da OficinaFramework: usaremos uma primitiva, ou <code>ofPrimitive</code>, para desenhar uma forma simples na tela que possamos manipular a nosso gosto.</p>
+<p><code>ofPrimitive</code>s são objetos que guardam informações de desenhos com vértices simples e sequenciais, derivados das primitivas de OpenGL. Estas informações são carregadas, no momento da criação, para a sua própria GPU e lá ficam armazenadas para desenho estático, o que significa que você, enquanto um desenvolvedor preocupado com a performance do seu jogo, não precisa se preocupar com a quantidade de informações que são enviadas a cada quadro para a sua GPU!</p>
+<a class="header" href="print.html#desenhando-a-primitiva" id="desenhando-a-primitiva"><h2>Desenhando a primitiva</h2></a>
+<p>Vamos começar indo ao arquivo <code>src/MinhaEntidade.hpp</code>.</p>
+<p>Precisaremos das definições de renderização para desenhar na tela, portanto, abaixo da inclusão do cabeçalho <code>oficina2/entity.hpp</code>, inclua o cabeçalho de renderização:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/render.hpp&gt;
+</code></pre>
+<p>Agora, entre a linha onde está escrito <code>private:</code> e a linha onde está escrito <code>public:</code>, adicione o seguinte campo:</p>
+<pre><code class="language-cpp">    ofPrimitive* pQuadrado;
+</code></pre>
+<p>Agora, mude para o arquivo <code>src/MinhaEntidade.cpp</code>. Vamos inicializar a forma da nossa primitiva.</p>
+<p>Vá para o método <code>void MinhaEntidade::load</code>. Lá, digite o seguinte código, ANTES da nossa mensagem de log:</p>
+<pre><code class="language-cpp">    float vertices[] = { // Vértices do quadrado
+        -50.0f, -50.0f, 0.0f, // topo esquerdo
+         50.0f, -50.0f, 0.0f, // topo direito
+         50.0f,  50.0f, 0.0f, // base direita
+        -50.0f,  50.0f, 0.0f  // base esquerda
+    };
+    pQuadrado = ofPrimitiveRenderer::makePrimitive(ofTriangleFan, 4, sizeof(vertices), vertices);
+</code></pre>
+<p>Uma dica valiosa é lembrar-se de sempre descarregar um conteúdo imediatamente após criar seu código de carregamento. Para tanto, vá ao método <code>void MinhaEntidade::unload</code> e, ANTES da mensagem de log, adicione esta linha:</p>
+<pre><code class="language-cpp">    delete pQuadrado;
+</code></pre>
+<p>Isto desalocará a estrutura da primitiva, após efetivamente deletá-la da GPU.</p>
+<a class="header" href="print.html#entendendo-a-primitiva-desenhada" id="entendendo-a-primitiva-desenhada"><h2>Entendendo a primitiva desenhada</h2></a>
+<p>Como você pode ver através dos comentários, estamos tentando desenhar um quadrado de tamanho 100x100, com seu centro fixado na origem.</p>
+<p>Os vértices são descritos por quatro linhas, cada linha com TRÊS números (obrigatoriamente TRÊS por vértice, e devem ser pontos flutuantes); cada número representando uma coordenada (X, Y e Z). Como estamos lidando apenas com duas dimensões, a dimensão Z será sempre zero. Também, veja que <strong>os vértices são descritos num sentido horário</strong>; isto é um conceito importante, que será explicado a seguir.</p>
+<p>Por fim, criamos a nossa primitiva, através da classe estática <code>ofPrimitiveRenderer</code>. Nela, o método <code>makePrimitive</code> recebe alguns argumentos importantes:</p>
+<ul>
+<li>O tipo de primitiva que estamos tentando desenhar;</li>
+<li>O número de vértices (pacotes de três pontos flutuantes) que usaremos;</li>
+<li>O tamanho, em bytes, do nosso vetor de vértices;</li>
+<li>A referência direta (subentenda-se um ponteiro de memória) aos nossos vértices.</li>
+</ul>
+<p>Este método nos dará um retorno do tipo <code>ofPrimitive*</code>, ou seja, um ponteiro para a nossa primitiva, após os dados serem enviados para a placa de vídeo. Esta primitiva armazenará uma referência indireta aos dados armazenados na nossa GPU.</p>
+<p>Veja que, apesar de estarmos criando um QUADRADO, o tipo da primitiva é <code>ofTriangleFan</code>. Isso ocorre porque OpenGL, a partir da versão 3.2, não possui o conceito formal de um quadrilátero; subentende-se que um quadrilátero é, na verdade, um conjunto de DOIS triângulos.</p>
+<p>Em um nível mais baixo, quando lidamos diretamente com esse tipo de renderização, podemos escolher várias formas de desenhar um quadrado na tela. Você pode especificar diretamente os três vértices de dois triângulos e renderizá-los diretamente (com um tipo de primitiva como <code>ofTriangles</code>), mas isso criaria uma redundância na quantidade de vértices, já que dois deles seriam duplicados. Você também poderia fazer a forma mais indicada, que seria especificar os vértices da forma que fizemos, e usar um buffer de elementos para especificar uma ordem de desenho dos vértices (o que não pode ser feito rapidamente, até mesmo na Oficina; para isso, você teria que usar estruturas como <code>ofVertexBuffer</code> e <code>ofElementBuffer</code>, além de configurar outros aspectos manualmente que não vem ao caso mencionar agora).</p>
+<p>Uma opção mais fácil - a usada aqui por nós - seria especificar, normalmente, nossos vértices, e classificá-los como uma primitiva do tipo <code>ofTriangleFan</code>- ou seja, um &quot;ventilador&quot; de vértices.
+Isso pode ser um pouco difícil de visualizar, então peço que preste atenção: a ideia, aqui, é fixar um primeiro vértice e, à medida que os próximos vértices forem sendo dados, construir triângulos AO REDOR deste primeiro vértice, como pétalas de uma flor em torno de um centro.</p>
+<p>Quebrando em passos o que ocorre:</p>
+<ul>
+<li>Fixamos o topo esquerdo como o centro;</li>
+<li>Damos o topo direito;</li>
+<li>Damos a base direita. Forma-se um triângulo com os vértices do TOPO ESQUERDO, TOPO DIREITO e BASE DIREITA;</li>
+<li>Damos a base esquerda. Forma-se um triângulo com os vértices do TOPO ESQUERDO, BASE DIREITA e BASE ESQUERDA.</li>
+</ul>
+<p>Veja que, se déssemos mais um vértice, não teríamos mais um quadrilátero! Esta é a desvantagem de não se usar algo mais avançado. Infelizmente, só podemos desenhar um quadrado por vez com esta técnica, mas nos servirá por enquanto.</p>
+<p>Caso você tenha entendido o que aconteceu, pode também utilizar <code>ofQuad</code> no lugar de <code>ofTriangleFan</code> que manteremos, por enquanto, por fins didáticos.</p>
+<p>A título de curiosidade, como você pode observar, também é possível desenhar círculos usando esta técnica. Em uma aplicação, círculos são desenhados, vetorialmente, com um número de vértices grande o suficiente - ao redor de um centro - para dar a impressão de que se trata de uma figura completamente redonda.</p>
+<a class="header" href="print.html#renderizando-a-primitiva-desenhada" id="renderizando-a-primitiva-desenhada"><h2>Renderizando a primitiva desenhada</h2></a>
+<p>Agora, poderemos realmente renderizar nossa primitiva.
+Com ajuda da mesma classe estática <code>ofPrimitiveRenderer</code>, podemos usar o método <code>draw</code> para desenhar nossa primitiva.</p>
+<p>Vá ao método <code>void MinhaEntidade::draw</code> e adicione esta linha de código:</p>
+<pre><code class="language-cpp">    ofPrimitiveRenderer::draw(pQuadrado, glm::vec4(1.0f), mvp);
+</code></pre>
+<p>Ao compilar e executar este código, você verá um quadrado no canto superior da tela, mas saberá que algo está errado: Você está vendo apenas um quarto do quadrado! Ademais, não seria melhor que o quadrado estivesse no centro da tela?</p>
+<p><img src="../img/005.png" alt="Imagem do quadrado sendo renderizado na tela, porém cortado." title="Imagem do quadrado sendo renderizado na tela, porém cortado." /></p>
+<p>Existe uma razão para isso: <strong>primitivas não possuem sua própria matriz Model</strong>. Elas apenas são renderizadas no local especificado pela matriz <code>mvp</code> a elas dada.
+Lembra-se de que, anteriormente, quando definimos os vértices da nossa primitiva, definimo-nos relativos a uma origem? Pois bem, a origem do nosso plano é o mesmo canto superior esquerdo da tela, como definido na nossa matriz <code>mvp</code>.</p>
+<p>A solução seria criar uma matriz <code>Model</code>, e então multiplicá-la por nossa <code>mvp</code>: <code>mvp * Model</code>. Mas não precisamos fazer exatamente isso.</p>
+<p>Como mencionado anteriormente, toda entidade possui submatrizes da matriz Model, e esta matriz Model pode ser gerada com uma chamada simples de função. Portanto, basta substituir a linha de desenho da matriz por esta linha</p>
+<pre><code class="language-cpp">    ofPrimitiveRenderer::draw(pQuadrado, glm::vec4(1.0f), mvp * getModelMatrix());
+</code></pre>
+<p>onde a função <code>getModelMatrix</code> é, na verdade, um método da nossa classe, herdado de <code>ofEntity</code>. Isto fará com que nossa primitiva seja renderizada SEMPRE onde a nossa entidade verdadeiramente está.</p>
+<p>Mas, como você pode ver (caso tenha compilado e executado o seu programa agora), só isto não é o suficiente para centralizar nosso objeto na tela. Para isso, aplicaremos uma operação de translação na própria entidade.</p>
+<p>No método <code>void MinhaEntidade::init</code>, antes do nosso log, adicione a seguinte linha de código:</p>
+<pre><code class="language-cpp">    translate(glm::vec3(400.0f, 300.0f, 0.0f), true);
+</code></pre>
+<p>Mais detalhes serão explicados logo no próximo tópico, mas isto fará com que nossa entidade seja posicionada no centro exato da tela (veja que os valores correspondentes a X e Y no vetor de três dimensões são 400 e 300, metades exatas do tamanho da nossa resolução interna de 800x600).</p>
+<p>Compile e execute o código. Você verá uma tela assim:</p>
+<p><img src="../img/006.png" alt="Imagem do quadrado sendo renderizado no centro da tela." title="Imagem do quadrado sendo renderizado no centro da tela." /></p>
+<p>Abaixo, o código final dos nossos arquivos <code>src/MinhaEntidade.hpp</code> e <code>src/MinhaEntidade.cpp</code>:</p>
+<pre><code class="language-cpp">#pragma once
+
+#include &lt;oficina2/entity.hpp&gt;
+#include &lt;oficina2/render.hpp&gt;
+using namespace oficina;
+
+class MinhaEntidade : public ofEntity
+{
+private:
+    ofPrimitive* pQuadrado;
+public:
+    void init();
+    void load();
+    void unload();
+    void update(float dt);
+    void draw(glm::mat4 mvp);
+};
+</code></pre>
+<pre><code class="language-cpp">#include &quot;MinhaEntidade.hpp&quot;
+#include &lt;oficina2/io.hpp&gt;
+
+void MinhaEntidade::init()
+{
+    translate(glm::vec3(400.0f, 300.0f, 0.0f), true);
+    ofLog(ofLogWarn, &quot;Entidade inicializada!\n&quot;);
+}
+
+void MinhaEntidade::load()
+{
+    float vertices[] = { // Vértices do quadrado
+        -50.0f, -50.0f, 0.0f, // topo esquerdo
+         50.0f, -50.0f, 0.0f, // topo direito
+         50.0f,  50.0f, 0.0f, // base direita
+        -50.0f,  50.0f, 0.0f  // base esquerda
+    };
+    pQuadrado = ofPrimitiveRenderer::makePrimitive(ofTriangleFan, 4, sizeof(vertices), vertices);
+    ofLog(ofLogWarn, &quot;Entidade carregada!\n&quot;);
+}
+
+void MinhaEntidade::unload()
+{
+    delete pQuadrado;
+    ofLog(ofLogWarn, &quot;Entidade descarregada!\n&quot;);
+}
+
+void MinhaEntidade::update(float dt)
+{
+}
+
+void MinhaEntidade::draw(glm::mat4 mvp)
+{
+    ofPrimitiveRenderer::draw(pQuadrado, glm::vec4(1.0f), mvp * getModelMatrix());
+}
+</code></pre>
+<a class="header" href="print.html#movendo-a-ofentity" id="movendo-a-ofentity"><h1>Movendo a ofEntity</h1></a>
+<p>Agora que temos um objeto renderizado na tela, vamos fazer com que este objeto se mova de acordo com o nosso pressionamento de teclas.</p>
+<a class="header" href="print.html#entendendo-os-métodos-de-entrada-e-mapeamento" id="entendendo-os-métodos-de-entrada-e-mapeamento"><h2>Entendendo os métodos de entrada e mapeamento</h2></a>
+<p>Por razões de padrão e portabilidade, toda a entrada básica de um jogo, ao usar a Oficina, é recuperada a partir de mapeamentos de um controle como o do Xbox 360. Ou seja, a Oficina, por padrão, possui entradas associadas a:</p>
+<ul>
+<li>Botões de controles (A, B, X, Y, LB, RB, LT, RT, LS, RS, Start, Back);</li>
+<li>Analógicos (dois; analógico esquerdo e analógico direito);</li>
+<li>Botões direcionais digitais (Digital Pad Up, Digital Pad Down...);</li>
+<li>Gatilhos (diferente de pressionamentos simples de LT e RT, um valor normalizado indicando a taxa de pressionamento destes gatilhos).</li>
+</ul>
+<p>A Oficina suporta um máximo de quatro controles conectados (precisam ser compatíveis com a biblioteca SDL2), e inputs de teclado devem ser diretamente mapeados aos botões citados.
+Ao mapear botões de teclado para analógicos, a Oficina oferece ferramentas que relacionam o pressionamento de um botão à movimentação de um certo analógico em uma certa direção.</p>
+<p>A engine também possui suporte a posição e cliques do mouse; porém, a posição do ponteiro do mouse sempre será feita a partir do valor absoluto da posição na JANELA, e não no seu viewport! Desta forma, lembre-se de normalizar esta posição, caso um dia seja necessária para você.</p>
+<p>Tendo em vista que este mapeamento pode ser problemático para um pequeno projeto sendo feito rapidamente, a Oficina fornece uma função em especial que mapeia automaticamente algumas teclas ao input do Jogador 1. Usaremos, portanto, esta função para mapear nossos controles.</p>
+<p>Abra o arquivo <code>src/main.cpp</code> e, antes de <code>ofGameLoop</code>, digite esta linha de código:</p>
+<pre><code class="language-cpp">ofMapDefaultsP1();
+</code></pre>
+<p>Feito isso, poderemos mover nossa entidade, nos próximos tópicos, com as setas do teclado, após utilizarmo-nas apropriadamente. Ou, se assim achar melhor, você pode simplesmente plugar um controle compatível e usar o analógico esquerdo deste controle para interagir da mesma forma.</p>
+<p>Para saber um pouco mais sobre as funções disponíveis e sobre o mapeamento, você pode consultar a documentação da Oficina.</p>
+<a class="header" href="print.html#recebendo-métodos-de-entrada" id="recebendo-métodos-de-entrada"><h2>Recebendo métodos de entrada</h2></a>
+<p>Agora que mapeamos nossa entrada adequadamente, podemos partir para a forma como devemos lidar com a entrada em si.</p>
+<p>A Oficina possui várias funções essenciais para lidar com estes valores. Eis as essenciais, que lidam diretamente com entradas de controladores ou de teclado mapeado:</p>
+<pre><code class="language-cpp">// Analógicos
+ofGetLeftStick(jogador);
+ofGetRightStick(jogador);
+// Botões
+ofButtonPress(botao, jogador);
+ofButtonTap(botao, jogador);
+// Gatilhos
+ofGetLeftTrigger(jogador);
+ofGetRightTrigger(jogador);
+</code></pre>
+<p>Note que, nestas funções, o parâmetro <code>jogador</code> é sempre opcional. Caso omitido, a engine assume que você esteja se referindo ao Jogador 1 (<code>ofPlayerOne</code>).</p>
+<p>Abra o arquivo <code>src/MinhaEntidade.cpp</code>.</p>
+<p>Logo após os cabeçalhos já incluídos, adicione o cabeçalho de entradas da Oficina:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/input.hpp&gt;
+</code></pre>
+<p>Agora, no método <code>void MinhaEntidade::update</code>, insira o seguinte código:</p>
+<pre><code class="language-cpp">    glm::vec2 velocidade = ofGetLeftStick();
+</code></pre>
+<p>Apesar de não possuir nenhum efeito gráfico, já estamos recuperando a posição do analógico esquerdo do Jogador 1 e salvando-o em um vetor de duas dimensões.
+Neste vetor, a coordenada X lida com o plano horizontal, e a Y lida com o plano vertical.</p>
+<p>Mover o analógico para a esquerda total e para a direita total significa fazer com que esta coordenada X do vetor se torne -1 e 1, respectivamente; mover o analógico parcialmente também alterará o valor. Um analógico não movido no plano horizontal terá seu valor em X igual a ZERO.
+Da mesma forma, mover para cima e para baixo fará com que a coordenada Y assuma valores -1 e 1 respectivamente. Note que, da mesma forma como estabelecemos para nossa projeção anteriormente, o valor se torna maior na direção PARA BAIXO.</p>
+<p>Perceba que, no caso do teclado, ele SIMULA este tipo de valor; apertar a seta para a esquerda, por exemplo, fará com que a coordenada X assuma um valor de exatamente -1; apertar a seta para a esquerda fará X assumir 1, e assim por diante. Note, porém, que por padrão não é possível simular, no teclado, algo como um meio-movimento (mover o analógico apenas um pouco para uma direção).</p>
+<a class="header" href="print.html#calculando-a-velocidade-do-movimento" id="calculando-a-velocidade-do-movimento"><h2>Calculando a velocidade do movimento</h2></a>
+<p>Agora, faremos com que nossa entidade efetivamente SE MOVA na tela.</p>
+<p>Primeiramente, é interessante ressaltar que, normalmente, movimentos em jogos são interpolados, já que jogos normalmente possuem uma variação ilimitada na quantidade de quadros processados por segundo. Porém, ao iniciarmos este projeto, configuramos a engine de forma a assegurar que nosso jogo NUNCA ultrapasse a barreira dos 60 quadros por segundo, NO MÁXIMO. Por tanto, podemos operar como se nosso jogo estivesse sempre operando nesta quantidade fixa de quadros por segundo.</p>
+<p>Abaixo da linha em que obtemos a posição do nosso analógico, adicione esta linha:</p>
+<pre><code class="language-cpp">    velocidade *= 5.0f;
+</code></pre>
+<p>Isto fará com que cada um dos eixos do nosso analógico esquerdo tenha seu valor multiplicado pela taxa de movimento que queremos (5 pixels por quadro ou, numa variação de 60 quadros por segundo, em torno de 300 pixels por segundo).
+Perceba que nos valemos de um pequeno artifício da GL Mathematics: estamos multiplicando dois valores, que fazem parte do nosso vetor, com apenas uma linha. Na prática, esta linha faz um trabalho como este:</p>
+<pre><code class="language-cpp">    velocidade.x = velocidade.x * 5.0f;
+    velocidade.y = velocidade.y * 5.0f;
+</code></pre>
+<p>Agora, portanto, podemos dizer que temos o valor em pixels para o qual sabemos que nosso objeto pode se mover. O sinal desse valor indicará a direção do movimento (por exemplo, se tivermos que nos mover APENAS para a esquerda, teremos um valor como {x = -5, y = 0}).</p>
+<a class="header" href="print.html#transformando-a-entidade" id="transformando-a-entidade"><h2>Transformando a entidade</h2></a>
+<p>Por fim, agora, só falta incorporar esta variação de posição do objeto ao próprio objeto.</p>
+<p>Mais cedo, utilizamos o método <code>translate</code> para posicionar nosso objeto na tela. Este método, em conjunto com <code>rotate</code> e <code>scale</code>, é herdado também da casse <code>ofEntity</code>.
+Estes três métodos especiais fazem com que seja possível alterar aspectos da nossa classe ou, mais especificamente: posição, ângulo de rotação e escala.</p>
+<p>Vá ao fim do mesmo método <code>void MinhaEntidade::update</code>, e adicione esta linha, depois do cálculo da velocidade:</p>
+<pre><code class="language-cpp">    translate(glm::vec3(velocidade, 0.0f));
+</code></pre>
+<p>O que estamos fazendo é uma translação direta na matriz de posição do nosso objeto. O argumento <code>glm::vec3(velocidade, 0.0f)</code> cria um vetor tridimensional a partir dos valores X e Y de velocidade e, no que tange ao valor Z (que está faltando em <code>velocidade</code>), usamos 0.0f, já que vamos nos manter em duas dimensões.</p>
+<p>Compile e execute seu aplicativo. Você agora poderá mover o quadrado usando as setas do teclado ou, caso ache melhor, conectando a qualquer momento um controle compatível e usando o analógico esquerdo do controle.</p>
+<p>Eis o método <code>update</code> da entidade, após o experimento:</p>
+<pre><code class="language-cpp">void MinhaEntidade::update(float dt)
+{
+    glm::vec2 velocidade = ofGetLeftStick();
+    velocidade *= 5.0f;
+    translate(glm::vec3(velocidade, 0.0f));
+}
+</code></pre>
+<a class="header" href="print.html#gráficos-e-renderização" id="gráficos-e-renderização"><h1>Gráficos e Renderização</h1></a>
+<p>Já fizemos bastante até agora. Colocamos um quadrado na tela, e conseguimos movê-lo através dos comandos do próprio jogador.
+Mas nosso jogo ainda continua um pouco feio... por isso, colocaremos gráficos reais no nosso jogo.</p>
+<a class="header" href="print.html#texturas" id="texturas"><h2>Texturas</h2></a>
+<a class="header" href="print.html#renderizando-uma-textura" id="renderizando-uma-textura"><h3>Renderizando uma textura</h3></a>
+<a class="header" href="print.html#lidando-com-um-atlas-de-texturas" id="lidando-com-um-atlas-de-texturas"><h3>Lidando com um atlas de texturas</h3></a>
+<a class="header" href="print.html#usando-animações" id="usando-animações"><h3>Usando animações</h3></a>
+<a class="header" href="print.html#Áudio-e-efeitos-sonoros" id="Áudio-e-efeitos-sonoros"><h1>Áudio e Efeitos Sonoros</h1></a>
+<a class="header" href="print.html#scripts-e-repl" id="scripts-e-repl"><h1>Scripts e REPL</h1></a>
+<a class="header" href="print.html#usando-scripts-para-entidades-em-scheme" id="usando-scripts-para-entidades-em-scheme"><h2>Usando scripts para entidades (em Scheme)</h2></a>
+<a class="header" href="print.html#usando-scripts-para-entidades-em-lua" id="usando-scripts-para-entidades-em-lua"><h2>Usando scripts para entidades (em Lua)</h2></a>
+<a class="header" href="print.html#detecção-básica-de-colisão" id="detecção-básica-de-colisão"><h1>Detecção Básica de Colisão</h1></a>
+<a class="header" href="print.html#particionamento-espacial" id="particionamento-espacial"><h2>Particionamento espacial</h2></a>
+<a class="header" href="print.html#particionando-o-espaço" id="particionando-o-espaço"><h3>Particionando o espaço</h3></a>
+<a class="header" href="print.html#adicionando-blocos-sólidos" id="adicionando-blocos-sólidos"><h3>Adicionando blocos sólidos</h3></a>
+<a class="header" href="print.html#física-básica-" id="física-básica-"><h3>Física básica (?)</h3></a>
+<a class="header" href="print.html#volumes-delimitadores" id="volumes-delimitadores"><h2>Volumes delimitadores</h2></a>
+<a class="header" href="print.html#entendendo-volumes-delimitadores" id="entendendo-volumes-delimitadores"><h3>Entendendo volumes delimitadores</h3></a>
+<a class="header" href="print.html#criando-sensores" id="criando-sensores"><h3>Criando sensores</h3></a>
+<a class="header" href="print.html#detecção-de-colisão" id="detecção-de-colisão"><h2>Detecção de colisão</h2></a>
+<a class="header" href="print.html#detectando-o-chão" id="detectando-o-chão"><h3>Detectando o chão</h3></a>
+<a class="header" href="print.html#detecção-em-c-puro" id="detecção-em-c-puro"><h4>Detecção em C++ puro</h4></a>
+<a class="header" href="print.html#detecção-com-scripts-scheme" id="detecção-com-scripts-scheme"><h4>Detecção com scripts (Scheme)</h4></a>
+<a class="header" href="print.html#detecção-com-scripts-lua" id="detecção-com-scripts-lua"><h4>Detecção com scripts (Lua)</h4></a>
+<a class="header" href="print.html#lançamento-e-distribuição" id="lançamento-e-distribuição"><h1>Lançamento e Distribuição</h1></a>
+<a class="header" href="print.html#lidando-com-recursos-do-jogo" id="lidando-com-recursos-do-jogo"><h2>Lidando com recursos do jogo</h2></a>
+<a class="header" href="print.html#distribuindo-o-jogo" id="distribuindo-o-jogo"><h2>Distribuindo o jogo</h2></a>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+
+                
+
+            </div>
+
+            
+
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+        <script>
+            $(document).ready(function() {
+                window.print();
+            })
+        </script>
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>

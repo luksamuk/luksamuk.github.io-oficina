@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exibindo texto básico - Oficina Framework 2: Guia Prático</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Construa seu jogo do zero com a engine Oficina Framework 2, em um modelo orientado a projetos.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="../">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li><a href="./objetivo/intro.html"><strong>1.</strong> Oficina Framework 2: Guia Prático</a></li><li><ul class="section"><li><a href="./objetivo/sobre.html"><strong>1.1.</strong> Sobre o livro</a></li><li><a href="./objetivo/pre-requisitos.html"><strong>1.2.</strong> Pré-requisitos</a></li></ul></li><li><a href="./projeto/intro.html"><strong>2.</strong> Criando o Projeto</a></li><li><ul class="section"><li><a href="./projeto/hierarquia.html"><strong>2.1.</strong> Hierarquia</a></li><li><a href="./projeto/arquivos.html"><strong>2.2.</strong> Inicialização e compilação do jogo</a></li><li><a href="./projeto/gameargs.html"><strong>2.3.</strong> GameArgs: Pré-configurando seu jogo</a></li></ul></li><li><a href="./primeirospassos/intro.html"><strong>3.</strong> Primeiros Passos</a></li><li><ul class="section"><li><a href="./primeirospassos/canvas.html"><strong>3.1.</strong> Criando uma Cena do jogo</a></li><li><a href="./primeirospassos/verifica.html"><strong>3.2.</strong> REPL: Verificando a existência da cena</a></li><li><a href="./primeirospassos/mvp.html"><strong>3.3.</strong> Configurando a visualização na tela</a></li><li><a href="./primeirospassos/texto.html" class="active"><strong>3.4.</strong> Exibindo texto básico</a></li><li><a href="./primeirospassos/entidades.html"><strong>3.5.</strong> Entidades, os objetos de um jogo</a></li><li><a href="./primeirospassos/log.html"><strong>3.6.</strong> Debug: Usando e manipulando o log</a></li><li><a href="./primeirospassos/primitivas.html"><strong>3.7.</strong> Desenhando primitivas</a></li><li><a href="./primeirospassos/input.html"><strong>3.8.</strong> Métodos de entrada do jogador</a></li></ul></li><li><a href="./graficosrenderiz/intro.html"><strong>4.</strong> Gráficos e Renderização</a></li><li><a href="./4_audio.html"><strong>5.</strong> Áudio e Efeitos Sonoros</a></li><li><a href="./5_scriptsrepl.html"><strong>6.</strong> Scripts e REPL</a></li><li><a href="./6_colisao.html"><strong>7.</strong> Detecção Básica de Colisão</a></li><li><a href="./7_lancamento.html"><strong>8.</strong> Lançamento e Distribuição</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title">Oficina Framework 2: Guia Prático</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="./primeirospassos/texto.html#escrevendo-texto-na-tela" id="escrevendo-texto-na-tela"><h1>Escrevendo texto na tela</h1></a>
+<p>Para um pequeno teste básico, aprenderemos, agora, a desenhar texto na tela.</p>
+<p>Uma fonte de texto é carregada com métodos muito similares a uma textura, como veremos mais adiante. Porém, a Oficina possui algumas fontes de texto já predefinidas para uso imediato.
+Neste exemplo, usaremos a fonte Fixedsys Excelsior para escrever texto na tela.</p>
+<a class="header" href="./primeirospassos/texto.html#carregando-e-descarregando-uma-fonte-padrão" id="carregando-e-descarregando-uma-fonte-padrão"><h2>Carregando e descarregando uma fonte padrão</h2></a>
+<p>Vá até o arquivo <code>src/MinhaCena.hpp</code>.</p>
+<p>Lidaremos, agora, diretamente, com uma estrutura de renderização, então precisaremos do cabeçalho da Oficina onde as estruturas e funções de renderização estão definidas. Abaixo da inclusão do cabeçalho <code>oficina2/canvas.hpp</code>, digite o seguinte:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/render.hpp&gt;
+</code></pre>
+<p>E logo abaixo da definição da nossa matriz <code>mvp</code>, ainda na região <code>private</code> da classe, adicione este novo campo:</p>
+<pre><code class="language-cpp">    ofFont fonte;
+</code></pre>
+<p>Vá, agora, para o arquivo <code>src/MinhaCena.cpp</code>. Você deverá adicionar aos métodos citados estes códigos:</p>
+<pre><code class="language-cpp">// Em &quot;void MinhaCena::load()&quot;:
+fonte = ofTexturePool::loadDefaultFont(ofFontFaceFixedsysExcelsior);
+
+// Em &quot;void MinhaCena::unload()&quot;:
+fonte.unload();
+</code></pre>
+<p>A explicação para estas linhas é bem intuitiva. No caso do código adicionado a <code>load</code>, trata-se do carregamento de uma das fontes predefinidas da Oficina, alteráveis através de uma enumeração; aqui usamos a fonte Fixedsys Excelsior. No caso de <code>unload</code>, o código apenas assegura que a fonte seja descarregada da GPU quando nossa cena for descarregada.</p>
+<p>É importante notar que a Oficina descarrega toda e qualquer fonte/textura da GPU ao abandonar a aplicação, porém, para evitar uso excessivo de recursos do computador, é aconselhável descarregar tudo o que não for mais usado ao fim de uma cena.</p>
+<p>Você pode compilar o projeto para verificar o carregamento da fonte. Caso o carregamento seja feito com sucesso, você verá, no log do console, uma linha escrita da seguinte forma:</p>
+<pre><code>INFO: ofLoadDefaultFont: Uploaded Fixedsys Excelsior (Hardcoded) to VRAM
+</code></pre>
+<a class="header" href="./primeirospassos/texto.html#definindo-e-posicionando-um-texto" id="definindo-e-posicionando-um-texto"><h2>Definindo e posicionando um texto</h2></a>
+<p>Agora, por fim, desenharemos texto na tela.
+Ainda no arquivo <code>src/MinhaCena.cpp</code>, vá até o método <code>void MinhaCena::draw</code> e adicione o seguinte código:</p>
+<pre><code class="language-cpp">fonte.write(&quot;Hello, world!&quot;, glm::vec2(50.0f), mvp, glm::vec4(1.0f));
+</code></pre>
+<p>O código acima é um método da classe ofFont, que recebe, respectivamente, como parâmetro:</p>
+<ul>
+<li>Um texto a ser exibido (pode ser uma literal ou um texto compatível com uma <code>std::string</code>). Infelizmente, atualmente, uma <code>ofFont</code> só suporta texto ASCII sem acentuação, exceto pelo acento grave, que também pode ser usado no REPL -- sobretudo em IronScheme;</li>
+<li>A posição do texto (apenas eixos X e Y de coordenadas são suportados). Utilizando abstrações da GL Mathematics, definimos esta posição como 50x50;</li>
+<li>A matriz ModelViewProjection da cena. Teoricamente, você também pode reposicionar o texto usando diretamente essa matriz, especialmente se você tiver um texto sendo renderizado de dentro de uma <code>ofEntity</code> (que veremos a seguir), por exemplo. Neste caso, a posição do texto citada anteriormente se tornaria uma posição relativa à posição estipulada na matriz Model;</li>
+<li>Um vetor de quatro dimensões, definindo a COR do texto a ser exibido, em RGBA (vermelho, verde, azul, alpha/transparência) normalizado (valores de 0 a 1). Utilizando abstrações da GL Mathematics, definimos esta cor como branco sólido (R: 1, G: 1, B: 1, A: 1).</li>
+</ul>
+<p>Compile e execute o jogo mais uma vez. Você deverá ver texto inserido na tela.</p>
+<p><img src="../img/004.png" alt="Tela do jogo, agora com o texto sendo exibido." title="Tela do jogo, agora com o texto sendo exibido." /></p>
+<p>O arquivo <code>src/MinhaCena.cpp</code> deverá estar com o seguinte código, agora:</p>
+<pre><code class="language-cpp">#include &quot;MinhaCena.hpp&quot;
+
+void MinhaCena::init()
+{
+    glm::mat4 view =
+        glm::lookAt(
+            glm::vec3(0.0f, 0.0f, -1.2f),
+            glm::vec3(0.0f, 0.0f, 0.0f),
+            glm::vec3(0.0f, -1.0f, 0.0f));
+    glm::mat4 projection =
+        glm::ortho(
+            0.0f,
+            800.0f, -600.0f,
+            0.0f, 1.0f, 10.0f);
+    mvp = projection * view;
+}
+
+void MinhaCena::load()
+{
+    fonte = ofTexturePool::loadDefaultFont(ofFontFaceFixedsysExcelsior);
+}
+
+void MinhaCena::unload()
+{
+    fonte.unload();
+}
+
+void MinhaCena::update(float dt)
+{
+}
+
+void MinhaCena::draw()
+{
+    fonte.write(&quot;Hello, world!&quot;, glm::vec2(50.0f), mvp, glm::vec4(1.0f));
+}
+</code></pre>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a rel="prev" href="./primeirospassos/mvp.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="./primeirospassos/entidades.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+
+            </div>
+
+            
+                <a href="./primeirospassos/mvp.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+                <a href="./primeirospassos/entidades.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>

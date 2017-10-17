@@ -1,0 +1,271 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Desenhando primitivas - Oficina Framework 2: Guia Prático</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Construa seu jogo do zero com a engine Oficina Framework 2, em um modelo orientado a projetos.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="../">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li><a href="./objetivo/intro.html"><strong>1.</strong> Oficina Framework 2: Guia Prático</a></li><li><ul class="section"><li><a href="./objetivo/sobre.html"><strong>1.1.</strong> Sobre o livro</a></li><li><a href="./objetivo/pre-requisitos.html"><strong>1.2.</strong> Pré-requisitos</a></li></ul></li><li><a href="./projeto/intro.html"><strong>2.</strong> Criando o Projeto</a></li><li><ul class="section"><li><a href="./projeto/hierarquia.html"><strong>2.1.</strong> Hierarquia</a></li><li><a href="./projeto/arquivos.html"><strong>2.2.</strong> Inicialização e compilação do jogo</a></li><li><a href="./projeto/gameargs.html"><strong>2.3.</strong> GameArgs: Pré-configurando seu jogo</a></li></ul></li><li><a href="./primeirospassos/intro.html"><strong>3.</strong> Primeiros Passos</a></li><li><ul class="section"><li><a href="./primeirospassos/canvas.html"><strong>3.1.</strong> Criando uma Cena do jogo</a></li><li><a href="./primeirospassos/verifica.html"><strong>3.2.</strong> REPL: Verificando a existência da cena</a></li><li><a href="./primeirospassos/mvp.html"><strong>3.3.</strong> Configurando a visualização na tela</a></li><li><a href="./primeirospassos/texto.html"><strong>3.4.</strong> Exibindo texto básico</a></li><li><a href="./primeirospassos/entidades.html"><strong>3.5.</strong> Entidades, os objetos de um jogo</a></li><li><a href="./primeirospassos/log.html"><strong>3.6.</strong> Debug: Usando e manipulando o log</a></li><li><a href="./primeirospassos/primitivas.html" class="active"><strong>3.7.</strong> Desenhando primitivas</a></li><li><a href="./primeirospassos/input.html"><strong>3.8.</strong> Métodos de entrada do jogador</a></li></ul></li><li><a href="./graficosrenderiz/intro.html"><strong>4.</strong> Gráficos e Renderização</a></li><li><a href="./4_audio.html"><strong>5.</strong> Áudio e Efeitos Sonoros</a></li><li><a href="./5_scriptsrepl.html"><strong>6.</strong> Scripts e REPL</a></li><li><a href="./6_colisao.html"><strong>7.</strong> Detecção Básica de Colisão</a></li><li><a href="./7_lancamento.html"><strong>8.</strong> Lançamento e Distribuição</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title">Oficina Framework 2: Guia Prático</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="./primeirospassos/primitivas.html#renderizando-um-ofprimitive" id="renderizando-um-ofprimitive"><h1>Renderizando um ofPrimitive</h1></a>
+<p>Nós já sabemos que nossa entidade está em nossa cena, mas não temos NENHUMA representação visual de que ela ao menos exista!</p>
+<p>É hora de usar um dos recursos da OficinaFramework: usaremos uma primitiva, ou <code>ofPrimitive</code>, para desenhar uma forma simples na tela que possamos manipular a nosso gosto.</p>
+<p><code>ofPrimitive</code>s são objetos que guardam informações de desenhos com vértices simples e sequenciais, derivados das primitivas de OpenGL. Estas informações são carregadas, no momento da criação, para a sua própria GPU e lá ficam armazenadas para desenho estático, o que significa que você, enquanto um desenvolvedor preocupado com a performance do seu jogo, não precisa se preocupar com a quantidade de informações que são enviadas a cada quadro para a sua GPU!</p>
+<a class="header" href="./primeirospassos/primitivas.html#desenhando-a-primitiva" id="desenhando-a-primitiva"><h2>Desenhando a primitiva</h2></a>
+<p>Vamos começar indo ao arquivo <code>src/MinhaEntidade.hpp</code>.</p>
+<p>Precisaremos das definições de renderização para desenhar na tela, portanto, abaixo da inclusão do cabeçalho <code>oficina2/entity.hpp</code>, inclua o cabeçalho de renderização:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/render.hpp&gt;
+</code></pre>
+<p>Agora, entre a linha onde está escrito <code>private:</code> e a linha onde está escrito <code>public:</code>, adicione o seguinte campo:</p>
+<pre><code class="language-cpp">    ofPrimitive* pQuadrado;
+</code></pre>
+<p>Agora, mude para o arquivo <code>src/MinhaEntidade.cpp</code>. Vamos inicializar a forma da nossa primitiva.</p>
+<p>Vá para o método <code>void MinhaEntidade::load</code>. Lá, digite o seguinte código, ANTES da nossa mensagem de log:</p>
+<pre><code class="language-cpp">    float vertices[] = { // Vértices do quadrado
+        -50.0f, -50.0f, 0.0f, // topo esquerdo
+         50.0f, -50.0f, 0.0f, // topo direito
+         50.0f,  50.0f, 0.0f, // base direita
+        -50.0f,  50.0f, 0.0f  // base esquerda
+    };
+    pQuadrado = ofPrimitiveRenderer::makePrimitive(ofTriangleFan, 4, sizeof(vertices), vertices);
+</code></pre>
+<p>Uma dica valiosa é lembrar-se de sempre descarregar um conteúdo imediatamente após criar seu código de carregamento. Para tanto, vá ao método <code>void MinhaEntidade::unload</code> e, ANTES da mensagem de log, adicione esta linha:</p>
+<pre><code class="language-cpp">    delete pQuadrado;
+</code></pre>
+<p>Isto desalocará a estrutura da primitiva, após efetivamente deletá-la da GPU.</p>
+<a class="header" href="./primeirospassos/primitivas.html#entendendo-a-primitiva-desenhada" id="entendendo-a-primitiva-desenhada"><h2>Entendendo a primitiva desenhada</h2></a>
+<p>Como você pode ver através dos comentários, estamos tentando desenhar um quadrado de tamanho 100x100, com seu centro fixado na origem.</p>
+<p>Os vértices são descritos por quatro linhas, cada linha com TRÊS números (obrigatoriamente TRÊS por vértice, e devem ser pontos flutuantes); cada número representando uma coordenada (X, Y e Z). Como estamos lidando apenas com duas dimensões, a dimensão Z será sempre zero. Também, veja que <strong>os vértices são descritos num sentido horário</strong>; isto é um conceito importante, que será explicado a seguir.</p>
+<p>Por fim, criamos a nossa primitiva, através da classe estática <code>ofPrimitiveRenderer</code>. Nela, o método <code>makePrimitive</code> recebe alguns argumentos importantes:</p>
+<ul>
+<li>O tipo de primitiva que estamos tentando desenhar;</li>
+<li>O número de vértices (pacotes de três pontos flutuantes) que usaremos;</li>
+<li>O tamanho, em bytes, do nosso vetor de vértices;</li>
+<li>A referência direta (subentenda-se um ponteiro de memória) aos nossos vértices.</li>
+</ul>
+<p>Este método nos dará um retorno do tipo <code>ofPrimitive*</code>, ou seja, um ponteiro para a nossa primitiva, após os dados serem enviados para a placa de vídeo. Esta primitiva armazenará uma referência indireta aos dados armazenados na nossa GPU.</p>
+<p>Veja que, apesar de estarmos criando um QUADRADO, o tipo da primitiva é <code>ofTriangleFan</code>. Isso ocorre porque OpenGL, a partir da versão 3.2, não possui o conceito formal de um quadrilátero; subentende-se que um quadrilátero é, na verdade, um conjunto de DOIS triângulos.</p>
+<p>Em um nível mais baixo, quando lidamos diretamente com esse tipo de renderização, podemos escolher várias formas de desenhar um quadrado na tela. Você pode especificar diretamente os três vértices de dois triângulos e renderizá-los diretamente (com um tipo de primitiva como <code>ofTriangles</code>), mas isso criaria uma redundância na quantidade de vértices, já que dois deles seriam duplicados. Você também poderia fazer a forma mais indicada, que seria especificar os vértices da forma que fizemos, e usar um buffer de elementos para especificar uma ordem de desenho dos vértices (o que não pode ser feito rapidamente, até mesmo na Oficina; para isso, você teria que usar estruturas como <code>ofVertexBuffer</code> e <code>ofElementBuffer</code>, além de configurar outros aspectos manualmente que não vem ao caso mencionar agora).</p>
+<p>Uma opção mais fácil - a usada aqui por nós - seria especificar, normalmente, nossos vértices, e classificá-los como uma primitiva do tipo <code>ofTriangleFan</code>- ou seja, um &quot;ventilador&quot; de vértices.
+Isso pode ser um pouco difícil de visualizar, então peço que preste atenção: a ideia, aqui, é fixar um primeiro vértice e, à medida que os próximos vértices forem sendo dados, construir triângulos AO REDOR deste primeiro vértice, como pétalas de uma flor em torno de um centro.</p>
+<p>Quebrando em passos o que ocorre:</p>
+<ul>
+<li>Fixamos o topo esquerdo como o centro;</li>
+<li>Damos o topo direito;</li>
+<li>Damos a base direita. Forma-se um triângulo com os vértices do TOPO ESQUERDO, TOPO DIREITO e BASE DIREITA;</li>
+<li>Damos a base esquerda. Forma-se um triângulo com os vértices do TOPO ESQUERDO, BASE DIREITA e BASE ESQUERDA.</li>
+</ul>
+<p>Veja que, se déssemos mais um vértice, não teríamos mais um quadrilátero! Esta é a desvantagem de não se usar algo mais avançado. Infelizmente, só podemos desenhar um quadrado por vez com esta técnica, mas nos servirá por enquanto.</p>
+<p>Caso você tenha entendido o que aconteceu, pode também utilizar <code>ofQuad</code> no lugar de <code>ofTriangleFan</code> que manteremos, por enquanto, por fins didáticos.</p>
+<p>A título de curiosidade, como você pode observar, também é possível desenhar círculos usando esta técnica. Em uma aplicação, círculos são desenhados, vetorialmente, com um número de vértices grande o suficiente - ao redor de um centro - para dar a impressão de que se trata de uma figura completamente redonda.</p>
+<a class="header" href="./primeirospassos/primitivas.html#renderizando-a-primitiva-desenhada" id="renderizando-a-primitiva-desenhada"><h2>Renderizando a primitiva desenhada</h2></a>
+<p>Agora, poderemos realmente renderizar nossa primitiva.
+Com ajuda da mesma classe estática <code>ofPrimitiveRenderer</code>, podemos usar o método <code>draw</code> para desenhar nossa primitiva.</p>
+<p>Vá ao método <code>void MinhaEntidade::draw</code> e adicione esta linha de código:</p>
+<pre><code class="language-cpp">    ofPrimitiveRenderer::draw(pQuadrado, glm::vec4(1.0f), mvp);
+</code></pre>
+<p>Ao compilar e executar este código, você verá um quadrado no canto superior da tela, mas saberá que algo está errado: Você está vendo apenas um quarto do quadrado! Ademais, não seria melhor que o quadrado estivesse no centro da tela?</p>
+<p><img src="../img/005.png" alt="Imagem do quadrado sendo renderizado na tela, porém cortado." title="Imagem do quadrado sendo renderizado na tela, porém cortado." /></p>
+<p>Existe uma razão para isso: <strong>primitivas não possuem sua própria matriz Model</strong>. Elas apenas são renderizadas no local especificado pela matriz <code>mvp</code> a elas dada.
+Lembra-se de que, anteriormente, quando definimos os vértices da nossa primitiva, definimo-nos relativos a uma origem? Pois bem, a origem do nosso plano é o mesmo canto superior esquerdo da tela, como definido na nossa matriz <code>mvp</code>.</p>
+<p>A solução seria criar uma matriz <code>Model</code>, e então multiplicá-la por nossa <code>mvp</code>: <code>mvp * Model</code>. Mas não precisamos fazer exatamente isso.</p>
+<p>Como mencionado anteriormente, toda entidade possui submatrizes da matriz Model, e esta matriz Model pode ser gerada com uma chamada simples de função. Portanto, basta substituir a linha de desenho da matriz por esta linha</p>
+<pre><code class="language-cpp">    ofPrimitiveRenderer::draw(pQuadrado, glm::vec4(1.0f), mvp * getModelMatrix());
+</code></pre>
+<p>onde a função <code>getModelMatrix</code> é, na verdade, um método da nossa classe, herdado de <code>ofEntity</code>. Isto fará com que nossa primitiva seja renderizada SEMPRE onde a nossa entidade verdadeiramente está.</p>
+<p>Mas, como você pode ver (caso tenha compilado e executado o seu programa agora), só isto não é o suficiente para centralizar nosso objeto na tela. Para isso, aplicaremos uma operação de translação na própria entidade.</p>
+<p>No método <code>void MinhaEntidade::init</code>, antes do nosso log, adicione a seguinte linha de código:</p>
+<pre><code class="language-cpp">    translate(glm::vec3(400.0f, 300.0f, 0.0f), true);
+</code></pre>
+<p>Mais detalhes serão explicados logo no próximo tópico, mas isto fará com que nossa entidade seja posicionada no centro exato da tela (veja que os valores correspondentes a X e Y no vetor de três dimensões são 400 e 300, metades exatas do tamanho da nossa resolução interna de 800x600).</p>
+<p>Compile e execute o código. Você verá uma tela assim:</p>
+<p><img src="../img/006.png" alt="Imagem do quadrado sendo renderizado no centro da tela." title="Imagem do quadrado sendo renderizado no centro da tela." /></p>
+<p>Abaixo, o código final dos nossos arquivos <code>src/MinhaEntidade.hpp</code> e <code>src/MinhaEntidade.cpp</code>:</p>
+<pre><code class="language-cpp">#pragma once
+
+#include &lt;oficina2/entity.hpp&gt;
+#include &lt;oficina2/render.hpp&gt;
+using namespace oficina;
+
+class MinhaEntidade : public ofEntity
+{
+private:
+    ofPrimitive* pQuadrado;
+public:
+    void init();
+    void load();
+    void unload();
+    void update(float dt);
+    void draw(glm::mat4 mvp);
+};
+</code></pre>
+<pre><code class="language-cpp">#include &quot;MinhaEntidade.hpp&quot;
+#include &lt;oficina2/io.hpp&gt;
+
+void MinhaEntidade::init()
+{
+    translate(glm::vec3(400.0f, 300.0f, 0.0f), true);
+    ofLog(ofLogWarn, &quot;Entidade inicializada!\n&quot;);
+}
+
+void MinhaEntidade::load()
+{
+    float vertices[] = { // Vértices do quadrado
+        -50.0f, -50.0f, 0.0f, // topo esquerdo
+         50.0f, -50.0f, 0.0f, // topo direito
+         50.0f,  50.0f, 0.0f, // base direita
+        -50.0f,  50.0f, 0.0f  // base esquerda
+    };
+    pQuadrado = ofPrimitiveRenderer::makePrimitive(ofTriangleFan, 4, sizeof(vertices), vertices);
+    ofLog(ofLogWarn, &quot;Entidade carregada!\n&quot;);
+}
+
+void MinhaEntidade::unload()
+{
+    delete pQuadrado;
+    ofLog(ofLogWarn, &quot;Entidade descarregada!\n&quot;);
+}
+
+void MinhaEntidade::update(float dt)
+{
+}
+
+void MinhaEntidade::draw(glm::mat4 mvp)
+{
+    ofPrimitiveRenderer::draw(pQuadrado, glm::vec4(1.0f), mvp * getModelMatrix());
+}
+</code></pre>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a rel="prev" href="./primeirospassos/log.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="./primeirospassos/input.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+
+            </div>
+
+            
+                <a href="./primeirospassos/log.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+                <a href="./primeirospassos/input.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>

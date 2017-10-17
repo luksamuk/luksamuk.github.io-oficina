@@ -1,0 +1,4 @@
+# Sobre o livro
+Este livro surgiu da minha necessidade de explicar e mostrar a forma como a Oficina foi programada, seu foco e sua maleabilidade para desenvolvimento de jogos C++. Enquanto possui diversas alternativas no mercado, a Oficina foi criada com foco no código livre e aberto e em manter a simplicidade, mas ainda assim trazer certa portabilidade e poderosos recursos controláveis através de scripting, bem como um tom voltado para programação ao vivo de jogos.
+
+Trocando em miúdos, isso significa que seus jogos serão majoritariamente programados em C++, mas você possuirá ferramentas para alterar o comportamento do jogo ao vivo sem precisar recompilá-lo, e poderá também utilizar a sua própria linguagem de script escolhida para alterar o comportamento de objetos e variáveis enquanto o seu jogo está sendo executado. Poderá, também, debugar erros nestes scripts enquanto o jogo roda.

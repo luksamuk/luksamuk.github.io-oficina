@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Debug: Usando e manipulando o log - Oficina Framework 2: Guia Prático</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Construa seu jogo do zero com a engine Oficina Framework 2, em um modelo orientado a projetos.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="../">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li><a href="./objetivo/intro.html"><strong>1.</strong> Oficina Framework 2: Guia Prático</a></li><li><ul class="section"><li><a href="./objetivo/sobre.html"><strong>1.1.</strong> Sobre o livro</a></li><li><a href="./objetivo/pre-requisitos.html"><strong>1.2.</strong> Pré-requisitos</a></li></ul></li><li><a href="./projeto/intro.html"><strong>2.</strong> Criando o Projeto</a></li><li><ul class="section"><li><a href="./projeto/hierarquia.html"><strong>2.1.</strong> Hierarquia</a></li><li><a href="./projeto/arquivos.html"><strong>2.2.</strong> Inicialização e compilação do jogo</a></li><li><a href="./projeto/gameargs.html"><strong>2.3.</strong> GameArgs: Pré-configurando seu jogo</a></li></ul></li><li><a href="./primeirospassos/intro.html"><strong>3.</strong> Primeiros Passos</a></li><li><ul class="section"><li><a href="./primeirospassos/canvas.html"><strong>3.1.</strong> Criando uma Cena do jogo</a></li><li><a href="./primeirospassos/verifica.html"><strong>3.2.</strong> REPL: Verificando a existência da cena</a></li><li><a href="./primeirospassos/mvp.html"><strong>3.3.</strong> Configurando a visualização na tela</a></li><li><a href="./primeirospassos/texto.html"><strong>3.4.</strong> Exibindo texto básico</a></li><li><a href="./primeirospassos/entidades.html"><strong>3.5.</strong> Entidades, os objetos de um jogo</a></li><li><a href="./primeirospassos/log.html" class="active"><strong>3.6.</strong> Debug: Usando e manipulando o log</a></li><li><a href="./primeirospassos/primitivas.html"><strong>3.7.</strong> Desenhando primitivas</a></li><li><a href="./primeirospassos/input.html"><strong>3.8.</strong> Métodos de entrada do jogador</a></li></ul></li><li><a href="./graficosrenderiz/intro.html"><strong>4.</strong> Gráficos e Renderização</a></li><li><a href="./4_audio.html"><strong>5.</strong> Áudio e Efeitos Sonoros</a></li><li><a href="./5_scriptsrepl.html"><strong>6.</strong> Scripts e REPL</a></li><li><a href="./6_colisao.html"><strong>7.</strong> Detecção Básica de Colisão</a></li><li><a href="./7_lancamento.html"><strong>8.</strong> Lançamento e Distribuição</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title">Oficina Framework 2: Guia Prático</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="./primeirospassos/log.html#isolando-bugs-e-colhendo-informações-a-função-oflog" id="isolando-bugs-e-colhendo-informações-a-função-oflog"><h1>Isolando bugs e colhendo informações: A função ofLog</h1></a>
+<p>Para verificar melhor o funcionamento do programa, é bom que tenhamos um sistema de log, que imprima texto na tela. Para isso, temos a função <code>ofLog</code>.</p>
+<p>Na realidade, <code>ofLog</code> é uma função muito parecida com <code>sprintf</code> e <code>fprintf</code>. Porém, <code>ofLog</code> é dinâmica no sentido de que permite configuração de níveis de gravidade do texto de log a ser impresso, bem como redirecionamento: você pode escolher entre imprimir no console, imprimir num arquivo de texto, ou não imprimir os logs.</p>
+<p>Esta função pode ser usada da seguinte forma:</p>
+<pre><code class="language-cpp">ofLog(nivel, formato, ...);
+</code></pre>
+<ul>
+<li><code>nivel</code>: Nível de gravidade do log. Os níveis suportados são:
+<ul>
+<li><code>ofLogCrit</code>: Erro crítico, possivelmente ocasionando uma quebra no funcionamento do programa. Este tipo de erro, quando o log é suprimido, exibirá uma caixa de texto comuma mensagem de erro na tela;</li>
+<li><code>ofLogErr</code>: Mensagem de erro;</li>
+<li><code>ofLogWarn</code>: Mensagem de aviso;</li>
+<li><code>ofLogInfo</code>: Mensagem de informação;</li>
+<li><code>ofLogNone</code>: Mensagem sem nível de propósito simples.</li>
+</ul>
+</li>
+<li><code>formato</code>: Formato da string de saída, da mesma forma que <code>printf</code>. Recomenda-se encerrar a string com o caractere <code>\n</code>;</li>
+<li><code>...</code>: Elipses; variáveis que farão parte do formato, da mesma forma que em <code>printf</code>.</li>
+</ul>
+<p>Além disso, você ainda pode usar as seguintes funções para definir propriedades do seu log:</p>
+<pre><code class="language-cpp">ofLogSetLevel(nivel);
+</code></pre>
+<p>Onde <code>nivel</code> é o seu nível mínimo de log. Qualquer nível ABAIXO deste nível de log será automaticamente descartado da saída.</p>
+<pre><code class="language-cpp">ofLogUseFile(nome_do_arquivo);
+ofLogUseConsole();
+ofLogDisable();
+</code></pre>
+<p>Estas três funções estabelecem onde o log será impresso.</p>
+<ul>
+<li><code>ofLogUseFile</code> determina que o log seja impresso num arquivo à parte, caso <code>nome_do_arquivo</code> seja um arquivo válido ou possa ser criado;</li>
+<li><code>ofLogUseConsole</code> devolve o log ao console onde o jogo está sendo executado, caso o log esteja sendo feito em um arquivo ou esteja desabilitado;</li>
+<li><code>ofLogDisable</code> suprime toda e qualquer tentativa de impressão de log, a não ser janelas de mensagens de erro crítico.</li>
+</ul>
+<p>Abra o arquivo <code>src/MinhaEntidade.cpp</code>.
+Abaixo da inclusão do arquivo <code>MinhaEntidade.hpp</code>, escreva a seguinte linha:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/io.hpp&gt;
+</code></pre>
+<p>Agora, adicione as seguintes linhas aos seus respectivos métodos:</p>
+<pre><code class="language-cpp">// em &quot;void MinhaEntidade::init&quot;:
+ofLog(ofLogWarn, &quot;Entidade inicializada!\n&quot;);
+
+// em &quot;void MinhaEntidade::load&quot;:
+ofLog(ofLogWarn, &quot;Entidade carregada!\n&quot;);
+
+// em &quot;void MinhaEntidade::unload&quot;:
+ofLog(ofLogWarn, &quot;Entidade descarregada!\n&quot;);
+</code></pre>
+<p>Após inicializar e imediatamente fechar a aplicação, você verá uma mensagem de saída, no seu console, similar a este log:</p>
+<pre><code>INFO: Powered by OficinaFramework v2.0.11
+INFO: ofInit: Creating generic display and context
+INFO: ofInit: Pushing gameargs
+INFO: ofInit: Opening display and context
+INFO: ofDisplay.parseArgs: Window size set to (800, 600)
+INFO: ofDisplay.setSwapInterval: Set a cap to 60.00FPS.
+INFO: ofContext.open: 
+  OpenGL v3.3.0 NVIDIA 378.13
+  GLSL Shader Model v3.30 NVIDIA via Cg compiler
+  GL Extension Wrangler v2.0.0
+  Renderer: GeForce GT 525M/PCIe/SSE2
+  Vendor: NVIDIA Corporation
+  ARB Debug Log: Yes
+INFO: ofInit: Starting canvas manager
+INFO: ofLoadDefaultFont: Uploaded GohuFont (Hardcoded) to VRAM
+INFO: ofShader.compile: Compilation successful
+INFO: ofShader.compile: Compilation successful
+INFO: ofInit: Starting global REPL interpreter
+INFO: Initializing Scheme REPL...
+INFO: ofGameLoop
+WARN: Entidade inicializada!
+INFO: ofLoadDefaultFont: Uploaded Fixedsys Excelsior (Hardcoded) to VRAM
+WARN: Entidade carregada!
+INFO: ofSoftStop
+INFO: ofQuit: Unloading canvases
+INFO: ofTexturePool.unload: Deleted Fixedsys Excelsior (Hardcoded) from VRAM
+WARN: Entidade descarregada!
+INFO: ofTexturePool.unload: Deleted GohuFont (Hardcoded) from VRAM
+INFO: ofQuit: Unloading REPL interpreter
+INFO: Uninitializing Scheme REPL...
+INFO: ofQuit: Unloading texture pool
+INFO: ofTexturePool.clear: Clearing pool
+INFO: ofTexturePool.clear: Cleared
+INFO: ofQuit: Closing context and display
+</code></pre>
+<p>Observe que nossas mensagens de log na entidade receberam um prefixo <code>WARN:</code> (provavelmente na cor amarela, caso seu console suporte caracteres coloridos), em conformidade com o nível de log que demos a elas (<code>ofLogWarn</code>).</p>
+<p>Por último, você pode, também, imprimir texto colorido, caso seu console suporte isso. Através do truque de concatenação de strings de C++, existem alguns macros predefinidos no cabeçalho <code>oficina2/io.hpp</code> que auxiliam nesta façanha.
+Por exemplo, um comando como</p>
+<pre><code class="language-cpp">ofLog(ofLogInfo, OFLOG_GRN &quot;Hello, &quot; OFLOG_RESET &quot;world!\n&quot;);
+</code></pre>
+<p>imprimirá a string &quot;Hello, &quot; em letras verdes, enquanto &quot;world!\n&quot; será impresso na cor normal de texto do console.
+Na verdade, o que ocorre é uma concatenação automática de literais de string, feitas durante a compilação do jogo.</p>
+<p>Você pode consultar estes macros nas documentações. Apenas lembre-se de usar a macro <code>OFLOG_RESET</code> ao fim da sua string!</p>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a rel="prev" href="./primeirospassos/entidades.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="./primeirospassos/primitivas.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+
+            </div>
+
+            
+                <a href="./primeirospassos/entidades.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+                <a href="./primeirospassos/primitivas.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>

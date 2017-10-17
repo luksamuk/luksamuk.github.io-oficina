@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Métodos de entrada do jogador - Oficina Framework 2: Guia Prático</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Construa seu jogo do zero com a engine Oficina Framework 2, em um modelo orientado a projetos.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <base href="../">
+
+        <link rel="stylesheet" href="book.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <link rel="shortcut icon" href="favicon.png">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme -->
+        
+
+        
+
+        <!-- Fetch Clipboard.js from CDN but have a local fallback -->
+        <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+        <script>
+            if (typeof Clipboard == 'undefined') {
+                document.write(unescape("%3Cscript src='clipboard.min.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch JQuery from CDN but have a local fallback -->
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+            if (typeof jQuery == 'undefined') {
+                document.write(unescape("%3Cscript src='jquery.js'%3E%3C/script%3E"));
+            }
+        </script>
+
+        <!-- Fetch store.js from local - TODO add CDN when 2.x.x is available on cdnjs -->
+        <script src="store.js"></script>
+
+        <!-- Custom JS script -->
+        
+
+    </head>
+    <body class="light">
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme = store.get('mdbook-theme');
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            $('body').removeClass().addClass(theme);
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var sidebar = store.get('mdbook-sidebar');
+            if (sidebar === "hidden") { $("html").addClass("sidebar-hidden") }
+            else if (sidebar === "visible") { $("html").addClass("sidebar-visible") }
+        </script>
+
+        <div id="sidebar" class="sidebar">
+            <ul class="chapter"><li><a href="./objetivo/intro.html"><strong>1.</strong> Oficina Framework 2: Guia Prático</a></li><li><ul class="section"><li><a href="./objetivo/sobre.html"><strong>1.1.</strong> Sobre o livro</a></li><li><a href="./objetivo/pre-requisitos.html"><strong>1.2.</strong> Pré-requisitos</a></li></ul></li><li><a href="./projeto/intro.html"><strong>2.</strong> Criando o Projeto</a></li><li><ul class="section"><li><a href="./projeto/hierarquia.html"><strong>2.1.</strong> Hierarquia</a></li><li><a href="./projeto/arquivos.html"><strong>2.2.</strong> Inicialização e compilação do jogo</a></li><li><a href="./projeto/gameargs.html"><strong>2.3.</strong> GameArgs: Pré-configurando seu jogo</a></li></ul></li><li><a href="./primeirospassos/intro.html"><strong>3.</strong> Primeiros Passos</a></li><li><ul class="section"><li><a href="./primeirospassos/canvas.html"><strong>3.1.</strong> Criando uma Cena do jogo</a></li><li><a href="./primeirospassos/verifica.html"><strong>3.2.</strong> REPL: Verificando a existência da cena</a></li><li><a href="./primeirospassos/mvp.html"><strong>3.3.</strong> Configurando a visualização na tela</a></li><li><a href="./primeirospassos/texto.html"><strong>3.4.</strong> Exibindo texto básico</a></li><li><a href="./primeirospassos/entidades.html"><strong>3.5.</strong> Entidades, os objetos de um jogo</a></li><li><a href="./primeirospassos/log.html"><strong>3.6.</strong> Debug: Usando e manipulando o log</a></li><li><a href="./primeirospassos/primitivas.html"><strong>3.7.</strong> Desenhando primitivas</a></li><li><a href="./primeirospassos/input.html" class="active"><strong>3.8.</strong> Métodos de entrada do jogador</a></li></ul></li><li><a href="./graficosrenderiz/intro.html"><strong>4.</strong> Gráficos e Renderização</a></li><li><a href="./4_audio.html"><strong>5.</strong> Áudio e Efeitos Sonoros</a></li><li><a href="./5_scriptsrepl.html"><strong>6.</strong> Scripts e REPL</a></li><li><a href="./6_colisao.html"><strong>7.</strong> Detecção Básica de Colisão</a></li><li><a href="./7_lancamento.html"><strong>8.</strong> Lançamento e Distribuição</a></li></ul>
+        </div>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page" tabindex="-1">
+                <div id="menu-bar" class="menu-bar">
+                    <div class="left-buttons">
+                        <i id="sidebar-toggle" class="fa fa-bars"></i>
+                        <i id="theme-toggle" class="fa fa-paint-brush"></i>
+                    </div>
+
+                    <h1 class="menu-title">Oficina Framework 2: Guia Prático</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html">
+                            <i id="print-button" class="fa fa-print" title="Print this book"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="content" class="content">
+                    <a class="header" href="./primeirospassos/input.html#movendo-a-ofentity" id="movendo-a-ofentity"><h1>Movendo a ofEntity</h1></a>
+<p>Agora que temos um objeto renderizado na tela, vamos fazer com que este objeto se mova de acordo com o nosso pressionamento de teclas.</p>
+<a class="header" href="./primeirospassos/input.html#entendendo-os-métodos-de-entrada-e-mapeamento" id="entendendo-os-métodos-de-entrada-e-mapeamento"><h2>Entendendo os métodos de entrada e mapeamento</h2></a>
+<p>Por razões de padrão e portabilidade, toda a entrada básica de um jogo, ao usar a Oficina, é recuperada a partir de mapeamentos de um controle como o do Xbox 360. Ou seja, a Oficina, por padrão, possui entradas associadas a:</p>
+<ul>
+<li>Botões de controles (A, B, X, Y, LB, RB, LT, RT, LS, RS, Start, Back);</li>
+<li>Analógicos (dois; analógico esquerdo e analógico direito);</li>
+<li>Botões direcionais digitais (Digital Pad Up, Digital Pad Down...);</li>
+<li>Gatilhos (diferente de pressionamentos simples de LT e RT, um valor normalizado indicando a taxa de pressionamento destes gatilhos).</li>
+</ul>
+<p>A Oficina suporta um máximo de quatro controles conectados (precisam ser compatíveis com a biblioteca SDL2), e inputs de teclado devem ser diretamente mapeados aos botões citados.
+Ao mapear botões de teclado para analógicos, a Oficina oferece ferramentas que relacionam o pressionamento de um botão à movimentação de um certo analógico em uma certa direção.</p>
+<p>A engine também possui suporte a posição e cliques do mouse; porém, a posição do ponteiro do mouse sempre será feita a partir do valor absoluto da posição na JANELA, e não no seu viewport! Desta forma, lembre-se de normalizar esta posição, caso um dia seja necessária para você.</p>
+<p>Tendo em vista que este mapeamento pode ser problemático para um pequeno projeto sendo feito rapidamente, a Oficina fornece uma função em especial que mapeia automaticamente algumas teclas ao input do Jogador 1. Usaremos, portanto, esta função para mapear nossos controles.</p>
+<p>Abra o arquivo <code>src/main.cpp</code> e, antes de <code>ofGameLoop</code>, digite esta linha de código:</p>
+<pre><code class="language-cpp">ofMapDefaultsP1();
+</code></pre>
+<p>Feito isso, poderemos mover nossa entidade, nos próximos tópicos, com as setas do teclado, após utilizarmo-nas apropriadamente. Ou, se assim achar melhor, você pode simplesmente plugar um controle compatível e usar o analógico esquerdo deste controle para interagir da mesma forma.</p>
+<p>Para saber um pouco mais sobre as funções disponíveis e sobre o mapeamento, você pode consultar a documentação da Oficina.</p>
+<a class="header" href="./primeirospassos/input.html#recebendo-métodos-de-entrada" id="recebendo-métodos-de-entrada"><h2>Recebendo métodos de entrada</h2></a>
+<p>Agora que mapeamos nossa entrada adequadamente, podemos partir para a forma como devemos lidar com a entrada em si.</p>
+<p>A Oficina possui várias funções essenciais para lidar com estes valores. Eis as essenciais, que lidam diretamente com entradas de controladores ou de teclado mapeado:</p>
+<pre><code class="language-cpp">// Analógicos
+ofGetLeftStick(jogador);
+ofGetRightStick(jogador);
+// Botões
+ofButtonPress(botao, jogador);
+ofButtonTap(botao, jogador);
+// Gatilhos
+ofGetLeftTrigger(jogador);
+ofGetRightTrigger(jogador);
+</code></pre>
+<p>Note que, nestas funções, o parâmetro <code>jogador</code> é sempre opcional. Caso omitido, a engine assume que você esteja se referindo ao Jogador 1 (<code>ofPlayerOne</code>).</p>
+<p>Abra o arquivo <code>src/MinhaEntidade.cpp</code>.</p>
+<p>Logo após os cabeçalhos já incluídos, adicione o cabeçalho de entradas da Oficina:</p>
+<pre><code class="language-cpp">#include &lt;oficina2/input.hpp&gt;
+</code></pre>
+<p>Agora, no método <code>void MinhaEntidade::update</code>, insira o seguinte código:</p>
+<pre><code class="language-cpp">    glm::vec2 velocidade = ofGetLeftStick();
+</code></pre>
+<p>Apesar de não possuir nenhum efeito gráfico, já estamos recuperando a posição do analógico esquerdo do Jogador 1 e salvando-o em um vetor de duas dimensões.
+Neste vetor, a coordenada X lida com o plano horizontal, e a Y lida com o plano vertical.</p>
+<p>Mover o analógico para a esquerda total e para a direita total significa fazer com que esta coordenada X do vetor se torne -1 e 1, respectivamente; mover o analógico parcialmente também alterará o valor. Um analógico não movido no plano horizontal terá seu valor em X igual a ZERO.
+Da mesma forma, mover para cima e para baixo fará com que a coordenada Y assuma valores -1 e 1 respectivamente. Note que, da mesma forma como estabelecemos para nossa projeção anteriormente, o valor se torna maior na direção PARA BAIXO.</p>
+<p>Perceba que, no caso do teclado, ele SIMULA este tipo de valor; apertar a seta para a esquerda, por exemplo, fará com que a coordenada X assuma um valor de exatamente -1; apertar a seta para a esquerda fará X assumir 1, e assim por diante. Note, porém, que por padrão não é possível simular, no teclado, algo como um meio-movimento (mover o analógico apenas um pouco para uma direção).</p>
+<a class="header" href="./primeirospassos/input.html#calculando-a-velocidade-do-movimento" id="calculando-a-velocidade-do-movimento"><h2>Calculando a velocidade do movimento</h2></a>
+<p>Agora, faremos com que nossa entidade efetivamente SE MOVA na tela.</p>
+<p>Primeiramente, é interessante ressaltar que, normalmente, movimentos em jogos são interpolados, já que jogos normalmente possuem uma variação ilimitada na quantidade de quadros processados por segundo. Porém, ao iniciarmos este projeto, configuramos a engine de forma a assegurar que nosso jogo NUNCA ultrapasse a barreira dos 60 quadros por segundo, NO MÁXIMO. Por tanto, podemos operar como se nosso jogo estivesse sempre operando nesta quantidade fixa de quadros por segundo.</p>
+<p>Abaixo da linha em que obtemos a posição do nosso analógico, adicione esta linha:</p>
+<pre><code class="language-cpp">    velocidade *= 5.0f;
+</code></pre>
+<p>Isto fará com que cada um dos eixos do nosso analógico esquerdo tenha seu valor multiplicado pela taxa de movimento que queremos (5 pixels por quadro ou, numa variação de 60 quadros por segundo, em torno de 300 pixels por segundo).
+Perceba que nos valemos de um pequeno artifício da GL Mathematics: estamos multiplicando dois valores, que fazem parte do nosso vetor, com apenas uma linha. Na prática, esta linha faz um trabalho como este:</p>
+<pre><code class="language-cpp">    velocidade.x = velocidade.x * 5.0f;
+    velocidade.y = velocidade.y * 5.0f;
+</code></pre>
+<p>Agora, portanto, podemos dizer que temos o valor em pixels para o qual sabemos que nosso objeto pode se mover. O sinal desse valor indicará a direção do movimento (por exemplo, se tivermos que nos mover APENAS para a esquerda, teremos um valor como {x = -5, y = 0}).</p>
+<a class="header" href="./primeirospassos/input.html#transformando-a-entidade" id="transformando-a-entidade"><h2>Transformando a entidade</h2></a>
+<p>Por fim, agora, só falta incorporar esta variação de posição do objeto ao próprio objeto.</p>
+<p>Mais cedo, utilizamos o método <code>translate</code> para posicionar nosso objeto na tela. Este método, em conjunto com <code>rotate</code> e <code>scale</code>, é herdado também da casse <code>ofEntity</code>.
+Estes três métodos especiais fazem com que seja possível alterar aspectos da nossa classe ou, mais especificamente: posição, ângulo de rotação e escala.</p>
+<p>Vá ao fim do mesmo método <code>void MinhaEntidade::update</code>, e adicione esta linha, depois do cálculo da velocidade:</p>
+<pre><code class="language-cpp">    translate(glm::vec3(velocidade, 0.0f));
+</code></pre>
+<p>O que estamos fazendo é uma translação direta na matriz de posição do nosso objeto. O argumento <code>glm::vec3(velocidade, 0.0f)</code> cria um vetor tridimensional a partir dos valores X e Y de velocidade e, no que tange ao valor Z (que está faltando em <code>velocidade</code>), usamos 0.0f, já que vamos nos manter em duas dimensões.</p>
+<p>Compile e execute seu aplicativo. Você agora poderá mover o quadrado usando as setas do teclado ou, caso ache melhor, conectando a qualquer momento um controle compatível e usando o analógico esquerdo do controle.</p>
+<p>Eis o método <code>update</code> da entidade, após o experimento:</p>
+<pre><code class="language-cpp">void MinhaEntidade::update(float dt)
+{
+    glm::vec2 velocidade = ofGetLeftStick();
+    velocidade *= 5.0f;
+    translate(glm::vec3(velocidade, 0.0f));
+}
+</code></pre>
+
+                </div>
+
+                <!-- Mobile navigation buttons -->
+                
+                    <a rel="prev" href="./primeirospassos/primitivas.html" class="mobile-nav-chapters previous">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="./graficosrenderiz/intro.html" class="mobile-nav-chapters next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+
+            </div>
+
+            
+                <a href="./primeirospassos/primitivas.html" class="nav-chapters previous" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            
+
+            
+                <a href="./graficosrenderiz/intro.html" class="nav-chapters next" title="You can navigate through the chapters using the arrow keys">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            
+
+        </div>
+
+
+        <!-- Local fallback for Font Awesome -->
+        <script>
+            if ($(".fa").css("font-family") !== "FontAwesome") {
+                $('<link rel="stylesheet" type="text/css" href="_FontAwesome/css/font-awesome.css">').prependTo('head');
+            }
+        </script>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        
+
+        
+
+        
+
+        
+
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+    </body>
+</html>
